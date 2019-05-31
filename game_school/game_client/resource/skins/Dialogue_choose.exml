@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Dialogue_choose" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group left="0" right="0" top="0" width="750" bottom="-334" verticalCenter="167" horizontalCenter="0" height="1334">
+		<e:Image top="0" verticalCenter="-167" bottom="334" left="0" horizontalCenter="0" right="0" alpha="0.4" source="image_black_png"/>
+		<e:Group id="Group_choose" width="700" height="600" horizontalCenter="0" verticalCenter="0">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" gap="20"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

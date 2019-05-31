@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="g3dlite" InternalType="Library">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="src/AABox.cpp"/>
+    <File Name="src/Any.cpp"/>
+    <File Name="src/AnyVal.cpp"/>
+    <File Name="src/AreaMemoryManager.cpp"/>
+    <File Name="src/BinaryFormat.cpp"/>
+    <File Name="src/BinaryInput.cpp"/>
+    <File Name="src/BinaryOutput.cpp"/>
+    <File Name="src/Box.cpp"/>
+    <File Name="src/Box2D.cpp"/>
+    <File Name="src/BumpMapPreprocess.cpp"/>
+    <File Name="src/Capsule.cpp"/>
+    <File Name="src/CollisionDetection.cpp"/>
+    <File Name="src/Color1.cpp"/>
+    <File Name="src/Color1uint8.cpp"/>
+    <File Name="src/Color3.cpp"/>
+    <File Name="src/Color3uint8.cpp"/>
+    <File Name="src/Color4.cpp"/>
+    <File Name="src/Color4uint8.cpp"/>
+    <File Name="src/Cone.cpp"/>
+    <File Name="src/constants.cpp"/>
+    <File Name="src/ConvexPolyhedron.cpp"/>
+    <File Name="src/CoordinateFrame.cpp"/>
+    <File Name="src/Crypto.cpp"/>
+    <File Name="src/Crypto_md5.cpp"/>
+    <File Name="src/Cylinder.cpp"/>
+    <File Name="src/debugAssert.cpp"/>
+    <File Name="src/FileSystem.cpp"/>
+    <File Name="src/fileutils.cpp"/>
+    <File Name="src/filter.cpp"/>
+    <File Name="src/format.cpp"/>
+    <File Name="src/g3dfnmatch.cpp"/>
+    <File Name="src/g3dmath.cpp"/>
+    <File Name="src/GCamera.cpp"/>
+    <File Name="src/GImage.cpp"/>
+    <File Name="src/GImage_bayer.cpp"/>
+    <File Name="src/GImage_bmp.cpp"/>
+    <File Name="src/GImage_jpeg.cpp"/>
+    <File Name="src/GImage_png.cpp"/>
+    <File Name="src/GImage_ppm.cpp"/>
+    <File Name="src/GImage_tga.cpp"/>
+    <File Name="src/GLight.cpp"/>
+    <File Name="src/GThread.cpp"/>
+    <File Name="src/GUniqueID.cpp"/>
+    <File Name="src/Image1.cpp"/>
+    <File Name="src/Image1uint8.cpp"/>
+    <File Name="src/Image3.cpp"/>
+    <File Name="src/Image3uint8.cpp"/>
+    <File Name="src/Image4.cpp"/>
+    <File Name="src/Image4uint8.cpp"/>
+    <File Name="src/ImageFormat_convert.cpp"/>
+    <File Name="src/Intersect.cpp"/>
+    <File Name="src/license.cpp"/>
+    <File Name="src/Line.cpp"/>
+    <File Name="src/LineSegment.cpp"/>
+    <File Name="src/Log.cpp"/>
+    <File Name="src/Matrix.cpp"/>
+    <File Name="src/Matrix3.cpp"/>
+    <File Name="src/Matrix4.cpp"/>
+    <File Name="src/MemoryManager.cpp"/>
+    <File Name="src/MeshAlg.cpp"/>
+    <File Name="src/MeshAlgAdjacency.cpp"/>
+    <File Name="src/MeshAlgWeld.cpp"/>
+    <File Name="src/MeshBuilder.cpp"/>
+    <File Name="src/NetAddress.cpp"/>
+    <File Name="src/NetworkDevice.cpp"/>
+    <File Name="src/PhysicsFrame.cpp"/>
+    <File Name="src/PhysicsFrameSpline.cpp"/>
+    <File Name="src/Plane.cpp"/>
+    <File Name="src/PrecomputedRandom.cpp"/>
+    <File Name="src/prompt.cpp"/>
+    <File Name="src/Quat.cpp"/>
+    <File Name="src/Random.cpp"/>
+    <File Name="src/Ray.cpp"/>
+    <File Name="src/Rect2D.cpp"/>
+    <File Name="src/ReferenceCount.cpp"/>
+    <File Name="src/RegistryUtil.cpp"/>
+    <File Name="src/Sphere.cpp"/>
+    <File Name="src/SplineBase.cpp"/>
+    <File Name="src/stringutils.cpp"/>
+    <File Name="src/System.cpp"/>
+    <File Name="src/TextInput.cpp"/>
+    <File Name="src/TextOutput.cpp"/>
+    <File Name="src/ThreadSet.cpp"/>
+    <File Name="src/Triangle.cpp"/>
+    <File Name="src/uint128.cpp"/>
+    <File Name="src/UprightFrame.cpp"/>
+    <File Name="src/Vector2.cpp"/>
+    <File Name="src/Vector2int16.cpp"/>
+    <File Name="src/Vector3.cpp"/>
+    <File Name="src/Vector3int16.cpp"/>
+    <File Name="src/Vector3int32.cpp"/>
+    <File Name="src/Vector4.cpp"/>
+    <File Name="src/Vector4int8.cpp"/>
+    <File Name="src/Welder.cpp"/>
+    <File Name="src/WinMain.cpp"/>
+    <File Name="src/XML.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="include">
+    <File Name="include/G3D/AABox.h"/>
+    <File Name="include/G3D/Any.h"/>
+    <File Name="include/G3D/AnyVal.h"/>
+    <File Name="include/G3D/AreaMemoryManager.h"/>
+    <File Name="include/G3D/Array.h"/>
+    <File Name="include/G3D/AtomicInt32.h"/>
+    <File Name="include/G3D/BinaryFormat.h"/>
+    <File Name="include/G3D/BinaryInput.h"/>
+    <File Name="include/G3D/BinaryOutput.h"/>
+    <File Name="include/G3D/BoundsTrait.h"/>
+    <File Name="include/G3D/Box.h"/>
+    <File Name="include/G3D/Box2D.h"/>
+    <File Name="include/G3D/BumpMapPreprocess.h"/>
+    <File Name="include/G3D/Capsule.h"/>
+    <File Name="include/G3D/CollisionDetection.h"/>
+    <File Name="include/G3D/Color1.h"/>
+    <File Name="include/G3D/Color1uint8.h"/>
+    <File Name="include/G3D/Color3.h"/>
+    <File Name="include/G3D/Color3uint8.h"/>
+    <File Name="include/G3D/Color4.h"/>
+    <File Name="include/G3D/Color4uint8.h"/>
+    <File Name="include/G3D/Cone.h"/>
+    <File Name="include/G3D/constants.h"/>
+    <File Name="include/G3D/ConvexPolyhedron.h"/>
+    <File Name="include/G3D/CoordinateFrame.h"/>
+    <File Name="include/G3D/Crypto.h"/>
+    <File Name="include/G3D/Cylinder.h"/>
+    <File Name="include/G3D/debug.h"/>
+    <File Name="include/G3D/debugAssert.h"/>
+    <File Name="include/G3D/debugPrintf.h"/>
+    <File Name="include/G3D/enumclass.h"/>
+    <File Name="include/G3D/EqualsTrait.h"/>
+    <File Name="include/G3D/FileSystem.h"/>
+    <File Name="include/G3D/fileutils.h"/>
+    <File Name="include/G3D/filter.h"/>
+    <File Name="include/G3D/format.h"/>
+    <File Name="include/G3D/g3dfnmatch.h"/>
+    <File Name="include/G3D/g3dmath.h"/>
+    <File Name="include/G3D/g3dmath.inl"/>
+    <File Name="include/G3D/G3D.h"/>
+    <File Name="include/G3D/G3DAll.h"/>
+    <File Name="include/G3D/G3DGameUnits.h"/>
+    <File Name="include/G3D/GCamera.h"/>
+    <File Name="include/G3D/GImage.h"/>
+    <File Name="include/G3D/GLight.h"/>
+    <File Name="include/G3D/GMutex.h"/>
+    <File Name="include/G3D/GThread.h"/>
+    <File Name="include/G3D/GUniqueID.h"/>
+    <File Name="include/G3D/HashTrait.h"/>
+    <File Name="include/G3D/Image1.h"/>
+    <File Name="include/G3D/Image1uint8.h"/>
+    <File Name="include/G3D/Image3.h"/>
+    <File Name="include/G3D/Image3uint8.h"/>
+    <File Name="include/G3D/Image4.h"/>
+    <File Name="include/G3D/Image4uint8.h"/>
+    <File Name="include/G3D/ImageFormat.h"/>
+    <File Name="include/G3D/Intersect.h"/>
+    <File Name="include/G3D/KDTree.h"/>
+    <File Name="include/G3D/Line.h"/>
+    <File Name="include/G3D/LineSegment.h"/>
+    <File Name="include/G3D/Log.h"/>
+    <File Name="include/G3D/Map2D.h"/>
+    <File Name="include/G3D/Matrix.h"/>
+    <File Name="include/G3D/Matrix2.h"/>
+    <File Name="include/G3D/Matrix3.h"/>
+    <File Name="include/G3D/Matrix4.h"/>
+    <File Name="include/G3D/MemoryManager.h"/>
+    <File Name="include/G3D/MeshAlg.h"/>
+    <File Name="include/G3D/MeshBuilder.h"/>
+    <File Name="include/G3D/NetAddress.h"/>
+    <File Name="include/G3D/netheaders.h"/>
+    <File Name="include/G3D/NetworkDevice.h"/>
+    <File Name="include/G3D/networkHelpers.h"/>
+    <File Name="include/G3D/ParseError.h"/>
+    <File Name="include/G3D/PhysicsFrame.h"/>
+    <File Name="include/G3D/PhysicsFrameSpline.h"/>
+    <File Name="include/G3D/Plane.h"/>
+    <File Name="include/G3D/platform.h"/>
+    <File Name="include/G3D/Pointer.h"/>
+    <File Name="include/G3D/PointHashGrid.h"/>
+    <File Name="include/G3D/PointKDTree.h"/>
+    <File Name="include/G3D/PositionTrait.h"/>
+    <File Name="include/G3D/PrecomputedRandom.h"/>
+    <File Name="include/G3D/prompt.h"/>
+    <File Name="include/G3D/Quat.h"/>
+    <File Name="include/G3D/Quat.inl"/>
+    <File Name="include/G3D/Queue.h"/>
+    <File Name="include/G3D/Random.h"/>
+    <File Name="include/G3D/Ray.h"/>
+    <File Name="include/G3D/Rect2D.h"/>
+    <File Name="include/G3D/ReferenceCount.h"/>
+    <File Name="include/G3D/RegistryUtil.h"/>
+    <File Name="include/G3D/serialize.h"/>
+    <File Name="include/G3D/Set.h"/>
+    <File Name="include/G3D/SmallArray.h"/>
+    <File Name="include/G3D/Sphere.h"/>
+    <File Name="include/G3D/Spline.h"/>
+    <File Name="include/G3D/splinefunc.h"/>
+    <File Name="include/G3D/Stopwatch.h"/>
+    <File Name="include/G3D/stringutils.h"/>
+    <File Name="include/G3D/System.h"/>
+    <File Name="include/G3D/Table.h"/>
+    <File Name="include/G3D/TextInput.h"/>
+    <File Name="include/G3D/TextOutput.h"/>
+    <File Name="include/G3D/ThreadSet.h"/>
+    <File Name="include/G3D/Triangle.h"/>
+    <File Name="include/G3D/uint128.h"/>
+    <File Name="include/G3D/units.h"/>
+    <File Name="include/G3D/UprightFrame.h"/>
+    <File Name="include/G3D/Vector2.h"/>
+    <File Name="include/G3D/Vector2.inl"/>
+    <File Name="include/G3D/Vector2int16.h"/>
+    <File Name="include/G3D/Vector3.h"/>
+    <File Name="include/G3D/Vector3.inl"/>
+    <File Name="include/G3D/Vector3int16.h"/>
+    <File Name="include/G3D/Vector3int32.h"/>
+    <File Name="include/G3D/Vector4.h"/>
+    <File Name="include/G3D/Vector4.inl"/>
+    <File Name="include/G3D/Vector4int8.h"/>
+    <File Name="include/G3D/vectorMath.h"/>
+    <File Name="include/G3D/WeakCache.h"/>
+    <File Name="include/G3D/Welder.h"/>
+    <File Name="include/G3D/WrapMode.h"/>
+    <File Name="include/G3D/XML.h"/>
+  </VirtualDirectory>
+  <Settings Type="Static Library">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" C_Options="-g" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="./include"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="./Debug/lib$(ProjectName).a" IntermediateDirectory="../bin/Debug/$(ProjectName)" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" C_Options="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="./include"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="./Release/lib$(ProjectName).a" IntermediateDirectory="../bin/Release/$(ProjectName)" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+</CodeLite_Project>

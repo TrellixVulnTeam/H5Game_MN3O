@@ -1,0 +1,8 @@
+require:
+	ACE6.0.3
+	tbb3_20110427oss
+	expat
+	protobuf 2.4.1*
+	zeromq
+	log4cpp
+	msgpack

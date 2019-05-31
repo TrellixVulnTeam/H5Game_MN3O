@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configure>
+	<game version="1.0" release="7">
+                                                               
+		<!-- ·þÎñÆ÷³ÌÐòµ¼Èë -->                                       
+		<file src="srcfiles/server/pwctrlsrv" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwworldsrv" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwdbsrv" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwaccsrv" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwconnsrv" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwaccmgr" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwdbprinter" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwnrobot" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwproxy" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/pwrobot" dest="/export/game1/server/"/>
+		                                                   
+		<!-- ·þÎñÆ÷ÅäÖÃµ¼ÈëºÍÐÞ¸Ä -->                                    
+		<file src="srcfiles/server/data" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/Lua" dest="/export/game1/server/"/>
+		<file src="srcfiles/server/sql" dest="/export/game1/server/"/>
+                                                               
+		<!-- ÐÞ¸ÄÁ¬½ÓµÄ¶Ë¿Ú£¬×îºÃÊÇ°ÑzoneidµÄºóÁ½Î»Ð´Èë¶Ë¿ÚµÄ¹æÔò£¬±ÜÃâÖØ¸´ -->            
+		<file src="srcfiles/server/pwaccsrv.xml" dest="/export/game1/server/"/>
+		<replace file="/export/game1/server/pwaccsrv.xml" src="9706" dest="4206"/>
+		<replace file="/export/game1/server/pwaccsrv.xml" src="9707" dest="4207"/>
+                                                               
+		<file src="srcfiles/server/pwconnsrv.xml" dest="/export/game1/server/"/>
+		<replace file="/export/game1/server/pwconnsrv.xml" src="9707" dest="4207"/>
+		<replace file="/export/game1/server/pwconnsrv.xml" src="8000" dest="4200"/>
+                                                               
+		<file src="srcfiles/server/pwctrlsrv.xml" dest="/export/game1/server/"/>
+		<replace file="/export/game1/server/pwctrlsrv.xml" src="9707" dest="4207"/>
+		<replace file="/export/game1/server/pwctrlsrv.xml" src="9708" dest="4208"/>
+		<replace file="/export/game1/server/pwctrlsrv.xml" src="9709" dest="4209"/>
+		<replace file="/export/game1/server/pwctrlsrv.xml" src="8001" dest="4201"/>
+		<replace file="/export/game1/server/pwctrlsrv.xml" src="8002" dest="4202"/>
+		<replace file="/export/game1/server/pwctrlsrv.xml" src="8003" dest="4203"/>
+                                                               
+		<file src="srcfiles/server/pwdbsrv.xml" dest="/export/game1/server/"/>
+		<replace file="/export/game1/server/pwdbsrv.xml" src="9709" dest="4009"/>
+		<!-- ÐÞ¸ÄÊý¾Ý¿âÁ¬½ÓµÄIP£¬ÓÃ»§Ãû£¬ÃÜÂë£¬Êý¾Ý¿âÃû -->                        
+		<replace file="/export/game1/server/pwdbsrv.xml" src="host" dest="dbip"/>
+		<replace file="/export/game1/server/pwdbsrv.xml" src="root" dest="root"/>
+		<replace file="/export/game1/server/pwdbsrv.xml" src="<pswd><" dest="<pswd>123456<"/>
+		<replace file="/export/game1/server/pwdbsrv.xml" src="pwngs_characters" dest="pwngs_characters_4200"/>
+                                                               
+		<file src="srcfiles/server/server_0.xml" dest="/export/game1/server/"/>
+		<replace file="/export/game1/server/server_0.xml" src="9701" dest="4201"/>
+		<replace file="/export/game1/server/server_0.xml" src="9707" dest="4207"/>
+		<replace file="/export/game1/server/server_0.xml" src="9708" dest="4208"/>
+		<replace file="/export/game1/server/server_0.xml" src="9709" dest="4209"/>
+                                                               
+		<file src="srcfiles/server/server_group.xml" dest="/export/game1/server/"/>
+		<!-- ÐÞ¸ÄÓÎÏ·ID -->                                        
+		<replace file="/export/game1/server/server_group.xml" src="<id>1<" dest="<id>42<"/>
+		<!-- ÐÞ¸ÄzoneID -->                                      
+		<replace file="/export/game1/server/server_group.xml" src="<zone_id>1<" dest="<zone_id>4200<"/>
+		<!-- ÐÞ¸Ä³äÖµµÄÃÜÔ¿ -->                                       
+		<replace file="/export/game1/server/server_group.xml" src="<secret>123456<" dest="<secret>123456<"/>
+		<!-- ¿ª·þÈÕÆÚ£¬ÐÞ¸ÄÎª¿ª·þµÄµ±ÌìÊ±¼ä -->                               
+		<replace file="/export/game1/server/server_group.xml" src="<kaifudate><" dest="<kaifudate>20130507<"/>
+		<!-- Æ½Ì¨ÈÕÖ¾´æ·ÅÄ¿Â¼ -->                                      
+		<replace file="/export/game1/server/server_group.xml" src="<log_qlvh>./qlogs/" dest="<log_qlvh>/export/qlogs/"/>
+		<!-- Æ½Ì¨ÈÕÖ¾´æ·ÅÄ¿Â¼ -->                                      
+		<replace file="/export/game1/server/server_group.xml" src="<log_self>./logs/" dest="<log_self>/export/logs/"/>
+		<!-- ÏµÍ³²¿ÈÕÖ¾´æ·ÅÄ¿Â¼ -->                                      
+		<replace file="/export/game1/server/server_group.xml" src="<log_wm>./wlogs/" dest="<log_wm>/export/wlogs/"/>
+
+		
+		<!-- Æô·þ½Å±¾ÐÞ¸Ä -->                                        
+		<file src="srcfiles/server/start.sh" dest="/export/game1/server/"/>
+		<replace file="/export/game1/server/start.sh" src="/root/Revision_Latest/" dest="/export/game1/server/"/>
+                                                               
+		<!-- Í£·þ½Å±¾ÐÞ¸Ä -->                                        
+		<file src="srcfiles/server/stop.sh" dest="/export/game1/server/"/>
+		<replace file="/export/game1/server/stop.sh" src="/root/Revision_Latest/" dest="/export/game1/server/"/>
+                                                               
+	</game>                                                    
+                                                               
+</configure>                                                   
+                                                               

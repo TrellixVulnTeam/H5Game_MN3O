@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Pro_loading" minWidth="30" minHeight="18" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image scale9Grid="9,9,5,5" width="418"
+			 height="25" y="0" fillMode="scale" source="loading2_png"/>
+	<e:Image id="thumb" height="25" width="418" source="loading3_png"/>
+	<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle"
+			 size="22" fontFamily="Tahoma"
+			 horizontalCenter="0" verticalCenter="0" text="" textColor="0x683636" visible="false"/>
+
+	<w:Config id="163910f3088" ></w:Config>
+</e:Skin>

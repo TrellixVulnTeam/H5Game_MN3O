@@ -1,0 +1,203 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/11000_11999_dma.proto
+// -------------------------------------------------------
+
+// --------------副本主玩法 cbh -----------------------------------------------------
+message SC_DMA_PoltStart
+{
+	option(msgid) = 11000;
+	optional int32 flags = 1;
+}
+
+message SC_DMA_PoltClean
+{
+	option(msgid) = 11001;
+	required int32 flags = 1;
+}
+
+message SC_DMA_PoltCameraStart
+{
+	option(msgid) = 11010;
+	required int32 flags = 1;
+	required int32 type = 2; //1为npctype 2为actionId
+	required int32 arg = 3;
+}
+
+message SC_DMA_PoltCameraClean
+{
+	option(msgid) = 11011;
+	required int32 flags = 1;
+}
+
+message SC_DMA_PoltSpeak
+{
+	option(msgid) = 11030;
+	required int32 flags = 1;
+	required int64 refid = 2;
+	required int32 npc_type = 3;
+	required int32 npc_talk_id = 4;
+	required int32 npc_talk_time = 5;
+	required int32 player_talk_id = 6;
+	required int32 speak_type = 7; //1:黑屏2：对话 3：冒泡对话 4: 出按钮对话
+}
+
+message CS_DMA_SpeakSkip
+{
+	option(msgid) = 11031;
+	required int64 refid = 1;
+}
+
+message CS_DMA_SpeakAllSkip
+{
+	option(msgid) = 11032;
+	required int64 refid = 1;
+}
+
+message SC_DMA_CountDown
+{
+	option(msgid) = 11040;
+	required int32 flags = 1;
+	required int32 countdown_time_ms = 2;
+}
+
+message SC_DMA_WaveStart
+{
+	option(msgid) = 11050;
+	required int32 flags = 1;
+	required int32 wave = 2;
+}
+
+message SC_DMA_WaveClean
+{
+	option(msgid) = 11051;
+	required int32 flags = 1;
+	required int32 wave = 2;
+}
+
+// 普通副本通关评分
+message SC_DMA_Score
+{
+	option (msgid) = 11060;
+	required int32 clearTime 		= 1;	// 通关时间
+	required int32 clearTimeScore 	= 2;	// 通关时间评分
+	required int32 maxBatter		= 3;	// 最高连杀
+	required int32 maxBatterScore	= 4;	// 最高连杀评分
+	required int32 consume			= 5;	// 战斗损耗
+	required int32 consumeScore		= 6;	// 战斗损耗评分
+	required int32 death			= 7;	// 死亡次数
+	required int32 deathScore		= 8;	// 死亡次数评分
+	required int32 totalScore		= 9;	// 总评分
+	required int32 rewardExp		= 10;	// 经验奖励
+	required int32 rewardSilver		= 11;	// 银币奖励
+	required int32 rewardMagicPoint = 12;	// 术力奖励
+	repeated int32 chestStatus		= 13;	// 宝箱开启状态
+    optional bool open_ui           = 14;   // 是否直接弹出ui
+}
+
+// 竞技场比赛评分
+message SC_DMA_ArenaScore
+{
+	option(msgid) = 11061;
+	required int32 finish_time = 1;
+	required int64 win_tid = 2;	// =0平局，>0获胜队伍id 
+	repeated SArenaScore scores = 3;
+}
+
+// 暗黑擂台通关评分
+message SC_DMA_DarkArenaScore
+{
+	option (msgid) = 11062;
+	required int32 clearTime 		= 1;	// 通关时间
+	required int32 clearTimeScore 	= 2;	// 通关时间评分
+	required int32 maxBatter		= 3;	// 最高连杀
+	required int32 maxBatterScore	= 4;	// 最高连杀评分
+	required int32 consume			= 5;	// 战斗损耗
+	required int32 consumeScore		= 6;	// 战斗损耗评分
+	required int32 death			= 7;	// 死亡次数
+	required int32 deathScore		= 8;	// 死亡次数评分
+	required int32 totalScore		= 9;	// 总评分
+	required int32 rewardExp		= 10;	// 经验奖励
+	required int32 rewardSilver		= 11;	// 银币奖励
+	required int32 rewardMagicPoint = 12;	// 术力奖励
+}
+
+// 客户端请求领取副本奖励
+message CS_DMA_GetPrize
+{
+	option (msgid) = 11063;
+}
+
+//当前连接数
+message	SC_DMA_BatterCount
+{
+	option (msgid) = 11070;
+	required int32 batterCount = 1;
+}
+
+//当前连击数
+message	SC_DMA_ComboCount
+{
+	option (msgid) = 11071;
+	required int32 comboCount = 1;
+}
+
+//播放离子特性
+message	SC_DMA_ParticleStart
+{
+	option (msgid) = 11080;
+	required int32 particleId = 1;
+}
+
+// ----------------------------------------------------------------------
+
+// 开启副本信息
+message SDungeonRecord
+{
+	required int32 baseMapId 		= 1; // 副本id
+	required int32 totalScore		= 2; // 总评分
+	repeated int32 chestStatus		= 3; // 宝箱开启状态
+	required int32 usedCount		= 4; // 今天已进入次数
+	required int32 freeCount		= 5; // 每天免费进入次数,0=不限次数
+	required int32 boughtCount		= 6; // 今天已购买的次数(剩余次数=freeCount+boughtCount-usedCount)
+}
+
+// 更新开启副本信息到客户端
+message SCUpdateDungeonRecord
+{
+	option (msgid) = 11090;
+	repeated SDungeonRecord info = 1;
+}
+
+// 同步奖励领取情况
+message SDungeonGroupRecord
+{
+	required int32 group_id = 1;
+	repeated int32 rewards = 2;
+}
+
+message SCUpdateDungeonGroupRecord
+{
+	option (msgid) = 11091;
+	repeated SDungeonGroupRecord groups = 1;
+}
+
+// 领取奖励
+message CSDrawGroupReward
+{
+	option (msgid) = 11092;
+	required int32 group_id = 1;
+	required int32 reward_id = 2;
+}
+
+message SCDrawGroupReward
+{
+	option (msgid) = 11093;
+	required int32 result = 1;
+}
+
+

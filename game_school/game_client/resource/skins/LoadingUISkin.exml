@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.LoadingUISkin" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group verticalCenter="0" horizontalCenter="0" left="0" right="0" top="0" bottom="0">
+		<e:Image left="0" top="0" verticalCenter="0" bottom="0" horizontalCenter="0" right="0" source="login_bg_png"/>
+		<e:Image source="logo_png" height="370" width="640" horizontalCenter="0" verticalCenter="-300"/>
+		<e:Group width="750" height="200" horizontalCenter="0" verticalCenter="100">
+			<e:Label id="txtMsg" text="资源加载中..." width="400" horizontalCenter="0.5" verticalCenter="-56.5" size="28" verticalAlign="middle" textAlign="center" x="251" y="31" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0x634660" bold="true"/>
+			<e:ProgressBar id="pro" width="415" height="25" horizontalCenter="0" skinName="Pro_loadingSkin" verticalCenter="-7.5"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

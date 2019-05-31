@@ -1,0 +1,77 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/49200_49399_crystal_cube.proto
+// -------------------------------------------------------
+// ------------------------------------------
+// 水晶魔方相关
+// ------------------------------------------
+
+// 水晶魔方数据结构
+message SCrystalCubeData
+{
+	required int32 loc = 1;					// 位置
+	required int32 type = 2;				// 类型(0=无 火=1 冰=2 雷=3 毒=4)
+}
+
+// -----------------------------------------
+// 水晶魔方查询
+message CSCrystalCubeQuery
+{
+	option (msgid) = 49200;
+}
+
+message SCCrystalCubeQuery
+{
+	option (msgid) = 49201;
+	required int32 result = 1;
+	optional int32 today_draw_cnt = 2;					// 今天领取次数
+	optional int32 max_draw_cnt = 3;					// 最大领取次数
+	optional int32 type_today = 4;						// 今日主题(火=1 冰=2 雷=3 毒=4)
+	repeated SCrystalCubeData crystal_cube_data = 5;	// 水晶魔方信息
+	optional int64 draw_left_sec = 6;					// 领取剩余秒数(秒) 
+	optional int32 buy_draw_cnt = 7;					// vip购买的领取次数
+}
+
+// -----------------------------------------
+// 转动
+message CSCrystalCubeTurn
+{
+	option (msgid) = 49202;
+}
+
+message SCCrystalCubeTurn
+{
+	option (msgid) = 49203;
+	required int32 result = 1;
+}
+
+// -----------------------------------------
+// 领取
+message CSCrystalCubeDraw
+{
+	option (msgid) = 49204;
+	required int32 type = 1;							// 0免费 1金币
+}
+
+message SCCrystalCubeDraw
+{
+	option (msgid) = 49205;
+	required int32 result = 1;
+	required int32 type = 2;
+	optional int64 draw_left_sec = 3;					// 领取剩余秒数(秒) 
+}
+
+message CSCrystalCubeBuyDrawCount
+{
+	option (msgid) = 49207;
+}
+
+message SCCrystalCubeBuyDrawCount
+{
+	option (msgid) = 49208;
+	required int32 result = 1;
+}

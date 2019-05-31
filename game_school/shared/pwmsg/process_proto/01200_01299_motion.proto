@@ -1,0 +1,67 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/01200_01299_motion.proto
+// -------------------------------------------------------
+// -----------------------------------------
+// “∆∂Ø–≈œ¢
+
+
+// -----------------------------------------
+
+message CSStartForward
+{
+	option (msgid) = 1201;
+	required SVector3 orientation = 1;
+	required SVector3 position = 2;
+	required SMotion motion = 3;
+}
+
+message SCStartForward
+{
+	option (msgid) = 1202;
+	required int64 id = 1;
+	required SVector3 position = 2;
+	required SMotion motion = 3;
+}
+
+message CSCleanForward
+{
+	option (msgid) = 1203;
+	required SVector3 orientation = 1;
+	required SVector3 position = 2;
+}
+
+message SCCleanForward
+{
+	option (msgid) = 1204;
+	required int64 id = 1;
+	required SVector3 orientation = 2;
+	required SVector3 position = 3;
+}
+
+message CSUpdateMoving
+{
+	option (msgid) = 1205;
+	required SVector3 position = 1;
+}
+
+message CSChangeOrientation
+{
+	option (msgid) = 1206;
+	required SVector3 position = 1;
+	required SVector3 orientation = 2;
+	optional SMotion motion = 3;
+}
+
+message SCChangeOrientation
+{
+	option (msgid) = 1207;
+	required int64 id = 1;
+	required SVector3 position = 2;
+	required SVector3 orientation = 3;
+	optional SMotion motion = 4;
+}

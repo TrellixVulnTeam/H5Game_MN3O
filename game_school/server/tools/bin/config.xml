@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<config>
+	<server>
+		<id>0</id>
+		<name>server0</name>
+		<dir>./</dir>
+	</server>
+	<server>
+		<id>1</id>
+		<name>server1</name>
+		<dir>./</dir>
+	</server>
+	<server>
+		<id>2</id>
+		<name>server2</name>
+		<dir>./</dir>
+	</server>
+	<server>
+		<id>3</id>
+		<name>server3</name>
+		<dir>./</dir>
+	</server>
+</config>

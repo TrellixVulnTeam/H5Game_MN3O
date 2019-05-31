@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.MainBattle" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group id="rootGroup" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" right="0">
+		<e:Image id="backImage" scaleX="1" scaleY="1" top="0" verticalCenter="0" bottom="0" left="0" horizontalCenter="0" right="0"/>
+		<e:Image id="image_mask" source="image_06_png" width="2000" height="2000" x="-625" y="-333"/>
+		<e:Group height="151" anchorOffsetY="0" bottom="0" left="0" right="0">
+			<e:Button id="btn_auto" label="" bottom="0" left="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn08_1_png" source.down="btn08_2_png" source.disabled="btn08_3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Button id="btn_manual" label="" bottom="0" left="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn11_1_png" source.down="btn11_2_png" source.disabled="btn11_3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Group id="skillGroup" width="325" height="128" anchorOffsetX="0" anchorOffsetY="0" bottom="0" right="0">
+			<e:Image width="320" height="141" source="image_26_png" y="-10" scaleX="1" scaleY="1" right="0"/>
+			<e:Image id="players_kill" width="90" height="90" anchorOffsetY="0" y="0" scaleX="1" scaleY="1" source="image_05_png" right="15"/>
+			<e:Image id="pinzhi" width="90" height="90" anchorOffsetY="0" y="0" scaleX="1" scaleY="1" source="quality_orange_png" right="15" visible="false"/>
+			<e:Label id="label_name_skill" text="糖多多喵" y="96" anchorOffsetX="0" width="112" size="24" textColor="0x000000" fontFamily="KaiTi" bold="true" scaleX="1" scaleY="1" right="7" textAlign="right"/>
+			<e:Group id="skill_list" width="180" height="110" y="16" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" right="124">
+				<e:layout>
+				<e:HorizontalLayout/>
+				</e:layout>
+			</e:Group>
+			</e:Group>
+		</e:Group>
+		<e:Group id="pointList" scaleX="1" scaleY="1" anchorOffsetY="0" top="0" bottom="152" width="750" horizontalCenter="0">
+			<e:Image id="one" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="0" height="0" x="260" y="500"/>
+			<e:Image id="two" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="800" x="260"/>
+			<e:Image id="three" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="1100" x="260"/>
+			<e:Image id="four" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="450" x="100"/>
+			<e:Image id="five" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="850" x="100"/>
+			<e:Image id="six" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="1150" x="100"/>
+			<e:Image id="seven" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="500" x="490"/>
+			<e:Image id="eight" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="800" x="490"/>
+			<e:Image id="nine" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="1100" x="490"/>
+			<e:Image id="ten" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="450" x="670"/>
+			<e:Image id="elven" height="100" anchorOffsetX="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="850" x="670"/>
+			<e:Image id="twelve" height="100" anchorOffsetX="0" anchorOffsetY="0" scaleX="0" scaleY="0" source="title01_png" width="100" y="1150" x="670"/>
+		</e:Group>
+	
+
+		<e:Group height="215" anchorOffsetY="0" top="0" left="0" right="0">
+			<e:Image height="86" source="title01_png" top="0" left="0" right="0" horizontalCenter="0"/>
+			<e:Image width="143" height="77" source="image_23_png" top="0" horizontalCenter="8.5"/>
+			<e:Image id="image_time" width="85" height="115" anchorOffsetY="0" source="image_time1_png" horizontalCenter="-3.5" top="123"/>
+			<e:Group width="287" height="110" anchorOffsetX="0" anchorOffsetY="0" y="0" right="0">
+				<e:Image width="176" height="45" anchorOffsetY="0" source="image_25_png" rotation="0" scaleX="-1" scaleY="1" x="185" y="7"/>
+				<e:Image width="106" height="106" source="image_28_png" anchorOffsetY="0" y="0" scaleX="1" scaleY="1" x="179"/>
+				<e:Image id="icon_enemy" width="100" height="100" anchorOffsetY="0" y="3" scaleX="1" scaleY="1" x="182" source="image_05_png"/>
+				<e:Group width="180" height="40" x="0" y="57" anchorOffsetX="0">
+					<e:Image width="180" height="40" x="180" y="0" source="image_31_png" scaleX="-1"/>
+					<e:Image id="pro_enemy" width="176" height="34" x="178" y="2" source="image_32_png" scaleX="-1"/>
+					<e:Label id="label_numenemy" text="100/100" size="26" y="7" anchorOffsetX="0" width="144" textAlign="left" fontFamily="KaiTi" textColor="0x490404" x="19"/>
+				</e:Group>
+				<e:Label id="label_name_enemy" text="腿毛毛" x="22" y="17" anchorOffsetX="0" width="149" size="28" fontFamily="KaiTi" textColor="0x0f0000" textAlign="right"/>
+			</e:Group>
+			<e:Group height="110" anchorOffsetX="0" anchorOffsetY="0" width="287" top="0" left="0">
+				<e:Image width="176" height="45" anchorOffsetY="0" source="image_25_png" rotation="0" scaleX="1" scaleY="1" x="101" y="2" skewX="1"/>
+				<e:Image width="106" height="106" source="image_28_png" anchorOffsetY="0" y="0" scaleX="1" scaleY="1" x="0"/>
+				<e:Image id="icon_player" width="100" height="100" source="image_05_png" anchorOffsetY="0" y="3" scaleX="1" scaleY="1" x="2"/>
+				<e:Group width="180" height="40" x="105" y="57" anchorOffsetX="0">
+				<e:Image width="180" height="40" x="0" y="0" source="image_31_png" scaleX="1"/>
+				<e:Image id="pro_player" width="176" height="34" x="2" y="2" source="image_32_png" scaleX="1" anchorOffsetX="0"/>
+				<e:Label id="label_numplayer" text="100/100" size="26" y="7" anchorOffsetX="0" width="144" textAlign="right" fontFamily="KaiTi" textColor="0x490404" x="21"/>
+				</e:Group>
+				<e:Label id="label_name_player" text="糖多多" x="113" y="12" anchorOffsetX="0" width="149" size="28" fontFamily="KaiTi" textColor="0x0F0000"/>
+			</e:Group>
+			<e:Label id="label_round" text="30" textColor="0x660707" anchorOffsetX="0" width="66" anchorOffsetY="0" height="45" textAlign="center" verticalAlign="middle" bold="true" fontFamily="Microsoft YaHei" size="50" top="10" horizontalCenter="0"/>
+			<e:Label id="label_time" text="30" y="135" anchorOffsetX="0" width="66" anchorOffsetY="0" height="45" textAlign="center" verticalAlign="middle" bold="true" fontFamily="Microsoft YaHei" size="50" horizontalCenter="0" textColor="0xffffff" visible="false"/>
+			<e:Button id="btn_backmain" label="" y="115" left="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_fanhuidating01_png" source.down="btn_fanhuidating02_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Group id="battle_time" width="750" height="161" y="127" x="0">
+				<e:Image width="747" height="161" x="0" y="0" source="image_50_png"/>
+				<e:Image width="379" height="81" source="image_49_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Group id="rount_group" width="133" height="69" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-38.5" verticalCenter="0">
+					<e:BitmapLabel id="font_battle_time" width="50" height="70" font="battle_time_fnt" anchorOffsetX="0" anchorOffsetY="0" text="12" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0.5"/>
+					<e:layout>
+						<e:HorizontalLayout paddingLeft="0" gap="0" horizontalAlign="center" verticalAlign="middle"/>
+					</e:layout>
+				</e:Group>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+	<e:Image id="image_black" scaleX="1" scaleY="1" source="image_06_png" alpha="1" left="0" right="0" top="0" bottom="0"/>
+</e:Skin>

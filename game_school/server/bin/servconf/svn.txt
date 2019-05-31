@@ -1,0 +1,1 @@
+svnadmin lslocks ./repos/ /mmo/branches/pwngs_openbeta_20140704  | grep "/mmo/branches/pwngs_openbeta_20140704" | awk '{$1="";print}' | xargs -i svnadmin rmlocks ./repos/ "{}"

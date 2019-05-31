@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+F:/pwngs_branches/trunk/deps/curl-7.36.0/lib/CMakeLists.txt
+F:/pwngs_branches/trunk/deps/curl-7.36.0/include/curl/curlbuild.h.cmake
+F:/pwngs_branches/trunk/deps/curl-7.36.0/lib/curl_config.h.cmake
+F:/pwngs_branches/trunk/deps/curl-7.36.0/build/lib/Makefile.inc.cmake

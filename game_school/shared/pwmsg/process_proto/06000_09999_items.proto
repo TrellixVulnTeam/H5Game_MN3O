@@ -1,0 +1,1374 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/06000_09999_items.proto
+// -------------------------------------------------------
+
+// 装备相关
+
+// 客户端请求: 装备一件物品
+message CSEquip
+{
+	option (msgid) = 6005;
+	required int32 src_bag = 1;
+	required int32 dst_bag = 2;
+	required int32 src_idx = 3;
+	required int32 dst_idx = 4;
+	optional int32 context = 5;
+}
+
+// 服务器通知: 装备物品反馈
+message SCEquipResult
+{
+	option (msgid) = 6006;
+	required int32 result = 1;
+	required int64 id = 2;
+	required int32 src_bag = 3;
+	required int32 dst_bag = 4;
+	required int32 src_idx = 5;
+	required int32 dst_idx = 6;
+	optional SEquipObject equipObject = 7;
+    optional int64 old_equip_type = 8; // 替换下来的装备itemtype,0=没有
+}
+
+// 客户端请求: 卸载一件物品
+message CSUnEquip
+{
+	option (msgid) = 6010;
+	required int32 src_bag = 1;
+	required int32 dst_bag = 2;
+	required int32 src_idx = 3;
+	required int32 dst_idx = 4;
+}
+
+// 服务器通知: 卸载物品反馈
+message SCUnEquipResult
+{
+	option (msgid) = 6011;
+	required int32 result = 1;
+	required int64 id = 2;
+	required int32 src_bag = 3;
+	required int32 dst_bag = 4;
+	required int32 src_idx = 5;
+	required int32 dst_idx = 6;
+	optional SEquipObject equipObject = 7;
+    optional int32 src_tid = 8; // 卸下装备的tid
+}
+
+// 客户端请求: 更换时装
+message CSEquipFashion
+{
+	option (msgid) = 6015;
+	required bool dressed = 1;
+}
+
+// 服务器通知: 更换时装
+message SCEquipFashion
+{
+	option (msgid) = 6016;
+	required int64 uid = 1;
+	required bool dressed = 2;
+}
+
+// 客户端请求: 丢弃一件装备
+message CSEquipDiscard
+{
+	option (msgid) = 6020;
+	required int32 src_idx = 1;
+}
+
+// 服务器通知: 丢弃装备反馈
+message SCEquipDiscardResult
+{
+	option (msgid) = 6021;
+	required int32 result = 1;
+	required int32 src_idx = 2;
+}
+
+// 服务器通知: 装备信息更新广播（AOI范围内）
+message SCEquipObjectUpdate
+{
+	option (msgid) = 6030;
+	required int64 owner = 1;
+	required SEquipObject equipObject = 2;
+}
+
+message SCEquipIndexGemUpdate
+{
+	option (msgid) = 6040;
+	required SEquipIndexGem gem = 1;
+}
+
+message SCEquipIndexGemInitial
+{
+	option (msgid) = 6041;
+	repeated SEquipIndexGem gems = 1;
+}
+
+message CSOneKeyInlayGems
+{
+	option (msgid) = 6042;
+}
+
+// 宝石融合玩法
+message CSGemCombineEx
+{
+	option (msgid) = 6043;
+	repeated int64 src_gem_uuid = 1;
+	required int32 dst_gem_type = 2;
+}
+
+message SCGemCombineExResult
+{
+	option (msgid) = 6044;
+	required int32 result = 1;
+}
+
+// 物品相关
+
+// 客户端请求: 获取物品列表
+message CSItemQuery
+{
+	option (msgid) = 7010;
+	required int64 id = 1;
+	required int32 item_bag = 2;
+}
+
+// 服务端通知: 下发物品列表
+message SCItemQueryResult
+{
+	option (msgid) = 7011;
+	required int64 id = 1;
+	required int32 item_bag = 2;
+	required int32 bag_size = 3;
+	repeated SItem items = 4;
+	optional int32 bag_ini_size = 5;
+	optional int32 bag_max_size = 6;
+	optional int32 bag_unlock_index = 7;
+	optional int32 bag_unlock_timer = 8;
+}
+
+// 服务端通知: 增加一个物品
+message SCItemAdd
+{
+	option (msgid) = 7020;
+	required SItem items = 1;
+	required int32 reason = 2;
+}
+
+// 服务端通知: 删除一个物品
+message SCItemDel
+{
+	option (msgid) = 7031;
+	required int64 item_id = 1;
+	required int32 item_bag = 2;
+	required int32 reason = 3;
+}
+
+// 客户端请求: 丢弃一件物品
+message CSItemDiscard
+{
+	option (msgid) = 7032;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+}
+
+// 服务器通知: 丢弃物品反馈
+message SCItemDiscardResult
+{
+	option (msgid) = 7033;
+	required int32 result = 1;
+	required int32 item_bag = 2;
+	required int32 item_idx = 3;
+}
+
+// 服务端通知: 更新物品信息
+message SCItemUpdate
+{
+	option (msgid) = 7040;
+	required SItem items = 1;
+	required int32 reason = 2;
+}
+
+// 客户端请求: 交换两个物品
+message CSItemSwap
+{
+	option (msgid) = 7050;
+	required int32 src_bag = 1;
+	required int32 dst_bag = 2;
+	required int32 src_idx = 3;
+	required int32 dst_idx = 4;
+}
+
+// 服务端通知: 交换物品反馈
+message SCItemSwapResult
+{
+	option (msgid) = 7051;
+	required int32 result = 1;
+	required int32 src_bag = 2;
+	required int32 dst_bag = 3;
+	required int32 src_idx = 4;
+	required int32 dst_idx = 5;
+}
+
+// 客户端请求: 使用一个物品
+message CSItemUse
+{
+	option (msgid) = 7060;
+	required int64 item_id = 1;
+	required int32 item_bag = 2;
+	optional int32 item_count = 3;
+}
+
+// 服务端通知: 使用物品反馈
+message SCItemUseResult
+{
+	option (msgid) = 7061;
+	required int32 result = 1;
+	required int64 item_id = 2;
+	required int32 item_bag = 3;
+	optional int32 item_tid = 4;
+}
+
+// 客户端请求: 出售背包物品
+message CSItemSell
+{
+	option (msgid) = 7070;
+	required int32 item_bag = 1;
+	repeated int64 item_ids = 2;
+}
+
+// 服务端通知: 出售物品反馈
+message SCItemSellResult
+{
+	option (msgid) = 7071;
+	required int32 result = 1;
+	required int32 silver = 2;
+}
+
+// 客户端请求: 整理背包物品
+message CSItemPack
+{
+	option (msgid) = 7080;
+	required int32 item_bag = 1;
+}
+
+// 服务端通知: 整理背包反馈
+message SCItemPackResult
+{
+	option (msgid) = 7081;
+	required int32 result = 1;
+	required int32 item_bag = 2;
+}
+
+// 客户端请求: 背包容量扩充
+message CSBagExpand
+{
+	option (msgid) = 7090;
+	required int32 item_bag = 1;
+	required int32 inc_size = 2;
+}
+
+// 服务端通知: 背包扩充反馈
+message SCBagExpandResult
+{
+	option (msgid) = 7091;
+	required int32 result = 1;
+	required int32 item_bag = 2;
+	required int32 new_size = 3;
+}
+
+// 服务端通知: 背包解锁计时
+message SCBagExpandTimer
+{
+	option (msgid) = 7092;
+	required int32 item_bag = 1;
+	required int32 unlock_index = 2;
+	required int32 unlock_timer = 3;
+}
+
+// 客户端请求: 拆分一个物品
+message CSItemSplit
+{
+	option (msgid) = 7100;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+	required int32 split_count = 3;
+}
+
+// 服务端通知: 拆分物品反馈
+message SCItemSplitResult
+{
+	option (msgid) = 7101;
+	required int32 result = 1;
+}
+
+// -------------------------------------------------------------------------
+// -------------------------------------------------------------------------
+
+// 服务端通知: 合成物品准备
+message SCItemSynthesisStart
+{
+	option (msgid) = 7200;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+}
+
+// 客户端请求: 配方合成物品
+message CSItemSynthesis
+{
+	option (msgid) = 7201;
+	required int64 item_id = 1;
+	required bool do_cost_gold = 2;
+}
+
+// 服务端通知: 合成物品反馈
+message SCItemSynthesisResult
+{
+	option (msgid) = 7202;
+	required int32 result = 1;
+}
+
+
+// -----------------------------------------
+
+// 客户端请求: 启动装备升阶
+message CSEquipUpgradeStart
+{
+	option (msgid) = 7230;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+}
+
+// 服务端通知: 装备升阶启动
+message SCEquipUpgradeStart
+{
+	option (msgid) = 7231;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+}
+
+// 客户端请求: 请求装备升阶
+message CSEquipUpgrade
+{
+	option (msgid) = 7232;
+	required int64 item_id = 1;
+}
+
+// 服务端通知: 升阶结果反馈
+message SCEquipUpgradeResult
+{
+	option (msgid) = 7233;
+	required int32 result = 1;
+}
+
+// 装备升星
+message CSEquipStarUp
+{
+	option (msgid) = 7240;
+	required int64 item_id = 1;
+	required bool use_gold = 2;	//使用元宝，升星几率提升100%
+	required bool use_gold_item = 3; //使用元宝代替不足的物品
+}
+message SCEquipStarUpResult
+{
+	option (msgid) = 7241;
+	required int32 result = 1;
+}
+
+// 装备一键升星
+message CSEquipAutoStarUp
+{
+	option (msgid) = 7242;
+}
+message SCEquipAutoStarUpResult
+{
+	option (msgid) = 7243;
+	required int32 result = 1;
+}
+
+// -----------------------------------------
+
+// 客户端请求: 请求装备强化
+message CSEquipEnchant
+{
+	option (msgid) = 7252;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+	optional bool use_gold = 3;
+	optional bool use_luck = 4;
+}
+
+// 服务端通知: 强化结果反馈
+message SCEquipEnchantResult
+{
+	option (msgid) = 7253;
+	required int32 result = 1;
+	optional int32 item_bag = 2;
+	optional int32 item_idx = 3;
+}
+
+// 客户端请求: 请求装备强化继承
+message CSEquipInherit
+{
+	option (msgid) = 7254;
+	required int32 src_bag = 1;
+	required int32 src_idx = 2;
+	required int32 dst_bag = 3;
+	required int32 dst_idx = 4;
+	optional bool use_gold = 5;
+}
+
+// 服务端通知: 强化继承结果反馈
+message SCEquipInheritResult
+{
+	option (msgid) = 7255;
+	required int32 result = 1;
+	optional int32 src_bag = 2;
+	optional int32 src_idx = 3;
+	optional int32 dst_bag = 4;
+	optional int32 dst_idx = 5;
+}
+
+// -----------------------------------------
+
+// 客户端请求: 灵石祝福启动
+message CSItemBlessStart
+{
+	option (msgid) = 7260;
+}
+
+// 服务端通知: 启动灵石祝福
+message SCItemBlessStart
+{
+	option (msgid) = 7261;
+	required int32 result = 1;
+}
+
+// 客户端请求: 激活祝福属性
+message CSItemBlessActive
+{
+	option (msgid) = 7262;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+	required int32 attr_idx = 3;
+}
+
+// 服务端通知: 激活结果反馈
+message SCItemBlessActiveResult
+{
+	option (msgid) = 7263;
+	required int32 result = 1;
+}
+
+// 客户端请求: 请求灵石祝福
+message CSItemBless
+{
+	option (msgid) = 7264;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+	repeated int32 attr_lock_idxs = 3;
+	required bool random_or_target = 4;
+	optional int32 target_attr_id = 5;
+	optional int32 target_attr_range = 6;
+	optional int32 target_count = 7;
+}
+
+// 服务端通知: 祝福结果反馈
+message SCItemBlessResult
+{
+	option (msgid) = 7265;
+	required int32 result = 1;
+	required bool random_or_target = 2;
+	optional int32 target_count = 3;
+}
+
+//------------------------------------------
+// 宝石玩法
+message CSGemCombine
+{
+	option (msgid) = 7270;
+	required int32 item_bag = 1;
+	required int32 item_tid = 2;
+	required int32 gem_count = 3;
+	optional int32 binded_num = 4;
+	optional int32 unbinded_num = 5;
+	optional bool use_gold = 6;
+	optional bool use_binding_item = 7;
+}
+
+message SCGemCombineResult
+{
+	option (msgid) = 7271;
+	required int32 result = 1;
+	required int32 src_gem_id = 2;
+	optional bool use_binding_item = 3;
+}
+
+message CSGemInlay
+{
+	option (msgid) = 7272;
+	required int32 src_bag = 1;
+	required int32 src_idx = 2;
+	required int32 dst_bag = 3;
+	required int32 dst_idx = 4;
+	required int32 gem_idx = 5;
+}
+
+message SCGemInlayResult
+{
+	option (msgid) = 7273;
+	required int32 result = 1;
+}
+
+message CSGemRemove
+{
+	option (msgid) = 7274;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+	required int32 gem_idx = 3;
+}
+
+message SCGemRemoveResult
+{
+	option (msgid) = 7275;
+	required int32 result = 1;
+}
+
+message CSGemRemoveAll
+{
+	option (msgid) = 7276;
+	required int32 item_bag = 1;
+	required int32 item_idx = 2;
+}
+
+message SCGemRemoveAllResult
+{
+	option (msgid) = 7277;
+	required int32 result = 1;
+}
+
+// 客户端请求: 请求宝石升级
+message CSGemUpgrade
+{
+	option (msgid) = 7278;
+	required int32 dst_idx = 1;
+	required int32 gem_idx = 2;
+}
+
+// 服务端通知: 宝石升级反馈
+message SCGemUpgradeResult
+{
+	option (msgid) = 7279;
+	required int32 result = 1;
+}
+
+//------------------------------------------
+// 装备精炼
+message CSEquipRefine
+{
+	option (msgid) = 7280;
+	required int32 bag = 1;
+	required int32 index = 2;
+}
+
+// 装备精炼反馈
+message SCEquipRefineResult
+{
+	option (msgid) = 7281;
+	required int32 result = 1;
+}
+
+//------------------------------------------
+// 装备符文玩法
+message CSEquipRuneInlay
+{
+	option (msgid) = 7290;
+	required int32 src_bag = 1;
+	required int32 src_idx = 2;
+	required int32 dst_bag = 3;
+	required int32 dst_idx = 4;
+}
+
+message SCEquipRuneInlayResult
+{
+	option (msgid) = 7291;
+	required int32 result = 1;
+	optional int32 dst_bag = 2;
+	optional int32 dst_idx = 3;
+}
+
+// -----------------------------------------
+// 拾取物品
+message CSPickupItem
+{
+	option (msgid) = 7300;
+	required int64 id = 1;
+}
+
+message SCPickupItemResult
+{
+	option (msgid) = 7301;
+	required int64 id = 1;
+	required int32 result = 2;
+}
+
+//------------------------------------------
+// 公会商店玩法
+message CSRefreshGuildShop
+{
+	option (msgid) = 7310;
+}
+
+message SCRefreshGuildShopResult
+{
+	option (msgid) = 7311;
+	required int32 result = 1;
+	repeated SGuildShopItem items = 2;
+}
+
+message CSBuyGuildShopItem
+{
+	option (msgid) = 7312;
+	required int32 index = 1;
+}
+
+message SCBuyGuildShopItemResult
+{
+	option (msgid) = 7313;
+	required int32 result = 1;
+	optional int32 index = 2;
+}
+
+message CSQueryGuildMall
+{
+	option (msgid) = 7314;
+}
+
+message SCQueryGuildMallResult
+{
+	option (msgid) = 7315;
+	repeated SGuildMallItem mall_items = 1;
+	required bool is_query = 2; 
+}
+
+message CSBuyGuildMallItem
+{
+	option (msgid) = 7316;
+	required int32 index = 1;
+	required int32 count = 2;
+}
+
+message SCBuyGuildMallItemResult
+{
+	option (msgid) = 7317;
+	required int32 result = 1;
+	optional int32 index = 2;
+	optional int32 count = 3;
+}
+
+//------------------------------------------
+// 公会仓库
+
+message CS_GDepositoryQuery
+{
+    option (msgid) = 7400;
+}
+
+message SC_GDepositoryQuery
+{
+    option (msgid) = 7401;
+    repeated SPlainItem plain_items = 1;    
+}
+
+message CS_GDepositoryAllot
+{
+    option (msgid) = 7405;
+    required int32 type = 1;
+    required int32 count = 2;
+    required int64 target = 3;
+    optional int32 index = 4;
+}
+
+message SC_GDepositoryNum
+{
+    option (msgid) = 7410;
+    required SPlainItem plain_item = 1;
+}
+
+message SC_GDepositoryAdd
+{
+    option (msgid) = 7411;
+    required SPlainItem plain_item = 1;
+}
+
+message SC_GDepositoryDel
+{
+    option (msgid) = 7412;
+    required int32 index = 1;
+}
+
+//------------------------------------------
+// 装备附加属性鉴定
+message CSEquipExtendAttrIdentify
+{
+	option (msgid) = 7450;
+	required int32 src_index = 1;
+	required int32 dst_index = 2;
+	required int32 dst_bag = 3;
+}
+
+message SCEquipExtendAttrIdentifyResult
+{
+	option (msgid) = 7451;
+	required int32 result = 1;
+}
+
+//------------------------------------------
+// 装备分解
+message CSEquipDecompose
+{
+	option (msgid) = 7460;
+	required int32 bag = 1;
+	repeated int64 uuids = 2;
+}
+
+message SCEquipDecomposeResult
+{
+	option (msgid) = 7461;
+	required int32 result = 1;
+}
+
+//------------------------------------------
+// 装备属性重铸
+message CSEquipRecast
+{
+	option (msgid) = 7470;
+	required int32 bag = 1;
+	required int32 idx = 2;
+	required int32 mod = 3;
+	optional bool use_gold = 4;
+}
+
+message SCEquipRecastResult
+{
+	option (msgid) = 7471;
+	required int32 result = 1;
+}
+
+//------------------------------------------
+// 物品商城价格
+message CSItemFetchPrice
+{
+	option (msgid) = 7480;
+	repeated int32 tid = 1;
+}
+
+message SCItemFetchPrice
+{
+	option (msgid) = 7481;
+	repeated SItemPrice price = 1;
+}
+
+//------------------------------------------
+// 装备宝石开启信息
+message SCGemOpensUpdate
+{
+	option (msgid) = 7485;
+	repeated SGemOpen opens = 1;
+}
+
+//------------------------------------------
+// 物品合成
+message CSItemCompose
+{
+	option (msgid) = 7487;
+	required int32 dst_tid = 1;
+}
+
+message SCItemComposeResult
+{
+	option (msgid) = 7488;
+	required int32 result = 1;
+}
+
+
+//------------------------------------------
+// 装备属性洗练
+message CSEquipWash
+{
+	option (msgid) = 7490;
+	required int32 bag = 1;
+	required int32 idx = 2;
+	required int32 mod = 3;// 洗练级别 1初级 2中级 3高级
+	optional bool is_ten_time = 4; //是否洗练10次
+}
+
+message SCEquipWashResult
+{
+	option (msgid) = 7491;
+	required int32 result = 1;
+}
+
+
+//------------------------------------------
+// 装备加锁
+message CSEquipLockOrUnlock
+{
+	option (msgid) = 7492;
+	required int32 bag = 1;
+	required int32 idx = 2;
+	required bool islock = 3; //true为加锁
+}
+
+message SCEquipLockOrUnlockResult
+{
+	option (msgid) = 7493;
+	required int32 bag = 1;
+	required int32 idx = 2;
+	required int32 result = 3;
+	required bool islock = 4; //true为加锁
+}
+
+
+
+//------------------------------------------
+// 时装相关
+
+message CSEquipFashionEnhance
+{
+	option (msgid) = 7500;
+	required int32 bag = 1;
+	required int64 id = 2;
+	
+}
+
+message SCEquipFashionEnhance
+{
+	option (msgid) = 7501;
+	required int32 result = 1;
+	required int32 bag = 2;
+	required int64 id = 3;
+}
+
+message CSEquipFashionPartsEnhance
+{
+	option (msgid) = 7502;
+	required int32 bag = 1;
+	required int64 id = 2;
+	required int32 idx = 3;
+	required bool gold_replace = 4;
+}
+
+message SCEquipFashionPartsEnhance
+{
+	option (msgid) = 7503;
+	required int32 result = 1;
+	required int32 bag = 2;
+	required int64 id = 3;
+	required int32 idx = 4;
+	required bool gold_replace = 5;
+}
+
+message CSEquipFashionActive
+{
+	option (msgid) = 7504;
+	required int32 tid = 1;
+}
+
+message SCEquipFashionActive
+{
+	option (msgid) = 7505;
+	required int32 result = 1;
+	required int32 tid = 2;
+}
+
+//------------------------------------------
+// 装备合成相关
+
+message CSEquipComposeNew
+{
+	option (msgid) = 7552;
+	required int32 id = 1;
+	required bool inherit = 2;
+}
+
+message SCEquipComposeNewResult
+{
+	option (msgid) = 7553;
+	required int32 result = 1;
+}
+
+
+//------------------------------------------
+// 翅膀打造相关
+message CSWingBreakup
+{
+	option (msgid) = 7555;
+	required int64 uuid = 1;
+	required bool use_gold = 2;
+}
+
+message SCWingBreakupResult
+{
+	option (msgid) = 7556;
+	required int32 result = 1;
+	optional bool is_levelup = 2;
+}
+
+message CSWingLevelup
+{
+	option (msgid) = 7557;
+	required int64 uuid = 1;
+	required int32 type = 2;
+	required bool use_gold = 3;
+}
+
+message SCWingLevelupResult
+{
+	option (msgid) = 7558;
+	required int32 result = 1;
+	optional bool is_crit = 2;
+	optional bool is_starup = 3;
+	optional bool is_levelup = 4;
+}
+
+message CSWingChangeBreakStep
+{
+	option (msgid) = 7559;
+	required int64 uuid = 1;
+	required int32 step = 2;
+}
+
+message SCWingChangeBreakStepResult
+{
+	option (msgid) = 7560;
+	required int32 result = 1;
+	required int64 uuid = 2;
+	required int32 step = 3;
+}
+
+// 装备洗练
+message CSQueryEquipWash
+{
+	option (msgid) = 7570;
+}
+
+message SEquipWashInfo
+{
+	required int32 idx = 1;
+	required int32 val1 = 10;
+	required int32 val2 = 20;
+	required int32 val3 = 30;
+	required int32 level = 40;
+}
+
+message SCQueryEquipWash
+{
+	option (msgid) = 7571;
+	repeated SEquipWashInfo equip_wash = 1;
+}
+
+message CSDoEquipWash
+{
+	option (msgid) = 7572;
+	required int32 idx = 1;
+	required int32 stone_type = 2;
+	required bool use_gold_item = 3;
+}
+
+message SCUpdateEquipWash
+{
+	option (msgid) = 7573;
+	required SEquipWashInfo equip_wash = 1;
+}
+
+message SCDoEquipWash
+{
+	option (msgid) = 7574;
+	required int32 result = 1;
+}
+
+message CSEquipRefineEx
+{
+	option (msgid) = 7575;
+	repeated int32 idx = 1;
+}
+
+message SCEquipRefineEx
+{
+	option (msgid) = 7576;
+	required int32 result = 1;
+}
+
+message CSQueryEquipRefineInfo
+{
+	option (msgid) = 7577;
+}
+
+message SCUpdateEquipRefineInfo
+{
+	option (msgid) = 7578;
+	required int32 level = 1;
+	required int32 exp = 2;
+}
+
+// 请求开启宝石槽位
+message CSGemOpenSlot
+{
+	option (msgid) = 7579;
+	required int32 equ_idx = 1;		//装备位置ID
+	required int32 Slot_idx = 2; 	//对应宝石槽位ID
+}
+
+// 查询宝石槽位状态
+message CSQueryGemSlotState
+{
+	option (msgid) = 7580;
+}
+
+// 宝石槽位信息
+message SCGemSlotStateMesResult
+{
+	option (msgid) = 7581;
+	repeated SEquGemSlotState slots_state = 1; //槽位信息,查询时返回所有信息，单独时对应信息
+	required int32 result = 2;// 0=成功
+}
+
+// 洗练升阶
+message CSWashRankUp
+{
+	option (msgid) = 7590;
+	required int32 idx = 1;
+}
+
+message SCWashRankUp
+{
+	option (msgid) = 7591;
+	required int32 result = 1;
+}
+
+// ------------------------------------------
+// 神器相关
+// ------------------------------------------
+
+// 神器信息查询
+message CSHolyWeaponQuery
+{
+	option (msgid) = 7600;
+	optional int64 holy_weapon_id = 1;
+}
+
+message SCHolyWeaponQueryResult
+{
+	option (msgid) = 7601;
+	repeated SHolyWeapon weapons = 1;
+}
+
+// 装备
+message CSHolyWeaponEquip
+{
+	option (msgid) = 7602;
+	required int64 holy_weapon_id = 1;
+}
+
+message SCHolyWeaponEquipResult
+{
+	option (msgid) = 7603;
+	required int32 result = 1;
+	optional SHolyWeapon weapon = 2;
+}
+
+// 空闲
+message CSHolyWeaponIdle
+{
+	option (msgid) = 7604;
+	required int64 holy_weapon_id = 1;
+}
+
+message SCHolyWeaponIdleResult
+{
+	option (msgid) = 7605;
+	required int32 result = 1;
+	optional SHolyWeapon weapon = 2;
+}
+
+// 激活
+message CSHolyWeaponActivate
+{
+	option (msgid) = 7606;
+	required int64 holy_weapon_id = 1;
+}
+
+message SCHolyWeaponActivateResult
+{
+	option (msgid) = 7607;
+	required int32 result = 1;
+	optional SHolyWeapon weapon = 2;
+}
+
+// 培养经验
+message CSHolyWeaponExpUp
+{
+	option (msgid) = 7608;
+	required int64 holy_weapon_id = 1;
+}
+
+message SCHolyWeaponExpUpResult
+{
+	option (msgid) = 7609;
+	required int32 result = 1;
+	optional SHolyWeapon weapon = 2;
+}
+
+// 升阶
+message CSHolyWeaponRankUp
+{
+	option (msgid) = 7610;
+	required int64 holy_weapon_id = 1;
+}
+
+message SCHolyWeaponRankUpResult
+{
+	option (msgid) = 7611;
+	required int32 result = 1;
+	optional SHolyWeapon weapon = 2;
+}
+
+// 神器能量值查询
+message CSHolyWeaponEnergyQuery
+{
+	option (msgid) = 7612;
+}
+
+message SCHolyWeaponEnergyResult
+{
+	option (msgid) = 7613;
+	required int32 energy = 1;
+}
+// ------------------------------------------
+// 法宝相关
+// ------------------------------------------
+// 法宝信息查询
+message CSMagicWeaponQuery
+{
+	option (msgid) = 7614;
+	//repeated int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponQueryResult
+{
+	option (msgid) = 7615;
+	repeated SMagicWeapon weapons = 1;
+}
+
+// 激活
+message CSMagicWeaponActivate
+{
+	option (msgid) = 7616;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponActivateResult
+{
+	option (msgid) = 7617;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+// 装备
+message CSMagicWeaponEquip
+{
+	option (msgid) = 7618;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponEquipResult
+{
+	option (msgid) = 7619;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+// 空闲
+message CSMagicWeaponIdle
+{
+	option (msgid) = 7620;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponIdleResult
+{
+	option (msgid) = 7621;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+// 升级
+message CSMagicWeaponLevelUp
+{
+	option (msgid) = 7622;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponLevelUpResult
+{
+	option (msgid) = 7623;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+// 一键升级
+message CSMagicWeaponLevelUpOnekey
+{
+	option (msgid) = 7624;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponLevelUpOnekeyResult
+{
+	option (msgid) = 7625;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+// 进阶 
+message CSMagicWeaponAdvanceUp
+{
+	option (msgid) = 7626;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponAdvanceUpResult
+{
+	option (msgid) = 7627;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+// 一键进阶
+message CSMagicWeaponAdvanceUpOneKey
+{
+	option (msgid) = 7628;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponAdvanceUpOneKeyResult
+{
+	option (msgid) = 7629;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+// 升星 
+message CSMagicWeaponStarUp
+{
+	option (msgid) = 7630;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponStarUpResult
+{
+	option (msgid) = 7631;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+// 充能
+message CSMagicWeaponChargeEnergy
+{
+	option (msgid) = 7632;
+	required int64 magic_weapon_id = 1;
+}
+
+message SCMagicWeaponChargeEnergyResult
+{
+	option (msgid) = 7633;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+
+//改变技能效果id
+message CSMagicWeaponChangeEffectId
+{
+	option (msgid) = 7634;
+	required int64 magic_weapon_id = 1;
+	required int32 magic_weapon_new_effect_id = 2;
+}
+
+message SCMagicWeaponChangeEffectIdResult
+{
+	option (msgid) = 7635;
+	required int32 result = 1;
+	optional SMagicWeapon weapon = 2;
+}
+//更新装备的法宝
+message SCMagicWeaponEquipUpdate
+{
+	option (msgid) = 7636;
+	required int64 uid = 1;
+	required int32 weaponId = 2;
+	required int32 status = 3;
+}
+
+// ------------------------------------------
+// 新神器相关
+// ------------------------------------------
+// 新神器信息查询
+
+message CSWeaponQuery
+{
+	option (msgid) = 7640;
+}
+
+message SCWeaponQueryResult
+{
+	option (msgid) = 7641;
+	repeated SNewWeapon weapons = 1;
+}
+
+// 激活
+message CSWeaponActivate
+{
+	option (msgid) = 7642;
+	required int64 weapon_id = 1;
+}
+
+message SCWeaponActivateResult
+{
+	option (msgid) = 7643;
+	required int32 result = 1;
+	optional SNewWeapon weapon = 2;
+}
+// 升级
+message CSWeaponLevelUp
+{
+	option (msgid) = 7644;
+	required int64 weapon_id = 1;
+}
+
+message SCWeaponLevelUpResult
+{
+	option (msgid) = 7645;
+	required int32 result = 1;
+	optional SNewWeapon weapon = 2;
+}
+
+// 进阶 
+message CSWeaponAdvanceUp
+{
+	option (msgid) = 7647;
+	required int64 weapon_id = 1;
+}
+
+message SCWeaponAdvanceUpResult
+{
+	option (msgid) = 7648;
+	required int32 result = 1;
+	optional SNewWeapon weapon = 2;
+}
+
+

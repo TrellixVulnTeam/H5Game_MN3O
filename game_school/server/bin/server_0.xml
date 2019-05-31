@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>worldsrv0</name>
+    
+	<communicator>
+		<listen_addr>tcp://127.0.0.1:8701</listen_addr>
+	</communicator>
+	
+    <pwworldsrv>
+		<id>0</id>
+		<mode>1</mode>
+		<csv_path>./data/csv/</csv_path>        
+        
+        <thread_world>
+            <enable>true</enable>
+            <thread_num>5</thread_num>
+        </thread_world>
+        
+        <thread_login>
+            <enable>true</enable>
+        </thread_login>
+        
+        <thread_support>
+            <enable>false</enable>
+            <port>port_support</port>
+        </thread_support>
+
+	</pwworldsrv>
+	<nodes>
+		<count>4</count>
+		<node1>
+			<name>dbsrv</name>
+			<addr>tcp://127.0.0.1:8709</addr>
+		</node1>
+		<node2>
+			<name>ctrlsrv</name>
+			<addr>tcp://127.0.0.1:8708</addr>
+		</node2>
+		<node3>
+			<name>connsrv</name>
+			<addr>tcp://127.0.0.1:8707</addr>
+		</node3>
+		<node4>
+			<name>accsrv</name>
+			<addr>tcp://127.0.0.1:8706</addr>
+		</node4>
+	</nodes>
+</pwdist>
+
+

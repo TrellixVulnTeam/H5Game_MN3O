@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.DialogViewRadioButtonSkin" states="up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected" xmlns:e="http://ns.egret.com/eui">
+    <e:Group left="0" right="0" top="0" bottom="0" width="640" height="58">
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+        <e:Image fillMode="scale" alpha="1" alpha.disabled="0.5" alpha.down="0.7"
+                 source.upAndSelected="btn_dia1_png"
+                 source.downAndSelected="btn_dia2_png"
+                 source.disabledAndSelected="btn_dia2_png" left="0" right="0" top="0" bottom="0" source="btn_dia1_png"/>
+        <e:Label id="labelDisplay" size="25"
+                 textAlign="center" verticalAlign="middle"
+                 fontFamily="Microsoft YaHei" top="0" bottom="0" textColor="0xffffff" text="" horizontalCenter="-2.5" left="46" right="51" anchorOffsetX="0"/>
+    </e:Group>
+</e:Skin>

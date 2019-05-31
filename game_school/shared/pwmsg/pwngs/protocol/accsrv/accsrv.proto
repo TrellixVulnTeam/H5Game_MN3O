@@ -1,0 +1,174 @@
+import "pwngs/options.proto";
+package pwngs.protocol.accsrv;
+
+// -----------------------------------------
+// 以下为acc消息(msgid为1-999)
+// -----------------------------------------
+
+enum EProgramVersion
+{
+    MajorVersion = 1;
+    MinorVersion = 0;
+};
+
+// 173.com登录接口
+message CSLoginEx {
+    option (msgid) = 10;
+    required int64 userid = 1;
+    required int64 tm = 2;
+    required int32 fatigue = 3;
+    required bytes signature = 4;
+    required int32 major_version = 5;
+    required int32 minor_version = 6;
+    optional int32 client_type = 7;
+    optional bytes agent = 8;
+}
+
+message CSLogin {
+	option (msgid) = 11;
+	required string name = 1;
+	required string pswd = 2;
+    optional string token = 3;
+    required int32 major_version = 4;
+    required int32 minor_version = 5;
+    optional int32 client_type = 6;
+    optional bytes agent = 7;
+}
+
+message SCLoginResult {
+	option (msgid) = 12;
+	required int32 result = 1;
+	optional string error = 2;
+    optional string suggestion_name = 3; // 建议使用名
+}
+
+message CSTokenLogin {
+	option (msgid) = 15;
+	required int32 type = 1; // 1=老虎网登录
+	required string name = 2;
+	required string token = 3;	
+}
+
+// -----------------------------------------------------------------
+// 新的登录消息
+// -----------------------------------------------------------------
+
+enum ELoginType
+{
+	LoginType_UserPswd = 0;	// 账号密码登录
+	LoginType_173 = 1;		// 173登录
+	LoginType_LaoHu = 2;	// 老虎网登录
+	LoginType_LianYun = 3; 	// 联运登录
+    LoginType_Tencent = 4; // 腾讯开放平台登录
+    LoginType_ARC = 5;      // 北美ARC token登录,使用SLoginToken
+	LoginType_XiYou = 6;    //西游网登陆
+	LoginType_360 = 7;    //360平台登陆
+	LoginType_Kor = 8;    //kor平台登陆
+	LoginType_Ladder = 100; // 天梯登录
+};
+
+// -----------------------------------------------------------------
+
+message SLoginInformation
+{
+    required int32 major_version = 1;
+    required int32 minor_version = 2;
+    optional int32 client_type = 3;
+    optional bytes agent = 4;
+	optional bytes unique_device_id = 5;
+	optional bytes adid = 6;
+	optional int32 zoneid = 7;
+};
+
+// -----------------------------------------------------------------
+
+message SLoginUserPswd
+{
+	required string name = 1;
+	required string pswd = 2;
+};
+
+message SLogin173
+{
+	required int64 userid = 1;
+    required int64 tm = 2;
+    required int32 fatigue = 3;
+    required bytes signature = 4;
+};
+
+message SLoginToken
+{
+	required string name = 1;
+	required string token = 2;
+};
+
+message SLoginLianYun
+{
+	optional bytes	ip = 1;
+	optional int32	port = 2;
+	optional int32	serverid = 3;
+	optional bytes	servername = 4;
+	optional bytes	agent = 5;
+	optional bytes	uid = 6;
+	optional int64	t = 7;
+	optional int32	cm = 8;
+	optional bytes	sign = 9;
+}
+
+message SLoginTencent
+{
+    required string openid = 1;
+    required string openkey = 2;
+    required string platform = 3; // qzone,pengyou,qqgame....
+    required string platform_key = 4;
+    optional int32 pid = 5;
+};
+
+message SLoginXiYou
+{
+    required string sid = 1;
+    required string uid = 2;
+	required int32 fcm = 3;
+    required string exts = 4;
+	required int64 time = 5;
+    required string platform = 6;
+	required string sign = 7;
+    required string type = 8;
+	required string channel = 9;
+};
+
+message SLogin360
+{
+	required int64 qid = 1;
+	required string server_id = 2;
+	required int64 time = 3;
+	required int32 isAdult = 4;
+	required string sign = 5;
+};
+
+message SLoginKor
+{
+	required int64 uid = 1;
+	required string platform = 2;
+	required int32 sid = 3;
+	required int64 time = 4;
+	required int32 fcm = 5;
+	required int32 type = 6;
+	required string sign = 7;
+};
+// -----------------------------------------------------------------
+
+message CSLoginNew
+{
+	option (msgid) = 16;
+	required ELoginType type = 1; // 0=账号密码登录,1=173登录,2=老虎网登录,3=联运登录,4=腾讯登录,6=西游网登陆,100=天梯服登录
+	optional SLoginInformation loginInfo = 2;
+	optional SLoginUserPswd loginUserPswd = 3;
+	optional SLogin173 login173 = 4;
+	optional SLoginToken loginToken = 5;
+	optional SLoginLianYun loginLianYun = 6;
+    optional SLoginTencent loginTencent = 7;
+	optional SLoginXiYou loginXiYou = 8;
+	optional SLogin360 login360 = 9;
+	optional SLoginKor loginKor = 10;
+	};

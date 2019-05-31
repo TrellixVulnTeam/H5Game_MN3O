@@ -1,0 +1,337 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/48500_48999_tarot.proto
+// -------------------------------------------------------
+// ------------------------------------------
+// 塔罗牌相关
+// ------------------------------------------
+
+// 塔罗牌数据结构
+message STarotData
+{
+	required int32 loc = 1;
+	required int32 draw_loc = 2;
+	required int32 tid = 3;
+	required int32 num = 4;
+	required int32 qua = 5;
+}
+
+// -----------------------------------------
+// 家园塔罗牌查询
+message CSTarotCastleQuery
+{
+	option (msgid) = 48500;
+}
+
+message SCTarotCastleQuery
+{
+	option (msgid) = 48501;
+	required int32 result = 1;
+	required int32 left_free_draw = 2;		// 剩余免费翻牌次数
+	required int32 draw_count = 3;			// 翻牌次数
+	required int64 reset_cycle_sec = 4;		// 重置周期(秒)
+	required int64 left_reset_sec = 5;		// 剩余重置时间(秒)
+	repeated STarotData tarot_data = 6;		// 所有牌信息
+	required int32 today_reset_count = 7;	// 今天重置次数
+}
+
+// -----------------------------------------
+// 家园塔罗牌翻牌
+message CSTarotCastleDraw
+{
+	option (msgid) = 48502;
+	required int32 draw_loc = 1;
+}
+
+message SCTarotCastleDraw
+{
+	option (msgid) = 48503;
+	required int32 result = 1;
+	required int32 draw_loc = 2;
+	optional int32 left_free_draw = 3;		// 剩余免费翻牌次数
+	optional int32 draw_count = 4;			// 翻牌次数
+	repeated STarotData tarot_data = 5;		// 所有牌信息
+}
+
+// -----------------------------------------
+// 家园塔罗牌重置
+message CSTarotCastleReset
+{
+	option (msgid) = 48504;
+}
+
+message SCTarotCastleReset
+{
+	option (msgid) = 48505;
+	required int32 result = 1;
+}
+
+// -----------------------------------------
+// 家园塔罗牌一键翻牌
+message CSTarotCastleDrawBatch
+{
+	option (msgid) = 48506;
+}
+
+message SCTarotCastleDrawBatch
+{
+	option (msgid) = 48507;
+	required int32 result = 1;
+}
+
+
+// -----------------------------------------
+// 转盘抽奖
+message CSLotteryQuery
+{
+	option (msgid) = 48600;
+}
+
+message SCLotteryQueryResult
+{
+	option (msgid) = 48601;
+	repeated SLotteryItem result = 1;
+	repeated SLotteryCost costs = 2;
+	optional int32 score = 3;
+	optional string start_date = 4;
+	optional string ended_date = 5;
+}
+
+message CSLotteryExec
+{
+	option (msgid) = 48602;
+	required int32 type = 1;
+}
+
+message SCLotteryExecResult
+{
+	option (msgid) = 48603;
+	required int32 result = 1;
+	required int32 type = 2;
+	repeated SLotteryItem rewards = 3;
+}
+
+message CSLotteryLogsQuery
+{
+	option (msgid) = 48604;
+}
+
+message SCLotteryLogsQueryResult
+{
+	option (msgid) = 48605;
+	repeated SLotteryLog global_logs = 1;
+	repeated SLotteryLog player_logs = 2;
+}
+
+message CSLotteryBuy
+{
+	option (msgid) = 48606;
+	required int32 index = 1;
+}
+
+message SCLotteryBuyResult
+{
+	option (msgid) = 48607;
+	required int32 result = 1;
+	required int32 index = 2;
+}
+
+message SCLotteryInfoUpdate
+{
+	option (msgid) = 48608;
+	required int32 score = 1;
+}
+
+message CSLotteryRecvAll
+{
+	option (msgid) = 48609;
+	required int32 color = 1;
+}
+
+// -----------------------------------------
+// 宝箱抽奖
+message CSChestQuery
+{
+	option (msgid) = 48610;
+}
+
+message SCChestQueryResult
+{
+	option (msgid) = 48611;
+	repeated SChestBox result = 1;
+	optional string start_date = 2;
+	optional string ended_date = 3;
+}
+
+message CSChestExec
+{
+	option (msgid) = 48612;
+	required int32 type = 1;
+}
+
+message SCChestExecResult
+{
+	option (msgid) = 48613;
+	required int32 result = 1;
+	required int32 type = 2;
+	repeated SPackItem rewards = 3;
+}
+
+message CSChestLogsQuery
+{
+	option (msgid) = 48614;
+}
+
+message SCChestLogsQueryResult
+{
+	option (msgid) = 48615;
+	repeated SChestLog global_logs = 1;
+	repeated SChestLog player_logs = 2;
+}
+
+message CSChestBuy
+{
+	option (msgid) = 48616;
+	required int32 type = 1;
+	required int32 box = 2;
+	required int32 tid = 3;
+}
+
+message SCChestBuyResult
+{
+	option (msgid) = 48617;
+	required int32 result = 1;
+}
+
+message SCChestInfoUpdate
+{
+	option (msgid) = 48618;
+	required int32 score = 1;
+}
+
+message CSChestRecvAll
+{
+	option (msgid) = 48619;
+	required int32 color = 1;
+}
+
+message CSLotteryShopQuery
+{
+	option (msgid) = 48630;
+}
+
+message SCLotteryShopQueryResult
+{
+	option (msgid) = 48631;
+	repeated SLotteryShopItem result = 1;
+}
+
+message CSLotteryShopBuy
+{
+	option (msgid) = 48632;
+	required int32 tid = 1;
+}
+
+message SCLotteryShopBuyResult
+{
+	option (msgid) = 48633;
+	required int32 result = 1;
+	required int32 tid = 2;
+}
+
+
+// -----------------------------------------
+// 命运转盘抽奖
+message CSLotteryPrizeQuery
+{
+	option (msgid) = 48634;
+}
+
+message SCLotteryPrizeQueryResult
+{
+	option (msgid) = 48635;
+	repeated SLotteryItem result = 1;
+	repeated SLotteryCost costs = 2;
+	optional int32 score = 3;
+	optional string start_date = 4;
+	optional string ended_date = 5;
+}
+
+message CSLotteryPrizeExec
+{
+	option (msgid) = 48636;
+	required int32 type = 1;
+}
+
+message SCLotteryPrizeExecResult
+{
+	option (msgid) = 48637;
+	required int32 result = 1;
+	required int32 type = 2;
+	repeated SLotteryItem rewards = 3;
+}
+
+message CSLotteryPrizeLogsQuery
+{
+	option (msgid) = 48638;
+}
+
+message SCLotteryPrizeLogsQueryResult
+{
+	option (msgid) = 48639;
+	repeated SLotteryLog global_logs = 1;
+	repeated SLotteryLog player_logs = 2;
+}
+
+message CSLotteryPrizeBuy
+{
+	option (msgid) = 48640;
+	required int32 index = 1;
+}
+
+message SCLotteryPrizeBuyResult
+{
+	option (msgid) = 48641;
+	required int32 result = 1;
+	required int32 index = 2;
+}
+
+message SCLotteryPrizeInfoUpdate
+{
+	option (msgid) = 48642;
+	required int32 score = 1;
+}
+
+message CSLotteryPrizeRecvAll
+{
+	option (msgid) = 48643;
+	required int32 color = 1;
+}
+
+message CSLotteryPrizeShopQuery
+{
+	option (msgid) = 48644;
+}
+
+message SCLotteryPrizeShopQueryResult
+{
+	option (msgid) = 48645;
+	repeated SLotteryShopItem result = 1;
+}
+
+message CSLotteryPrizeShopBuy
+{
+	option (msgid) = 48646;
+	required int32 tid = 1;
+}
+
+message SCLotteryPrizeShopBuyResult
+{
+	option (msgid) = 48647;
+	required int32 result = 1;
+	required int32 tid = 2;
+}

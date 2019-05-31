@@ -1,0 +1,5 @@
+"id"	"英雄ID"	"职业（战1，弓2，法3）"	"属性1"	"属性1初值"	"属性1上限"	"属性2"	"属性2初值"	"属性2上限"	"属性3"	"属性3初值"	"属性3上限"	"属性4"	"属性4初值"	"属性4上限"	"属性5"	"属性5初值"	"属性5上限"	"属性6"	"属性6初值"	"属性6上限"	"属性7"	"属性7初值"	"属性7上限"	
+"id"	"dragonid"	"profession"	"stat1"	"stat1_value"	"stat1_cap"	"stat2"	"stat2_value"	"stat2_cap"	"stat3"	"stat3_value"	"stat3_cap"	"stat4"	"stat4_value"	"stat4_cap"	"stat5"	"stat5_value"	"stat5_cap"	"stat6"	"stat6_value"	"stat6_cap"	"stat7"	"stat7_value"	"stat7_cap"	
+"int"	"int"	"int"	"int"	"float"	"float"	"int"	"float"	"float"	"int"	"float"	"float"	"int"	"float"	"float"	"int"	"float"	"float"	"int"	"float"	"float"	"int"	"float"	"float"	
+"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	
+"1"	"1"	"1"	"0"	"520.000000"	"12837.000000"	"8"	"52.000000"	"1414.000000"	"10"	"26.000000"	"381.000000"	"11"	"26.000000"	"754.000000"	"-1"	"-1.000000"	"-1.000000"	"-1"	"-1.000000"	"-1.000000"	"18"	"10.000000"	"449.000000"	

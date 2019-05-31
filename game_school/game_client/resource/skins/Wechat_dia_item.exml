@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Wechat_dia_item" width="520" height="60" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group anchorOffsetY="0" top="0" left="0" verticalCenter="0" bottom="0" horizontalCenter="0" right="0" width="520">
+		<e:Image width="520" height="60" source="btn_dia1_png" verticalCenter="0" horizontalCenter="0"/>
+		<e:Label id="label_dia" text="Label" x="45" anchorOffsetX="0" width="429" fontFamily="Microsoft YaHei" height="30" verticalAlign="middle" size="30" bold="true" verticalCenter="0" textAlign="center" textColor="0x510450"/>
+		<e:Button id="button_dia" label="" x="0" y="0" width="500" height="60">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>

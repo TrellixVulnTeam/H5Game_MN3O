@@ -1,0 +1,25 @@
+现有的脚本机制
+(统一都存在pwdist::PortEx中的lua_State*中,所有同线程的脚本都使用同一个state)
+======================================================
+    pwdist 分布式脚本支持(协程),程序用,存在__pwdist_coroutines
+    ai脚本(协程) AsyncScriptOwner体系 程序用,存在g_ai_tables
+    dungeonplay脚本(协程) AsyncScriptOwner体系,策划用,存在g_async_scripts
+
+
+
+
+pwlua说明
+======================================================
+	T&参数传入lua时，如果T是从pwlua::refcounted_object继承，则加一ref，在gc时unref,否则直接传入指针，且不处理gc
+	T*参数传入lua时
+		gc为false，不处理gc
+		gc为true时，如果T是从pwlua::refcounted_object继承，则加一ref，在gc时unref,否则GC时删除
+
+
+脚本消息支持
+======================================================
+	msgid存在lua table中,使用例如 msgids.SCAuarBegan 的格式获取
+	proto buf消息转换到lua table,MsgToLua系类函数,转出的table放入lua栈
+	lua table转换到proto buf消息
+		LuaToMsgCluster函数，按msgid自动取相应转换函数
+		LuaToMsg指定消息的转换

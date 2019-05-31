@@ -1,0 +1,20 @@
+{
+    "groups":[
+        {
+            "keys":"global,proto_config",
+            "name":"preload_core"
+        }
+    ],
+    "resources":[
+        {
+            "name":"global",
+            "type":"json",
+            "url":"resource_json/config_json/global.json?v=40143"
+        },
+        {
+            "name":"proto_config",
+            "type":"json",
+            "url":"resource_json/config_json/proto/servermessage.json?v=40146"
+        }
+    ]
+}

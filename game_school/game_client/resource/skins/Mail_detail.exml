@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Mail_detail" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="star">
+			<tween:TweenItem target="{Group_detail}">
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{0}" scaleY="{1}" scaleX="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object rotation="{0}" scaleY="{1}" scaleX="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group left="0" right="0" horizontalCenter="0" top="0" verticalCenter="0" bottom="0">
+		<e:Image left="0" top="0" verticalCenter="0" bottom="0" horizontalCenter="0" right="0" source="image_hui_png"/>
+		<e:Group id="Group_detail" width="750" height="1000" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0">
+			<e:Image width="750" height="1000" horizontalCenter="0" verticalCenter="0" source="main_bg1_png"/>
+			<e:Button id="btn_get" label="" bottom="56" horizontalCenter="208">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn22_1_png" source.down="btn22_2_png" source.disabled="btn22_3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_del" label="" bottom="56" horizontalCenter="-203">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn21_1_png" source.down="btn21_2_png" source.disabled="btn21_3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Group id="group_reward" width="500" height="170" y="627" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" gap="20"/>
+				</e:layout>
+			</e:Group>
+			<e:Scroller width="540" height="400" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" verticalCenter="-92" anchorOffsetX="0" horizontalCenter="0">
+				<e:Group id="scr_label" height="400" width="540">
+				<e:layout>
+					<e:VerticalLayout horizontalAlign="center" verticalAlign="top"/>
+				</e:layout>
+					<e:Label id="label_mail" text="你写这么长。。。你以为我会看么" x="25.420000000000016" y="22.360000000000014" anchorOffsetX="0" width="565.33" anchorOffsetY="0" height="422.27" fontFamily="Microsoft YaHei" textColor="0x600505" bold="true" textAlign="left" verticalAlign="top" scaleX="1" scaleY="1" size="24"/>
+				</e:Group>
+			</e:Scroller>
+			<e:Label id="label_name" text="发件人：爱谁谁" x="100" y="37" anchorOffsetX="0" width="432" anchorOffsetY="0" height="45" fontFamily="Microsoft YaHei" bold="true" textAlign="left" textColor="0x380202"/>
+			<e:Label id="label_player" text="发件人：系统小姐姐" x="100" y="121" anchorOffsetX="0" width="271" anchorOffsetY="0" height="35" fontFamily="Microsoft YaHei" textAlign="left" textColor="0x0a0000" size="26"/>
+			<e:Label id="label_time" text="有效期：13天" y="121" anchorOffsetX="0" width="210" anchorOffsetY="0" height="35" fontFamily="Microsoft YaHei" textAlign="right" size="26" x="445" textColor="0x5b5555"/>
+			<e:Button id="btn_close" label="" bottom="915" horizontalCenter="321">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_close1_png" source.down="btn_close1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+	</e:Group>
+</e:Skin>

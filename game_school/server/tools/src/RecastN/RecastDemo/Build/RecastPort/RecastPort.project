@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="RecastPort" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="Contrib">
+    <File Name="../../Contrib/fastlz/fastlz.c"/>
+    <File Name="../../Contrib/fastlz/fastlz.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="DebugUtils">
+    <VirtualDirectory Name="inc">
+      <File Name="../../../DebugUtils/Include/DebugDraw.h"/>
+      <File Name="../../../DebugUtils/Include/DetourDebugDraw.h"/>
+      <File Name="../../../DebugUtils/Include/RecastDebugDraw.h"/>
+      <File Name="../../../DebugUtils/Include/RecastDump.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="src">
+      <File Name="../../../DebugUtils/Source/DebugDraw.cpp"/>
+      <File Name="../../../DebugUtils/Source/DetourDebugDraw.cpp"/>
+      <File Name="../../../DebugUtils/Source/RecastDebugDraw.cpp"/>
+      <File Name="../../../DebugUtils/Source/RecastDump.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Demo">
+    <VirtualDirectory Name="inc">
+      <File Name="../../Include/ChunkyTriMesh.h"/>
+      <File Name="../../Include/ConvexVolumeTool.h"/>
+      <File Name="../../Include/CrowdTool.h"/>
+      <File Name="../../Include/Filelist.h"/>
+      <File Name="../../Include/imgui.h"/>
+      <File Name="../../Include/imguiRenderGL.h"/>
+      <File Name="../../Include/InputGeom.h"/>
+      <File Name="../../Include/MeshLoaderObj.h"/>
+      <File Name="../../Include/NavMeshTesterTool.h"/>
+      <File Name="../../Include/OffMeshConnectionTool.h"/>
+      <File Name="../../Include/PerfTimer.h"/>
+      <File Name="../../Include/Sample.h"/>
+      <File Name="../../Include/Sample_Debug.h"/>
+      <File Name="../../Include/SampleInterfaces.h"/>
+      <File Name="../../Include/Sample_SoloMesh.h"/>
+      <File Name="../../Include/Sample_TempObstacles.h"/>
+      <File Name="../../Include/Sample_TileMesh.h"/>
+      <File Name="../../Include/SlideShow.h"/>
+      <File Name="../../Include/TestCase.h"/>
+      <File Name="../../Include/ValueHistory.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="src">
+      <File Name="../../Source/ChunkyTriMesh.cpp"/>
+      <File Name="../../Source/ConvexVolumeTool.cpp"/>
+      <File Name="../../Source/CrowdTool.cpp"/>
+      <File Name="../../Source/Filelist.cpp"/>
+      <File Name="../../Source/imgui.cpp"/>
+      <File Name="../../Source/imguiRenderGL.cpp"/>
+      <File Name="../../Source/InputGeom.cpp"/>
+      <File Name="../../Source/main.cpp"/>
+      <File Name="../../Source/MeshLoaderObj.cpp"/>
+      <File Name="../../Source/NavMeshTesterTool.cpp"/>
+      <File Name="../../Source/OffMeshConnectionTool.cpp"/>
+      <File Name="../../Source/PerfTimer.cpp"/>
+      <File Name="../../Source/Sample.cpp"/>
+      <File Name="../../Source/Sample_Debug.cpp"/>
+      <File Name="../../Source/SampleInterfaces.cpp"/>
+      <File Name="../../Source/Sample_SoloMesh.cpp"/>
+      <File Name="../../Source/Sample_TempObstacles.cpp"/>
+      <File Name="../../Source/Sample_TileMesh.cpp"/>
+      <File Name="../../Source/SlideShow.cpp"/>
+      <File Name="../../Source/TestCase.cpp"/>
+      <File Name="../../Source/ValueHistory.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="DetourCrowd">
+    <VirtualDirectory Name="inc">
+      <File Name="../../../DetourCrowd/Include/DetourCrowd.h"/>
+      <File Name="../../../DetourCrowd/Include/DetourLocalBoundary.h"/>
+      <File Name="../../../DetourCrowd/Include/DetourObstacleAvoidance.h"/>
+      <File Name="../../../DetourCrowd/Include/DetourPathCorridor.h"/>
+      <File Name="../../../DetourCrowd/Include/DetourPathQueue.h"/>
+      <File Name="../../../DetourCrowd/Include/DetourProximityGrid.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="src">
+      <File Name="../../../DetourCrowd/Source/DetourCrowd.cpp"/>
+      <File Name="../../../DetourCrowd/Source/DetourLocalBoundary.cpp"/>
+      <File Name="../../../DetourCrowd/Source/DetourObstacleAvoidance.cpp"/>
+      <File Name="../../../DetourCrowd/Source/DetourPathCorridor.cpp"/>
+      <File Name="../../../DetourCrowd/Source/DetourPathQueue.cpp"/>
+      <File Name="../../../DetourCrowd/Source/DetourProximityGrid.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="DetourTileCache">
+    <VirtualDirectory Name="inc">
+      <File Name="../../../DetourTileCache/Include/DetourTileCache.h"/>
+      <File Name="../../../DetourTileCache/Include/DetourTileCacheBuilder.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="src">
+      <File Name="../../../DetourTileCache/Source/DetourTileCache.cpp"/>
+      <File Name="../../../DetourTileCache/Source/DetourTileCacheBuilder.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Recast">
+    <VirtualDirectory Name="inc">
+      <File Name="../../../Recast/Include/Recast.h"/>
+      <File Name="../../../Recast/Include/RecastAlloc.h"/>
+      <File Name="../../../Recast/Include/RecastAssert.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="src">
+      <File Name="../../../Recast/Source/Recast.cpp"/>
+      <File Name="../../../Recast/Source/RecastAlloc.cpp"/>
+      <File Name="../../../Recast/Source/RecastArea.cpp"/>
+      <File Name="../../../Recast/Source/RecastContour.cpp"/>
+      <File Name="../../../Recast/Source/RecastFilter.cpp"/>
+      <File Name="../../../Recast/Source/RecastLayers.cpp"/>
+      <File Name="../../../Recast/Source/RecastMesh.cpp"/>
+      <File Name="../../../Recast/Source/RecastMeshDetail.cpp"/>
+      <File Name="../../../Recast/Source/RecastRasterization.cpp"/>
+      <File Name="../../../Recast/Source/RecastRegion.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Detour">
+    <VirtualDirectory Name="inc">
+      <File Name="../../../Detour/Include/DetourAlloc.h"/>
+      <File Name="../../../Detour/Include/DetourAssert.h"/>
+      <File Name="../../../Detour/Include/DetourCommon.h"/>
+      <File Name="../../../Detour/Include/DetourNavMesh.h"/>
+      <File Name="../../../Detour/Include/DetourNavMeshBuilder.h"/>
+      <File Name="../../../Detour/Include/DetourNavMeshQuery.h"/>
+      <File Name="../../../Detour/Include/DetourNode.h"/>
+      <File Name="../../../Detour/Include/DetourStatus.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="src">
+      <File Name="../../../Detour/Source/DetourAlloc.cpp"/>
+      <File Name="../../../Detour/Source/DetourCommon.cpp"/>
+      <File Name="../../../Detour/Source/DetourNavMesh.cpp"/>
+      <File Name="../../../Detour/Source/DetourNavMeshBuilder.cpp"/>
+      <File Name="../../../Detour/Source/DetourNavMeshQuery.cpp"/>
+      <File Name="../../../Detour/Source/DetourNode.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" C_Options="-g" Required="yes" PreCompiledHeader="">
+        <IncludePath Value="."/>
+        <IncludePath Value="../../Contrib/fastlz"/>
+        <IncludePath Value="../../Contrib/SDL/include"/>
+        <IncludePath Value="../../Include"/>
+        <IncludePath Value="../../../DetourCrowd/Include"/>
+        <IncludePath Value="../../../Detour/Include"/>
+        <IncludePath Value="../../../DebugUtils/Include"/>
+        <IncludePath Value="../../../Recast/Include"/>
+        <IncludePath Value="../../Contrib"/>
+        <IncludePath Value="../../../DetourTileCache/Include"/>
+      </Compiler>
+      <Linker Options="" Required="yes">
+        <Library Value="libGL"/>
+        <Library Value="libglut"/>
+        <Library Value="libGLU"/>
+        <Library Value="libSDL"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../Bin/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../../Bin/" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" C_Options="" Required="yes" PreCompiledHeader="">
+        <IncludePath Value="."/>
+        <IncludePath Value="../../Contrib/fastlz"/>
+        <IncludePath Value="../../Contrib/SDL/include"/>
+        <IncludePath Value="../../Include"/>
+        <IncludePath Value="../../../DetourCrowd/Include"/>
+        <IncludePath Value="../../../Detour/Include"/>
+        <IncludePath Value="../../../DebugUtils/Include"/>
+        <IncludePath Value="../../../Recast/Include"/>
+        <IncludePath Value="../../Contrib"/>
+        <IncludePath Value="../../../DetourTileCache/Include"/>
+      </Compiler>
+      <Linker Options="-O2" Required="yes">
+        <Library Value="libGL"/>
+        <Library Value="libglut"/>
+        <Library Value="libGLU"/>
+        <Library Value="libSDL"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

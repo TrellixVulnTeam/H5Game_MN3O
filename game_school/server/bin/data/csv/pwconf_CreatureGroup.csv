@@ -1,0 +1,4 @@
+"组id"	"头目类型idcreature_type"	"巡逻路径(CreatureSpawnConfig.xls)"	"注释"	
+"id"	"bossCreature"	"patrolPath"	"comment"	
+"int"	"int"	"string[]"	"string"	
+"s"	"s"	"s"	"s"	

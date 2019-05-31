@@ -1,0 +1,5 @@
+"装备ID"	"附魔等级"	"附魔战力"	"CombatTriggerId"	
+"id"	"enchantLevel"	"fightPoint"	"combatTriggerID"	
+"int"	"int"	"int"	"int"	
+"cs"	"cs"	"cs"	"cs"	
+"1001"	"100"	"100"	"1000"	

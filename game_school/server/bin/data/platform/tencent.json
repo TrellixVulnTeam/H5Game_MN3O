@@ -1,0 +1,12 @@
+{
+  "tencent_platform": true,
+  "tencent_debug" : true,
+  "tiyan_stage": 1251,
+  "autofix_server_info": true,
+  "autofix_server_start" : 5,
+  "lianyun_bits" : [],
+  "lianyun_giftcard": true,
+  "wmlog_disable_mask0" : [ 12 ],
+  "humanlevel_limit": 300,
+  "ladder_level_mowang": 1
+}

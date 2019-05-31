@@ -1,0 +1,41 @@
+{
+  "global": {
+    "globalAdsorbEnable": false,
+    "globalRulerEnable": false,
+    "globalAutoLayerMarkEnable": true,
+    "globalBindingDataTestObj": []
+  },
+  "1635dc45514": {
+    "backgroundType": "user",
+    "backgroundColor": "#fc0000",
+    "useBgImage": true,
+    "useBgColor": true,
+    "backgroundImage": "C:\\Users\\Administrator\\Desktop\\EGER-PRO-master\\resource\\images\\scene\\homeBg4.jpg",
+    "backgroundX": 0,
+    "backgroundY": 0,
+    "backgroundWidth": -1,
+    "backgroundHeight": -1,
+    "backgroundAlpha": 100,
+    "guideLinesEnabled": false
+  },
+  "1635dd50b09": {
+    "bindingDataTestObj": [],
+    "backgroundType": "user",
+    "backgroundImage": "E:\\game_afterschooldontleave\\resource\\03一般校舎廊下_昼.png"
+  },
+  "1635e3c73bc": {
+    "backgroundType": "user"
+  },
+  "1635e3c73bd": {
+    "backgroundColor": "#ffffff",
+    "backgroundType": "null",
+    "useBgImage": true,
+    "useBgColor": false,
+    "backgroundX": 0,
+    "backgroundY": 0,
+    "backgroundWidth": -1,
+    "backgroundHeight": -1,
+    "backgroundAlpha": 100,
+    "backgroundImage": "E:\\game_afterschooldontleave\\resource\\03一般校舎廊下_昼.png"
+  }
+}

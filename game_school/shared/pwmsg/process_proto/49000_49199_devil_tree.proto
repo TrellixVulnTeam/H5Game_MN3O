@@ -1,0 +1,138 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/49000_49199_devil_tree.proto
+// -------------------------------------------------------
+// ------------------------------------------
+// 恶魔果树相关
+// ------------------------------------------
+
+// 恶魔果树数据结构
+message SDevilTreeData
+{
+	required int32 loc = 1;					// 果树位置
+	required bool is_open = 2;				// 是否已开放
+	required int32 step = 3;				// 当前阶段(1-5)
+	required int32 fruit_id = 4;			// 果实ID
+	required int32 fruit_level = 5;			// 果实等级(1-5)
+	required int64 upgrade_left_sec = 6;	// 升级剩余时间(秒)
+}
+
+// -----------------------------------------
+// 恶魔果树查询
+message CSDevilTreeQuery
+{
+	option (msgid) = 49000;
+}
+
+message SCDevilTreeQuery
+{
+	option (msgid) = 49001;
+	required int32 result = 1;
+	optional int32 pick_curr_today = 2;				// 今天摘取次数
+	optional int32 pick_max_today = 3;				// 今天摘取上限
+	repeated SDevilTreeData devil_tree_data = 4;	// 恶魔果树信息
+	optional int32 buy_pick_cnt = 5;				// 恶魔果树购买摘取次数
+}
+
+// -----------------------------------------
+// 摘取
+message CSDevilTreePick
+{
+	option (msgid) = 49003;
+	required int32 loc = 1;
+}
+
+message SCDevilTreePick
+{
+	option (msgid) = 49004;
+	required int32 result = 1;
+	required int32 loc = 2;
+	optional int32 pick_curr_today = 3;				// 今天摘取次数
+}
+
+// -----------------------------------------
+// 放弃
+message CSDevilTreeDiscard
+{
+	option (msgid) = 49005;
+	required int32 loc = 1;
+}
+
+message SCDevilTreeDiscard
+{
+	option (msgid) = 49006;
+	required int32 result = 1;
+	required int32 loc = 2;
+}
+
+// -----------------------------------------
+// 催熟
+message CSDevilTreeAcce
+{
+	option (msgid) = 49007;
+	required int32 loc = 1;
+}
+
+message SCDevilTreeAcce
+{
+	option (msgid) = 49008;
+	required int32 result = 1;
+	required int32 loc = 2;
+}
+
+message SCDevilTreeUpdate
+{
+	option (msgid) = 49009;
+	repeated SDevilTreeData devil_tree_data = 1;
+}
+
+message CSDevilTreeBuyPickCount
+{
+	option (msgid) = 49010;
+}
+
+message SCDevilTreeBuyPickCount
+{
+	option (msgid) = 49011;
+	required int32 result = 1;
+}
+
+// 一键摘取
+message CSDevilTreePickBatch
+{
+	option (msgid) = 49020;
+}
+
+message SCDevilTreePickBatch
+{
+	option (msgid) = 49021;
+	required int32 result = 1;
+}
+
+// 一键催熟
+message CSDevilTreeAcceBatch
+{
+	option (msgid) = 49022;
+}
+
+message SCDevilTreeAcceBatch
+{
+	option (msgid) = 49023;
+	required int32 result = 1;
+}
+
+// 一键丢弃
+message CSDevilTreeDiscardBatch
+{
+	option (msgid) = 49024;
+}
+
+message SCDevilTreeDiscardBatch
+{
+	option (msgid) = 49025;
+	required int32 result = 1;
+}

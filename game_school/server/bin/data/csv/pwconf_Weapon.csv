@@ -1,0 +1,8 @@
+"神器ID"	"神器名称"	"激活等级"	"备注（策划用）"	"当前神器最大阶"	"神器界面坐标修改方法见单元格备注"	"神器界面角度修改方法见单元格备注"	"模型缩放修改方法见单元格备注"	"新获得界面名称美术字"	"神器头像图片（图集，图片名）"	"低阶模型ID多少阶范围内开"	"排序权重"	"列表名称美术字"	"中阶模型多少阶范围内开"	"高阶模型多少阶范围内开"	"神器类型（图集，图片名）"	
+"id"	"name"	"grade"	"note"	"class_max"	"ui_position"	"ui_rotation"	"model_scale"	"name_icon"	"weapon_icon_pic"	"avatar_id"	"order_weight"	"list_icon"	"avatar_id2"	"avatar_id3"	"weapon_type"	
+"int"	"string"	"int"	"string"	"int"	"float[2]"	"float[3]"	"float"	"string[2]"	"string[2]"	"int[3]"	"float"	"string[2]"	"int[3]"	"int[3]"	"string[2]"	
+"cs"	"cl"	"cs"	"c"	"cs"	"c"	"c"	"c"	"c"	"c"	"c"	"c"	"c"	"c"	"c"	"c"	
+"1001"	"神魔镰"	"40"	""	"8"	"0.3,0"	""	"0.800000"	"shenqiname,shenqi01"	"icon_item1,icon_shenqi01"	"1,3,80104"	"990"	"shenqiname,s_shenqi01"	"4,6,80105"	"7,8,80106"	"Pic_sc,type_g"	
+"1002"	"影魂琴"	"50"	""	"8"	"0.1,0"	""	"0.800000"	"shenqiname,shenqi02"	"icon_item1,icon_shenqi02"	"1,3,80111"	"930"	"shenqiname,s_shenqi02"	"4,6,80112"	"7,8,80113"	"Pic_sc,type_f"	
+"1003"	"冰魄剑"	"60"	""	"8"	"0.3,-0.2"	""	"0.600000"	"shenqiname,shenqi03"	"icon_item1,icon_shenqi04"	"1,3,80108"	"950"	"shenqiname,s_shenqi03"	"4,6,80109"	"7,8,80110"	"Pic_sc,type_z"	
+"1004"	"焱霄刃"	"70"	""	"8"	"0.3,-0.2"	""	"0.600000"	"shenqiname,shenqi04"	"icon_item1,icon_shenqi03"	"1,3,80100"	"1000"	"shenqiname,s_shenqi04"	"4,6,80101"	"7,8,80102"	"Pic_sc,type_x"	

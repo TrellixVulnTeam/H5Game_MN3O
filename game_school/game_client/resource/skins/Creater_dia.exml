@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Creater_dia" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+	</w:Declarations>
+	<e:Group id="group" height="1334" top="0" left="0" horizontalCenter="0" right="0">
+		<e:Image id="image_bg" scaleX="1" scaleY="1" height="1334" horizontalCenter="0" top="0" left="0" right="0" source="create_bg_png"/>
+		<e:Image id="image_player" width="850" height="1108" anchorOffsetX="0" left="-20" top="0" source="creatname_bg4_png"/>
+		<e:Group id="left" width="750" height="266" y="742" left="0">
+			<e:Image width="750" height="266" source="image_47_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="label_left_name" text="同学：" x="64" y="24" size="30" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="110" anchorOffsetY="0" height="44" textColor="0x0a0000" bold="true"/>
+			<e:Label id="label_left_dia" text="听说你是新来的，请问这道题怎么做呢？" x="68" y="88" size="30" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="640" anchorOffsetY="0" height="124" textColor="0xffffff" lineSpacing="10"/>
+		</e:Group>
+		<e:Group id="right" width="750" height="266" y="960" right="0">
+			<e:Image width="750" height="266" horizontalCenter="0" verticalCenter="0" source="image_47_1_png"/>
+			<e:Label id="label_right_name" text="wo" x="502" y="26" size="30" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="150" anchorOffsetY="0" height="44" textColor="0x0A0000" bold="true"/>
+			<e:Label id="label_left_dia0" text="听说你是新来的，我这里有个问题，考验考验你的学习" x="68" y="88" size="30" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="640" anchorOffsetY="0" height="124" textColor="0xFFFFFF" lineSpacing="10" visible="false"/>
+			<e:Group width="608" height="66" x="64" y="128" anchorOffsetX="0" anchorOffsetY="0">
+			<e:RadioButton id="btn_a" label="A." x="20" y="8" anchorOffsetX="0" width="71" anchorOffsetY="0" height="48"/>
+			<e:RadioButton id="btn_b" label="A." x="30" y="18" anchorOffsetX="0" width="71" anchorOffsetY="0" height="48"/>
+			<e:RadioButton id="btn_c" label="A." x="40" y="28" anchorOffsetX="0" width="71" anchorOffsetY="0" height="48"/>
+			<e:layout>
+				<e:HorizontalLayout gap="100"/>
+			</e:layout>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

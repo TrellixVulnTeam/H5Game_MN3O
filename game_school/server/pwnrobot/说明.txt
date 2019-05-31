@@ -1,0 +1,20 @@
+server ==== 打印当前连接的服务器信息
+server -i IP地址 -p 端口 ==== 设置连接的服务器
+c -N 账号前缀 -s 开始id -e 结束id,==创建机器人，并连接到服务器
+objnum ==== 查看当前连接的机器人数量
+caster start ==== 开始随机放技能
+caster stop ==== 结束随机放技能
+gm 文本 ==== 发送聊天消息到服务器(用作发gm命令) 可选参数 -s id1 -e id2，只对id1-id2之间的角色生效
+moveto X位置 Y位置 Z位置 == 自动寻路到该位置
+movetorandom X位置 Y位置 Z位置 随机距离 == 在该位置周围随机距离内取一个点，寻路到该点
+close ==关闭所有机器人
+q == 关闭程序
+
+
+
+启动参数
+pwnrobot.exe lua文件   ======自动执行lua脚本
+	lua脚本仅支持两个函数
+	cmd(命令字符串) === 执行text命令
+	sleep(毫秒数) === 等待指定时间
+pwnrobot.exe %d %d 直接启动%d-%d个机器人(cbh前缀)

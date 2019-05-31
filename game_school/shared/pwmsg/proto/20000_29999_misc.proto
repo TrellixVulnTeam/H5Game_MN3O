@@ -1,0 +1,40 @@
+
+// -----------------------------------------
+
+message SCCharacterKick
+{
+	option (msgid) = 20000;
+	required int32 reason = 1;
+    optional bytes error = 2;
+}
+
+// -----------------------------------------
+
+message SCLevelup
+{
+	option (msgid) = 20001;
+	required int64 id = 1;
+	required int32 level = 2;
+}
+
+// 检查时间
+message CSTimeCheck
+{
+	option (msgid) = 20009;
+	optional int64 data = 1; 
+}
+
+// PING消息
+message CSPing
+{
+	option (msgid) = 20010;
+	required float time = 1;
+}
+
+// PING的响应消息
+message SCPong
+{
+	option (msgid) = 20011;
+	required float time = 2;
+	required int64 server_time = 3;
+}

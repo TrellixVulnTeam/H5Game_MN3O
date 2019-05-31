@@ -1,0 +1,660 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/05000_05499_activity.proto
+// -------------------------------------------------------
+// 加入活动
+message CSActivityJoin
+{
+	option (msgid) = 5000;
+	required int32 activityID = 1;//活动ID
+	required int64 gameMapId = 2;//活动要去的副本ID or 如果是军团战活动则发送要加入的guildId
+}
+
+// 加入活动返回消息
+message SCActivityJoinResult
+{
+	option (msgid) = 5001;
+	required int32 flag = 1;
+	required int32 activityID = 2;
+}
+
+message CSActivityRewardQuery
+{
+	option (msgid) = 5002;
+}
+message SCActivityRewardResult
+{
+	option (msgid) = 5003;
+	required int32 activitys = 1;
+	repeated SUnitAttrValue attrs = 2;
+}
+message CSActivityReward
+{
+	option (msgid) = 5004;
+	required int32 activityID = 1;
+}
+message SCActivityDelete
+{
+	option (msgid) = 5005;
+	required int32 activityID = 1;	
+}
+message SCActivityStatus
+{
+	option (msgid) = 5006;
+	required int32 activityID = 1;	
+	required int32 status = 2;
+    optional int64 data1 = 3;
+    optional int64 data2 = 4;
+}
+
+message CSActivityAuction
+{
+	option (msgid) = 5007;
+	required int32 activityID = 1;	
+	required int32 money = 2;
+}
+
+message SCActivityAuction
+{
+	option (msgid) = 5008;
+	required int32 activityID = 1;	
+	required int32 status = 2;
+}
+
+message CSActivityGetBuff
+{
+	option (msgid) = 5009;
+	required int32 activityID = 1;
+	required int32 buffID = 2;	
+}
+
+
+message SCActivityDamage
+{
+	option (msgid) = 5102;
+	required int64 id = 1;
+	required float damage = 2;
+	required bytes name = 3;
+	required int32 num = 4;
+}
+
+message SCActivityBoss
+{
+	option (msgid) = 5103;
+	required int64 id = 1;
+	required bytes name = 2;
+}
+
+message CSActivityBoss
+{
+	option (msgid) = 5104;
+	required int64 id = 1;
+}
+
+message SCActivityNpcID
+{
+	option (msgid) = 5105;
+	required int64 id = 1;
+}
+
+message CSActivityStartCtrl
+{
+	option (msgid) = 5106;
+	required int64 id = 1;
+}
+
+message CSActivityStopCtrl
+{
+	option (msgid) = 5107;
+}
+
+//大逃杀活动 5200
+
+//大逃杀副本报名信息
+message SDungeonSignUpInfo
+{
+	required int64 gameMapId = 1;
+	required int32 baseMapId = 2;
+	required int32 curNum = 3;
+}
+message CSDTSDungeonSignUpInfo
+{
+	option (msgid) = 5200;
+	required int32 activityId = 1;
+}
+
+message SCDTSDungeonSignUpInfo
+{
+	option (msgid) = 5201;
+	repeated SDungeonSignUpInfo info = 1;
+}
+
+
+//进入区域安全区或者PVP区
+message CSDTSEnterArea
+{
+	option (msgid) = 5202;
+	required int32	activityId = 1;
+	required int32 areaType = 2; //1:安全区 2：PVP
+}
+
+message SCDTSEnterAreaResult
+{
+	option (msgid) = 5203;
+	required int32 result = 1;
+}
+
+//大逃杀排行
+message SDTSRank
+{
+	required int64 id = 1;
+	required bytes name = 2;
+	required int32 score = 3;
+	required int32 killnum = 4;
+	required int32 killednum = 5;
+	required int32 itemCount = 6;
+	required int32 seconds = 7;
+    optional STencentUserInfo tencent_user_info = 8;
+	optional int32 maxbattercount = 9;
+	optional int64 guildid = 10;
+}
+message SCDTSRankUpdate
+{
+	option (msgid) = 5204;
+	repeated SDTSRank info = 1;
+}
+
+message SCDTSHumanInfoUpdate
+{
+	option (msgid) = 5205;
+	required int32 type = 1;
+	required int32 basemap = 2;
+	required SDTSRank info = 3;
+}
+
+message CSDTSDungeonBuyItem
+{
+	option (msgid) = 5206;
+}
+
+message SCDTSDungeonBuyItem
+{
+	option (msgid) = 5207;
+	required int32 ret = 1; 
+}
+
+message SCDTSUpdate
+{
+	option (msgid) = 5208;
+	required bool use_substitute = 1;	// 是否开启替身
+}
+
+message CSDTSSetSubstitute
+{
+	option (msgid) = 5209;
+	required bool use_substitute = 1;	// 是否开启替身
+}
+
+// 客户端请求：传送地图
+message CSDTSTranstportMap
+{
+	option (msgid) = 5210;
+}
+
+message SCLeaveActivity
+{
+	option (msgid) = 5217;
+	required int64 activityId = 1;
+}
+
+// --------------------------------------------------------------------
+// 公会之前的对战结果
+// --------------------------------------------------------------------
+
+message SJTZNResult
+{
+    required int32 round = 1;
+    required int64 targetGuild = 2;
+    required int32 resource = 3;
+    required int32 score = 4;
+    required int32 success = 5;
+    required int32 position = 6;	// 当时那一轮的position
+	required bytes first = 7;		// 本次比赛的第一名
+}
+
+// 公会信息
+message SJTZNGuild
+{
+    required int64 id = 1;
+    required int32 position = 2; // 位置
+    required int32 round_position = 3; // 当前轮位置(除以10相等的另一方,为下轮对手)
+    required int64 total_power = 4;
+    required bytes name = 5; 
+    required int64 supportNum = 6; // 支持的人数
+    required int32 supported = 7; // 我是否已支持
+    required int32 failed = 8; // 是否已经失败
+    repeated SJTZNResult results = 9; // 对战结果
+	required int32 status = 10; // 队伍状态(0=初始化,1=比赛中,2=比赛结束)
+}
+
+message CSJTZNGuildsQuery
+{
+    option (msgid) = 5230;
+}
+
+// 公会信息(打开界面时查询)
+message SCJTZNGuilds
+{
+    option (msgid) = 5231;
+    required int32 round = 1;
+    repeated SJTZNGuild guilds = 2;
+	required int32 status = 3;		// 0=比赛即将开始，1=比赛已开始，2=比赛已结束
+	optional bytes start_time = 4;	// 若没开始，该时间表示下次开始时间
+}
+
+message SJTZNHumanRank
+{
+    required int64 id = 1;
+    required bytes name = 2;
+    required int32 kill_count = 3;
+    required int32 rank = 4;
+    required int32 occupation_num = 5; // 占领资源数量
+    optional STencentUserInfo tencent_user_info = 6;
+	optional int64 guild_id = 7;
+}
+
+message SKfmzGuildInfo
+{
+	required int64 red_guild_id = 1;
+	required int64 blue_guild_id = 2;
+	required bytes red_guild_name = 3;
+	required bytes blue_guild_name = 4;
+}
+
+// 一场比赛结束时,显示的玩家个人积分
+message SCJTZNRoundResult
+{
+    option (msgid) = 5232;
+    repeated SJTZNHumanRank ranks = 1;
+    required bool finished = 2;
+	optional int64 winnerid = 3;
+	optional SKfmzGuildInfo kfmz_guild_info = 4;
+}
+
+message SJTZNTeamInfo
+{
+    required int64 teamid = 1;
+    required int32 resources = 2;
+    required int32 score = 3;
+	optional int32 maxscore = 4;
+}
+
+// 资源数&队伍积分变更时下发
+message SCJTZNUpdate
+{
+    option (msgid) = 5235;
+    required SJTZNTeamInfo red = 1;
+    required SJTZNTeamInfo blue = 2;
+	optional bool kfmz = 3;
+}
+
+// 为某个公会助威
+message CSJTZNSupport
+{
+    option (msgid) = 5236;
+    required int64 guild = 1;
+}
+
+message SCJTZNSupportResult
+{
+    option (msgid) = 5237;
+    required int32 result = 1;
+	required int64 guild = 2;
+}
+
+// 更新资源信息，只通知进入资源范围的玩家
+message SCJTZNUpdateResource
+{
+	option (msgid) = 5238;
+	required int64 resid = 1;	// 资源id
+	required int32 score = 2;	// 资源当前分数值
+	required int32 resno = 3;	// 资源序号
+}
+
+message SJTZNResourceStatus
+{
+	required int64 resid = 1;	// 资源id
+	required int32 faction = 2;	// 资源当前阵营
+	required int32 friend_num = 3;	// 占领资源的红方人数
+	required int32 enemy_num = 4;// 占领资源的蓝方人数
+	required int32 resno = 5;	// 资源序号
+}
+
+// 更新资源状态，地图闪烁显示用
+message SCJTZNUpdateResourceStatus
+{
+	option (msgid) = 5239;
+	repeated SJTZNResourceStatus resources = 1;
+}
+
+message SJTZNSupportRecord
+{
+	required int32 round = 1;			// 比赛轮数
+	required int64 guild_id = 2;		// 助威联盟的id
+	required bytes guild_name = 3;		// 助威联盟的名字
+	optional bool guild_win = 4;		// 无该字段表示比赛还未结束，有该字段则该子段代表比赛结果
+	optional int64 reward_silver = 5;	// 助威队伍获胜时，该字段有效，代表助威奖励
+}
+
+// 查询助威记录
+message CSJTZNSupportQuery
+{
+	option (msgid) = 5240;
+}
+
+// 返回助威记录
+message SCJTZNSupportQuery
+{
+	option (msgid) = 5241;
+	repeated SJTZNSupportRecord records = 1;
+}
+
+// --------------------------------------------------------------------
+// 龙骨矿井相关
+// --------------------------------------------------------------------
+
+message SLGKJHumanRankInfo
+{
+	required int32 rank = 1;	// 玩家名次
+	required bytes name = 2;	// 玩家姓名
+	required int64 damage = 3;	// 玩家造成的总伤害
+}
+
+message SLGKJGuildRankInfo
+{
+	required int32 rank = 1;	// 联盟名次
+	required bytes name = 2;	// 联盟名称
+	required int64 damage = 3;	// 联盟造成的总伤害
+}
+
+message SCLGKJUpdateRanklist
+{
+	option (msgid) = 5250;
+	repeated SLGKJHumanRankInfo human_ranklist = 1;		// 个人伤害排名(前10)
+	repeated SLGKJGuildRankInfo guild_ranklist = 2;		// 联盟伤害排名(前10)
+	optional SLGKJHumanRankInfo self_human_rank = 3;	// 自身伤害名次
+	optional SLGKJGuildRankInfo self_guild_rank = 4;	// 自身联盟伤害名称
+}
+
+message SCLGKJBossUpdate
+{
+	option (msgid) = 5251;
+	required int64 bossid = 1;
+	required SVector3 pos = 2;
+	optional int32 subline = 3;
+	optional bool is_dead = 4;
+	optional int32 realive_time = 5;
+}
+
+////////////////////////
+// 跨服盟战部分
+///////////////////////
+// 获取神佑面板数据
+message CSKFMZGetBoardInfo
+{
+	option (msgid) = 5300;
+}
+
+message SKFMZSYRankInfo
+{
+	required int32 rank = 1;	//联盟名次
+	required int64 gid = 2;		//联盟id
+	required bytes name = 3;	//联盟名称
+	required int64 damage = 4;	//联盟造成的总伤害
+}
+
+message SCKFMZGetBoardInfo
+{
+	option (msgid) = 5301;
+	required int32 waitsec = 1;	//等待n天数开启
+	repeated SKFMZSYRankInfo syranklist = 2;	//神佑排行
+}
+
+// 获取神佑试炼状态
+message CSGetSYDungeonStatus
+{
+	option (msgid) = 5302;
+}
+enum SESYDungeonStatus
+{
+	EStatus_Open = 1;
+	EStatus_Closed = 2;
+	EStatus_Hide = 3;
+}
+message SCGetSYDungeonStatus
+{
+	option (msgid) = 5303;
+	required SESYDungeonStatus es = 1;
+}
+// 开启神佑试炼
+message CSOpenSYDungeon
+{
+	option (msgid) = 5304;
+}
+// 进入神佑试炼
+message CSEnterSYDungeon
+{
+	option (msgid) = 5305;
+}
+
+// 获取神佑试炼场景数据
+message SCSYStageInfo
+{
+	option (msgid) = 5310;
+	required int32 time = 1;
+	required int64 totaldamage = 2;
+	required int64 maxdamage = 3;
+	required int32 acount = 4;
+	required int32 bcount = 5;
+}
+
+// 购买buff
+enum STypeBuff
+{
+	STypeBuff_A = 1;
+	STypeBuff_B = 2;
+}
+message CSSYStageBuyBuff
+{
+	option (msgid) = 5311;
+	required STypeBuff type = 1;
+}
+
+// 获取淘汰赛数据
+message CSGetTTSInfo
+{
+	option (msgid) = 5320;
+}
+message STTSInfo
+{
+	required int64 guildid = 1;
+	required bytes guildname = 2;
+	required int32 round = 3;
+	required int32 ranking = 4;
+	required int32 totalfight = 5;
+}
+message SCGetTTSInfo
+{
+	option (msgid) = 5321;
+	repeated STTSInfo ttslist = 1;
+	required int32 round = 2;
+	required bool ttsrunning = 3;	//淘汰赛开启
+}
+
+message SCTTSResult
+{
+	option (msgid) = 5322;
+	required int64 winguildid = 1;
+}
+
+message SCTTSEnter
+{
+	option (msgid) = 5323;
+	required int32 flag = 1;	// 1:进入标记，2:结束倒计时
+}
+
+// 活动图标显示
+message SCActivityIconShow
+{
+	option (msgid) = 5324;
+	required int32 type = 1;	// 类型 - 1:tts图标
+	required bool show = 2;		// 是否显示
+}
+
+// --------------------------------------------------------------------
+// 帮派战
+// --------------------------------------------------------------------
+message SGuildInfo
+{
+	required int64 guild_id = 1;
+	required bytes guild_name = 2;		// 联盟名字
+	required int64 guild_fight = 3;
+}
+
+message SMatchInfo
+{
+	required int64 red_guild_id = 1;
+	required int64 blue_guild_id = 2;
+	required int64 win_guild_id = 3;	//胜利联盟id
+}
+
+message CSGetGBInfo
+{
+	option (msgid) = 5400;
+}
+
+// 帮派战结果
+message SCGBInfo
+{
+	option (msgid) = 5401;
+	required int32 round = 1;
+	repeated SGuildInfo guild_info = 2;
+	repeated SMatchInfo match_info_first = 3;	//第一轮对战
+	repeated SMatchInfo match_info_second = 4;	//第二轮对战
+	repeated SMatchInfo match_info_third = 5;	//第三轮对战
+}
+
+// 帮派战场景内同步
+message SCGBStageInfo
+{
+	option (msgid) = 5402;
+	required int64 time = 1;
+	required int32 guild_score = 2;
+	required int32 enemy_score = 3;
+	required int32 kill_count = 4;
+	required int32 score = 5;
+}
+
+// 帮派战结束协议
+message SCGBFinish
+{
+	option (msgid) = 5403;
+	required SMatchInfo match_info = 1;
+}
+
+// 全服广播帮派战状态
+message SCGBBroadcastStatus
+{
+	option (msgid) = 5404;
+	required int32 round = 1;
+}
+
+/////////////////////////////////
+// 护送
+/////////////////////////////////
+
+// 获取护送状态数据
+message CSGetRunCarInfo
+{
+	option (msgid) = 5410;
+}
+message SCGetRunCarInfo
+{
+	option (msgid) = 5411;
+	required int32 conf_id = 1;
+	required bool running = 2;	// false:未开始护送；true:护送中
+	required int32 used_times = 3;	//已护送次数
+	optional int32 run_time_sec = 4;	//已经护送时间
+	optional bool doubletiming = 5;	//当前是否双倍时间
+}
+
+// 提升护送品质
+message CSUpRunCarColor
+{
+	option (msgid) = 5412;
+	required int32 target_conf_id = 1;
+}
+message SCUpRunCarColor
+{
+	option (msgid) = 5413;
+	required int32 result = 1;
+	required int32 conf_id = 2;
+}
+
+// 开始护送
+message CSStartRunCar
+{
+	option (msgid) = 5414;
+}
+message SCStartRunCar
+{
+	option (msgid) = 5415;
+	required int32 result = 1;
+}
+
+// 双倍时间
+message SCRunCarDoubleReward
+{
+	option (msgid) = 5416;
+	required bool doubletiming = 1;	// true为双倍时间内
+}
+
+// 护送结束
+message SCRunCarFinish
+{
+	option (msgid) = 5417;
+	required int32 conf_id = 1;
+	required bool success = 2;	//护送成功
+	required bool doubletiming = 3;	//双倍时间 
+}
+
+// 传送到npc或者镖车位置
+message CSFlyToNpcOrRunCar
+{
+	option (msgid) = 5418;
+}
+
+// ------------------------------------------
+// 篝火
+// ------------------------------------------
+// 传送到篝火活动区域
+message CSFireTransport
+{
+	option (msgid) = 5440;
+}
+// 篝火兑换
+message CSFireExchange
+{
+	option (msgid) = 5441;	
+	required int32 configid = 1;	
+	repeated SPackItem pack_item = 2;		
+}
+message SCFireExchangeResult
+{
+	option (msgid) = 5442;	
+	required int32 result = 1;
+}

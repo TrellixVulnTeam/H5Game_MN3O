@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<pwdist>
+	<id>1</id>
+	<name>connsrv1</name>
+	
+    <communicator>
+		<listen_addr>tcp://GAME1_ADDR:CONNSRV1_PORT</listen_addr>
+	</communicator>
+    
+    <gate>
+        <node>worldsrv0</node>
+        <port>world_login</port>
+    </gate>
+    
+	<game>
+		<listen_port>CONNSRV1_SERV_PORT</listen_port>
+	</game>
+	
+    <nodes>
+		<count>0</count>
+	</nodes>
+</pwdist>
+
+

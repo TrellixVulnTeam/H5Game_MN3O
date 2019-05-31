@@ -1,0 +1,5 @@
+"ID"	"武神副本ID"	"每日膜拜次数"	"每日免费挑战次数"	"购买次数限制"	"膜拜奖励物品"	"膜拜奖励数量"	"排名奖励发放起始名次"	"排名奖励发放结束名次"	"排名奖励发放时间格式：hh:mm:ss"	"进入排名等级"	""	""	
+"id"	"dungeon_id"	"worship_cnt"	"combat_free"	"normal_pay_limit"	"worship_award_id"	"worship_award_num"	"rank_award_start"	"rank_award_end"	"rank_award_time"	"rank_level_limit"	""	""	
+"int"	"int"	"int"	"int"	"int"	"int[]"	"int[]"	"int"	"int"	"string"	"int"	""	""	
+"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	""	""	
+"1"	"3001"	"0"	"10"	"0"	"0"	"0"	"1"	"3500"	"21:00:00"	"45"	""	""	

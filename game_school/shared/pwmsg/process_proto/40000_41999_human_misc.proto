@@ -1,0 +1,1141 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/40000_41999_human_misc.proto
+// -------------------------------------------------------
+message CS_173_RequestToken
+{
+    option (msgid) = 40000;
+    required bytes location = 1;
+    required int64 context = 2;
+}
+
+message SC_173_RequestTokenResult
+{
+    option (msgid) = 40001;
+    required int32 code = 1; 
+    optional bytes appid = 2;
+    optional int64 userid = 3;
+    optional bytes token = 4;
+    optional int64 context = 5;
+}
+
+message SCReturnCreateCharacterUI
+{
+    option (msgid) = 40005;
+	optional int32 mode = 1; // 0 = 返回创角界面 1=返回角色列表界面
+}
+
+
+// 龙魂获得
+message SCDragonicObtained
+{
+    option (msgid) = 40010;
+    required int32 way = 1;
+    optional int64 from_creature_id = 2;
+    required int32 value = 3;
+}
+
+// 精英副本状态
+message SEliteDungeonStatus
+{
+    required int32 id = 1;
+    required int32 status = 2;
+}
+
+message SCEliteDungeonInitial
+{
+    option (msgid) = 40020;
+    repeated SEliteDungeonStatus elite_status = 1;
+    required int64 reset_remain_sec = 2;
+    required int32 reset_remain_count = 3;
+}
+
+message SCEliteDungeonUpdate
+{
+    option (msgid) = 40021;
+    required SEliteDungeonStatus elite_status = 1;
+    required int32 reset_remain_count = 2;
+}
+
+message CSEliteDungeonResetting
+{
+    option (msgid) = 40022;
+    required int32 group = 1;
+}
+
+message SCHint
+{
+    option (msgid) = 40030;
+    required int32 strid = 1;
+    required int32 time = 2;
+}
+
+message SCHintClose
+{
+    option (msgid) = 40031;
+    required int32 strid = 1; // 如果为0,关闭所有提示
+}
+
+message SCFunctionDeblockingInitial
+{
+    option (msgid) = 40040;
+    repeated int32 enabled_func = 1;
+    repeated int32 disabled_func = 2;
+}
+
+message SCFunctionDeblockingUpdate
+{
+    option (msgid) = 40041;
+    optional int32 enabled_func = 1;
+    optional int32 disabled_func = 2;
+}
+
+message SCDungeonRecommend
+{
+    option (msgid) = 40050;
+    optional int32 scene = 1;
+    optional int32 type = 2;
+}
+
+message SCRenameOpen
+{
+    option (msgid) = 40060;
+}
+
+message CSRename
+{
+    option (msgid) = 40061;
+    required bytes newname = 1;
+	optional bool is_notify = 2;
+}
+
+message CSRenameCancel
+{
+    option (msgid) = 40062;
+}
+
+message SCRenameResult
+{
+    option (msgid) = 40063;
+    required int32 code = 1;
+    optional int64 id = 2;
+    optional bytes newname = 3;
+}
+
+message CSVerifyName
+{
+    option (msgid) = 40065;
+    required bytes name = 1;
+    required int64 context = 2;
+}
+
+message SCVerifyName
+{
+    option (msgid) = 40066;
+    required bytes name = 1;
+    required int64 context = 2;
+    required int32 result = 3;
+}
+
+message SCMagicCooldownReduce
+{
+    option (msgid) = 40070;
+    required int32 magic_id = 1; // =0表示所有技能
+    required int32 reduce_ms = 2; // 减少的cd毫秒数
+}
+
+message SCMagicCooldownIncrease
+{
+    option (msgid) = 40071;
+    required int32 magic_id = 1; // 技能id
+    required int32 increase_ms = 2; // 增加的cd毫秒数
+}
+
+message SCClientOperation
+{
+    option (msgid) = 40075;
+    required int32 ui = 1;
+    required bytes params = 2;
+	optional bytes params2 = 3;
+    required int64 context = 4;
+}
+
+message CSClientOperationResult
+{
+    option (msgid) = 40076;
+    required int32 ui = 1;
+    required bytes response = 2;
+    required int64 context = 3;
+}
+
+message SCClientOperationDialog
+{
+    option (msgid) = 40077;
+    required int32 title = 1;
+    required int64 context = 2;
+}
+
+message CSClientOperationDialogResult
+{
+    option (msgid) = 40078;
+    required int32 response = 1;
+    required int64 context = 2;
+}
+
+message CSDebugFindPath
+{
+    option (msgid) = 40100;
+    required SVector3 start = 1;
+    required SVector3 target = 2;
+    required int64 context = 3;
+}
+
+message CSDebugRandomPath
+{
+    option (msgid) = 40101;
+    required SVector3 start = 1;
+    required SVector3 target = 2;
+    required float random_dist = 3;
+    required int64 context = 4;
+}
+
+message SCDebugFindPath
+{
+    option (msgid) = 40102;
+    required int32 code = 1;
+    repeated SVector3 path = 2;
+    required int64 context = 3;
+}
+
+// -----------------------------------------
+
+message CSQueryVigor
+{
+    option (msgid) = 40200;
+}
+
+message SCQueryVigor
+{
+    option (msgid) = 40201;
+    required int32 buy_times = 1;
+	required int32 buy_times_max = 2;
+    required int32 vigor = 3;
+	required int32 vigor_extra = 4;
+	optional int64 next_add_time = 5;
+	required int32 vigor_max = 6;		// 体力值上限，超过该值体力不再自动增加
+	required int32 vigor_limit = 7;		// 体力值上限，最大体力值不能超过该值
+}
+
+message SCUpdateVigor
+{
+    option (msgid) = 40202;
+    optional int32 buy_times = 1;
+    optional int32 vigor = 2;
+	optional int32 vigor_extra = 3;
+	optional int64 next_add_time = 4;
+	optional int32 vigor_max = 5;		// 体力值上限，超过该值体力不再自动增加
+}
+
+// 客户端请求: 购买体力值
+message CSBuyVigor
+{
+    option (msgid) = 40203;
+}
+
+// 服务器回应: 购买结果
+message SCBuyVigor
+{
+    option (msgid) = 40204;
+    required int32 code = 1;
+}
+
+// -----------------------------------------
+
+// 点金术-初始化
+message CSAlchemyQuery
+{
+    option (msgid) = 40300;
+}
+
+message SCAlchemyQueryResult
+{
+    option (msgid) = 40301;
+	required int32 today_free_count = 1;	// 当天已点免费次数
+	required int32 total_free_count = 2;	// 当天免费总次数
+	required int32 today_gold_count = 3;	// 当天已点付费次数
+	required int32 total_gold_count = 4;	// 当天付费总次数
+	repeated int32 chest_status = 5;		// 所有宝箱的开启状态(0=不可开,1=可开,2=已开)
+}
+
+// 点金术
+message CSAlchemyClick
+{
+    option (msgid) = 40302;
+}
+
+// 点金术返回值
+message SCAlchemyClickResult
+{
+    option (msgid) = 40303;
+    required int64 grant_silver = 1;	// 本次点击获得银币数
+    required int32 chest = 2; 			// 本次开启的箱子索引(0-4),没有则为-1
+}
+
+message SCAlchemyUpdate
+{
+	option (msgid) = 40304;
+	required int32 today_free_count = 1;	// 当天已点免费次数
+	required int32 total_free_count = 2;	// 当天免费总次数
+	required int32 today_gold_count = 3;	// 当天已点付费次数
+	required int32 total_gold_count = 4;	// 当天付费总次数
+	repeated int32 chest_status = 5;		// 所有宝箱的开启状态(0=不可开,1=可开,2=已开)
+}
+
+message CSAlchemyOpenChest
+{
+	option (msgid) = 40305;
+	required int32 chest = 1;			// 开启的箱子索引(0-4)
+}
+
+message SCAlchemyOpenChestResult
+{
+	option (msgid) = 40306;
+	required int32 chest = 1; 			// 开启的箱子索引(0-4)
+    required int32 chest_silver = 2; 	// 开箱获得的银币
+}
+
+// -----------------------------------------
+
+// vip初始化下发
+message SC_Vip_Initial
+{
+    option (msgid) = 40400;
+    required int32 exp = 1;
+    required int32 level = 2;
+    required int32 temporary_level = 3;
+    repeated int32 reward = 4; // 可以领取的充值礼包(多个)
+    repeated int32 reward_daily = 5; // 是否可以领取本日礼包
+}
+
+// vip 等级,经验,临时等级 走属性下发
+
+// vip可领奖励变更时下发
+message SC_Vip_UpdateRewards
+{
+    option (msgid) = 40401;
+    repeated int32 reward = 4; // 可以领取的充值礼包(多个)
+    repeated int32 reward_daily = 5; // 是否可以领取本日礼包
+}
+
+// 领取vip首充礼包
+message CS_Vip_TakeReward
+{
+    option (msgid) = 40410;
+    required int32 level = 1; // 指定要领取的vip等级
+}
+
+// 领取vip每日礼包
+message CS_Vip_TakeDailyReward
+{
+    option (msgid) = 40411;
+    required int32 level = 1; // 指定要领取的vip等级,负数代表当前vip等级
+}
+
+// 返回vip每日礼包
+message SC_Vip_TakeDailyRewardResult
+{
+    option (msgid) = 40412;
+    required int32 reward_daily = 1; // 是否可以领取本日礼包
+}
+
+
+// ----------------------------------------
+
+message CSChangeChannel
+{
+    option (msgid) = 40600;
+    required int32 channel = 1;
+}
+
+// -----------------------------------------
+// 防沉迷
+
+message SCFatigueStatusUpdate
+{
+    option (msgid) = 40700;
+    required int32 result = 1;
+}
+
+// -----------------------------------------
+// 家园赌博玩法(风险投资)
+
+message CSGambleQuery
+{
+    option (msgid) = 40800;
+}
+
+message SCGambleQueryResult
+{
+    option (msgid) = 40801;
+    required int32 started_count = 1;		// 当天已玩总次数(包括收费和免费的)
+    required int32 start_limit = 2;			// 当天可玩总次数(包括收费和免费的)
+	required int32 free_started_count = 3;	// 当天已玩免费次数
+	required int32 free_start_limit = 4;	// 当天可玩免费总次数
+
+	required bool is_started = 5;			// 赌博是否开始
+	optional int32 roll_times = 6;			// 当前赌博次数
+	optional int64 roll_silver = 7;			// 当前赌博奖励
+	optional int32 remain_revive_times = 8;	// 剩余复活次数
+}
+
+message CSGambleStart
+{
+	option (msgid) = 40802;
+}
+
+message SCGambleStartResult
+{
+	option (msgid) = 40803;
+	required int32 result = 1;
+	required bool is_started = 2;			// 赌博是否开始
+	optional int32 roll_times = 3;			// 当前赌博次数
+	optional int64 roll_silver = 4;			// 当前赌博奖励
+	optional int32 remain_revive_times = 5;	// 剩余复活次数
+}
+
+message CSGambleRoll
+{
+	option (msgid) = 40804;
+}
+
+message SCGambleRollResult
+{
+	option (msgid) = 40805;
+	required int32 result = 1;
+	required bool is_started = 2;			// 赌博是否开始
+	optional int32 roll_times = 3;			// 当前赌博次数
+	optional int64 roll_silver = 4;			// 当前赌博奖励
+	optional bool can_revive = 5;			// 是否可复活
+}
+
+message CSGambleRevive
+{
+	option (msgid) = 40806;
+}
+
+message SCGambleReviveResult
+{
+	option (msgid) = 40807;
+	required int32 result = 1;
+	required bool is_started = 2;			// 赌博是否开始
+	optional int32 roll_times = 3;			// 当前赌博次数
+	optional int64 roll_silver = 4;			// 当前赌博奖励
+	optional int32 remain_revive_times = 5;	// 剩余复活次数
+}
+
+message CSGambleEnd
+{
+	option (msgid) = 40808;
+}
+
+message SCGambleEndResult
+{
+	option (msgid) = 40809;
+	required int32 result = 1;
+}
+
+message SCGambleUpdate
+{
+	option (msgid) = 40810;
+    required int32 started_count = 1;		// 当天已玩总次数(包括收费和免费的)
+    required int32 start_limit = 2;			// 当天可玩总次数(包括收费和免费的)
+	required int32 free_started_count = 3;	// 当天已玩免费次数
+	required int32 free_start_limit = 4;	// 当天可玩免费总次数
+	required bool is_started = 5;			// 赌博是否开始
+}
+
+// -----------------------------------------
+// 角色冷却模块
+
+message SCUpdateCooldownInfo
+{
+    option (msgid) = 40820;
+    required int32 type = 1;				// CD类型				
+    required int64 remain_ms = 2; 			// 剩余毫秒
+    optional int64 total_ms = 3; 			// 总CD时间
+}
+
+// -----------------------------------------
+// 称号模块
+
+// 客户端请求：查询称号相关数据
+message CSTitleQuery
+{
+	option (msgid) = 40850;
+}
+
+//称号时间结构
+message STitleTime
+{
+	required int32 id = 1;			
+	required int64 invalid_time = 2;	
+}
+
+// 服务器返回：返回称号相关数据
+message SCTitleQueryResult
+{
+	option (msgid) = 40851;
+	required int32 current_title = 1;		// 当前头顶称号
+	repeated STitleTime titles = 2;	// 获取到的全部称号
+}
+
+// 客户端请求：设置当前头顶称号
+message CSTitleSetCurrent
+{
+	option (msgid) = 40852;
+	required int32 title = 1;				// 称号id
+	required bool is_used = 2;				// 使用称号true,取消称号false
+}
+
+// 服务器返回：更新称号相关数据
+message SCTitleUpdate
+{
+	option (msgid) = 40853;
+	required int32 type = 1;				// 1=更新当前头顶称号，2=更新获得的全部称号
+	required bool is_used = 2;				// 使用称号true,取消称号false
+	optional int32 current_title = 3;		// 当前头顶称号
+	repeated STitleTime titles = 4;	// 获取到的全部称号
+}
+
+// 服务器广播到视野内的玩家
+message SCTitleChanged
+{
+	option (msgid) = 40854;
+	required int64 id = 1;					// 玩家id
+	required int32 title = 2;				// 玩家当前头顶称号
+	required bool is_used = 3;				// 使用称号true,取消称号false
+}
+
+// -----------------------------------------
+// 成就模块
+message SDrawAchievement
+{
+	required int32 id = 1;
+	required int32 level = 2;
+}
+
+// 客户端查询：查询成就相关信息
+message CSAchievementQuery
+{
+	option (msgid) = 40860;
+}
+
+// 服务器返回：返回成就相关信息
+message SCAchievementQueryResult
+{
+	option (msgid) = 40861;
+	repeated SAchievement underway = 1;		// 未完成成就
+	repeated int32 completed = 2;			// 已完成成就
+	repeated SDrawAchievement draw = 3;		// 已完成并领取
+	repeated int32 last_draw = 4;			// 最后领取成就
+}
+
+// 服务器通知：获得成就
+message SCAchievementCompleted
+{
+	option (msgid) = 40862;
+	required int32 id = 1;					// 已完成成就
+}
+
+// 服务器通知：获得成就
+message CSDrawAchievement
+{
+	option (msgid) = 40863;
+	required int32 id = 1;					// 已完成成就
+}
+message SCDrawAchievement
+{
+	option (msgid) = 40864;
+	required int32 result = 1;
+	required SDrawAchievement draw = 2;		// 已完成并领取
+}
+
+// -----------------------------------------
+// dbflag
+
+// 服务器通知：更新dbflags到客户端
+message SCUpdateDBFlags
+{
+	option (msgid) = 40870;
+	required int32 dbflags = 1;
+}
+
+message CSUnlockStuck
+{
+    option (msgid) = 40880;
+}
+
+message SCUnlockStuckResult
+{
+    option (msgid) = 40881;
+    required int32 code = 1;
+}
+
+// -----------------------------------------
+// 神装活动模块
+
+// 神装信息
+message SHolyEquip
+{
+	required int32 id = 1;					// 神装活动id
+	required int32 status = 2;				// 0：未完成，1：已完成
+	required bool reward = 3;				// 是否已领奖
+	repeated int32 goal_results = 4;		// 神装活动完成状态
+}
+
+// 客户端查询：查询神装活动相关信息
+message CSHolyEquipQuery
+{
+	option (msgid) = 40890;
+}
+
+// 服务器返回：返回神装活动相关信息
+message SCHolyEquipQueryResult
+{
+	option (msgid) = 40891;
+	required int64 count_down = 1;			// 神装活动剩余时间（秒）
+	repeated SHolyEquip list_holy_equip = 2;	//神装活动
+}
+
+// 客户端发放奖励请求
+message CSHolyEquipReward
+{
+	option (msgid) = 40892;
+	required int32 id = 1;	
+}
+
+
+// 服务器通知：发放神装奖励结果
+message SCHolyEquipRewardResult
+{
+	option (msgid) = 40893;
+	required int32 id = 1;	
+	required int32 code = 2;	// 0：成功。-1表示不成功
+}
+
+// -----------------------------------------
+// 通用活动模块
+
+// 活动目标奖励
+message SCommonActivityReward
+{
+	required int32 id = 1;
+	required int32 num = 2;
+}
+
+// 基金回馈分红
+message SCommonActivityFundFeedback
+{
+	required int32 gold = 1;		//今天可以领取的分红金币
+	required int32 cnt = 2;			//分红剩余领取次数
+	required int32 feedback = 3;	//已经领取的分红
+}
+
+// 活动目标信息
+message SCommonActivityGoal
+{
+	required int32 id = 1;
+	required int32 total_max_num = 2;	//奖励全服总量
+	required int32 total_reward_num = 3;	//全服已发奖励数量	
+	required int32 reward_status = 4;	// 活动目标领奖状态列表（0：未达到领奖条件，1：可以领奖，2：已领奖）
+	repeated SCommonActivityReward list_reward = 5;	
+	optional int32 fund = 6;
+	optional SCommonActivityFundFeedback feedback = 7;
+	optional int32 counter = 8;	//目标计数器
+	
+}
+
+// 活动信息
+message SCommonActivity
+{
+	required int32 id = 1;					// 活动id
+	required int32 status = 2;				// 0：未开启，1：进行中，2：已完成
+	required bytes start_time = 3;			// 活动开启时间
+	required bytes end_time = 4;			// 活动结束时间
+	repeated SCommonActivityGoal list_goal = 5;
+	required int32 patternid = 6;
+}
+
+// 客户端查询：查询通用活动相关信息
+message CSCommonActivityQuery
+{
+	option (msgid) = 40900;
+}
+
+// 服务器返回：返回通用活动相关信息
+message SCCommonActivityQueryResult
+{
+	option (msgid) = 40901;	
+	repeated SCommonActivity list_activity = 1;		
+}
+
+// 客户端领取奖励请求
+message CSCommonActivityReward
+{
+	option (msgid) = 40902;
+	required int32 activity_id = 1;	
+	required int32 goal_id = 2;	
+}
+
+// 服务器通知：发放活动目标奖励结果
+message SCCommonActivityRewardResult
+{
+	option (msgid) = 40903;
+	required int32 activity_id = 1;	
+	required int32 goal_id = 2;	
+	required int32 code = 3;	// 0：成功。非0表示不成功，对应错误信息msgid
+}
+
+// 客户端购买基金请求
+message CSCommonActivityBuyFund
+{
+	option (msgid) = 40904;
+	required int32 activity_id = 1;	
+	required int32 goal_id = 2;	
+}
+
+// 服务器通知：购买基金结果
+message SCCommonActivityBuyFundResult
+{
+	option (msgid) = 40905;
+	required int32 activity_id = 1;	
+	required int32 goal_id = 2;	
+	required int32 code = 3;	// 0：成功。非0表示不成功，对应错误信息msgid
+}
+
+// 客户端领取基金分红请求
+message CSCommonActivityFundFeedback
+{
+	option (msgid) = 40906;
+	required int32 activity_id = 1;	
+	required int32 goal_id = 2;	
+}
+
+// 服务器通知：领取基金分红结果
+message SCCommonActivityFundFeedbackResult
+{
+	option (msgid) = 40907;
+	required int32 activity_id = 1;	
+	required int32 goal_id = 2;	
+	required int32 code = 3;	// 0：成功。非0表示不成功，对应错误信息msgid
+}
+
+// 服务器返回：返回通用活动奖励已更新的活动
+message SCCommonActivityUpdate
+{
+	option (msgid) = 40908;	
+	repeated SCommonActivity list_activity = 1;		
+}
+
+// 退出请求:返回角色列表 | 退出游戏
+message CSRequestExit
+{
+	option (msgid) = 40920;
+	optional bool return_CLU = 1; // 是否为返回角色列表UI
+}
+
+message SCRequestExit
+{
+	option (msgid) = 40922;
+	optional bool return_CLU = 1; // 是否为返回角色列表UI
+	required int32 seconds = 2; // 等待时间
+}
+
+// 取消退出请求
+message CSRequestCancelExit
+{
+	option (msgid) = 40921;
+}
+
+message SCRequestCancelExit
+{
+	option (msgid) = 40923;
+}
+
+// -----------------------------------------
+// 挂机相关
+
+// 客户端请求：查询挂机状态
+message CSMeditationQuery
+{
+	option (msgid) = 41000;
+}
+
+// 客户端请求：进入挂机
+message CSMeditationEnter
+{
+	option (msgid) = 41001;
+}
+
+// 客户端请求：退出挂机
+message CSMeditationExit
+{
+	option (msgid) = 41002;
+}
+
+// 服务器通知：更新挂机状态给自己
+message SCMeditationUpdateToOwner
+{
+	option (msgid) = 41003;
+	required bool meditating = 1;	// 是否挂机状态
+	optional int64 enter_time = 2;	// 开始挂机时间
+	optional int32 enter_level = 3;	// 开始挂机时玩家等级
+}
+
+// 服务器通知：更新挂机状态给视野中的玩家
+message SCMeditationUpdateToView
+{
+	option (msgid) = 41004;
+	required int64 id = 1;			// 玩家id
+	required bool meditating = 2;	// 是否挂机状态
+}
+
+// 玩法界面被打开
+message CSPlayEntryOpened
+{
+	option (msgid) = 41050;
+	required int32 entry = 1;			// 玩家id
+}
+
+// 请求切换分线
+message CSSwitchSubline
+{
+	option (msgid) = 41060;
+	required int32 subline = 1;			// 分线id
+}
+
+// 查询分线
+message CSSublineQuery
+{
+	option (msgid) = 41061;
+}
+
+// 查询分线结果
+message SCSublineQueryResult
+{
+	option (msgid) = 41062;
+	repeated int32 sublines = 1;			// 可切换的分线
+}
+
+// 腾讯:请求充值
+message CSTencentBuyGold
+{
+    option (msgid) = 41070;
+    required int64 gold = 1; // 金币数
+    required int64 context = 2;
+    optional string gold_photo_url = 3; // 金币图像Url
+}
+
+// 腾讯:请求充值返回
+message SCTencentBuyGold
+{
+    option (msgid) = 41071;
+    
+    required int32 code = 1;
+    required string error_message = 2;
+    
+    required int64 gold = 3;
+    required int64 context = 4;
+    optional string token = 5; // 打开页面用token
+    optional string url_params = 6; // 打开页面用url_params
+}
+
+// 腾讯:请求专有充值
+message CSTencentBuyGoods
+{
+    option (msgid) = 41074;
+    required int64 goods = 1; // 特定货物id
+    required int64 context = 2;
+    optional string gold_photo_url = 3; // 金币图像Url
+}
+
+// 腾讯:请求专有充值返回
+message SCTencentBuyGoods
+{
+    option (msgid) = 41075;
+    
+    required int32 code = 1;
+    required string error_message = 2;
+    
+    required int64 goods = 3;
+    required int64 context = 4;
+    optional string token = 5; // 打开页面用token
+    optional string url_params = 6; // 打开页面用url_params
+}
+
+// 购买各玩法的次数
+message CSBuyCount
+{
+    option (msgid) = 41080;
+    required int32 type = 1;	// 玩法的类型(0=龙域守护领奖次数)
+    optional int64 param1 = 2;	// 可选参数
+}
+
+
+//--------------------------------
+
+// 勇者试炼查询
+message CSYZSLQuery
+{
+	option (msgid) = 41200;
+}
+
+message SCYZSLQuery
+{
+	option (msgid) = 41201;
+	required int32 round = 1;
+	required int32 time = 2;
+	repeated SLegendGem gems = 3;
+}
+
+// 勇者试炼进入
+message CSYZSLEnter
+{
+	option (msgid) = 41202;
+	required bool usegold = 1;
+}
+
+// 勇者试炼进入反馈
+message SCYZSLEnterResult
+{
+	option (msgid) = 41203;
+	required int32 result = 1;
+}
+
+// 勇者试炼退出
+message CSYZSLLeave
+{
+	option (msgid) = 41204;
+}
+
+// 勇者试炼退出反馈
+message SCYZSLLeaveResult
+{
+	option (msgid) = 41205;
+}
+
+// 更新勇者试炼每轮信息
+message SCYZSLRoundUpdate
+{
+	option (msgid) = 41206;
+	required int32 state = 1; // 1开始 2结束
+	required int32 round = 2;
+	required int32 time = 3;
+	required int32 total_time = 4;
+}
+
+// 勇者试炼通知客户端结算
+message SCYZSLEndedUpdate
+{
+	option (msgid) = 41207;
+	required int32 round = 1;
+	required int32 time = 2;
+}
+
+// 传奇宝石升级
+message CSLegendGemLevelup
+{
+	option (msgid) = 41220;
+	required int32 id = 1;
+}
+
+message SCLegendGemLevelupResult
+{
+	option (msgid) = 41221;
+	required int32 result = 1;
+}
+
+message SCLegendGemUpdate
+{
+	option (msgid) = 41222;
+	required SLegendGem gem = 1;
+}
+
+// VIP月卡更新
+message SCVipCardUpdate
+{
+    option (msgid) = 41230;
+    required int32 type = 1;
+	required int32 remain_time = 2;
+}
+
+// VIP月卡购买
+message CSVipCardBuy
+{
+    option (msgid) = 41231;
+    required int32 index = 1;
+}
+
+// VIP月卡列表
+message SCVipCardList
+{
+    option (msgid) = 41232;
+    repeated SVipCard cards = 1;
+}
+
+// VIP月卡购买
+message CSVipCardReward
+{
+    option (msgid) = 41233;
+    required int32 index = 1;
+	required int32 level_index = 2; // 0:30 1:40 2:50 3:60 4:70
+}
+
+// VIP月卡购买
+message SCVipCardRewardResult
+{
+    option (msgid) = 41234;
+    required int32 index = 1;
+	required int32 level_index = 2; // 0:30 1:40 2:50 3:60 4:70
+	required int32 result = 3;
+}
+
+//--------------------------------
+
+// 地狱试炼查询
+message CSHellTrialQuery
+{
+	option (msgid) = 41240;
+}
+
+message SCHellTrialQuery
+{
+	option (msgid) = 41241;
+	required int32 round = 1;
+	required int32 time = 2;
+}
+
+// 地狱试炼进入
+message CSHellTrialEnter
+{
+	option (msgid) = 41242;
+	required bool useticket = 1;
+	optional int32 round = 2;
+}
+
+// 地狱试炼进入反馈
+message SCHellTrialEnterResult
+{
+	option (msgid) = 41243;
+	required int32 result = 1;
+	optional bool useticket = 2;
+}
+
+// 地狱试炼退出
+message CSHellTrialLeave
+{
+	option (msgid) = 41244;
+}
+
+// 地狱试炼退出反馈
+message SCHellTrialLeaveResult
+{
+	option (msgid) = 41245;
+}
+
+// 更新地狱试炼每轮信息
+message SCHellTrialRoundUpdate
+{
+	option (msgid) = 41246;
+	required int32 state = 1; // 1开始 2结束
+	required int32 round = 2;
+	required int32 time = 3;
+	required int32 total_time = 4;
+}
+
+// 地狱试炼结算
+message SCHellTrialEndedUpdate
+{
+	option (msgid) = 41247;
+	required int32 round = 1;
+	required int32 time = 2;
+}
+
+// 开关自动战斗
+message SCAutoCombatOpen
+{
+	option (msgid) = 41250;
+}
+
+message SCAutoCombatClose
+{
+	option (msgid) = 41251;
+}
+
+// 资源副本数据更新
+message SCResourcesUpdate
+{
+	option (msgid) = 41252;
+	required int32 time_count = 1;                //资源副本时间限定
+	required int32 resources1_id = 2;             //资源副本1编号
+	required int32 resources1_count = 3;          //资源副本1数量
+	required int32 resources2_id = 4;             //资源副本2编号
+	required int32 resources2_count = 5;          //资源副本2数量
+	required int32 resources3_id = 6;             //资源副本3编号
+	required int32 resources3_count = 7;          //资源副本3数量
+}
+
+// 资源副本退出
+message SCResourcesLeave
+{
+	option (msgid) = 41253;
+	required bytes leave_str = 1;                 //客户端应该显示的字符串
+	required int32 resources1_id = 2;             //资源副本1编号
+	required int32 resources1_count = 3;          //资源副本1数量
+	required int32 resources2_id = 4;             //资源副本2编号
+	required int32 resources2_count = 5;          //资源副本2数量
+	required int32 resources3_id = 6;             //资源副本3编号
+	required int32 resources3_count = 7;          //资源副本3数量
+}
+
+// 客服端请求：摇钱树信息
+message CSQueryProduceCoinInfo
+{
+	option (msgid) = 41254;
+}
+
+// 服务器返回：摇钱树信息
+message SCQueryProduceCoinInfoResult
+{
+	option (msgid) = 41255;
+	required int64 cur_output = 1;							// 当前产量
+	required int64 cur_reserves = 2;						// 当前储量
+	required int64 max_reserves = 3;						// 最大储量
+	required int32 time = 4;										// 60秒内流逝时间
+	required int32 quest_id = 5;								// 财神任务
+}
+
+// 客服端请求：获取摇钱树铜币
+message CSGiveProduceCoin
+{
+	option (msgid) = 41256;
+}
+
+// 客服端请求：增加产量和最大储量
+message CSAddProduceCoinsItems
+{
+	option (msgid) = 41257;
+	required int32 type = 1;
+	required int32 num = 2;
+}
+
+// 客服端请求：是否接取财神任务
+message CSAcceptProduceCoinsQuest
+{
+	option (msgid) = 41258;
+	required bool accept = 1;
+}

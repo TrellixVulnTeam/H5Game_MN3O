@@ -1,0 +1,4 @@
+"索引"	"第一类：等级区分40:1-49区间等级的装备50:50-59区间等级的装备60:60-69区间等级的装备70:70-79区间等级的装备"	"第二类：类型区分1.名牌2.套装"	"合成产物"	"打造类型1：材料打造2：装备继承打造"	"需要材料"	"合成概率(万分比)"	"增加经验值"	"打造消耗"	"预估战力"	"是否需要公告"	
+"index"	"level_limit"	"type"	"dstitems"	"make_type"	"srcitems"	"dstitem_probs"	"exp_plus"	"cost_gold"	"fight"	"broc"	
+"int"	"int"	"int"	"int"	"int"	"int[]"	"int"	"int"	"int"	"int"	"bool"	
+"cs"	"cs"	"c"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"c"	"cs"	

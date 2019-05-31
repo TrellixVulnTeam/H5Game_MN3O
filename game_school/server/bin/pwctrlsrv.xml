@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>ctrlsrv</name>
+    
+    <simpl_entrance>
+        <port>8001</port>
+        
+        <enable>true</enable>
+        
+        <level_0>
+            <ip>127.0.0.1</ip>
+            <local_ip>127.0.0.1</local_ip>
+            <port>8001</port>
+            <login_port>8000</login_port>
+        </level_0>
+        
+        <level_1>
+            <ip></ip>
+            <local_ip></local_ip>
+            <port>0</port>
+            <login_port>0</login_port>
+        </level_1>
+        
+        <level_2>
+            <ip></ip>
+            <local_ip></local_ip>
+            <port>0</port>
+            <login_port>0</login_port>
+        </level_2>
+    </simpl_entrance>
+    
+    <performance_http>
+        <port>8002</port>
+        <enable>true</enable>
+    </performance_http>
+    
+    <qlvh_customer_service_interface>
+        <bind></bind>
+        <port>8003</port>
+        <enable>true</enable>
+    </qlvh_customer_service_interface>
+    
+	<communicator>
+		<listen_addr>tcp://127.0.0.1:8708</listen_addr>
+	</communicator>
+    
+	<sqlitedb_path>./data/sqlitedb/</sqlitedb_path>
+	
+	<max_online>2000</max_online>
+	
+    <nodes>
+		<count>3</count>
+		<node1>
+			<name>dbsrv</name>
+			<addr>tcp://127.0.0.1:8709</addr>
+		</node1>
+		<node2>
+			<name>connsrv</name>
+			<addr>tcp://127.0.0.1:8707</addr>
+		</node2>
+        <node3>
+			<name>accsrv</name>
+			<addr>tcp://127.0.0.1:8706</addr>
+		</node3>        
+	</nodes>
+    
+    <namesrv>
+        <enable>false</enable>
+        <database>
+			<host>10.68.43.14</host>
+			<port>8017</port>
+			<name>namedb</name>
+			<user>test</user>
+			<pswd>test</pswd>
+		</database>
+    </namesrv>
+</pwdist>
+
+

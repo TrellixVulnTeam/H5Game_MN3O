@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>dbsrv</name>
+	<communicator>
+		<listen_addr>tcp://GAME1_ADDR:DBSRV_PORT</listen_addr>
+	</communicator>
+	<pwdbsrv>
+		<database>
+			<host>CHARACTERDB_ADDR</host>
+			<port>CHARACTERDB_PORT</port>
+			<name>CHARACTERDB_NAME</name>
+			<user>CHARACTERDB_USER</user>
+			<pswd>CHARACTERDB_PSWD</pswd>
+		</database>		
+	</pwdbsrv>
+</pwdist>
+
+

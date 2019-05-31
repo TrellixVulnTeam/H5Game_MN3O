@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Chapter_choose" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group id="chapterChooseGroup" left="0" right="0" top="0" bottom="0" height="1334">
+		<e:Image left="0" right="0" top="0" bottom="0" source="image_bai_png"/>
+		<e:Image left="0" right="0" top="0" bottom="0" source="chapierback_png" x="10" y="10"/>
+		<e:Scroller id="sclistchapter" scaleX="1" scaleY="1" anchorOffsetY="0" enabled="true" bounces="false" left="0" right="0" horizontalCenter="0" scrollPolicyH="off" height="1280" y="42">
+			<e:Group id="chapterChooseItemGroup" width="750" height="1280" anchorOffsetY="0" anchorOffsetX="0">
+				<e:Button id="chapter_btn1" label="" width="599" height="256" anchorOffsetX="0" anchorOffsetY="0" x="-208" y="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="1_1_png" source.down="1_1_png" source.disabled="1_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn2" label="" y="0" width="493" height="408" anchorOffsetX="0" anchorOffsetY="0" x="405">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="2_1_png" source.down="2_1_png" source.disabled="2_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn3" label="" y="125" width="376" height="680" x="-109" anchorOffsetX="0" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="3_1_png" source.down="3_1_png" source.disabled="3_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn4" label="" y="239" width="661" height="480" anchorOffsetX="0" x="276" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="4_1_png" source.down="4_1_png" source.disabled="4_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn5" label="" y="744" x="-175" width="560" height="467" anchorOffsetX="0" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="5_1_png" source.down="5_1_png" source.disabled="5_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn6" label="" y="584" anchorOffsetX="0" x="394" width="525" height="768" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="6_1_png" source.down="6_1_png" source.disabled="6_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn7" label="" y="1105" x="-134" width="1013" height="462" anchorOffsetX="0" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="7_1_png" source.down="7_1_png" source.disabled="7_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn8" label="" y="1508" x="-140" width="512" height="799" anchorOffsetX="0" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="8_1_png" source.down="8_1_png" source.disabled="8_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn9" label="" y="1385" x="387" width="569" height="586" anchorOffsetX="0" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="9_1_png" source.down="9_1_png" source.disabled="9_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn10" label="" y="1677.58" x="340" width="568" height="583" anchorOffsetX="0" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="10_1_png" source.down="10_1_png" source.disabled="10_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="chapter_btn11" label="" y="2063.35" x="-175" width="1101" height="457" anchorOffsetX="0" anchorOffsetY="0">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="11_1_png" source.down="11_1_png" source.disabled="11_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+			</e:Group>
+		</e:Scroller>
+		<e:Image height="65" source="title01_png" left="0" right="0" top="0"/>
+		<e:Button id="btn_back" label="" scaleX="1" scaleY="1" top="0" right="0">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image width="532.03" height="205.08" source="image_72_png" bottom="0" left="0" anchorOffsetX="0" anchorOffsetY="0"/>
+	</e:Group>
+</e:Skin>

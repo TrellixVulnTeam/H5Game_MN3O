@@ -1,0 +1,323 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/47001_48000_ride.proto
+// -------------------------------------------------------
+// ------------------------------------------
+// 坐骑相关
+// ------------------------------------------
+
+// -----------------------------------------
+// 添加坐骑消息
+message SCRideAdd
+{
+	option (msgid) = 47100;
+	required SRide ride = 1;
+}
+
+// 删除坐骑消息
+message SCRideDel
+{
+	option (msgid) = 47105;
+	required int32 id = 1;
+}
+
+// 坐骑查询消息
+message CSRideQuery
+{
+	option (msgid) = 47200;
+}
+
+// 坐骑查询返回消息
+message SCRideQuery
+{
+	option (msgid) = 47201;
+	required int32 result = 1;
+	repeated SRide ride = 2;
+	optional int32 ride_def = 3;	// 默认坐骑
+	repeated SRideSoulSlot ride_soul_slot  = 4;
+}
+
+// 坐骑数据更新
+message SCRideUpdate
+{
+	option (msgid) = 47202;
+	required SRide ride = 2;
+}
+
+// 坐骑兽魂数据更新
+message SCRideSoulSlotUpdate
+{
+	option (msgid) = 47203;
+	repeated SRideSoulSlot ride_soul_slot = 1;
+}
+
+// 开始骑乘消息
+message CSRideStart
+{
+	option (msgid) = 47210;
+	required int32 id = 1;
+}
+
+// 开始骑乘返回消息
+message SCRideStart
+{
+	option (msgid) = 47211;
+	required int32 result = 1;
+	required int32 id = 2;
+}	
+
+// 结束骑乘消息
+message CSRideStop
+{
+	option (msgid) = 47212;
+}
+
+// 结束骑乘返回消息
+message SCRideStop
+{
+	option (msgid) = 47213;
+	required int32 result = 1;
+}
+
+// 默认坐骑更新
+message SCRideDefaultUpdate
+{
+	option (msgid) = 47216;
+	required int32 id = 1;
+}
+
+// 升级
+message CSRideLevelup
+{
+	option (msgid) = 47220;
+	required int32 id = 1;
+}
+
+// 突破
+message CSRideBreakup
+{
+	option (msgid) = 47221;
+	required int32 id = 1;
+}
+
+// 技能升级
+message CSRideSkillup
+{
+	option (msgid) = 47222;
+	required int32 id = 1;
+}
+
+// 喂养
+message CSRideFeed
+{
+	option (msgid) = 47223;
+	required int32 id = 1;
+}
+
+// 坐骑一键升级
+message CSRideLevelupOneKey
+{
+	option (msgid) = 47224;
+	required int32 id = 1;
+}
+
+// 一键突破
+message CSRideBreakupOneKey
+{
+	option (msgid) = 47225;
+	required int32 id = 1;
+}
+
+//注魂
+message CSRideInject
+{
+	option (msgid) = 47226;
+	required int32 id = 1;
+}
+
+//一键注魂
+message CSRideInjectOneKey
+{
+	option (msgid) = 47227;
+	required int32 id = 1;
+}
+
+// 坐骑装备
+message CSRideEquip
+{
+	option (msgid) = 47230;
+	required int32 id = 1;
+	required int32 src_idx = 2;
+	required int32 dst_idx = 3;
+}
+
+message SCRideEquipResult
+{
+	option (msgid) = 47231;
+	required int32 result = 1;
+	required int32 id = 2;
+	required int32 src_idx = 3;
+	required int32 dst_idx = 4;
+}
+
+// 坐骑卸装
+message CSRideUnEquip
+{
+	option (msgid) = 47232;
+	required int32 id = 1;
+	required int32 src_idx = 2;
+	required int32 dst_idx = 3;
+}
+
+message SCRideUnEquipResult
+{
+	option (msgid) = 47233;
+	required int32 result = 1;
+	required int32 id = 2;
+	required int32 src_idx = 3;
+	required int32 dst_idx = 4;
+}
+
+// 坐骑装备合成
+message CSRideEquipCombine
+{
+	option (msgid) = 47234;
+	required int32 src_idx = 1;
+	required int32 dst_idx = 2;
+}
+
+message SCRideEquipCombineResult
+{
+	option (msgid) = 47235;
+	required int32 result = 1;
+	required int32 src_idx = 2;
+	required int32 dst_idx = 3;
+}
+
+message CSRideEquipLevelup
+{
+	option (msgid) = 47236;
+	required int32 id = 1;
+	required int32 src_idx = 2;
+}
+
+message SCRideEquipLevelupResult
+{
+	option (msgid) = 47237;
+	required int32 result = 1;
+	required int32 id = 2;
+	required int32 src_idx = 3;
+}
+
+message SCRideTimeInvalid
+{
+	option (msgid) = 47238;
+	required int32 ride_id = 1;
+}
+
+///////////////////////////////////
+// 多人坐骑
+///////////////////////////////////
+// 骑乘多人坐骑
+message CSMountMultiRide
+{
+	option (msgid) = 47250;
+	required int32 id = 1;
+}
+// 下骑
+message CSDismountMultiRide
+{
+	option (msgid) = 47251;
+}
+
+// 骑乘状态同步
+message SCSyncMultiRideInfo
+{
+	option (msgid) = 47252;
+	required int64 multi_ride_id = 1;
+	required int32 multi_ride_did = 2;
+}
+
+// 多人坐骑骑乘角色列表
+message CSGetMultiRideHumanInfo
+{
+	option (msgid) = 47253;
+	required int64 multi_ride_id = 1;
+}
+message SCMultiRideHumanInfo
+{
+	option (msgid) = 47254;
+	required int64 multi_ride_id = 1;
+	required int32 multi_ride_did = 2;
+	repeated int64 human_ids = 3;
+}
+
+// 申请骑乘他人坐骑
+message CSReqRideMulti
+{
+	option (msgid) = 47260;
+	required int64 multi_ride_hid = 1;
+}
+message SCReqRideMulti
+{
+	option (msgid) = 47261;
+	required int32 result = 1;
+}
+// 通知多人坐骑所有者别人申请骑乘
+message SCNoticeReqRideMulti
+{
+	option (msgid) = 47262;
+	required int64 req_hid = 1;
+	required bytes req_name = 2;
+}
+
+// 坐骑所有者确认别人是否可以骑乘
+message CSConfirmRideMulti
+{
+	option (msgid) = 47263;
+	required int64 req_hid = 1;
+	required bool ok = 2;
+}
+message SCConfirmRideMulti
+{
+	option (msgid) = 47264;
+	required int32 result = 1;
+}
+
+// 邀请骑乘
+message CSInviteMountMultiRide
+{
+	option (msgid) = 47270;
+	required int64 hid = 1;
+}
+message SCInviteMountMultiRide
+{
+	option (msgid) = 47271;
+	required int32 result = 1;
+}
+
+// 通知目标被邀请
+message SCNoticeInviteMountMultiRide
+{
+	option (msgid) = 47272;
+	required int64 invite_hid = 1;
+	required bytes invite_name = 2;
+}
+
+// 确认邀请
+message CSConfimInviteMountMultiRide
+{
+	option (msgid) = 47273;
+	required int64 invite_hid = 1;
+	required bool ok = 2;
+}
+message SCConfimInviteMountMultiRide
+{
+	option (msgid) = 47274;
+	required int32 result = 1;
+}
+

@@ -1,0 +1,26 @@
+Localtime.lo: Localtime.cpp ../include/log4cpp/Portability.hh \
+ ../include/log4cpp/config-MinGW32.h ../include/log4cpp/Export.hh \
+ Localtime.hh \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/time.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/_mingw.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/stddef.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/memory.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/string.h
+
+../include/log4cpp/Portability.hh:
+
+../include/log4cpp/config-MinGW32.h:
+
+../include/log4cpp/Export.hh:
+
+Localtime.hh:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/time.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/_mingw.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/stddef.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/memory.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/string.h:

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Session Name="/home/cbh/workspace/pwngs/server/pwconnsrv/pwconnsrv.workspace">
+  <int Value="0" Name="m_selectedTab"/>
+  <wxString Value="/home/cbh/workspace/pwngs/server/pwconnsrv/pwconnsrv.workspace" Name="m_workspaceName"/>
+  <TabInfoArray Name="TabInfoArray">
+    <TabInfo>
+      <wxString Value="/home/cbh/workspace/pwngs/server/pwconnsrv/pw_connsrv_connection.cpp" Name="FileName"/>
+      <int Value="439" Name="FirstVisibleLine"/>
+      <int Value="449" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/cbh/workspace/pwngs/server/pwconnsrv/pw_connsrv_connection.h" Name="FileName"/>
+      <int Value="45" Name="FirstVisibleLine"/>
+      <int Value="1" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/cbh/workspace/pwngs/server/pwconnsrv/pw_connsrv_service_port.cpp" Name="FileName"/>
+      <int Value="2" Name="FirstVisibleLine"/>
+      <int Value="49" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+    </TabInfo>
+  </TabInfoArray>
+  <SerializedObject Name="m_breakpoints">
+    <long Value="1" Name="Count"/>
+    <SerializedObject Name="Breakpoint0">
+      <wxString Value="/home/cbh/workspace/pwngs/server/pwconnsrv/pw_connsrv_connection.cpp" Name="file"/>
+      <int Value="463" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <int Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+  </SerializedObject>
+</Session>

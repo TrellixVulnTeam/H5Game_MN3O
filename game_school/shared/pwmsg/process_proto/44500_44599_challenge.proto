@@ -1,0 +1,287 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/44500_44599_challenge.proto
+// -------------------------------------------------------
+// 挑战副本层级bossID请求
+message CSChallengeBossID
+{
+	option (msgid) = 44500;
+	required int32 level = 1; // 挑战副本层数
+}
+
+// 挑战副本层级bossID反馈
+message SCChallengeBossID
+{
+	option (msgid) = 44501;
+	required int32 bossid = 1; // 本层级bossid
+	optional int32 level = 2; // 挑战副本层数
+}
+
+// 挑战副本进入
+message CSChallengeEnter
+{
+	option (msgid) = 44502;
+}
+
+// 挑战副本进入反馈
+message SCChallengeEnter
+{
+	option (msgid) = 44503;
+	required int32 result = 1;
+}
+
+// 挑战副本信息查询
+message CSChallengeQuery
+{
+	option (msgid) = 44504;
+}
+
+// 挑战副本信息查询反馈
+message SCChallengeQuery
+{
+	option (msgid) = 44505;
+	required int32 curr_level = 1; // 当前挑战层数
+	required int32 max_pass_level = 2; // 最高挑战层数
+	repeated int32 obtain_reward_levels = 3; // 已领取首次奖励层数集合
+	required int32 reset_count = 4;
+}
+
+// 挑战副本扫荡
+message CSChallengeSweep
+{
+	option (msgid) = 44506;
+	required int32 sweep_type = 1; // 扫荡类型
+}
+
+// 挑战副本扫荡返回
+message SCChallengeSweep
+{
+	option (msgid) = 44507;
+	required int32 result = 1;
+}
+
+// 挑战副本领取首次通关奖励
+message CSChallengeObtainFirstPassReward
+{
+	option (msgid) = 44508;
+	required int32 level = 1; // 要领取首次奖励层数
+}
+
+// 挑战副本领取首次通关奖励返回
+message SCChallengeObtainFirstPassReward
+{
+	option (msgid) = 44509;
+	required int32 result = 1;
+	optional int32 level = 2; // 要领取首次奖励层数
+}
+
+// 挑战副本时间
+message SCChallengeExistTime
+{
+	option (msgid) = 44510;
+	required int32 time = 1;
+}
+
+//挑战副本通知客户端挑战结果:0-失败 1-成功
+message SCChallengeResult
+{
+	option (msgid) = 44511;
+	required int32 result = 1;
+}
+
+//重置挑战次数
+message CSChallengeReset
+{
+	option (msgid) = 44512;
+}
+
+//重置挑战次数结果
+message SCChallengeResetResult
+{
+	option (msgid) = 44513;
+	required int32 result = 1;
+	required int32 reset_count = 2;
+}
+
+
+// ------------------------------------------
+// 挑战副本二
+// ------------------------------------------
+// 挑战副本二进入
+message CSChallengeOtherEnter
+{
+	option (msgid) = 44520;
+}
+
+// 挑战副本二进入反馈
+message SCChallengeOtherEnter
+{
+	option (msgid) = 44521;
+	required int32 result = 1;
+}
+
+// 挑战副本二信息查询
+message CSChallengeOtherQuery
+{
+	option (msgid) = 44522;
+}
+
+// 挑战副本二信息查询反馈
+message SCChallengeOtherQuery
+{
+	option (msgid) = 44523;
+	required int32 curr_level = 1; // 当前挑战层数
+	required int32 max_pass_level = 2; // 最高挑战层数
+	repeated int32 obtain_reward_levels = 3; // 已领取首次奖励层数集合
+	required int32 reset_count = 4;
+}
+
+// 挑战副本二扫荡
+message CSChallengeOtherSweep
+{
+	option (msgid) = 44524;
+	required int32 sweep_type = 1; // 扫荡类型 0 普通, 1 vip
+}
+
+// 挑战副本二扫荡返回
+message SCChallengeOtherSweep
+{
+	option (msgid) = 44525;
+	required int32 result = 1;
+}
+
+// 挑战副本二领取首次通关奖励
+message CSChallengeOtherObtainFirstPassReward
+{
+	option (msgid) = 44526;
+	required int32 level = 1; // 要领取首次奖励层数
+}
+
+// 挑战副本二领取首次通关奖励返回
+message SCChallengeOtherObtainFirstPassReward
+{
+	option (msgid) = 44527;
+	required int32 result = 1;
+	optional int32 level = 2; // 要领取首次奖励层数
+}
+
+//挑战副本二通知客户端挑战结果:0-失败 1-成功
+message SCChallengeOtherResult
+{
+	option (msgid) = 44528;
+	required int32 result = 1;
+}
+
+// 挑战副本二关卡信息
+message SCChallengeOtherInfo
+{
+	option (msgid) = 44529;
+	required int32 time = 1;
+}
+
+//挑战副本二重置挑战次数
+message CSChallengeOtherReset
+{
+	option (msgid) = 44530;
+}
+
+//挑战副本二重置挑战次数结果
+message SCChallengeOtherResetResult
+{
+	option (msgid) = 44531;
+	required int32 result = 1;
+	required int32 reset_count = 2;
+}
+
+// ------------------------------------------
+// 挑战生存副本
+// ------------------------------------------
+// 挑战生存副本进入
+message CSChallengeLiveEnter
+{
+	option (msgid) = 44542;
+}
+
+// 挑战生存副本进入反馈
+message SCChallengeLiveEnter
+{
+	option (msgid) = 44543;
+	required int32 result = 1;
+}
+
+// 挑战生存副本信息查询
+message CSChallengeLiveQuery
+{
+	option (msgid) = 44544;
+}
+
+// 挑战生存副本信息查询反馈
+message SCChallengeLiveQuery
+{
+	option (msgid) = 44545;
+	required int32 curr_level = 1; // 当前挑战层数
+	required int32 max_pass_level = 2; // 最高挑战层数
+	repeated int32 obtain_reward_levels = 3; // 已领取首次奖励层数集合
+	required int32 reset_count = 4;
+}
+
+// 挑战生存副本扫荡
+message CSChallengeLiveSweep
+{
+	option (msgid) = 44546;
+	required int32 sweep_type = 1; // 扫荡类型
+}
+
+// 挑战生存副本扫荡返回
+message SCChallengeLiveSweep
+{
+	option (msgid) = 44547;
+	required int32 result = 1;
+}
+
+// 挑战生存副本领取首次通关奖励
+message CSChallengeLiveObtainFirstPassReward
+{
+	option (msgid) = 44548;
+	required int32 level = 1; // 要领取首次奖励层数
+}
+
+// 挑战生存副本领取首次通关奖励返回
+message SCChallengeLiveObtainFirstPassReward
+{
+	option (msgid) = 44549;
+	required int32 result = 1;
+	optional int32 level = 2; // 要领取首次奖励层数
+}
+
+// 挑战生存副本时间
+message SCChallengeLiveExistTime
+{
+	option (msgid) = 44550;
+	required int32 time = 1;
+}
+
+//挑战生存副本通知客户端挑战结果:0-失败 1-成功
+message SCChallengeLiveResult
+{
+	option (msgid) = 44551;
+	required int32 result = 1;
+}
+
+//挑战生存副本重置挑战次数
+message CSChallengeLiveReset
+{
+	option (msgid) = 44552;
+}
+
+//挑战生存副本重置挑战次数结果
+message SCChallengeLiveResetResult
+{
+	option (msgid) = 44553;
+	required int32 result = 1;
+	required int32 reset_count = 2;
+}

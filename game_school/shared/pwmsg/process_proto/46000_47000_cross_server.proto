@@ -1,0 +1,50 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/46000_47000_cross_server.proto
+// -------------------------------------------------------
+
+
+// 客户端查询跨服服务器信息
+
+message SCrossServerConfig
+{
+    required string name = 1;
+    required string addr = 2;
+    required int32 port = 3;
+}
+
+message CS_CrossServer_QueryConfigs
+{
+    option (msgid) = 46000;
+}
+
+message SC_CrossServer_QueryConfigsResult
+{
+    option (msgid) = 46001;
+    repeated SCrossServerConfig configs = 1;
+}
+
+message SC_CrossServer_Start
+{
+	option (msgid) = 46010;
+	required string user = 1;
+	required string pswd = 2;
+	required int32 level = 3;
+	required int32 basemap = 4;
+	required int64 gamemap = 5;
+}
+
+message CS_CrossServer_Close
+{
+    option (msgid) = 46020;
+}
+
+message SC_CrossServer_Close
+{
+    option (msgid) = 46021;
+    required int32 basemap = 1;
+}

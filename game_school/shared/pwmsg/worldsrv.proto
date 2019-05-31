@@ -1,0 +1,341 @@
+import "options.proto";
+package pwngs.protocol.worldsrv;
+
+message STencentUserInfo
+{
+    required string platform = 1;
+    
+    required bool is_blue_vip = 2;
+    required bool is_blue_year_vip = 3;
+    required bool is_super_blue_vip = 4;
+    required int32 blue_vip_level = 5; 
+    
+    required bool is_yellow_vip = 6;
+    required bool is_yellow_year_vip = 7;
+    required bool is_super_yellow_vip = 8;
+    required int32 yellow_vip_level = 9; 
+	
+	required int32 tgp_level = 10;
+}
+
+message SMagicIntensify
+{
+    required int32 LevelPencent = 1; 
+    required int32 LevelValue = 2;  
+    required int32 LevelAddition = 3; 
+}
+
+message SMagicType
+{
+    required int32 id = 1;
+	required int32 loc = 2;
+    required SMagicIntensify intensify = 3;
+	required int64 exp = 4;
+    required int32 level = 5;
+	required int32 open_level = 6;
+	required int64 combat_point = 7;
+};
+
+message SVector3
+{
+	required float x = 1;
+	required float y = 2;
+	required float z = 3;
+}
+
+message SAura
+{
+	required int64 id = 1;
+	required int64 caster = 2;
+	required int64 owner = 3;
+	required int32 type = 5;
+	required int32 overlap_num = 6;
+	required int64 duration = 7; 
+	required int32 param = 8;
+    required int32 level = 9;
+}
+
+message SMotion
+{
+	required int32 motion_type = 1;
+	optional int64 motion_target = 2;
+	optional SVector3 motion_orientation = 3;
+	optional SVector3 motion_position = 4;
+	repeated SVector3 motion_path = 5;
+	optional float param = 6; 
+}
+
+message SStageInfo
+{
+	required int64 id = 1;
+	required bytes scene = 2;
+	required bytes scene_navmesh = 3;
+	required bytes scene_info = 4;
+}
+
+message SItemModAttr
+{
+	required int32 mod = 1;					
+	required int32 type = 2;				
+	required float value = 3;				
+}
+
+message SItemModTrig
+{
+	required int32 mod = 1;
+	repeated float params = 2;
+}
+
+message SCombatPoint
+{
+	required float zs_point = 1;
+	required float gs_point = 2;
+	required float fs_point = 3;
+}
+
+message SItemFashionParts
+{
+	required int32 idx = 1;
+	required int32 enhance_lv = 2;
+}
+
+message SItemWing
+{
+	required int32 exp = 1;
+	required int32 star = 2;
+	required int32 level = 3;
+	required int32 step = 4;
+	required int32 equip_step = 5;
+	required int32 luck = 6;
+}
+
+message SItemEquip
+{
+	required int32 color = 1;
+	required int32 level = 2;
+	required int32 use_level = 3;
+	optional int32 star_level = 4;
+	optional int32 enchant_level = 5;
+	repeated SItemModAttr basics_attr = 6;
+	repeated SItemModAttr extends_attr = 7;
+	optional SItemModAttr special_attr = 8;	
+	optional SItemModTrig special_trig = 9;
+	repeated SItemFashionParts fashion_parts = 10;
+	optional SItemWing wing = 11;
+	optional int32 skill_id = 12;
+}
+
+message SItemRune
+{
+	required int32 exp = 1;					
+}
+
+message SItemBless
+{
+	repeated SItemModAttr mod_attrs = 1;	
+}
+
+message SItemEgg
+{
+	required float aptitude = 1;			
+	required float fire_dmg = 2;			
+	required float cold_dmg = 3;			
+	required float light_dmg = 4;			
+	required float poison_dmg = 5;			
+	required float fire_res = 6;			
+	required float cold_res = 7;			
+	required float light_res = 8;			
+	required float poison_res = 9;			
+	required float grow_rate = 10;			
+	required float grow_rate_limit = 11;	
+	required float con_rate = 12;			
+	required float con_rate_limit = 13;		
+}
+
+message SItemEquipRune
+{
+	repeated SItemModAttr mod_attrs = 1;	
+}
+
+message SItemBloodGobm
+{
+	required int32 level = 1;
+	required int32 exp = 2;
+	required int32 active_type = 3;
+	required int32 active_param1 = 4;
+	required int32 active_param2 = 5;
+}
+
+message SEquipIndexGem
+{
+	required int32 equip_index = 1;
+	repeated SItem gems = 2;	
+}
+
+message SItemHPMP
+{
+	required int32 used_val = 1;
+	required int32 total_val = 2;
+}
+
+message SItem
+{
+	required int64 item_id = 1;				
+	required int32 item_type = 2;			
+	required int32 item_count = 3;			
+	required int32 item_bag = 4;			
+	required int32 item_position = 5;		
+	required int64 item_flags = 6;			
+	required int64 expired_time = 7;
+	optional int64 item_price = 8;
+	optional SItemEquip equip_attrs = 9;	
+	optional SItemBless bless_attrs = 10;	
+	optional SItemEgg egg_attrs = 11;	
+	optional SItemBloodGobm gobm_attrs = 12;
+	optional SCombatPoint combat_point = 13;
+	optional SItemHPMP hpmp_attrs = 14;
+}
+
+message SItemPrice
+{
+	required int32 tid = 1;
+	required int32 price = 2;
+}
+
+message SPackItem
+{
+	required int32 tid = 1;					
+	required int32 count = 2;				
+}
+
+message SRandomItem
+{
+	required int32 random_item_type = 1;	
+	required SPackItem pack_item = 2;								
+}
+// -----------------------------------------
+
+message SCharacter{
+	required int64	id = 1;
+	required bytes 	name = 2;
+	required int32 	profession = 3;
+	required int32 	level = 4;
+	required int32 	sex = 5;
+	required bool 	newbie = 6;
+}
+
+message CSLoginBegan
+{
+	option (msgid) = 1000;
+}
+
+message CSLoginGate
+{
+	option (msgid) = 1001;
+}
+
+message SCLoginGate
+{
+	option (msgid) = 1002;
+	required int32 result = 1;
+}
+
+message CSQueryCharacters {
+	option (msgid) = 1003;
+}
+
+message SCQueryCharacters {
+	option (msgid) = 1004;
+	repeated SCharacter characters = 1;
+	optional int64 last_login_hid = 2;
+}
+
+message CSCharacterCreate{
+	option (msgid) = 1005;
+	required bytes name = 1;
+	required int32 profession = 2;
+	required int32 sex = 3;
+}
+
+message SCCharacterCreate{
+	option (msgid) = 1006;
+	required int32 result = 1;
+	optional SCharacter character = 2;
+}
+
+message CSCharacterDelete{
+	option (msgid) = 1007;
+	required int64 id = 1;
+}
+
+message SCCharacterDelete{
+	option (msgid) = 1008;
+	required int32 result = 1;
+	optional int64 id = 2;
+	optional int64 survive_time = 3; // 删除成功后,该角色的剩余删除时间,-1时直接从列表中移除
+}
+
+message SLadderInformation
+{
+	required int32 basemap = 1;
+	required int64 gamemap = 2;
+}
+
+message CSCharacterLogin{
+	option (msgid) = 1009;
+	required int64 cid = 1;
+    optional bytes mac = 2;
+	optional SLadderInformation ladder_info = 3;
+}
+
+message SServerInformation
+{
+	required int64 zone_id = 1; // 服务器组id 
+	required bytes operators_name = 2; // 运营商名 
+}
+	
+message SCCharacterLogin
+{
+	option (msgid) = 1010;
+	required int32 result = 1;
+	optional bytes error = 2;
+}
+
+message CSCharacterEnterWorld
+{
+	option (msgid) = 1011;
+	required int64 id = 1;
+}
+
+message CSCharacterRevert
+{
+	option (msgid) = 1030;
+	required int64 id = 1;
+}
+
+message SCCharacterRevert
+{
+	option (msgid) = 1031;
+	required int32 result = 1;
+	optional int64 id = 2;
+}
+
+// 服务器提示有角色还在线上
+message SCDroppedHumanHint
+{
+	option (msgid) = 1035;
+	required int64 dropped_hid = 1; // 掉线角色id
+	required int32 dropped_scene = 2; // 掉线角色所在地图
+	required int64 request_hid = 3; // 请求进入的角色id
+}
+
+// 客户端请求踢掉在线角色
+message CSKickDroppedHuman
+{
+	option (msgid) = 1036;
+}
+	
+message CSLoginEnded
+{
+	option (msgid) = 1199;
+}

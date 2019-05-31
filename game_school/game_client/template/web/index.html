@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>放课后战斗</title>
+    <!-- 防止被缓存-->
+    <meta http-equiv="Pragma" content="no-cache">  
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- 急速模式-->
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <!--Ios-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--QQBrowser full screen-->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-page-mode" content="app">
+    <meta name="x5-fullscreen" content="true">
+    <!--360Browser full screen-->
+    <meta name="360-fullscreen" content="true">
+    <!-- force screen orientation on some browser -->
+    <meta name="screen-orientation" content="portrait">
+    
+    <!--fix fireball/issues/3568 
+            background-image:url(resource/assets/bg/PCbg.png);
+            background-size:100% 100%; -->
+    <!-- <script src="//vjs.zencdn.net/5.19/video.min.js"></script> -->
+	<script type='text/javascript' src="./jszip.min.js"></script>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+			background-image:url(resource/assets/bg/PCbg.png);     
+            background-size:cover;  
+        }
+        video{
+            width: 100%;
+            height: 100%; 
+            overflow: hidden
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="MainDiv" style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="auto"
+         data-scale-mode="showAll"
+         data-frame-rate="0"
+         data-content-width="750"
+         data-content-height="1334"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+
+        <!--<video id="SVideo" hidden preload="auto" src="resource/assets/video/start.mp4"  webkit-playsinline="true" x5-playsinline="" 
+        x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-orientation="h5" x5-video-player-fullscreen="true" style="width: 100%;height: 100%;overflow: hidden;">
+        </video>-->
+        
+    
+        <!-- 必须加在微信api资源 --> 
+        <!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+        <script>
+        window.onload=function(){
+            window.scrollTo(0,1);
+        }
+
+        //进入全屏
+        function FullScreen() {
+            var ele = document.documentElement;
+            if (ele .requestFullscreen) {
+                ele .requestFullscreen();
+            } else if (ele .mozRequestFullScreen) {
+                ele .mozRequestFullScreen();
+            } else if (ele .webkitRequestFullScreen) {
+                ele .webkitRequestFullScreen();
+            }
+        }
+        //退出全屏
+        function exitFullscreen() {
+            var de = document;
+            if (de.exitFullscreen) {
+                de.exitFullscreen();
+            } else if (de.mozCancelFullScreen) {
+                de.mozCancelFullScreen();
+            } else if (de.webkitCancelFullScreen) {
+                de.webkitCancelFullScreen();
+            }
+        }
+        var creat_video = function(videourl,defaultimg,complete) {
+            var _this=document.getElementById("MainDiv");
+
+            var _videoUrl = videourl,
+                _img = defaultimg,
+                _dom = document.createElement('video'),
+                _autoPlayAllowed = true,
+                _p;
+            _dom.id="VideoMobile";
+            _dom.setAttribute('src', _videoUrl);
+            // _dom.setAttribute('controls', 'controls');
+            _dom.style.width="100%";
+            _dom.style.height="100%";
+            _dom.style.color="#000000";
+            _dom.style.overflow="hidden";
+            _dom.style.height="100%";
+            _dom.style.width="100%";
+            _dom.style.position="absolute";
+            _dom.style.zIndex="99";
+            _dom.setAttribute('autoPlay', 'false');
+            _dom.setAttribute('x5-video-player-type', 'h5');
+            _dom.setAttribute('x5-video-orientation', 'portrait');
+            _this.classList.add('vjs-waiting');
+            _dom.setAttribute('webkit-playsinline', 'webkit-playsinline');
+            _dom.setAttribute('x5-playsinline', 'x5-playsinline');
+            _dom.setAttribute('playsinline', 'playsinline');
+            _dom.setAttribute('poster', _img);
+
+            _p = _dom.play();
+            console.time("加载毫秒");
+            var _dom_buffered_promise = function() {
+                var _end = _dom.buffered.end(0);
+                var _duration = _dom.duration;
+                var _a = Math.round(_end / _duration * 100);
+                console.log(_end + ' ' + _duration)
+                if (_a < 10) {
+                    setTimeout(_dom_buffered , 200);
+                } else {
+                    _dom_buffered();
+                }
+            };
+            var _dom_buffered = function() {
+                _this.classList.remove('vjs-waiting');
+                _this.classList.add('hide');
+                _this.appendChild(_dom);
+                _dom.addEventListener('ended', function() {
+                    _this.classList.remove('hide');
+                    if(complete){complete();}
+                    _this.removeChild(_dom);
+                });
+                _dom.addEventListener('error', function() {
+                    alert("获取媒体数据过程中出错,默认跳过本视频播放");
+                    _this.classList.remove('hide');
+                    _this.parentNode.removeChild(_dom);
+                    if(complete){complete();}
+                });
+                _dom.currentTime = 0;
+                console.timeEnd("加载毫秒");
+            };
+
+             if (_p instanceof Promise) {
+                _p.catch(function(error) {
+                    
+                 alert(error);
+                    console.log(error.message);
+                    if (error.name === 'NotAllowedError') {
+                        _autoPlayAllowed = false;
+                    }
+                }).then(function(e) {
+                    if (_autoPlayAllowed) {
+                        _dom_buffered_promise();
+                    }
+                });
+            } else {
+                //ios8-9拿不到promise需要给个延时处理
+                setTimeout(function() {
+                    _dom_buffered();
+                }, 4000);
+            }
+            
+        };
+
+        function PlayeVideoOnMobile(videourl,defaultimg,complete){
+            new creat_video(videourl,defaultimg,complete);
+        }
+        function PlayVideo(video,defaultimg,videourl,complete){
+            if(video){
+                    video.poster=defaultimg;
+                    video.src=videourl;
+                    video.addEventListener('ended', function(){
+                        if(complete){
+                            complete();
+                        }
+                    }, false);
+                    video.play();
+                }
+        }
+        function PlayVideo2(isMobile,video,defaultimg,videourl,complete){
+            // if(isMobile){
+            //     if(video){
+            //         video.poster = defaultimg;
+            //         var myPlayer = videojs(video);
+            //         videojs(video).ready(function(){
+            //             var myPlayer = this;
+            //             myPlayer.play();
+            //             this.on("ended",function(){
+            //                 complete();
+            //             });
+            //         }); 
+            //     }
+            //     else
+            //     {
+            //         document.getElementById("SVideo");
+            //         thevideo.poster = defaultimg;
+            //         var myPlayer = videojs(thevideo);
+            //         videojs(thevideo).ready(function(){
+            //             var myPlayer = this;
+            //             myPlayer.play();
+            //             this.on("ended",function(){
+            //                 complete();
+            //             });
+            //         }); 
+            //     }
+            // }
+            // else
+            // {
+            //     if(video){
+            //         video.poster=defaultimg;
+            //         video.src=videourl;
+            //         video.addEventListener('ended', function(){
+            //             if(complete){
+            //                 complete();
+            //             }
+            //         }, false);
+            //         video.play();
+            //     }
+            // }
+        }
+        </script>
+    </div>
+<script>
+
+	 var loadScript = function (list, callback) {
+        var loaded = 0;
+        var loadNext = function () {
+            loadSingleScript(list[loaded], function () {
+                loaded++;
+                if (loaded >= list.length) {
+                    callback();
+                }
+                else {
+                    loadNext();
+                }
+            })
+        };
+        loadNext();
+    };
+
+    var loadSingleScript = function (src, callback) {
+        var s = document.createElement('script');
+        s.async = false;
+        s.src = src;
+        s.addEventListener('load', function () {
+            s.parentNode.removeChild(s);
+            s.removeEventListener('load', arguments.callee, false);
+            callback();
+        }, false);
+        document.body.appendChild(s);
+    };
+	
+	var list=[];
+	var xhr = new XMLHttpRequest();
+	xhr.responseType = "text";
+    xhr.open('GET', './manifest.json?v=' + Math.random(), true);
+    xhr.addEventListener("load", function () {
+        var manifest = JSON.parse(xhr.response);
+        var oldlist = manifest.initial.concat(manifest.game);
+		
+		for(var i=0; i<oldlist.length;i++)
+		{
+			var _splitList= oldlist[i].split('/');
+			list[i] = _splitList[1];
+		}
+		//加载egret的引擎库
+		try
+		{
+            //加载单个zip文件，成功后进行回调
+            function loadZip(url,callBack)
+            {
+                var xhrZip = new XMLHttpRequest();
+                xhrZip.open("GET", url, true);
+                xhrZip.responseType = "arraybuffer";
+                xhrZip.addEventListener("load", function (oEvent)
+                {
+                    var arrayBuffer = xhrZip.response; // 注意:不是oReq.responseText
+                    if (!arrayBuffer)
+                    {
+                        console.log(url + "解析异常:" + xhrZip);
+                        throw new Error("zip异常");
+                    }
+                    callBack(new JSZip(arrayBuffer));
+                });
+                xhrZip.send(null);
+            }
+            function createScript(zip,file)
+            {
+                //解压出来变成script脚本
+                var text = zip.file(file).asText();
+                var script = document.createElement("script");
+                script.setAttribute("type", "text/javascript");
+                script.text = text;
+                document.body.appendChild(script);
+                document.body.removeChild(script);
+            }
+
+			loadZip("egret.cfg",function(zip)
+			{
+				//压缩进的egret引擎的各个代码文件
+				var _mainjs;
+				for (var i = 0; i < list.length; i++)
+				{
+					if(list[i].indexOf("main.min")!=-1){
+						_mainjs = list[i];
+						continue;
+					}
+					createScript(zip,list[i]);
+				}
+				//加载游戏代码
+				loadZip("main.min.js.cfg" + "?v=" + Math.random(),function(zip)
+				{
+					createScript(zip,_mainjs);
+					//全部加载完成，启动egret游戏
+					egret.runEgret({ renderMode: "webgl", audioType: 0,retina:true});
+				});
+			});
+		}
+		catch (e)
+		{
+			//压缩失败，实际项目这里需要改为加载没压缩的js文件。
+			console.error("jszip解压文件报错，进行普通文件加载");
+			loadScript(oldlist, function () {
+				egret.runEgret({ renderMode: "webgl", audioType: 0, calculateCanvasScaleFactor:function(context) {
+					var backingStore = context.backingStorePixelRatio ||
+						context.webkitBackingStorePixelRatio ||
+						context.mozBackingStorePixelRatio ||
+						context.msBackingStorePixelRatio ||
+						context.oBackingStorePixelRatio ||
+						context.backingStorePixelRatio || 1;
+					return (window.devicePixelRatio || 1) / backingStore;
+				}});
+			});
+		}
+    });
+    xhr.send(null);
+</script>
+</body>
+
+</html>

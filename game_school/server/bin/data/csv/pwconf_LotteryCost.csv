@@ -1,0 +1,6 @@
+"索引(不重复ID)"	"几连抽"	"金币消耗（对应连抽元宝消耗）"	"物品消耗（物品ID及数量）"	"必中最高品级(1橙2金3紫4蓝)"	"必中最高品级次数"	"对应连抽所得积分"	
+"index"	"round_once"	"gold"	"ticket"	"rank_reward"	"rank_reward_count"	"ticket_score"	
+"int"	"int"	"int"	"int[2]"	"int"	"int"	"int"	
+"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	
+"1"	"1"	"10"	"100057,1"	""	""	"10"	
+"2"	"10"	"95"	"100057,10"	"2"	"1"	"100"	

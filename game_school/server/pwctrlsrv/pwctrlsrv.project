@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="pwctrlsrv" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
+    <File Name="pw_ctrlsrv_node.h"/>
+    <File Name="pw_ctrlsrv_node.cpp"/>
+    <File Name="../pwworldsrv/msg/msg.def.h"/>
+    <File Name="../pwworldsrv/msg/worldsrv.pb.cc"/>
+    <File Name="../pwworldsrv/msg/worldsrv.pb.h"/>
+    <File Name="pw_ctrlsrv.cpp"/>
+    <File Name="pw_ctrlsrv.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_guild">
+    <File Name="srv_guild/pw_guild.cpp"/>
+    <File Name="srv_guild/pw_guild.h"/>
+    <File Name="srv_guild/pw_guild_def.h"/>
+    <File Name="srv_guild/pw_guild_member.cpp"/>
+    <File Name="srv_guild/pw_guild_member.h"/>
+    <File Name="srv_guild/pw_service_guild.cpp"/>
+    <File Name="srv_guild/pw_service_guild.h"/>
+    <File Name="srv_guild/pw_guild_dataset.cpp"/>
+    <File Name="srv_guild/pw_guild_dataset.h"/>
+    <File Name="srv_guild/pw_guild_upgrade.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_common">
+    <File Name="srv_common/pw_chat_mgr.cpp"/>
+    <File Name="srv_common/pw_chat_mgr.h"/>
+    <File Name="srv_common/pw_chat_mgr_def.h"/>
+    <File Name="srv_common/pw_chat_session.cpp"/>
+    <File Name="srv_common/pw_chat_session.h"/>
+    <File Name="srv_common/pw_service_common.cpp"/>
+    <File Name="srv_common/pw_service_common.h"/>
+    <File Name="srv_common/pw_service_common_def.h"/>
+    <File Name="srv_common/pw_mail_mgr.cpp"/>
+    <File Name="srv_common/pw_mail_mgr.h"/>
+    <File Name="srv_common/pw_chat_upgrade.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="pwcommon">
+    <File Name="../pwcommon/pw_category.h"/>
+    <File Name="../pwcommon/pw_ngs_common.h"/>
+    <File Name="../pwcommon/pw_ngs_def.h"/>
+    <File Name="../pwcommon/pw_ngs_utils.cpp"/>
+    <File Name="../pwcommon/pw_ngs_utils.h"/>
+    <File Name="../pwcommon/pw_rpc_names.h"/>
+    <File Name="../pwcommon/pw_human_status.h"/>
+    <File Name="../pwcommon/pw_rpc_proxy.cpp"/>
+    <File Name="../pwcommon/pw_rpc_proxy.h"/>
+    <File Name="../pwcommon/pw_activity_consts.h"/>
+    <File Name="../pwcommon/pw_misc_consts.h"/>
+    <File Name="../pwcommon/pw_msg_export_pwworldsrv.cpp"/>
+    <File Name="../pwcommon/pw_msg_export_pwworldsrv.h"/>
+    <File Name="../pwcommon/pw_msg_cluster.cpp"/>
+    <File Name="../pwcommon/pw_msg_cluster.h"/>
+    <File Name="../pwcommon/pw_notify_def.h"/>
+    <File Name="../pwcommon/pw_mail_builder.h"/>
+    <File Name="../pwcommon/pw_mail_def.h"/>
+    <File Name="../pwcommon/pw_item_package.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_team">
+    <File Name="srv_team/pw_service_team.cpp"/>
+    <File Name="srv_team/pw_service_team.h"/>
+    <File Name="srv_team/pw_team.cpp"/>
+    <File Name="srv_team/pw_team.h"/>
+    <File Name="srv_team/pw_team_def.h"/>
+    <File Name="srv_team/pw_team_member.cpp"/>
+    <File Name="srv_team/pw_team_member.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_base">
+    <File Name="pw_service_base.h"/>
+    <File Name="pw_service_base.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="pwmsg">
+    <File Name="../../shared/pwmsg/options.pb.cc"/>
+    <File Name="../../shared/pwmsg/options.pb.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_pull">
+    <File Name="pw_service_pull_c.h"/>
+    <File Name="pw_service_pull_c.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_relation">
+    <File Name="srv_relation/pw_relation.cpp"/>
+    <File Name="srv_relation/pw_relation.h"/>
+    <File Name="srv_relation/pw_relation_def.h"/>
+    <File Name="srv_relation/pw_relation_member.cpp"/>
+    <File Name="srv_relation/pw_relation_member.h"/>
+    <File Name="srv_relation/pw_service_relation.cpp"/>
+    <File Name="srv_relation/pw_service_relation.h"/>
+    <File Name="srv_relation/pw_relation_const.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_stage">
+    <File Name="pw_service_stage.cpp"/>
+    <File Name="pw_service_stage.h"/>
+    <File Name="pw_monitor_def.cpp"/>
+    <File Name="pw_monitor_def.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="dist_impl">
+    <File Name="dist_impl/pw_rpcs_impl_guild.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplbase.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplcommon.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplguild.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplpull.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplrelation.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplstagemgr.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplteam.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_team.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplactivity.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_shopmgr.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_chatmgr.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_mailmgr.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simpladventure.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_activity">
+    <File Name="srv_activity/pw_service_activity.cpp"/>
+    <File Name="srv_activity/pw_service_activity.h"/>
+    <File Name="../pwworldsrv/conf/pwconf_Activity.cpp"/>
+    <File Name="../pwworldsrv/conf/pwconf_Activity.h"/>
+    <File Name="srv_activity/pw_activity_exports.cpp"/>
+    <File Name="srv_activity/pw_activity_exports.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="conf">
+    <File Name="../pwworldsrv/conf/pwconf_Shop.cpp"/>
+    <File Name="../pwworldsrv/conf/pwconf_Shop.h"/>
+    <File Name="../pwworldsrv/conf/pwconf_Guild.cpp"/>
+    <File Name="../pwworldsrv/conf/pwconf_Guild.h"/>
+    <File Name="../pwworldsrv/conf/pwconf_Adventure.cpp"/>
+    <File Name="../pwworldsrv/conf/pwconf_Adventure.h"/>
+    <File Name="../pwworldsrv/conf/pwconf_AdventureEvent.cpp"/>
+    <File Name="../pwworldsrv/conf/pwconf_AdventureEvent.h"/>
+    <File Name="../pwworldsrv/conf/pwconf_AdventureGenerate.cpp"/>
+    <File Name="../pwworldsrv/conf/pwconf_AdventureGenerate.h"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <VirtualDirectory Name="srv_misc">
+    <File Name="srv_misc/pw_service_misc.cpp"/>
+    <File Name="srv_misc/pw_service_misc.h"/>
+    <File Name="srv_misc/pw_shop_mgr.cpp"/>
+    <File Name="srv_misc/pw_shop_mgr.h"/>
+    <File Name="../pwworldsrv/shop/pw_shop_dataset.cpp"/>
+    <File Name="../pwworldsrv/shop/pw_shop_dataset.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="common_worldsrv">
+    <File Name="../pwworldsrv/common/pw_upgrader.cpp"/>
+    <File Name="../pwworldsrv/common/pw_upgrader.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_adventure">
+    <File Name="srv_adventure/pw_adventure.cpp"/>
+    <File Name="srv_adventure/pw_adventure.h"/>
+    <File Name="srv_adventure/pw_adventure_character.cpp"/>
+    <File Name="srv_adventure/pw_adventure_character.h"/>
+    <File Name="srv_adventure/pw_adventure_configure.h"/>
+    <File Name="srv_adventure/pw_adventure_dataset.cpp"/>
+    <File Name="srv_adventure/pw_adventure_dataset.h"/>
+    <File Name="srv_adventure/pw_service_adventure.cpp"/>
+    <File Name="srv_adventure/pw_service_adventure.h"/>
+    <File Name="srv_adventure/pw_adventure_configure.cpp"/>
+    <File Name="srv_adventure/pw_adventure_event.cpp"/>
+    <File Name="srv_adventure/pw_adventure_event.h"/>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Wall;--std=c++0x" C_Options="-g" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="../common"/>
+        <IncludePath Value="../proto"/>
+        <IncludePath Value="./msg"/>
+        <IncludePath Value="../mysql"/>
+        <IncludePath Value="../pwcommon"/>
+        <IncludePath Value="../../shared/pwmsg"/>
+        <IncludePath Value="../libcore/inc"/>
+        <IncludePath Value="../g3dlite/include"/>
+        <IncludePath Value="../pwworldsrv/msg"/>
+        <IncludePath Value="../pwworldsrv/common"/>
+        <IncludePath Value="../pwworldsrv/conf"/>
+        <IncludePath Value="../pwworldsrv/shop"/>
+        <IncludePath Value="./srv_team"/>
+        <IncludePath Value="./srv_guild"/>
+        <IncludePath Value="./srv_common"/>
+        <IncludePath Value="./srv_relation"/>
+        <IncludePath Value="./srv_activity"/>
+        <IncludePath Value="./srv_misc"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+        <Preprocessor Value="_DEBUG"/>
+        <Preprocessor Value="_PW_MEMORY_TRACE_"/>
+      </Compiler>
+      <Linker Options="-rdynamic" Required="yes">
+        <LibraryPath Value="../libcore/Debug"/>
+        <LibraryPath Value="../common/Debug"/>
+        <LibraryPath Value="../g3dlite/Debug"/>
+        <Library Value="libexpat"/>
+        <Library Value="libzmq"/>
+        <Library Value="libACE"/>
+        <Library Value="libtbb"/>
+        <Library Value="libcore"/>
+        <Library Value="liblog4cpp"/>
+        <Library Value="libpthread"/>
+        <Library Value="libmysqlclient"/>
+        <Library Value="libprotobuf"/>
+        <Library Value="libcommon"/>
+        <Library Value="libg3dlite"/>
+        <Library Value="liblua5.1"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../bin/$(ProjectName)" IntermediateDirectory="../bin/Debug/$(ProjectName)" Command="../bin/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../bin/" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      
+      
+      
+      
+      
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Wall;--std=c++0x;-m64" C_Options="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="./srv_activity"/>
+        <IncludePath Value="../common"/>
+        <IncludePath Value="../proto"/>
+        <IncludePath Value="./msg"/>
+        <IncludePath Value="../pwcommon"/>
+        <IncludePath Value="../../shared/pwmsg"/>
+        <IncludePath Value="../libcore/inc"/>
+        <IncludePath Value="../g3dlite/include"/>
+        <IncludePath Value="./srv_relation"/>
+        <IncludePath Value="./srv_team"/>
+        <IncludePath Value="./srv_guild"/>
+        <IncludePath Value="./srv_misc"/>
+        <IncludePath Value="./srv_common"/>
+        <IncludePath Value="./srv_adventure"/>
+        <IncludePath Value="../pwworldsrv/msg"/>
+        <IncludePath Value="../pwworldsrv/conf"/>
+        <IncludePath Value="../pwworldsrv/common"/>
+        <IncludePath Value="../pwworldsrv/shop"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+      </Compiler>
+      <Linker Options="-O2;-rdynamic" Required="yes">
+        <LibraryPath Value="../libcore/Release"/>
+        <LibraryPath Value="../common/Release"/>
+        <LibraryPath Value="../g3dlite/Release"/>
+        <Library Value="libexpat"/>
+        <Library Value="libzmq"/>
+        <Library Value="libACE"/>
+        <Library Value="libtbb"/>
+        <Library Value="libcore"/>
+        <Library Value="liblog4cpp"/>
+        <Library Value="libpthread"/>
+        <Library Value="libmysqlclient"/>
+        <Library Value="libprotobuf"/>
+        <Library Value="libcommon"/>
+        <Library Value="libg3dlite"/>
+        <Library Value="liblua5.1"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../bin/$(ProjectName)" IntermediateDirectory="../bin/Release/$(ProjectName)" Command="../bin/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../bin/" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

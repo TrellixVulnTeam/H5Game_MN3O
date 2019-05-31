@@ -1,0 +1,4 @@
+"套装ID"	"套装名称"	"职业1=战士2=弓箭手4=法师"	"装备ID"	"1件激活属性属性ID，加值方式，取值加值方式0=值，1=百分比"	"2件激活属性"	"3件激活属性"	"4件激活属性"	"5件激活属性"	"6件激活属性"	"7件激活属性"	"8件激活属性"	
+"suitID"	"suitName"	"pro"	"equipList"	"suitEffect1"	"suitEffect2"	"suitEffect3"	"suitEffect4"	"suitEffect5"	"suitEffect6"	"suitEffect7"	"suitEffect8"	
+"int"	"string"	"int"	"int[]"	"float[3]"	"float[3]"	"float[3]"	"float[3]"	"float[3]"	"float[3]"	"float[3]"	"float[3]"	
+"cs"	"cl"	"c"	"c"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	

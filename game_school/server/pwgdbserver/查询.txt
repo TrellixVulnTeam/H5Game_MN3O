@@ -1,0 +1,62 @@
+数据增加bson查询支持(需遍历整个表,较低性能)
+====================================================
+$ge 大等于
+$le 小等于
+$eq 等说
+$great 大于
+$less 小于
+$ne 不等于
+$like 包含
+$in 值在取值范围内[...]
+
+$or 条件或
+$and 条件与
+$exists 存在字段
+$contain 包含
+$default 默认值
+$element 数组成员结构,符合key条件
+
+增加gdbclient函数
+hquery 单表查询
+hcrossquery 跨从表查询
+
+
+条件语法:
+	{ key : { $oper : value } } 
+组合语法:
+	{ $and/$or [ 条件1,条件2,.... ] }
+示例
+
+查询 49-51等级间的human
+=============================
+c.hquery('human',{ level : {$ge : 49, $le : 51 } })
+
+
+查询 等级小于50 && 名字中含有'丹'的human
+=============================
+c.hquery('human',{ $and : [ { level : {$less : 50 }}, { name : {$like : '丹' }} ] })
+
+
+查询 指定id的物品，存在哪个玩家身上
+=============================
+c.hcrossquery('humanitems',{ $and : [{container : {$eq : 1} },{ item_uuids : {$contain : 6600961 } }] })
+
+<嵌套查询>查询所有level=62的装备,字段使用$分隔
+=============================
+c.hquery('item',{ 'equip.level' : {$eq : 62} })
+
+$in操作子示例,查询玩家背包1,2的记录
+=============================
+c.hquery('humanitems.17',{ container: {$in: [1,2] } })
+
+$default操作子标例,查询记录,如果v字段为空，都视为1来查询
+=============================
+c.hquery('humanitems.17',{ v: {$eq: 1,$default: 1} })
+
+$element操作子示例,查询拥有3100技能的记录
+=============================
+c.hquery('humanownedskill',{ skills: {$element: { id : {$eq: 3100}  } }})
+
+$element操作子示例,查询拥有3100技能且等级=30的记录
+=============================
+c.hquery('humanownedskill',{ skills: {$element: { $and: [ {id : {$eq: 3100}}, {level: {$eq: 30}}]  } }})

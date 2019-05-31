@@ -1,0 +1,35 @@
+
+//----------------------------------------------
+// 这里是备注
+//----------------------------------------------
+
+namespace worldsrv
+{
+	[file_initial ="../server/pwworldsrv/distrpc/pw_human_rpc_initial.cpp"]
+	object Human
+	{
+		method _rpc_call_MessageIncoming1(int32 cn22,int64 n3,double n12,const char* n34)(int32 r2,optional int32 v2)
+		method _rpc_call_MessageIncoming2(const std::string& text,lwrpc::Buffer buf)(int32 r2,optional int32 v2)
+		method _rpc_call_MessageIncoming3(int32 n22)(int32 r2,optional int32 v2)
+		method _rpc_call_MessageIncoming4(int32 n22)(int32 r2,optional int32 v2)
+		method _rpc_call_MessageIncoming5(int32 n22)(int32 r2,optional int32 v2)
+	}
+
+    [file_initial ="../server/pwworldsrv/distrpc/pw_human_rpc_initial.cpp"]
+	object Stage
+	{
+		method _rpc_call_Test()(int32 c)
+		method _rpc_call_Login(int32 n12)(int32 r1,lwrpc::Buffer v2)
+	}
+}
+
+namespace ctrlsrv
+{
+	object SImplStageMgr
+	{
+		method _rpc_Logint32oStage(int32 stage)(int32 result,optional int32 code)
+		method _rpc_CreateTeam(int32 stage,int32 n12,int32 n34)(int32 result,optional int32 code)
+		method _rpc_DeleteTeam(int32 stage,int32 n12,int32 n34)(int32 result,optional int32 code)
+		method _rpc_TestType(char stage,bool n12,short n34)(char stage,bool n12,optional short n34)
+	}
+}

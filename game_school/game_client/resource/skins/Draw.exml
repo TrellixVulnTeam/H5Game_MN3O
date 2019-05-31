@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Draw" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="star">
+			<tween:TweenItem target="{image}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}" x="{-417}" y="{-97}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="1000">
+					<tween:props>
+						<e:Object alpha="{1}" y="{-97}" x="{-308}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="1000">
+					<tween:props>
+						<e:Object alpha="{1}" y="{-97}" x="{-717}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="1000">
+					<tween:props>
+						<e:Object alpha="{1}" y="{-97}" x="{-417}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{player1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-500}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="2500">
+					<tween:props>
+						<e:Object x="{1000}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{player2}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-900}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="3050">
+					<tween:props>
+						<e:Object x="{1000}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{player3}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-1500}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="3500">
+					<tween:props>
+						<e:Object x="{1000}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image2}">
+				<tween:Set/>
+				<tween:To duration="3250">
+					<tween:props>
+						<e:Object alpha="{1}" x="{875}" y="{1040}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image3}">
+				<tween:Set/>
+				<tween:To duration="3250">
+					<tween:props>
+						<e:Object alpha="{1}" x="{-417}" y="{-97}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image4}">
+				<tween:Set/>
+				<tween:To duration="3800">
+					<tween:props>
+						<e:Object alpha="{1}" x="{1020}" y="{1114}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="300">
+					<tween:props>
+						<e:Object rotation="{0}" x="{1300}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{drwa_movie}">
+				<tween:Wait duration="3250"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object scaleX="{1.1}" scaleY="{1.1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group horizontalCenter="0" left="0" right="0" top="0" verticalCenter="0" bottom="0">
+		<e:Image top="0" verticalCenter="0" bottom="0" left="0" horizontalCenter="0" right="0" source="login_bg_png"/>
+		<e:Image top="0" verticalCenter="0" bottom="0" left="0" horizontalCenter="0" right="0" source="mainl_bg_png"/>
+		<e:Group height="71" anchorOffsetY="0" top="0" right="0" left="0">
+			<e:Image height="62" y="0" source="image_46_png" left="0" right="0"/>
+			<e:Image height="34" y="12" source="image_moneydi_png" width="148" left="430"/>
+			<e:Image height="34" y="12" source="image_moneydi_png" width="148" left="238"/>
+			<e:Image height="34" y="12" source="image_moneydi_png" width="148" left="38"/>
+			<e:Image id="money_coin" height="40" y="8" width="40" source="image_money1_png" left="224"/>
+			<e:Image id="money_tili" height="36" y="11" width="40" source="image_money3_png" left="408"/>
+			<e:Image id="money_dia" height="40" y="8" width="40" source="image_money2_png" left="28"/>
+			<e:Button id="btn_adddia" label="" y="6" width="120" left="54">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png" source.disabled="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_addcoin" label="" y="5" width="120" left="258">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png" source.disabled="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_addtili" label="" y="6" width="120" left="450">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png" source.disabled="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Label id="label_tili" text="9999" y="15" fontFamily="Microsoft YaHei" bold="true" textAlign="right" size="28" left="500"/>
+			<e:Label id="label_coin" text="9999" y="15" fontFamily="Microsoft YaHei" bold="true" textAlign="right" size="28" left="306"/>
+			<e:Label id="label_dia" text="9999" y="15" fontFamily="Microsoft YaHei" bold="true" textAlign="right" size="28" left="108"/>
+		</e:Group>
+		<e:Button id="btn_back" label="" right="-2" top="-2">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back2_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Group id="image_group" width="700" height="600" horizontalCenter="0" verticalCenter="-194">
+			<e:Image id="image_di" width="700" height="600" source="cg2_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Group id="imagelist_group" width="700" height="600" x="0" y="0">
+				<e:Image id="image_one" width="700" height="600" source="cg2_png" horizontalCenter="0" verticalCenter="0" x="0" y="-80" scaleX="1" scaleY="1"/>
+				<e:Image id="image_two" width="700" height="600" source="cg2_png" horizontalCenter="0" verticalCenter="0" x="20" y="-60" scaleX="1" scaleY="1"/>
+				<e:Image id="image_three" width="700" height="600" source="cg2_png" horizontalCenter="0" verticalCenter="0" x="10" y="-70" scaleX="1" scaleY="1"/>
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+		<e:Group height="200" anchorOffsetX="0" left="0" right="0" bottom="274">
+			<e:Button id="btn_one" label="" horizontalCenter="-200" verticalCenter="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="wechat_btn3_1_png" source.down="wechat_btn3_2_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_ten" label="" horizontalCenter="200" verticalCenter="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="wechat_btn3_1_png" source.down="wechat_btn3_2_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Label id="label_time" text="重置时间" fontFamily="Microsoft YaHei" textColor="0x470404" bold="true" horizontalCenter="-200" verticalCenter="-70" textAlign="center"/>
+			<e:Label id="label_costone" text="消耗" fontFamily="Microsoft YaHei" textColor="0x470404" bold="true" horizontalCenter="-200" verticalCenter="70" textAlign="center"/>
+			<e:Label id="label_costten" text="消耗" fontFamily="Microsoft YaHei" textColor="0x470404" bold="true" horizontalCenter="200" verticalCenter="70" textAlign="center"/>
+			<e:Image id="image_costmoney1" width="40" height="40" x="88" y="152" source="image_money1_png"/>
+			<e:Image id="image_costmoney2" width="40" height="40" y="154" source="image_money1_png" horizontalCenter="136"/>
+		</e:Group>
+		<e:Button id="btn_left" label="" left="0" verticalCenter="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_01_png" source.down="image_01_png" source.disabled="image_01_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_right" label="" right="0" verticalCenter="0">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_01_png" source.down="image_01_png" source.disabled="image_01_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Group id="drwa_movie" left="0" right="0" horizontalCenter="0" top="0" verticalCenter="0" bottom="0" anchorOffsetX="365" anchorOffsetY="700" visible="false">
+			<e:Image id="image2" width="796" height="974.81" anchorOffsetX="904.54" anchorOffsetY="765.85" source="draw4_png" y="1040" x="875" rotation="360"/>
+			<e:Image id="image3" width="1800" height="1500" anchorOffsetX="0" anchorOffsetY="0" source="draw2_png" x="-417" y="-97"/>
+			<e:Image id="image4" width="335" height="607" anchorOffsetX="800" anchorOffsetY="700" source="draw3_png" x="1020" y="1114"/>
+			<e:Image id="image" width="1800" height="1500" anchorOffsetX="0" anchorOffsetY="0" source="draw1_png" x="-417" y="-97" visible="false"/>
+			<e:Group id="player1" width="200" height="200" x="61" y="1003"/>
+			<e:Group id="player2" width="200" height="200" x="71" y="1013"/>
+			<e:Group id="player3" width="200" height="200" x="81" y="1023"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

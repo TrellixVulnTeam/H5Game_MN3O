@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="pwdbsrv" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
+    <File Name="pw_dbsrv_node.h"/>
+    <File Name="pw_dbsrv_node.cpp"/>
+    <File Name="pw_dbsrv_service.h"/>
+    <File Name="pw_dbsrv_service.cpp"/>
+    <File Name="pw_dbsrv_service_sql.h"/>
+    <File Name="pw_dbsrv_service_sql.cpp"/>
+    <File Name="pw_dbsrv_table.h"/>
+    <File Name="pw_dbsrv_table.cpp"/>
+    <File Name="pw_dbsrv_service_loader.cpp"/>
+    <File Name="pw_dbsrv_service_loader.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="pwcommon">
+    <File Name="../pwcommon/pw_category.h"/>
+    <File Name="../pwcommon/pw_ngs_common.h"/>
+    <File Name="../pwcommon/pw_ngs_def.h"/>
+    <File Name="../pwcommon/pw_ngs_utils.cpp"/>
+    <File Name="../pwcommon/pw_ngs_utils.h"/>
+    <File Name="../pwcommon/pw_rpc_names.h"/>
+    <File Name="../pwcommon/pw_rpc_proxy.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="dist_impl">
+    <File Name="dist_impl/pw_rpcs_impl_simpldb.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplsqlexecutor.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simpldbloader.cpp"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Wall;--std=c++0x" C_Options="-g" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="../common"/>
+        <IncludePath Value="../proto"/>
+        <IncludePath Value="../pwcommon"/>
+        <IncludePath Value="../libcore/inc"/>
+        <IncludePath Value="../g3dlite/include"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+        <Preprocessor Value="_DEBUG"/>
+        <Preprocessor Value="_PW_MEMORY_TRACE_"/>
+      </Compiler>
+      <Linker Options="-rdynamic" Required="yes">
+        <LibraryPath Value="../libcore/Debug"/>
+        <LibraryPath Value="../common/Debug"/>
+        <LibraryPath Value="../g3dlite/Debug"/>
+        <Library Value="libexpat"/>
+        <Library Value="libzmq"/>
+        <Library Value="libACE"/>
+        <Library Value="libtbb"/>
+        <Library Value="libcore"/>
+        <Library Value="liblog4cpp"/>
+        <Library Value="libpthread"/>
+        <Library Value="libmysqlclient"/>
+        <Library Value="libcommon"/>
+        <Library Value="libg3dlite"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../bin/$(ProjectName)" IntermediateDirectory="../bin/Debug/$(ProjectName)" Command="../bin/$(ProjectName)" CommandArguments="-c=testdf" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../bin/" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Wall;--std=c++0x;-m64" C_Options="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="../common"/>
+        <IncludePath Value="../proto"/>
+        <IncludePath Value="../pwcommon"/>
+        <IncludePath Value="../libcore/inc"/>
+        <IncludePath Value="../g3dlite/include"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+      </Compiler>
+      <Linker Options="-O2;-rdynamic" Required="yes">
+        <LibraryPath Value="../libcore/Release"/>
+        <LibraryPath Value="../common/Release"/>
+        <LibraryPath Value="../g3dlite/Release"/>
+        <Library Value="libexpat"/>
+        <Library Value="libzmq"/>
+        <Library Value="libACE"/>
+        <Library Value="libtbb"/>
+        <Library Value="libcore"/>
+        <Library Value="liblog4cpp"/>
+        <Library Value="libpthread"/>
+        <Library Value="libmysqlclient"/>
+        <Library Value="libcommon"/>
+        <Library Value="libg3dlite"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../bin/$(ProjectName)" IntermediateDirectory="../bin/Release/$(ProjectName)" Command="../bin/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../bin/" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

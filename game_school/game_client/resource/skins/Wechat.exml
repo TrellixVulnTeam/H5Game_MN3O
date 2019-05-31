@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Wechat" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="star1">
+			<tween:TweenItem target="{image1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{-600}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object y="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="600">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image6}">
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{-10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{-10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{-10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{-10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{-10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image5}">
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{14}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{14}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{14}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{14}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{10}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{14}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object rotation="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image7}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-500}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object x="{139}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="600">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image2}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{1350}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object y="{582}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="600">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image3}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{-200}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object y="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="600">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image4}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{300}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object y="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="600">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image8}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="1100"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image9}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="1200"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image10}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="1350"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image11}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="1450"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image12}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="1550"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group verticalCenter="0" top="0" left="0" horizontalCenter="0" right="0" bottom="0">
+		<e:Image right="0" left="0" top="1" bottom="-1" horizontalCenter="0" verticalCenter="1" source="webg_png"/>
+		<e:Image rotation="0.25" anchorOffsetX="0" anchorOffsetY="0" source="wechat_image3_png" verticalCenter="-1.5" horizontalCenter="0" left="-8" right="-8" top="-3" bottom="0"/>
+		<e:Image height="93" source="wechat_image8_png" right="0" left="0" bottom="9"/>
+		<e:Group id="gro_pyq" anchorOffsetY="0" left="0" right="0" top="0" bottom="131" visible="false">
+			<e:Button id="py_btn_back" label="" width="122" height="66" enabled="true" scaleX="1" name="py_btn_back" top="0" right="-4">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="py_btn_announce" label="" width="200" height="75" top="29" enabled="true" scaleX="1" name="py_btn_announce" left="27">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn13_1_png" source.down="btn13_2_png" source.disabled="btn13_3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Image id="image_tishi" width="36.27" height="37" anchorOffsetX="0" anchorOffsetY="0" top="25" source="image_talk8_png" left="162"/>
+			<e:Scroller id="py_scr" anchorOffsetY="0" anchorOffsetX="0" skinName="skins.ScrollerSkin" name="py_scr" scrollPolicyH="off" horizontalCenter="0" top="108" left="0" right="0" verticalCenter="66.5" bottom="-25">
+				<e:Group id="py_gro_total" anchorOffsetX="0" width="750" anchorOffsetY="0" height="1120" name="py_gro_total">
+				<e:layout>
+					<e:VerticalLayout verticalAlign="top" horizontalAlign="center" gap="30"/>
+				</e:layout>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group id="gro_talk" anchorOffsetY="0" left="0" right="0" top="0" bottom="114" visible="false">
+			<e:Button id="chat_back" label="" width="122" height="66" enabled="true" scaleX="1" name="chat_back" scaleY="1" top="0" right="-4">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Group id="frinde_TreeNode_Title" height="100" anchorOffsetY="0" left="0" right="0" top="90" x="0" y="1002" scaleX="1" scaleY="1" name="frinde_TreeNode_Title" visible="false">
+				<e:Label id="laebl_str1" text="联系好友" anchorOffsetX="0" width="194.01" rotation="359.78" textAlign="center" fontFamily="Microsoft YaHei" bold="true" x="267" verticalCenter="0" textColor="0xffffff"/>
+				<e:Image id="image_newfriend" width="56" height="56" source="image_69_png" right="60" verticalCenter="0"/>
+				<e:Image width="670" height="2" scaleX="1" scaleY="1" source="image_wuchatline_png" bottom="0" horizontalCenter="0"/>
+				<e:Button id="btn_friend" label="" x="0" width="750" anchorOffsetY="0" height="100" verticalCenter="0" name="btn_friend">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+			</e:Group>
+			<e:Group id="flock_TreeNode_Title" height="100" anchorOffsetY="0" y="90" scaleX="1" scaleY="1" name="flock_TreeNode_Title" width="680" horizontalCenter="0" visible="false">
+				<e:Label id="laebl_str0" text="进入群聊" anchorOffsetX="0" width="194.01" rotation="359.78" textAlign="center" fontFamily="Microsoft YaHei" bold="true" x="267" verticalCenter="0" textColor="0xffffff"/>
+				<e:Image id="image_newfriend1" width="56" height="56" source="image_69_png" right="24" verticalCenter="0"/>
+				<e:Image width="670" height="2" scaleX="1" scaleY="1" source="image_wuchatline_png" bottom="0" horizontalCenter="0"/>
+				<e:Button id="btn_flock" label="" x="0" width="750" anchorOffsetY="0" height="100" verticalCenter="0" name="btn_flock">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+				</e:Button>
+			</e:Group>
+			<e:Scroller id="py_talk" anchorOffsetY="0" anchorOffsetX="0" top="100" skinName="skins.ScrollerSkin" horizontalCenter="0" name="py_talk" height="1100" left="35" right="35">
+				<e:Group id="talk_Group" anchorOffsetX="0" width="680" anchorOffsetY="0" height="1120" name="talk_Group">
+				<e:layout>
+					<e:VerticalLayout gap="6"/>
+				</e:layout>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group id="gro_other" anchorOffsetY="0" left="0" right="0" top="0" bottom="158" visible="false">
+			<e:Scroller id="py_tongxun" anchorOffsetY="0" anchorOffsetX="0" top="100" skinName="skins.ScrollerSkin" horizontalCenter="0" name="py_tongxun" y="100" scaleX="1" scaleY="1" height="1100" left="35" right="35">
+				<e:Group id="tongxun_Group" anchorOffsetX="0" width="680" anchorOffsetY="0" height="1100" name="tongxun_Group">
+				<e:layout>
+					<e:VerticalLayout gap="6"/>
+				</e:layout>
+				</e:Group>
+			</e:Scroller>
+			<e:Button id="tongxun_back" label="" width="122" height="66" enabled="true" scaleX="1" name="tongxun_back" scaleY="1" top="0" right="-4" x="628" y="0">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="gro_mor" anchorOffsetY="0" left="0" right="0" top="0" bottom="158" visible="false">
+			<e:Image id="morbg" scaleX="1" scaleY="1" anchorOffsetY="0" height="47" source="image_70_png" width="122" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="gro_btn" horizontalCenter="-1" anchorOffsetY="0" left="3" right="5" top="1228" verticalCenter="614" bottom="0" anchorOffsetX="0">
+			<e:Group id="btn_gro_bulb2" horizontalCenter="0" anchorOffsetY="0" left="25" right="25" bottom="56" width="186" height="98" x="10" y="10">
+			<e:RadioButton id="btn_2" label="" scaleX="1" scaleY="1" right="0" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" width="186">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn15_2_png" source.down="btn15_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:RadioButton>
+			<e:Image id="image_tishi_pyq2" width="36" height="36" anchorOffsetX="0" anchorOffsetY="0" scaleY="1.08" scaleX="1" top="12" source="image_talk8_png" right="24"/>
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+			</e:Group>
+			<e:Group id="btn_gro_bulb1" horizontalCenter="0" anchorOffsetY="0" left="25" right="25" bottom="56" width="186" height="98">
+			<e:RadioButton id="btn_1" label="" scaleX="1" scaleY="1" right="0" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" width="186">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn14_2_png" source.down="btn14_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:RadioButton>
+			<e:Image id="image_tishi_pyq1" width="36" height="36" anchorOffsetX="0" anchorOffsetY="0" scaleY="1.08" scaleX="1" top="12" source="image_talk8_png" right="24"/>
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+			</e:Group>
+			<e:Group id="btn_gro_bulb3" horizontalCenter="0" anchorOffsetY="0" left="25" right="25" bottom="56" width="186" height="98" x="10" y="10">
+			<e:RadioButton id="btn_3" label="" scaleX="1" scaleY="1" right="0" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" width="186">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn17_2_png" source.down="btn17_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:RadioButton>
+			<e:Image id="image_tishi_pyq3" width="36" height="36" anchorOffsetX="0" anchorOffsetY="0" scaleY="1.08" scaleX="1" top="12" source="image_talk8_png" right="24"/>
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+			</e:Group>
+			<e:Group id="btn_gro_bulb4" horizontalCenter="0" anchorOffsetY="0" left="25" right="25" bottom="56" width="186" height="98" x="10" y="10">
+			<e:RadioButton id="btn_4" label="" scaleX="1" scaleY="1" right="0" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" width="186">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn16_2_png" source.down="btn16_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:RadioButton>
+			<e:Image id="image_tishi_pyq4" width="36" height="36" anchorOffsetX="0" anchorOffsetY="0" scaleY="1.08" scaleX="1" top="12" source="image_talk8_png" right="24"/>
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+			</e:Group>
+			<e:layout>
+			<e:HorizontalLayout gap="0" horizontalAlign="center"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

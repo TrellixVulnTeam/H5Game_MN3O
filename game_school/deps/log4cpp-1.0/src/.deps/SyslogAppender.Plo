@@ -1,0 +1,11 @@
+SyslogAppender.lo: SyslogAppender.cpp PortabilityImpl.hh \
+ ../include/log4cpp/Portability.hh ../include/log4cpp/config-MinGW32.h \
+ ../include/log4cpp/Export.hh
+
+PortabilityImpl.hh:
+
+../include/log4cpp/Portability.hh:
+
+../include/log4cpp/config-MinGW32.h:
+
+../include/log4cpp/Export.hh:

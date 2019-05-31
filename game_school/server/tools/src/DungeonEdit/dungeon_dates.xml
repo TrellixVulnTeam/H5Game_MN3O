@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root><!--type 1为事件，2为动作，3为条件-->
+	<node text="开始副本" name="Startup" id="1" type="1" typeid="1" childs="2,">
+		<node text="创建事件动作" name="SetEventHandler" id="2" type="2" typeid="1" childs="3," param1="StageEvents.DungeonCreated" param2="EventCreateProcess">
+			<node text="创建副本事件" name="EventCreateProcess" id="3" type="1" typeid="2" childs="4,">
+				<node text="创建time动作" name="CreateTimer" id="4" type="2" typeid="2" childs="5," param1="10" param2="Timer1">
+					<node text="创建time1事件" name="Timer1" id="5" type="1" typeid="3" childs="" />
+				</node>
+			</node>
+		</node>
+	</node>
+</root>

@@ -1,0 +1,270 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/44000_44200_blood.proto
+// -------------------------------------------------------
+// ------------------------------------------
+// 新血脉相关
+// ------------------------------------------
+
+// 血脉孔槽查询
+message CSBloodSlotQuery
+{
+	option (msgid) = 44000;
+}
+
+message SCBloodSlotQuery
+{
+	option (msgid) = 44001;
+	required int32 result = 1;
+	repeated SBloodSlot slot = 2;
+	required int32 exp = 3; //血脉之力
+	
+}
+
+// 血脉孔槽信息更新
+message SCBloodSlotUpdate
+{
+	option (msgid) = 44002;
+	repeated SBloodSlot slot = 1;
+	required int32 reason = 2;
+	required int32 exp = 3; //血脉之力
+}
+
+// 血脉魔晶镶嵌
+message CSBloodGobmInlay
+{
+	option (msgid) = 44003;
+	required int32 slotID = 1;
+	required int32 srcIdx = 2;
+}
+
+message SCBloodGobmInlay
+{
+	option (msgid) = 44004;
+	required int32 result = 1;
+}
+
+// 血脉孔槽中魔晶摘除
+message CSBloodGobmRemove
+{
+	option (msgid) = 44005;
+	required int32 slotID = 1;
+}
+
+message SCBloodGobmRemove
+{
+	option (msgid) = 44006;
+	required int32 result = 1;
+}
+
+// 血脉孔槽中魔晶拖动
+message CSBloodGobmMove
+{
+	option (msgid) = 44007;
+	required int32 srcId = 1;
+	required int32 dstId = 2;
+}
+
+message SCBloodGobmMove
+{
+	option (msgid) = 44008;
+	required int32 result = 1;
+}
+
+//--------------------------------
+
+// 血脉背包内一键融合
+message CSBloodGobmOneTouch
+{
+	option (msgid) = 44023;
+	required int32 rank = 1;
+}
+
+message SCBloodGobmOneTouch
+{
+	option (msgid) = 44024;
+	required int32 result = 1;
+}
+
+//--------------------------------
+
+// 血脉圣物查询
+message CSBloodRelicQuery
+{
+	option (msgid) = 44100;
+}
+
+message SCBloodRelicQuery
+{
+	option (msgid) = 44101;
+	repeated SBloodRelic relics = 1;
+	optional int32 equiped_relic_id = 2;
+	optional int32 equiped_relic_lv = 3;
+}
+
+// 血脉圣物升级
+message CSBloodRelicLevelup
+{
+	option (msgid) = 44102;
+	required int32 id = 1;
+	required bool use_gold = 2;
+}
+
+message SCBloodRelicLevelupResult
+{
+	option (msgid) = 44103;
+	required int32 result = 1;
+	optional int32 lucky_plus = 2;
+}
+
+message SCBloodRelicUpdate
+{
+	option (msgid) = 44104;
+	required SBloodRelic relic = 1;
+}
+
+// 血脉圣物穿戴
+message CSBloodRelicEquip
+{
+	option (msgid) = 44105;
+	required int32 id = 1;
+}
+
+message SCBloodRelicEquipResult
+{
+	option (msgid) = 44106;
+	required int32 result = 1;
+	required int32 id = 2;
+}
+
+message SCBloodRelicEquipUpdate
+{
+	option (msgid) = 44107;
+	required int64 uid = 1;
+	required int32 id = 2;
+	required bool equiped = 3;
+	optional int32 lv = 4;
+}
+
+//=================================================================
+// 新血脉系统 2014-12-23
+
+//查询
+message CSBloodSlotQueryEx
+{
+	option (msgid) = 44150;
+}
+
+//查询返回
+message SCBloodSlotQueryEx
+{
+	option (msgid) = 44151;
+	required int32 result = 1; 
+	repeated SBloodSlotInfoEx slotInfo = 2; // 孔槽信息
+	optional int64 totalexp = 3; // 血脉之力
+}
+
+// 更新
+message SCBloodSlotUpdateEx
+{
+	option (msgid) = 44152;
+	repeated SBloodSlotInfoEx slotInfo = 1; // 孔槽信息
+	required int64 totalexp = 2; // 血脉之力
+}
+
+// 注入
+message CSBloodInlayEx
+{
+	option (msgid) = 44153;
+	required int32 slotid  = 1; // 孔槽ID
+	required int32 srcIdx  = 2; // 物品索引
+}
+
+// 注入返回
+message SCBloodInlayEx
+{
+	option (msgid) = 44154;
+	required int32 result = 1;
+	optional int64 spend_silver = 2;	// 银币消耗
+}
+
+// 升阶
+message CSBloodSlotRankupEx
+{
+	option (msgid) = 44155;
+	required int32 slotId = 1;			// 孔槽ID
+}
+
+// 升阶返回
+message SCBloodSlotRankupEx
+{
+	option (msgid) = 44156;
+	required int32 result = 1;
+	required int32 slotId = 2;
+}
+
+// 融合
+message CSBloodDevourEx
+{
+	option (msgid) = 44157;
+	required int32 srcIdx = 1;
+	required int32 dstIdx = 2;
+}
+
+// 融合返回
+message SCBloodDevourEx
+{
+	option (msgid) = 44158;
+	required int32 result = 1;
+	optional int64 spend_silver = 2;	// 银币消耗
+}
+
+// 一键融合
+message CSBloodDevourBatchEx
+{
+	option (msgid) = 44159;
+}
+
+// 一键融合返回
+message SCBloodDevourBatchEx
+{
+	option (msgid) = 44160;
+	required int32 result = 1;
+	optional int32 devour_cnt = 2;		// 融合次数
+	optional int64 spend_silver = 3;	// 银币消耗
+}
+
+// 一键注入价格
+message CSBloodBatchInlayPriceEX
+{
+	option (msgid) = 44161;
+}
+
+// 一键注入价格返回
+message SCBloodBatchInlayPriceEx
+{
+	option (msgid) = 44162;
+	required int32 result = 1;
+	optional int64 sumcost = 2;
+}
+
+
+// 一键注入
+message CSBloodBatchInlayEX
+{
+	option (msgid) = 44163;
+}
+
+// 一键注入返回
+message SCBloodBatchInlayEx
+{
+	option (msgid) = 44164;
+	required int32 result = 1;
+	optional int64 sumcost = 2;
+	optional int32 start_pos = 3;
+	repeated SInlayInfo inlayinfo= 4;
+}

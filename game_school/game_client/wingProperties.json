@@ -1,0 +1,83 @@
+{
+    "resourcePlugin": {
+        "configs": [
+            {
+                "configPath": "resource/resource_json/sound_json/resource_sound.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_core.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_common.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_chapter.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_bg.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_icon.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_loading.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_load.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_player.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_battle.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_main.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_font.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_player/ui_bg.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_wechat.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_array.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_cg.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/resource_json/ui_json/ui_active.json",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/font/battle_green.fnt",
+                "relativePath": "resource/"
+            },
+            {
+                "configPath": "resource/default.res.json",
+                "relativePath": "resource/"
+            }
+        ]
+    },
+    "theme": "resource/default.thm.json"
+}

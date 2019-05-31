@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.text" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group horizontalCenter="0" left="0" right="0" top="0" verticalCenter="0" bottom="0">
+		<e:Image source="main1_png" top="0" verticalCenter="0" bottom="0" left="0" horizontalCenter="0" right="0"/>
+		<e:Button id="btn_back" label="" top="0" left="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_back2_png" source.down="btn_back1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Group id="group_btn" width="157" height="1062" anchorOffsetY="0" anchorOffsetX="0" verticalCenter="-130" horizontalCenter="287.5">
+			<e:Button id="btn_0" label="label" x="-17" y="10" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_1" label="label" x="-27" y="0" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_2" label="label" x="-17" y="10" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_3" label="label" x="-7" y="20" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_4" label="label" x="3" y="30" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_5" label="label" x="13" y="40" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_6" label="label" x="23" y="50" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_7" label="label" x="33" y="60" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_8" label="label" x="43" y="70" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_9" label="label" x="53" y="80" anchorOffsetX="0" width="127" height="50">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_10" label="label" x="63" y="90" anchorOffsetX="0" width="127" height="50" visible="false">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_11_png" source.down="image_talk3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

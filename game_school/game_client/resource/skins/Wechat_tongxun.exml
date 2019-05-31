@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Wechat_tongxun" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="xuanzhuan">
+			<tween:TweenItem target="{enlarge_Image}">
+				<tween:Set>
+				<tween:props>
+					<e:Object scaleX="{0.4}" scaleY="{0.4}" rotation="{0}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object scaleX="{1}" scaleY="{1}" rotation="{90}"/>
+				</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="back">
+			<tween:TweenItem target="{enlarge_Image}">
+				<tween:Set>
+				<tween:props>
+					<e:Object scaleX="{1}" scaleY="{1}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+				<tween:props>
+					<e:Object scaleX="{0}" scaleY="{0}"/>
+				</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group id="gro_comm" anchorOffsetY="0" left="0" right="0" top="0" bottom="0">
+		<e:Image id="wechatbg" right="0" left="0" top="0" bottom="0" source="login_bg_png"/>
+		<e:Image id="wechatbg0" right="0" left="0" top="0" bottom="0" source="wechat_image3_png"/>
+		<e:Image height="560" source="wechat_image2_png" anchorOffsetX="0" anchorOffsetY="0" top="456" horizontalCenter="0" width="680"/>
+		<e:Group left="0" right="0" top="0" height="65" horizontalCenter="0">
+			<e:Button id="btn_chatback" label="" width="122" height="66" enabled="true" scaleX="1" name="py_btn_back" scaleY="1" top="0" right="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group left="0" right="0" top="114" height="150" horizontalCenter="0" x="10" y="10">
+			<e:Image scaleX="1" scaleY="1" name="py_bg" height="150" source="wechat_image7_png" horizontalCenter="0" top="0" left="55" right="55"/>
+			<e:Image width="100" height="100" left="77" verticalCenter="0" source="wechat_image2_png"/>
+			<e:Image id="image_player" width="100" height="100" source="player_icon12_png" left="74" verticalCenter="0"/>
+			<e:Image id="image_bian" width="104" height="104" source="quality_orange_png" left="75" verticalCenter="0"/>
+			<e:Label id="label_name" text="小小甜美滋滋" x="194" y="20" size="28" fontFamily="Microsoft YaHei" textAlign="left" bold="true" textColor="0x600606"/>
+			<e:Label id="label_str" text="血型：" x="194" y="60" size="28" fontFamily="Microsoft YaHei" textAlign="left" bold="true" textColor="0x600606"/>
+			<e:Label id="label_str2" text="星座：" x="194" y="100" size="28" fontFamily="Microsoft YaHei" textAlign="left" bold="true" textColor="0x600606"/>
+			<e:Label id="label_blood_type" text="A" x="275" y="60" size="28" fontFamily="Microsoft YaHei" textAlign="left" textColor="0x600606" bold="true"/>
+			<e:Label id="label_star" text="天蝎" x="275" y="100" size="28" fontFamily="Microsoft YaHei" textAlign="left" textColor="0x600606" bold="true"/>
+			<e:Button id="btn_huanyuan" label="" y="78" anchorOffsetX="0" width="128" anchorOffsetY="0" height="56" right="66">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="wechat_btn4_2_png" source.down="wechat_btn4_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_xiugai" label="" y="12" anchorOffsetX="0" width="128" anchorOffsetY="0" height="56" right="66">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="wechat_btn5_2_png" source.down="wechat_btn5_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Group id="change_name" width="220" height="50" x="193.65" y="9.76" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image width="220" height="50" horizontalCenter="-2" verticalCenter="0" source="wechat_image9_png"/>
+				<e:EditableText id="change_inputtext" width="190" height="34" text="" x="13" y="8" anchorOffsetX="0" anchorOffsetY="0" fontFamily="Microsoft YaHei" textColor="0x1c0000"/>
+				<e:Button id="btn_ok" label="" x="234.15" y="4.09" anchorOffsetX="0" width="54" anchorOffsetY="0" height="40">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="wechat_btn6_1_png" source.down="wechat_btn7_1_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+			</e:Group>
+		</e:Group>
+		<e:Group left="0" right="0" top="284" height="150" horizontalCenter="0" x="10" y="10">
+			<e:Image scaleX="1" scaleY="1" name="py_bg" height="150" source="wechat_image1_png" width="602" y="0" horizontalCenter="0"/>
+			<e:Image scaleX="1" scaleY="1" name="py_bg" height="103" width="127" y="21.94" source="wechat_image6_png" horizontalCenter="-215.5"/>
+			<e:Label id="label_rank" text="4" y="46.56" fontFamily="Microsoft YaHei" horizontalCenter="-221.5" bold="true"/>
+			<e:ProgressBar id="progre" width="454" height="64" y="53.09" skinName="Pro_wechatSkin" horizontalCenter="68"/>
+		</e:Group>
+		<e:Scroller id="scr_talk" anchorOffsetY="0" anchorOffsetX="0" skinName="skins.ScrollerSkin" name="py_scr" height="500" y="482" scrollPolicyH="off" horizontalCenter="0">
+			<e:Group id="scr_playertalk" anchorOffsetX="0" width="660" anchorOffsetY="0" height="400" name="py_gro_total">
+				<e:layout>
+					<e:TileLayout verticalGap="10" horizontalAlign="left" verticalAlign="top" rowHeight="200" requestedRowCount="2" columnWidth="330" requestedColumnCount="2" horizontalGap="10" orientation="rows" rowAlign="justifyUsingHeight" columnAlign="justifyUsingWidth"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<e:Button id="btn_chat" label="" horizontalCenter="0" bottom="58">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="wechat_btn3_2_png" source.down="wechat_btn3_1_png" source.disabled="wechat_btn3_3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_history" label="" horizontalCenter="0" bottom="152">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="wechat_btn2_2_png" source.down="wechat_btn2_1_png" source.disabled="wechat_btn2_3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Group id="enlarge_group" top="0" bottom="0" left="0" right="0">
+			<e:Image id="enlarge_Image" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="cg_001_002_png" height="750" width="1334" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="back_Image" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" left="0" right="0" top="0" bottom="0" source="image_hui_png"/>
+			<e:Group id="imagelist_group" anchorOffsetY="0" height="1334" width="2262" y="0" x="-912.12">
+				<e:Image id="left_image" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="cg_001_002_png" bottom="-266" width="1600" x="897.94" height="900" rotation="90"/>
+				<e:Image id="middle_image" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="cg_001_002_png" bottom="-266" width="1600" x="1804.91" height="900" rotation="90" y="10"/>
+				<e:Image id="right_image" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="cg_001_002_png" bottom="-76" width="1600" x="768" height="900" rotation="90" y="20"/>
+				<e:layout>
+					<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" gap="0"/>
+				</e:layout>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

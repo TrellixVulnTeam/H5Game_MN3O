@@ -1,0 +1,10 @@
+#!/bin/bash
+ulimit -c unlimited
+#sysctl -w "kernel.core_pattern=%e.core"
+LD_PRELOAD="./libtcmalloc_minimal.so" 
+
+nohup ./pwconnsrv >pwconnsrv.out&
+nohup ./pwaccsrv >pwaccsrv.out&
+nohup ./pwdbsrv  >pwdbsrv.out&
+nohup ./pwctrlsrv  >pwctrlsrv.out&
+

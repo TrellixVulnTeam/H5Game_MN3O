@@ -1,0 +1,80 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/42000_42999_adventure.proto
+// -------------------------------------------------------
+message SAdventureEvent
+{
+    required int32 type = 1;
+    required float position = 2;
+}
+
+message CSCreateAdventure
+{
+    option (msgid) = 42010;
+	required int64 adventure_id = 1;
+    optional int64 item_id = 2;
+}
+
+message CSCancelAdventure
+{
+    option (msgid) = 42011;
+}
+
+message SCAdventureStartup
+{
+    option (msgid) = 42020;
+    required int32 conf = 1;
+    required int32 instance = 2;
+    required float speed = 3;
+    required float length = 4;
+    required float progress = 5;
+    required float battle_force = 6;
+    repeated SAdventureEvent events = 7;
+}
+
+message SCAdventureUpdate
+{
+    option (msgid) = 42030;
+}
+
+message SCAdventureFinish
+{
+    option (msgid) = 42040;    
+}
+
+message SAdventurePrizeItem
+{
+    required int32 type = 1;
+    required int32 count = 2;
+}
+
+message SAdventurePrize
+{
+    optional int64 gold = 1;
+    optional int64 silver = 2;
+    optional int64 exp = 3;
+    optional int32 aura = 4;
+    optional int64 dragonic = 5;
+    repeated SAdventurePrizeItem items = 6;
+}
+
+message SCAdventureEvent
+{
+    option (msgid) = 42050;
+    required int32 id = 1;
+    required float progress = 2;
+    required int32 wait_time = 3;
+    repeated int32 items = 4;
+    required SAdventurePrize prize = 6;
+}
+
+message SCAdventureDialog
+{
+    option (msgid) = 42060;
+	required int64 item_id = 1;
+	required int64 adventure_id = 2;
+}

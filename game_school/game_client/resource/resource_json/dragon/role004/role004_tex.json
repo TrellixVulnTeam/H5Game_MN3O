@@ -1,0 +1,311 @@
+{
+    "width": 1024,
+    "imagePath": "role004_tex.png",
+    "height": 512,
+    "name": "role004",
+    "SubTexture": [
+        {
+            "y": 255,
+            "frameWidth": 233,
+            "x": 1,
+            "frameHeight": 168,
+            "width": 231,
+            "frameY": -1,
+            "height": 166,
+            "name": "xiyangjian1",
+            "frameX": -1
+        },
+        {
+            "y": 423,
+            "frameWidth": 54,
+            "x": 140,
+            "frameHeight": 73,
+            "width": 52,
+            "frameY": -1,
+            "height": 71,
+            "name": "youdabi",
+            "frameX": -1
+        },
+        {
+            "width": 71,
+            "y": 157,
+            "height": 108,
+            "name": "youxiaobi",
+            "x": 716
+        },
+        {
+            "width": 88,
+            "y": 368,
+            "height": 116,
+            "name": "zuoxiaobi",
+            "x": 789
+        },
+        {
+            "y": 157,
+            "frameWidth": 121,
+            "x": 595,
+            "frameHeight": 130,
+            "width": 119,
+            "frameY": -1,
+            "height": 128,
+            "name": "majia",
+            "frameX": -1
+        },
+        {
+            "y": 170,
+            "frameWidth": 82,
+            "x": 789,
+            "frameHeight": 198,
+            "width": 80,
+            "frameY": -1,
+            "height": 196,
+            "name": "toufa11",
+            "frameX": -1
+        },
+        {
+            "y": 1,
+            "frameWidth": 169,
+            "x": 789,
+            "frameHeight": 169,
+            "width": 167,
+            "frameY": -1,
+            "height": 167,
+            "name": "lian-2",
+            "frameX": -1
+        },
+        {
+            "y": 287,
+            "frameWidth": 205,
+            "x": 584,
+            "frameHeight": 166,
+            "width": 203,
+            "frameY": -1,
+            "height": 164,
+            "name": "lian-1",
+            "frameX": -1
+        },
+        {
+            "y": 287,
+            "frameWidth": 169,
+            "x": 234,
+            "frameHeight": 169,
+            "width": 167,
+            "frameY": -1,
+            "height": 167,
+            "name": "lian-3",
+            "frameX": -1
+        },
+        {
+            "y": 285,
+            "frameWidth": 75,
+            "x": 871,
+            "frameHeight": 62,
+            "width": 73,
+            "frameY": -1,
+            "height": 60,
+            "name": "toufa10",
+            "frameX": -1
+        },
+        {
+            "y": 1,
+            "frameWidth": 59,
+            "x": 958,
+            "frameHeight": 98,
+            "width": 57,
+            "frameY": -1,
+            "height": 96,
+            "name": "toufa9",
+            "frameX": -1
+        },
+        {
+            "y": 267,
+            "frameWidth": 32,
+            "x": 946,
+            "frameHeight": 51,
+            "width": 30,
+            "frameY": -1,
+            "height": 49,
+            "name": "erhuan",
+            "frameX": -1
+        },
+        {
+            "y": 1,
+            "frameWidth": 190,
+            "x": 235,
+            "frameHeight": 286,
+            "width": 188,
+            "frameY": -1,
+            "height": 284,
+            "name": "toufa6",
+            "frameX": -1
+        },
+        {
+            "y": 99,
+            "frameWidth": 40,
+            "x": 958,
+            "frameHeight": 45,
+            "width": 38,
+            "frameY": -1,
+            "height": 43,
+            "name": "erduo",
+            "frameX": -1
+        },
+        {
+            "y": 453,
+            "frameWidth": 80,
+            "x": 694,
+            "frameHeight": 57,
+            "width": 78,
+            "frameY": -1,
+            "height": 55,
+            "name": "toufa8",
+            "frameX": -1
+        },
+        {
+            "y": 1,
+            "frameWidth": 170,
+            "x": 425,
+            "frameHeight": 276,
+            "width": 168,
+            "frameY": -1,
+            "height": 274,
+            "name": "toufa5",
+            "frameX": -1
+        },
+        {
+            "y": 1,
+            "frameWidth": 234,
+            "x": 1,
+            "frameHeight": 254,
+            "width": 232,
+            "frameY": -1,
+            "height": 252,
+            "name": "toufa4",
+            "frameX": -1
+        },
+        {
+            "y": 423,
+            "frameWidth": 86,
+            "x": 1,
+            "frameHeight": 86,
+            "width": 84,
+            "frameY": -1,
+            "height": 84,
+            "name": "toufa1",
+            "frameX": -1
+        },
+        {
+            "y": 453,
+            "frameWidth": 110,
+            "x": 584,
+            "frameHeight": 42,
+            "width": 108,
+            "frameY": -1,
+            "height": 40,
+            "name": "toufa7",
+            "frameX": -1
+        },
+        {
+            "y": 277,
+            "frameWidth": 159,
+            "x": 425,
+            "frameHeight": 215,
+            "width": 157,
+            "frameY": -1,
+            "height": 213,
+            "name": "toufa2",
+            "frameX": -1
+        },
+        {
+            "y": 1,
+            "frameWidth": 39,
+            "x": 742,
+            "frameHeight": 74,
+            "width": 37,
+            "frameY": -1,
+            "height": 72,
+            "name": "youdatui",
+            "frameX": -1
+        },
+        {
+            "width": 59,
+            "y": 170,
+            "height": 95,
+            "name": "youxiaotui",
+            "x": 940
+        },
+        {
+            "y": 423,
+            "frameWidth": 53,
+            "x": 87,
+            "frameHeight": 87,
+            "width": 51,
+            "frameY": -1,
+            "height": 85,
+            "name": "zuodabi",
+            "frameX": -1
+        },
+        {
+            "y": 423,
+            "frameWidth": 39,
+            "x": 194,
+            "frameHeight": 82,
+            "width": 37,
+            "frameY": -1,
+            "height": 80,
+            "name": "zuodatui",
+            "frameX": -1
+        },
+        {
+            "width": 67,
+            "y": 170,
+            "height": 113,
+            "name": "zuoxiaotui",
+            "x": 871
+        },
+        {
+            "y": 1,
+            "frameWidth": 147,
+            "x": 595,
+            "frameHeight": 156,
+            "width": 145,
+            "frameY": -1,
+            "height": 154,
+            "name": "qunzi",
+            "frameX": -1
+        },
+        {
+            "y": 453,
+            "frameWidth": 13,
+            "x": 774,
+            "frameHeight": 49,
+            "width": 11,
+            "frameY": -1,
+            "height": 47,
+            "name": "youdaizi",
+            "frameX": -1
+        },
+        {
+            "y": 75,
+            "frameWidth": 33,
+            "x": 742,
+            "frameHeight": 61,
+            "width": 31,
+            "frameY": -1,
+            "height": 59,
+            "name": "zuodaizi",
+            "frameX": -1
+        },
+        {
+            "y": 347,
+            "frameWidth": 90,
+            "x": 871,
+            "frameHeight": 20,
+            "width": 88,
+            "frameY": -1,
+            "height": 18,
+            "name": "yaodai",
+            "frameX": -1
+        }
+    ]
+}

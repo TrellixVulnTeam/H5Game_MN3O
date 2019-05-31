@@ -1,0 +1,160 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/12000_12999_shop.proto
+// -------------------------------------------------------
+// -----------------------------------------
+
+// 商店相关的消息
+
+message CSShopOpen
+{
+	option (msgid) = 12000;
+	required int32 shopid = 1;
+}
+
+message SCShopOpen
+{
+	option (msgid) = 12001;
+	required int32 result = 1;
+	required int32 shopid = 2;
+	repeated SShopItem shop_items = 3;
+	repeated SItem recycle_items = 4;
+	required int32 recycle_size = 5;
+}
+
+message CSShopBuy
+{
+	option (msgid) = 12004;
+	required int32 shopid = 1;
+	required int32 item_id = 2;			// 请求购买的物品配置id
+	required int32 item_count = 3;		// 请求购买的数量
+	optional int32 flags = 4;			// 1=自动购买
+}
+
+message SCShopBuyResult
+{
+	option (msgid) = 12005;
+	required int32 result = 1;
+	required int32 shopid = 2;
+	required int32 item_id = 3;			// 请求购买的物品配置id
+	required int32 item_count = 4;		// 请求购买的数量
+	required int32 left_count = 5;
+	optional int32 flags = 6;			// 1=自动购买
+}
+
+message CSShopBuyRecycleBin
+{
+	option (msgid) = 12006;
+	required int32 item_index = 1;
+}
+
+message SCShopBuyRecycleBinResult
+{
+	option (msgid) = 12007;
+	required int32 result = 1;
+	required int32 item_index = 2;
+}
+
+message CSShopSell
+{
+	option (msgid) = 12008;
+	required int32 item_bag = 1;
+	required int32 item_position = 2;
+}
+
+message SCShopSellResult
+{
+	option (msgid) = 12009;
+	required int32 result = 1;
+	optional SItem item_sold = 2;
+}
+
+// -----------------------------------------
+
+// 商城相关的消息
+
+message SMallItem
+{
+	required int32 item_id = 1;			// 配置表id
+	optional int32 global_count = 2;	// 全服剩余数量
+	optional int32 person_count = 3;	// 单人剩余数量(单人限量时)
+	optional int32 person_count_oneday = 4;	// 每日单人剩余数量(单人限量时)
+	optional int32 discount = 5;	// 折扣值（0-100，0和100均表示无折扣）
+	optional int32 actual_price = 6;	// 实际价格
+}
+
+message CSMallQuery
+{
+	option (msgid) = 12100;
+	required int32 type = 1;			// 分类(0=新品推荐,1=时装,2=龙,3=坐骑,4=道具,5=宝石)
+	required int32 index_min = 2;		// 请求索引下限
+	required int32 index_max = 3;		// 请求索引上限
+}
+
+message SCMallQueryResult
+{
+	option (msgid) = 12101;
+	required int32 result = 1;
+	required int32 type = 2;
+	repeated SMallItem items = 3;		// 物品列表
+	required int32 index_limit = 4;		// 服务器索引上限
+}
+
+message CSMallBuy
+{
+	option (msgid) = 12102;
+	required int32 item_id = 1;			// 请求购买的物品配置id
+	required int32 item_count = 2;		// 请求购买的数量
+}
+
+message SCMallBuyResult
+{
+	option (msgid) = 12103;
+	required int32 result = 1;
+	required int32 item_id = 2;			// 请求购买的物品配置id
+	required int32 item_count = 3;		// 请求购买的数量
+	optional SMallItem mall_item = 4;	// 更新物品
+}
+
+
+//随机商店部分
+//查询随机商店
+message CSQueryRandShop
+{
+	option (msgid) = 12104;
+}
+//刷新商店
+message CSRefreshRandShop
+{
+	option (msgid) = 12105;
+}
+//查询随机商店应答
+message SCUpdataRandShopMes
+{
+	option (msgid) = 12106;
+	required int32 grid_count = 1;
+	required int32 refresh_count = 2;
+	required int64 refresh_time = 3;
+	repeated SRandShopItem item_mes = 4;
+}
+//解锁格子
+message CSUnlockRandGrid
+{
+	option (msgid) = 12107;
+}
+//解锁格子应答
+message SCUnlockRandGridResult
+{
+	option (msgid) = 12108;
+	required int32 grid_count = 1;
+}
+//随机商店购买
+message CSBuyRandShopItem
+{
+	option (msgid) = 12109;
+	required int32 grid_id = 1;
+}

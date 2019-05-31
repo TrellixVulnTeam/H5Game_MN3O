@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Main_activity" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" left="0" right="0" top="0" bottom="0">
+		<e:Image id="back" scaleX="1" scaleY="1" left="0" top="0" verticalCenter="0" bottom="0" horizontalCenter="0" right="0" source="login_bg_png"/>
+		<e:Image width="656" height="1334" source="mainl_bg_png" horizontalCenter="160" verticalCenter="0"/>
+		<e:Group horizontalCenter="0" verticalCenter="18" anchorOffsetY="0" left="0" right="0" top="85" bottom="49">
+			<e:Scroller id="scr_list" anchorOffsetY="0" name="scro_date" right="0" width="750" bottom="-1" top="1" height="1200" bounces="false">
+				<e:Group id="gro_list" anchorOffsetX="0" width="750" anchorOffsetY="0" height="224" name="gro_date_point">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group height="70" top="0" horizontalCenter="0" left="0" right="0">
+			<e:Image width="750" height="65" source="title01_png" top="0" horizontalCenter="0"/>
+			<e:Button id="btn_back" label="" top="0" right="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Image width="294" height="131" source="image_activity_title_png" left="0" top="0"/>
+	</e:Group>
+</e:Skin>

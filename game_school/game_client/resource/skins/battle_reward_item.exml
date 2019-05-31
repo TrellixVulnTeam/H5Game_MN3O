@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.battle_reward_item" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="110">
+	<e:Group width="350" height="110">
+		<e:Image width="350" height="110" x="0" y="0" source="image_22_png"/>
+		<e:Image id="play" scale9Grid="23,29,29,24" anchorOffsetX="0" width="90" anchorOffsetY="0" height="90" source="image_05_png" y="10" x="10"/>
+		<e:Image id="quality" scale9Grid="23,29,29,24" anchorOffsetX="0" width="90" anchorOffsetY="0" height="90" source="quality_blue_png" x="10" y="10"/>
+
+		<e:Label id="lv" text="lv.999" y="12" size="24" x="264" anchorOffsetY="0" anchorOffsetX="0" width="78" textAlign="left" bold="true" border="false" borderColor="0x000000" strokeColor="0x4F0808" blendMode="normal" stroke="0" height="27" textColor="0x631010" fontFamily="KaiTi"/>
+		<e:Label id="name" text="呵呵" y="12" size="24" x="108" anchorOffsetY="0" anchorOffsetX="0" width="149" textAlign="left" bold="true" border="false" borderColor="0x000000" strokeColor="0x4F0808" blendMode="normal" stroke="0" height="27" textColor="0x420303" fontFamily="KaiTi"/>
+		<e:ProgressBar width="200" height="32" x="112" y="62"/>
+
+	</e:Group>
+
+	<w:Config id="163821654ed" ></w:Config>
+</e:Skin>

@@ -1,0 +1,6 @@
+{
+  "humanlevel_limit": 300,
+  "autofix_server_info" : true,
+  "default_encoding" : "GB18030",
+  "http_check_sign": false
+}

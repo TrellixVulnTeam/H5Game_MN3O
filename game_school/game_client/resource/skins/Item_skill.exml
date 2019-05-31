@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Item_skill" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="80">
+	<e:Group width="80" height="80">
+		<e:Image id="image_skill" scale9Grid="23,29,29,24" anchorOffsetX="0" width="80" anchorOffsetY="0" height="80" x="0" y="0" source="image_05_png"/>
+		<e:Image id="image_cd" scale9Grid="24,24,24,24" anchorOffsetX="0" width="80" anchorOffsetY="0" height="80" x="0" y="0" source="image_06_png"/>
+		<e:Image id="image_quality" scale9Grid="23,29,29,24" anchorOffsetX="0" width="80" anchorOffsetY="0" height="80" source="quality_blue_png"/>
+		<e:Label id="label_cd" text="30" y="4" size="30" x="4" anchorOffsetY="0" anchorOffsetX="0" width="75" left="1" textAlign="center" bold="true" border="false" borderColor="0x000000" textColor="0xffffff" strokeColor="0x4f0808" blendMode="normal" stroke="2" height="72" verticalAlign="middle"/>
+
+
+	</e:Group>
+</e:Skin>

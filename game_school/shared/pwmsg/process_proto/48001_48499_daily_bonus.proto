@@ -1,0 +1,190 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/48001_48499_daily_bonus.proto
+// -------------------------------------------------------
+// ------------------------------------------
+// 每日奖励相关
+// ------------------------------------------
+
+// -----------------------------------------
+// 签到查询
+message CSDailySignQuery
+{
+	option (msgid) = 48001;
+}
+
+message SCDailySignQuery
+{
+	option (msgid) = 48002;
+	required bool is_sign_today = 1;				// 今天是否普通签到
+	required int32 sign_total = 2;					// 当月全部签到累计天数
+	required int32 sign_vip_remain = 3;				// 当月vip签到剩余天数
+	required int32 sign_vip_all = 4;				// 当月vip签到总天数
+	required int32 sign_total_reward = 5;			// 当前已领取累计奖励天数(1-31位表示)
+	repeated int32 cur_month_sign_info =6;          //当月所有天的签到信息 
+}
+
+// -----------------------------------------
+// 签到
+message CSDailySignIn
+{
+	option (msgid) = 48010;
+	optional int32 sign_type = 1;					// 签到类型（0:普通，1:vip）
+	optional int32 fill_check_date = 2;             //补签的日期
+}
+
+message SCDailySignIn
+{
+	option (msgid) = 48011;
+	required int32 result = 1;
+	optional int32 fill_check_date = 2; //返回补签的日期
+}
+
+// -----------------------------------------
+// 签到累计奖励
+message CSDailySignTotalReward
+{
+	option (msgid) = 48017;
+	required int32 sign_total_reward = 1;			// 领取累计奖励天数
+}
+
+message SCDailySignTotalReward
+{
+	option (msgid) = 48018;
+	required int32 result = 1;
+}
+
+// -----------------------------------------
+// 活动结构
+message SDailyActivity
+{
+	required int32 id = 1;
+	required int32 cnt = 2;
+}
+
+// -----------------------------------------
+// 活跃度查询
+message CSDailyActiveQuery
+{
+	option (msgid) = 48050;
+}
+
+message SCDailyActiveQuery
+{
+	option (msgid) = 48051;
+	required int32 result = 1;
+	optional int32 active_today = 2;
+	optional int32 active_total = 3;
+	optional int32 active_reward_flag = 4;
+	repeated SDailyActivity activity = 5;
+	optional int32 achieve_curr_reward = 6;
+	optional int32 achieve_vip_start = 7;
+	optional int32 achieve_vip_end = 8;
+}
+
+// -----------------------------------------
+// 领取活跃度奖励
+message CSDailyAcitveReward
+{
+	option (msgid) = 48052;
+	required int32 id = 1;
+}
+
+message SCDailyAcitveReward
+{
+	option (msgid) = 48053;
+	required int32 result = 1;
+	required int32 id = 2;
+	optional int32 active_reward_flag = 3;
+}
+
+// -----------------------------------------
+// 活跃度更新
+message SCDailyActivityUpdate
+{
+	option (msgid) = 48054;
+	optional int32 active_today = 1;
+	optional int32 active_total = 2;
+	repeated SDailyActivity activity = 3;
+}
+
+// -----------------------------------------
+// 领取成就奖励
+message CSDailyAchieveReward
+{
+	option (msgid) = 48060;
+}
+
+message SCDailyAchieveReward
+{
+	option (msgid) = 48061;
+	required int32 result = 1;
+	optional int32 achieve_curr_reward = 2;
+	optional int32 achieve_vip_start = 3;
+	optional int32 achieve_vip_end = 4;
+}
+
+// -----------------------------------------
+// 补领成就VIP奖励
+message CSDailyAchieveVIPReward
+{
+	option (msgid) = 48062;
+}
+
+message SCDailyAchieveVIPReward
+{
+	option (msgid) = 48063;
+	required int32 result = 1;
+	optional int32 achieve_vip_start = 2;
+	optional int32 achieve_vip_end = 3;
+}
+
+//-------------------------------------------
+//角色创建奖励
+message SRoleCrtdReward
+{
+    optional int32 totalday = 1; // 登陆多少天
+    repeated int64 flag     = 2; // 普通领取的状态
+    repeated int64 vipflag  = 3; //	vip领取的状态
+
+}
+
+message CSRoleCreatedRewardQuery
+{
+    option (msgid) = 48064;
+		 
+}
+
+message SCRoleCreatedRewardQuery
+{
+    option (msgid) = 48065;
+	optional int32 ret = 1;
+    optional int32 totalday = 2; // 登陆多少天
+    repeated int64 flag     = 3; // 普通领取的状态
+    repeated int64 vipflag  = 4; //	vip领取的状态
+}
+
+//领取奖励
+message CSRoleCreatedRewardAward
+{
+    option (msgid) = 48066;
+	required int32 isVip     = 1; // isvip  0代表不是vip 1代表是vip	 
+	required int32 loginday  = 2; // 领取第几天的奖励
+}
+
+message SCRoleCreatedRewardAward
+{
+    option (msgid) = 48067;
+    optional int32 ret      = 1; // 领取结果
+	optional int32 loginday = 2; // 领取第几天的奖励
+	optional SRoleCrtdReward reward = 3;
+}
+
+
+
+
+

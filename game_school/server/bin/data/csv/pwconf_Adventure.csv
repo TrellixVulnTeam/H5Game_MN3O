@@ -1,0 +1,6 @@
+"ID首位为探险类型编号，后4位为该类型内的编号"	"冒险类型1=个人藏宝图2=个人抢夺城堡3=单人挂机4=多人PVE探险5=多人/多组探险活动"	"参与者限制0=没有限制条件1=成员与队长是好友关系2=成员与队长是同帮派关系"	"脚本类"	"参与人数"	"参与者速度(米/每秒)"	"中途掉线是否暂停"	"中途退出是否给予奖励"	"全程长度"	"探险活动结果"	"后置探险事件/探险活动需要用到填入后置探险的ID，如果没有则填-1"	"世界地图"	"探险路线"	"路线animition"	"近景1"	"近景2"	"近景3"	"远景1"	"远景2"	"远景3"	
+"id"	"type"	"limit_relation"	"script_class"	"limit_num"	"speed"	"pause_when_offline"	"grant_prize_if_cancel"	"length"	"result"	"delay_adventure"	"map"	""	"animation"	"near1"	"near2"	"near3"	"far1"	"far2"	"far3"	
+"int"	"int"	"int"	"string"	"int"	"float"	"bool"	"bool"	"float"	"string"	"int"	"string[]"	""	"string"	"string[]"	"string[]"	"string[]"	"string[]"	"string[]"	"string[]"	
+"cs"	"s"	"s"	"s"	"s"	"s"	"s"	"s"	"s"	"s"	"s"	"c"	""	"c"	"c"	"c"	"c"	"c"	"c"	"c"	
+"10001"	"1"	"0"	""	"1"	"1.000000"	"1"	"0"	"60.000000"	""	"-1"	"tansuo_jpg,fire"	""	"tansuo"	"tansuo_png,fire_di_1"	"tansuo_png,fire_di_2"	"tansuo_png,fire_di_3"	"tansuo_jpg,fire_ding_1"	"tansuo_jpg,fire_ding_2"	"tansuo_jpg,fire_ding_3"	
+"10002"	"1"	"0"	""	"1"	"2.000000"	"0"	"0"	"120.000000"	""	"-1"	"tansuo_jpg,fire"	""	"tansuo"	"tansuo_png,fire_di_1"	"tansuo_png,fire_di_2"	"tansuo_png,fire_di_3"	"tansuo_jpg,fire_ding_1"	"tansuo_jpg,fire_ding_2"	"tansuo_jpg,fire_ding_3"	

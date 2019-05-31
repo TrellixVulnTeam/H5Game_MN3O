@@ -1,0 +1,50 @@
+1、关闭跨服盟战普通服
+/kfmz close_kfmz
+
+2、关闭跨服盟战天梯服
+/kfmz close_kfmz_ladder
+
+3、更改神佑试炼活动状态，开启或者关闭。神佑试炼状态0点会更新。此指令更新状态后，0点也会更新状态。
+/kfmz change_sy_running true    [开启神佑试炼]
+/kfmz change_sy_running false	[关闭神佑试炼]
+
+4、淘汰赛进入第几阶段，只能顺序走
+/kfmz goto 0	[未开启阶段 - 此命令无作用]
+/kfmz goto 1	[开启第一阶段]
+/kfmz goto 2	[开启第二阶段]
+/kfmz goto 3	[开启第三阶段]
+/kfmz goto 4	[开启第四阶段]
+/kfmz goto 5	[结束阶段]
+
+5、淘汰赛直接进入结束状态，指令与“/kfmz goto 5”相同效果
+/kfmz finish
+
+6、淘汰赛重置，淘汰赛开始后要重新开始，必须使用此命令。
+/kfmz reset
+
+7、清空神佑排行
+/kfmz clear_syrankinfo
+
+
+8、清空淘汰赛排行
+/kfmz clear_ttsrankinfo
+
+9、设置淘汰赛结束是否清空神佑排行
+/kfmz tts_clear_sy true		[淘汰赛结束，清空神佑排行]
+/kfmz tts_clear_sy false	[淘汰赛结束，不清空神佑排行]
+
+
+
+
+
+/kfmz tts_clear_sy false
+/kfmz change_sy_running false
+/kfmz reset
+/kfmz goto 4
+/openframe ui_guild_pvp_all
+
+
+
+
+
+

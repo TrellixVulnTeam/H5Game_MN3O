@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<server_group>
+	<id>0</id>
+    <zone_id>4301</zone_id>
+    <secret>oP2LFmGbcbKv4rGQXSz2</secret>
+    <ladder-server>false</ladder-server>
+	 <laddertest>false</laddertest>
+	 <bi_send>false</bi_send>
+	 <report_send>false</report_send>
+    <ladder-server-login-stage>1002</ladder-server-login-stage>
+    <fatigue>2</fatigue>    
+	<name>0</name>
+    <kaifudate>20180531</kaifudate>
+    <log_qlvh>./qlogs/</log_qlvh>
+    <log_self>./mlogs/</log_self>
+    <log_wm>./wlogs/</log_wm>
+	<log_platform>./data/logs/</log_platform>
+    <default_login_stage>1005</default_login_stage>
+	<default_tiyan_stage>1005</default_tiyan_stage>
+    <token_appid>10003</token_appid>
+    <token_secret>DCHUISEnrgXFsGohFpwqOaKr6hAlNqqNbsL</token_secret>
+	<dawn_hour>5</dawn_hour>
+	<enable_cheat_detect>1</enable_cheat_detect>
+    <allow_assert>1</allow_assert>
+	<activity_opentime_limit>1</activity_opentime_limit>
+	
+    <default_encoding>GBK</default_encoding>
+    
+	<lianyun_push>0</lianyun_push>
+    
+	<default_agent>360</default_agent>
+	<autofix_server_info>1</autofix_server_info>
+	
+    <login-key>jHLHWdn0WnQKTCMlXO8H3Fh0vUJ6vnd3</login-key>
+	<pay-key>6GYU1Ns62O0IaD1WgHKAzTBGnPtxeiwa</pay-key>
+	<game-key>jygs</game-key>
+</server_group>
+

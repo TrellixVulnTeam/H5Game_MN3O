@@ -1,0 +1,31 @@
+// Test Comment Test Comment
+// Test Comment Test Comment
+
+table HumanDesc
+{
+	int64 id <key>;
+	string name;	
+}
+
+table Human
+{
+	<table_prefix "item">
+
+	int64 	id <key>;
+	string	name <len 64> <oldname "name1" "name2">;
+	string	attr;
+	int64	items <array>;
+	HumanDesc desc <table>;
+	HumanDesc descs <table> <array>;
+}
+ 
+
+table Item
+{
+	<table_prefix "item">
+
+	int64 	id <key>;
+	int32	type <default 10>;
+	string	name <default "">;
+	bytes	chunk;
+}

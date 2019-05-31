@@ -1,0 +1,89 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/45100_45199_ranklist.proto
+// -------------------------------------------------------
+
+
+// 客户端请求: 查询某类排行榜
+message CSQueryRankList
+{
+    option (msgid) = 45100;
+    required int64 rtype = 1;	// 类型
+	required int32 rpage = 2;	// 请求页数，从0开始
+}
+
+// 服务器通知: 查询排行榜反馈
+message SCQueryRankListResult
+{
+    option (msgid) = 45101;
+    required int64 rtype = 1;
+    required int32 rpage = 2;
+    repeated SRankRecord records = 3;
+}
+
+// 客户端请求: 查询角色排行信息
+message CSQueryRankInfo
+{
+    option (msgid) = 45110;
+}
+
+// 服务器通知: 查询角色排行反馈
+message SCQueryRankInfoResult
+{
+    option (msgid) = 45111;
+    repeated SRankDetail records = 1;
+}
+
+// 客户端请求: 查询单个角色排名
+message CSQueryPlayerRank
+{
+    option (msgid) = 45120;
+    required int64 rtype = 1;	// 类型
+	required bytes uname = 2;	// 角色名字
+}
+
+// 服务器通知: 查询角色排名反馈
+message SCQueryPlayerRankResult
+{
+    option (msgid) = 45121;
+    required int64 rtype = 1;
+    required bytes uname = 2;
+	required int32 pos = 3;
+    repeated SRankRecord records = 4;
+}
+
+// 客户端请求: 查询某类全局排行榜
+message CSQueryGlobalRankList
+{
+    option (msgid) = 45130;
+    required int32 type = 1;	// 类型
+}
+
+// 服务器通知: 查询全局排行榜反馈
+message SCQueryGlobalRankListResult
+{
+    option (msgid) = 45131;
+    required int32 type = 1;
+    repeated SGlobalRankRecord records = 2;
+}
+
+// 客户端请求: 查询单个角色全局排名
+message CSQueryPlayerGlobalRank
+{
+    option (msgid) = 45132;
+    required int32 type = 1;	// 类型
+	required int64 uid = 2;
+}
+
+// 服务器通知: 查询角色全局排名反馈
+message SCQueryPlayerGlobalRankResult
+{
+    option (msgid) = 45133;
+    required int32 type = 1;
+    required int64 uid = 2;
+    optional SGlobalRankRecord record = 3;
+}

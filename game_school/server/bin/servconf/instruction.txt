@@ -1,0 +1,75 @@
+game1上运行 dbsrv ctrlsrv worldsrv0 accsrv connsrv1
+link1上运行 connsrv2 worldsrv1
+
+全局
+======================================================
+${GAME1_ADDR}  		Game1服务器局域网地址
+${LINK1_ADDR}		Link1服务器局域网地址
+
+全局配置
+======================================================
+${LOCALID}				服务器唯一ID(与zoneid不同,可回收利用)
+${ZONEID}			ZoneId
+${173_SECRET}		173密钥(123456)
+${KAIFU_DATE}		开服日期(YYYYMMDD)
+${QLOG_PATH}		高章成LOG路径
+${WLOG_PATH}		韩亚惠LOG路径
+${TMPLOG_PATH}		高章成LOG临时路径
+${MLOG_PATH}		内部LOG路径
+
+账号服务器 accsrv
+======================================================
+${ACCSRV_PORT}		本地服务端口
+
+${ACCDB_ADDR}		账号数据库地址
+${ACCDB_PORT}		账号数据库端口
+${ACCDB_NAME}		账号数据库名
+${ACCDB_USER}		账号数据库用户
+${ACCDB_PSWD}		账号数据库密码
+
+连接服务器1 connsrv1
+======================================================
+${CONNSRV1_PORT}		Connsrv1本地服务端口
+${CONNSRV1_SERV_PORT}	Connsrv1对外服务端口(客户端用) ===========对外
+
+连接服务器2 connsrv2
+======================================================
+${CONNSRV2_PORT}		Connsrv2本地服务端口
+${CONNSRV2_SERV_PORT}	Connsrv2对外服务端口(客户端用) ===========对外
+
+控制服务器 ctrlsrv
+======================================================
+${LADDER_SERV_LOCAL_ADDR}	天梯服务器局域网地址
+${LADDER_SERV_LOCAL_PORT}	天梯服务器局域网端口
+${LADDER_SERV_ADDR}			天梯服务外网地址
+${LADDER_SERV_PORT}			天梯服务外网端口
+${CTRLSRV_173_PORT}			173充值端口(http) ===========对外
+${CTRLSRV_CSI_PORT}			客服服务端口(http) ===========对外
+${CTRLSRV_PORT}				本地服务端口
+
+${NAMESRV_ENABLE}			是否使用唯一名服务器(true | false)
+${NAMEDB_ADDR}				唯一名数据库地址
+${NAMEDB_PORT}				唯一名数据库端口
+${NAMEDB_NAME}				唯一名数据库名
+${NAMEDB_USER}				唯一名数据库用户
+${NAMEDB_PSWD}				唯一名数据库密码
+
+数据库服务器 dbsrv
+======================================================
+${DBSRV_PORT}				本地服务端口
+
+${CHARACTERDB_ADDR}			角色数据库地址
+${CHARACTERDB_PORT}			角色数据库端口
+${CHARACTERDB_NAME}			角色数据库名
+${CHARACTERDB_USER}			角色数据库用户
+${CHARACTERDB_PSWD}			角色数据库密码
+
+世界服务器 worldsrv0(game1上)
+======================================================
+${WORLDSRV0_PORT}			worldsrv0本地服务端口
+${WORLDSRV0_THREAD_NUM}		worldsrv0上启动的线程数
+
+世界服务器 worldsrv1(link1上)
+======================================================
+${WORLDSRV1_PORT}			worldsrv1本地服务端口
+${WORLDSRV1_THREAD_NUM}		worldsrv1上启动的线程数

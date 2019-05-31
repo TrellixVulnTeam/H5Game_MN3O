@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="unittest++\AssertException.cpp" />
+    <ClCompile Include="unittest++\Checks.cpp" />
+    <ClCompile Include="unittest++\CurrentTest.cpp" />
+    <ClCompile Include="unittest++\DeferredTestReporter.cpp" />
+    <ClCompile Include="unittest++\DeferredTestResult.cpp" />
+    <ClCompile Include="unittest++\MemoryOutStream.cpp" />
+    <ClCompile Include="unittest++\ReportAssert.cpp" />
+    <ClCompile Include="unittest++\Test.cpp" />
+    <ClCompile Include="unittest++\TestDetails.cpp" />
+    <ClCompile Include="unittest++\TestList.cpp" />
+    <ClCompile Include="unittest++\TestReporter.cpp" />
+    <ClCompile Include="unittest++\TestReporterStdout.cpp" />
+    <ClCompile Include="unittest++\TestResults.cpp" />
+    <ClCompile Include="unittest++\TestRunner.cpp" />
+    <ClCompile Include="unittest++\TimeConstraint.cpp" />
+    <ClCompile Include="unittest++\Win32\TimeHelpers.cpp" />
+    <ClCompile Include="unittest++\XmlTestReporter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="unittest++\AssertException.h" />
+    <ClInclude Include="unittest++\CheckMacros.h" />
+    <ClInclude Include="unittest++\Checks.h" />
+    <ClInclude Include="unittest++\Config.h" />
+    <ClInclude Include="unittest++\CurrentTest.h" />
+    <ClInclude Include="unittest++\DeferredTestReporter.h" />
+    <ClInclude Include="unittest++\DeferredTestResult.h" />
+    <ClInclude Include="unittest++\ExecuteTest.h" />
+    <ClInclude Include="unittest++\MemoryOutStream.h" />
+    <ClInclude Include="unittest++\ReportAssert.h" />
+    <ClInclude Include="unittest++\Test.h" />
+    <ClInclude Include="unittest++\TestDetails.h" />
+    <ClInclude Include="unittest++\TestList.h" />
+    <ClInclude Include="unittest++\TestMacros.h" />
+    <ClInclude Include="unittest++\TestReporter.h" />
+    <ClInclude Include="unittest++\TestReporterStdout.h" />
+    <ClInclude Include="unittest++\TestResults.h" />
+    <ClInclude Include="unittest++\TestRunner.h" />
+    <ClInclude Include="unittest++\TestSuite.h" />
+    <ClInclude Include="unittest++\TimeConstraint.h" />
+    <ClInclude Include="unittest++\TimeHelpers.h" />
+    <ClInclude Include="unittest++\UnitTest++.h" />
+    <ClInclude Include="unittest++\Win32\TimeHelpers.h" />
+    <ClInclude Include="unittest++\XmlTestReporter.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}</ProjectGuid>
+    <RootNamespace>UnitTestvsnet2005</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

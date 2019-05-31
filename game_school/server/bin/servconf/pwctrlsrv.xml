@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>ctrlsrv</name>
+    
+    <simpl_entrance>
+        <port>8001</port>
+        
+        <level_0>
+            <local_ip>LADDER_SERV_LOCAL_ADDR</local_ip>
+            <port>LADDER_SERV_LOCAL_PORT</port>
+            <ip>LADDER_SERV_ADDR</ip>
+            <login_port>LADDER_SERV_PORT</login_port>
+        </level_0>
+        
+        <level_1>
+            <ip></ip>
+            <local_ip></local_ip>
+            <port>0</port>
+            <login_port>0</login_port>
+        </level_1>
+        
+        <level_2>
+            <ip></ip>
+            <local_ip></local_ip>
+            <port>0</port>
+            <login_port>0</login_port>
+        </level_2>
+    </simpl_entrance>
+    
+    <performance_http>
+        <port>CTRLSRV_173_PORT</port>
+        <enable>true</enable>
+    </performance_http>
+    
+    <qlvh_customer_service_interface>
+        <bind></bind>
+        <port>CTRLSRV_CSI_PORT</port>
+        <enable>true</enable>
+    </qlvh_customer_service_interface>
+    
+	<communicator>
+		<listen_addr>tcp://GAME1_ADDR:CTRLSRV_PORT</listen_addr>
+	</communicator>
+	
+	<max_online>2000</max_online>
+	
+    <nodes>
+		<count>5</count>
+		<node1>
+			<name>dbsrv</name>
+			<addr>tcp://GAME1_ADDR:DBSRV_PORT</addr>
+		</node1>
+		<node2>
+			<name>connsrv1</name>
+			<addr>tcp://GAME1_ADDR:CONNSRV1_PORT</addr>
+		</node2>
+		<node3>
+			<name>connsrv2</name>
+			<addr>tcp://LINK1_ADDR:CONNSRV2_PORT</addr>
+		</node3>
+        <node4>
+			<name>accsrv</name>
+			<addr>tcp://GAME1_ADDR:ACCSRV_PORT</addr>
+		</node4> 
+		<node5>
+			<name>globalsrv</name>
+			<addr>tcp://GLOBAL_ADDR:GLOBAL_PORT</addr>
+			<custom_name>CTRLSRV_CUSTOMNAME</custom_name>
+		</node5> 		
+	</nodes>
+    
+    <namesrv>
+        <enable>NAMESRV_ENABLE</enable>
+        <database>
+			<host>NAMEDB_ADDR</host>
+			<port>NAMEDB_PORT</port>
+			<name>NAMEDB_NAME</name>
+			<user>NAMEDB_USER</user>
+			<pswd>NAMEDB_PSWD</pswd>
+		</database>
+    </namesrv>
+</pwdist>
+
+

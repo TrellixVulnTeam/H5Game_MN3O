@@ -1,0 +1,69 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/43000_43999_gift.proto
+// -------------------------------------------------------
+
+message SGiftGroup
+{
+    required int32 gid = 1;
+    required int32 state = 2;
+	optional int64 time = 3;
+}
+
+// 客户端请求: 查询礼包组信息
+message CSQueryGiftGroup
+{
+    option (msgid) = 43010;
+}
+
+// 服务器通知: 查询礼包组反馈
+message SCQueryGiftGroupResult
+{
+    option (msgid) = 43011;
+    repeated SGiftGroup groups = 1;
+}
+
+// 客户端请求: 领取一个礼包
+message CSRecvGift
+{
+    option (msgid) = 43020;
+    required int32 gid = 1;
+    required int32 idx = 2;
+}
+
+// 服务器通知: 领取礼包反馈
+message SCRecvGiftResult
+{
+    option (msgid) = 43021;
+    required int32 result = 1;
+    optional int32 gid = 2;
+    optional int32 idx = 3;
+}
+
+// 服务器通知: 更新礼包状态
+message SCUpdateGift
+{
+    option (msgid) = 43030;
+    required int32 gid = 1;
+    required int32 idx = 2;
+    required int32 state = 3;
+}
+
+// 服务器通知: 更新礼包组状态
+message SCUpdateGiftGroup
+{
+    option (msgid) = 43031;
+    required SGiftGroup group = 1;
+}
+
+// 服务器通知: 更新礼包内容
+message SCUpdateGiftInfo
+{
+  option (msgid) = 43032;
+	required int32 gid = 1;
+	repeated SPlainItem items = 2;
+}

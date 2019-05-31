@@ -1,0 +1,11 @@
+{"file":"battle_time.png","frames":{
+"0":{"x":1,"y":67,"w":47,"h":65,"offX":1,"offY":0,"sourceW":50,"sourceH":65},
+"1":{"x":194,"y":68,"w":33,"h":64,"offX":8,"offY":0,"sourceW":50,"sourceH":65},
+"2":{"x":103,"y":1,"w":48,"h":65,"offX":1,"offY":0,"sourceW":50,"sourceH":65},
+"3":{"x":50,"y":68,"w":47,"h":65,"offX":1,"offY":0,"sourceW":50,"sourceH":65},
+"4":{"x":1,"y":1,"w":50,"h":64,"offX":0,"offY":0,"sourceW":50,"sourceH":65},
+"5":{"x":99,"y":68,"w":47,"h":64,"offX":1,"offY":0,"sourceW":50,"sourceH":65},
+"6":{"x":203,"y":1,"w":48,"h":65,"offX":1,"offY":0,"sourceW":50,"sourceH":65},
+"7":{"x":148,"y":68,"w":44,"h":64,"offX":3,"offY":0,"sourceW":50,"sourceH":65},
+"8":{"x":53,"y":1,"w":48,"h":65,"offX":1,"offY":0,"sourceW":50,"sourceH":65},
+"9":{"x":153,"y":1,"w":48,"h":65,"offX":1,"offY":0,"sourceW":50,"sourceH":65}}}

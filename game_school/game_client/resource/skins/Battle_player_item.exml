@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Battle_player_item" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="200">
+	<e:Group width="200" height="200" scaleX="1" scaleY="1">
+		<e:Image id="image_player" width="176" height="176" source="" horizontalCenter="0" verticalCenter="0"/>
+		<e:ProgressBar id="pro_blood" width="180" height="25" skinName="Pro_battle_bloodSkin" horizontalCenter="0" top="13"/>
+
+
+
+
+
+
+
+
+	</e:Group>
+</e:Skin>

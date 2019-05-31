@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Item_icon" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="120" width="120">
+	<e:Group width="120" height="120">
+		<e:Image id="image_quality" scale9Grid="23,29,29,24" anchorOffsetX="0" width="90" anchorOffsetY="0" height="90" horizontalCenter="0" source="image_icon4_png"/>
+
+		<e:Image id="image_item" scale9Grid="23,29,29,24" anchorOffsetX="0" width="80" anchorOffsetY="0" height="80" y="0" horizontalCenter="0" source="item_icon1_png"/>
+
+
+		<e:Label id="label_num" text="999" y="66.5" size="20" anchorOffsetY="0" anchorOffsetX="0" width="75" bold="true" border="false" borderColor="0x000000" textColor="0xffffff" strokeColor="0x4f0808" blendMode="normal" stroke="2" right="21" textAlign="right" verticalAlign="bottom"/>
+		<e:Label id="label_lv" text="999" y="66.5" size="20" anchorOffsetY="0" anchorOffsetX="0" width="75" bold="true" border="false" borderColor="0x000000" textColor="0xFFFFFF" strokeColor="0x4F0808" blendMode="normal" stroke="2" right="21" textAlign="right"/>
+		<e:Image id="image_black" anchorOffsetX="0" width="80" anchorOffsetY="0" height="80" y="5" source="image_06_png" horizontalCenter="0"/>
+
+		<e:Label id="label_name" text="12323232" size="24" anchorOffsetY="0" anchorOffsetX="0" width="120" bold="true" border="false" borderColor="0x000000" strokeColor="0x4F0808" blendMode="normal" bottom="4" textColor="0x000000" horizontalCenter="0" textAlign="center" fontFamily="Microsoft YaHei"/>
+
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,8 @@
+"编号"	"刷新概率"	"提升消耗"	"护送奖励"	"超时系数"	"双倍系数"	"护送目标人物名字"	"品质稀有度(1=绿，2=蓝，3=紫，5=橙)"	"护送目标ID"	"护送模型"	"跟随时间"	"奖励绑定元宝"	"公告ID"	"名字_美术图集"	
+"id"	"rate"	"expend_num"	"exp_num"	"mulitiple_1"	"mulitiple_2"	"name"	"color"	"send_id"	"model_id"	"send_time"	"award"	"notice"	"pic_name"	
+"int"	"int"	"int[]"	"int"	"float"	"int"	"string"	"int"	"int"	"int"	"int"	"int[]"	"int"	"string[]"	
+"cs"	"s"	"cs"	"cs"	"cs"	"cs"	"cl"	"cs"	"cs"	"cs"	"cs"	"cs"	"s"	"c"	
+"1"	"75"	"100059,1"	"20000"	"0.700000"	"2"	"沉香"	"1"	"51201"	"70010"	"20"	"0,0"	"0"	"pic_act_husong,hs_chenxiang"	
+"2"	"20"	"100059,2"	"50000"	"0.7"	"2"	"彩云"	"2"	"51202"	"70011"	"20"	"0,0"	"0"	"pic_act_husong,hs_caiyun"	
+"3"	"5"	"100059,5"	"100000"	"0.7"	"2"	"欧阳羽"	"3"	"51203"	"70001"	"20"	"0,0"	"0"	"pic_act_husong,hs_oyangyu"	
+"4"	"0"	"0,0"	"200000"	"0.7"	"2"	"楚玉"	"5"	"51204"	"70002"	"20"	"710300,1"	"134108"	"pic_act_husong,hs_chuyu"	

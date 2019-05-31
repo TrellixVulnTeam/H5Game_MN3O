@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Chapter" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group horizontalCenter="0" verticalCenter="0" left="0" top="0" bottom="0" right="0">
+		<e:Image id="image_background" fillMode="scale" scaleX="1" scaleY="1" source="chapterbg01_png" left="0" horizontalCenter="0" right="0" top="0" verticalCenter="0" bottom="0"/>
+		<e:Group height="86" horizontalCenter="0" top="0" y="0" scaleX="1" scaleY="1" left="0" right="0">
+			<e:Image height="65" y="0" source="title01_png" left="-1" right="1" horizontalCenter="-1"/>
+			<e:Image height="87" width="370" left="0" top="0" source="image_77_png"/>
+			<e:Image height="42" width="39" y="23" x="313" source="btn_arrow1_1_png"/>
+			<e:Label id="label_chaptername" text="第一章 升学仪式之战" textColor="0x510d0d" bold="true" borderColor="0x6d3232" strokeColor="0xf9f9f9" stroke="1" textAlign="center" fontFamily="Microsoft YaHei" left="14" top="24"/>
+			<e:Button id="btn_arrow" label="" height="70" anchorOffsetX="0" width="420" left="0" top="0">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png" source.disabled="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Group width="169" height="80" anchorOffsetY="0" anchorOffsetX="0" top="82" left="12">
+				<e:Image width="169" height="80" fillMode="scale" source="image_75_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="label_star" text="10/30" x="45" textColor="0x5e1919" textAlign="left" fontFamily="Microsoft YaHei" size="30" stroke="1" strokeColor="0xffffff" verticalCenter="-11" bold="true"/>
+			<e:Image width="34" height="34" x="10" fillMode="scale" source="image_star1_png" verticalCenter="-11"/>
+			</e:Group>
+			<e:Button id="btn_back" label="" top="0" right="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="group_chapter" left="0" right="0" bottom="109" top="125" verticalCenter="8" horizontalCenter="0">
+			<e:Image width="688" height="1040" source="image_chapterbg_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Scroller width="100" height="930" y="126" horizontalCenter="308">
+				<e:Group id="Group_Radio" width="100">
+					<e:RadioButton id="btn0" label="1-1" width="99" height="73" x="0" y="0" enabled="true">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn1" label="1-1" width="99" height="73" x="10" y="10">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn2" label="1-1" width="99" height="73" x="20" y="20">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn3" label="1-1" width="99" height="73" x="30" y="30">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn4" label="1-1" width="99" height="73" x="40" y="40">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn5" label="1-1" width="99" height="73" x="50" y="50">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn6" label="1-1" width="99" height="73" x="60" y="60">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn7" label="1-1" width="99" height="73" x="70" y="70">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn8" label="1-1" width="99" height="73" x="80" y="80">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:RadioButton id="btn9" label="1-1" width="99" height="73" x="90" y="90">
+						<e:skinName>
+						<e:Skin states="up,down,disabled">
+							<e:Image width="100%" height="100%" source="tag_btn2_png" source.down="tag_btn1_png"/>
+							<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+						</e:skinName>
+					</e:RadioButton>
+					<e:layout>
+						<e:VerticalLayout verticalAlign="top" gap="16"/>
+					</e:layout>
+				</e:Group>
+			</e:Scroller>
+			<e:Group width="360" height="100" y="133" anchorOffsetX="0" horizontalCenter="-20">
+				<e:Image id="satr1" width="86" height="81" x="183" y="44" source="image_74_png"/>
+				<e:Image id="satr2" width="86" height="81" x="193" y="54" source="image_74_png"/>
+				<e:Image id="satr3" width="86" height="81" x="203" y="64" source="image_74_png"/>
+				<e:layout>
+					<e:HorizontalLayout gap="40"/>
+				</e:layout>
+			</e:Group>
+			<e:Group id="group_icon" width="280" height="74" y="283" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-20">
+				<e:Image id="icon1" width="62" height="62" x="183" y="44" source="item_icon1_png"/>
+				<e:Image id="icon2" width="62" height="62" x="193" y="54" source="item_icon2_png"/>
+				<e:Image id="icon3" width="62" height="62" x="203" y="64" source="item_icon3_png"/>
+				<e:layout>
+				<e:HorizontalLayout gap="40"/>
+				</e:layout>
+			</e:Group>
+			<e:Image width="400" height="45" source="image_73_png" y="234" horizontalCenter="-20"/>
+			<e:Image width="400" height="45" source="image_73_png" y="374" horizontalCenter="-20"/>
+			<e:Image width="400" height="45" source="image_73_png" y="598" horizontalCenter="-20"/>
+			<e:Image width="146" height="40" source="zi_03_png" y="234" horizontalCenter="-20"/>
+			<e:Image width="108" height="40" y="376" horizontalCenter="-20" source="zi_04_png"/>
+			<e:Image width="146" height="40" y="600.66" horizontalCenter="-20" source="zi_02_png"/>
+			<e:Group id="group_type" width="500" height="116.67" y="433" horizontalCenter="-20" anchorOffsetY="0">
+				<e:Label text="1.携带以下同学，可获buff加成" x="11" y="6" textAlign="left" textColor="0x5b0000" fontFamily="Microsoft YaHei" bold="true"/>
+				<e:Image width="45" height="41" x="451.66" y="3.34" source="image_yes_png"/>
+				<e:Image width="103" height="42" x="20" y="55" source="type_icon1_png"/>
+				<e:Image width="103" height="42" x="132" y="53.66" source="type_icon2_png"/>
+			</e:Group>
+			<e:Group id="group_player" width="500" height="80" y="656" horizontalCenter="-20" anchorOffsetY="0">
+				<e:Group width="80" height="80" x="0" y="0">
+					<e:Image width="80" height="80" x="0" y="0" source="player_icon1_png"/>
+					<e:Image width="80" height="80" x="0" y="0" source="quality_orange_png"/>
+				</e:Group>
+				<e:Group width="80" height="80" x="0" y="0">
+					<e:Image width="80" height="80" x="0" y="0" source="player_icon2_png"/>
+					<e:Image width="80" height="80" x="0" y="0" source="quality_orange_png"/>
+				</e:Group>
+				<e:Group width="80" height="80" x="10" y="10">
+					<e:Image width="80" height="80" x="0" y="0" source="player_icon3_png"/>
+					<e:Image width="80" height="80" x="0" y="0" source="quality_orange_png"/>
+				</e:Group>
+				<e:Group width="80" height="80" x="20" y="20">
+					<e:Image width="80" height="80" x="0" y="0" source="player_icon4_png"/>
+					<e:Image width="80" height="80" x="0" y="0" source="quality_orange_png"/>
+				</e:Group>
+				<e:Group width="80" height="80" x="30" y="30">
+					<e:Image width="80" height="80" x="0" y="0" source="player_icon11_png"/>
+					<e:Image width="80" height="80" x="0" y="0" source="quality_orange_png"/>
+				</e:Group>
+				<e:Group width="80" height="80" x="40" y="40">
+					<e:Image width="80" height="80" x="0" y="0" source="player_icon7_png"/>
+					<e:Image width="80" height="80" x="0" y="0" source="quality_orange_png"/>
+				</e:Group>
+				<e:layout>
+					<e:HorizontalLayout/>
+				</e:layout>
+			</e:Group>
+			<e:Button id="btn_battle" label="" y="849" width="200" height="66" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_diaocha_png" source.down="btn_diaocha_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Button id="btn_team" label="" scaleX="1" scaleY="1" width="180" height="150" x="570" y="1184">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn01_1_png" source.down="btn01_2_png" source.disabled="btn01_3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_clear" label="" scaleX="1" scaleY="1" width="102" height="82" anchorOffsetX="0" left="0" bottom="0" anchorOffsetY="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_37_png" source.down="image_37_png" source.disabled="image_37_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>

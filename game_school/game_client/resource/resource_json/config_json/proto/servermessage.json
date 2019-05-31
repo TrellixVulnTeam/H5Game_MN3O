@@ -1,0 +1,17 @@
+{
+"1199":"CSLoginEnded",
+"1031":"SCCharacterRevert",
+"1036":"CSKickDroppedHuman",
+"1011":"CSCharacterEnterWorld",
+"1035":"SCDroppedHumanHint",
+"1009":"CSCharacterLogin",
+"1008":"SCCharacterDelete",
+"1007":"CSCharacterDelete",
+"1006":"SCCharacterCreate",
+"1005":"CSCharacterCreate",
+"1030":"CSCharacterRevert",
+"1010":"SCCharacterLogin",
+"1002":"SCLoginGate",
+"1001":"CSLoginGate",
+"1000":"CSLoginBegan"
+}

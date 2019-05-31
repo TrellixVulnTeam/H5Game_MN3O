@@ -1,0 +1,38 @@
+TimeStamp.lo: TimeStamp.cpp ../include/log4cpp/TimeStamp.hh \
+ ../include/log4cpp/Portability.hh ../include/log4cpp/config-MinGW32.h \
+ ../include/log4cpp/Export.hh \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/c++/cstring \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/c++/mingw32/bits/c++config.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/c++/mingw32/bits/os_defines.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/c++/mingw32/bits/cpu_defines.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/string.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/_mingw.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/stddef.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/sys/timeb.h \
+ c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/sys/types.h
+
+../include/log4cpp/TimeStamp.hh:
+
+../include/log4cpp/Portability.hh:
+
+../include/log4cpp/config-MinGW32.h:
+
+../include/log4cpp/Export.hh:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/c++/cstring:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/c++/mingw32/bits/c++config.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/c++/mingw32/bits/os_defines.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/c++/mingw32/bits/cpu_defines.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/string.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/_mingw.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/include/stddef.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/sys/timeb.h:
+
+c:\mingw\bin\../lib/gcc/mingw32/4.6.1/../../../../include/sys/types.h:

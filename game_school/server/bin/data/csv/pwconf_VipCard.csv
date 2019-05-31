@@ -1,0 +1,4 @@
+"月卡类型"	"优先级"	"左上角头像上vip图片名字"	"左上角头像上Tips"	"享有特权1（修炼所）"	"享有特权2（佣兵大厅）"	"享有特权3（魔法果树）"	"享有特权4（迷宫探险）"	"享有特权5（点石成金）"	"享有特权6（凛冬试炼）"	"享有特权7（天空试炼）"	"享有特权8（装备强化成功率）"	"享有特权9（战龙悟性提高成功率）"	"享有特权10（所有物品掉落率）"	"享有特权11（属性：体质）"	"享有特权12（属性：力量和智力）"	"享有特权13（属性：生命值）"	"享有特权14（属性：物理攻击）"	"享有特权15（属性：物理防御）"	"享有特权16（魔法攻击）"	"享有特权17（魔法防御）"	"享有特权18"	"享有特权19"	"享有特权20"	
+"type"	"priority"	"icons"	"tips"	"privilege_1"	"privilege_2"	"privilege_3"	"privilege_4"	"privilege_5"	"privilege_6"	"privilege_7"	"privilege_8"	"privilege_9"	"privilege_10"	"privilege_11"	"privilege_12"	"privilege_13"	"privilege_14"	"privilege_15"	"privilege_16"	"privilege_17"	"privilege_18"	"privilege_19"	"privilege_20"	
+"int"	"int"	"string[]"	"string"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	"float"	
+"cs"	"cs"	"c"	"cl"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	

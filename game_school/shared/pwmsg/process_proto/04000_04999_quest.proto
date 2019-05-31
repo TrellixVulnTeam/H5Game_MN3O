@@ -1,0 +1,324 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/04000_04999_quest.proto
+// -------------------------------------------------------
+
+// 已接受的任务信息
+message SQuestAccepted
+{
+	required int32 quest_type 		= 1; // 主任务任务ID
+	repeated int32 quest_tasks 		= 2; // 任务目标（杀怪，对话，强化等）
+	repeated int32 quest_tasks_max 	= 3; // 任务目标上限
+	required int32 quest_state 		= 4; //	1: 可接受 2: 已接受 3: 已完成,未提交 4: 已完成,已提交
+	required int32 child_quest_type = 5; //	当前节点任务ID
+}
+
+// 查询任务数据 登陆时
+message CSQuestQuery
+{
+	option (msgid) = 4000;
+}
+
+// 查询任务数据 服务端返回
+message SCQuestQuery
+{
+	option (msgid) = 4001;
+	repeated SQuestAccepted accepted_quests	= 1; // 已接受的任务列表，节点任务包含在内
+	repeated int32 acceptable_quests 		= 2; // 可接任务列表，不包括节点任务
+	repeated int32 completed_quests			= 3; // 已完成任务列表
+}
+
+// 客户端请求: 接受任务
+message CSQuestAccept
+{
+	option (msgid) = 4003;
+	required int32 quest_type = 1;
+}
+
+// 服务端通知: 任务已接受
+message SCQuestAccepted
+{
+	option (msgid) = 4004;
+	required SQuestAccepted quest 		= 1; // 已接主任务
+	optional SQuestAccepted child_quest	= 2; // 已接节点任务
+}
+
+// 客户端请求: 放弃任务
+message CSQuestDrop
+{
+	option (msgid) = 4005;
+	required int32 quest_type = 1;
+}
+
+// 服务端通知: 任务已放弃
+message SCQuestDropped
+{
+	option (msgid) = 4006;
+	required int32 quest_type 		= 1; // 已放弃主任务ID
+	optional int32 child_quest_type = 2; // 已放弃节点任务ID
+}
+
+// 客户端请求: 完成任务
+message CSQuestDone
+{
+	option (msgid) = 4007;
+	required int32 quest_type = 1;
+}
+
+// 服务端通知: 完成已任务
+message SCQuestDoned
+{
+	option (msgid) = 4008;
+	required int32 quest_type = 1;
+}
+
+// 服务端通知: 任务状态更新
+message SCQuestUpdate
+{
+	option (msgid) = 4009;
+	required int32 tag						= 1; // 更新标记，0：更新已接任务状态；1：更新全部可接任务
+	repeated SQuestAccepted accepted_quests = 2; // 需要更新状态的已接任务(包括节点)
+	repeated int32 acceptable_quests 		= 3; // 全部可接任务
+}
+
+// ---------------------------------------------------------------------------------------
+
+message CSDialogNpc
+{
+	option (msgid) 			= 4200;
+	required int64 npcId 	= 1;
+	required int32 context	= 2;
+}
+
+message CSDialogTalk
+{
+	option (msgid) = 4201;
+	required int64 npcId 	= 1;
+	required int32 state 	= 2;	//state = 0下一步，1， 点击功能选项，2，可完成 3，可接， 4,未完成
+	required int32 context 	= 3;	//上下文参数，任务相关存的是任务id
+}
+
+message SCDialogNpc
+{
+	option (msgid) 					= 4202;
+	required int32 talkId 			= 1;	//默认对话
+	repeated int32 functions	 	= 2;	//功能选项
+	repeated int32 acceptableQuests 	= 3;	//可接受任务选项（可接任务ID）
+	repeated int32 completeQuests 	= 4;	//可完成任务选项（可完成任务ID）
+	repeated int32 underwayQuests 		= 5;	//进行中任务选项（进行中任务ID）
+	required int32 context	= 6;
+	optional int32 functionid = 7;		//功能id
+}
+
+message SCDialogTalk
+{
+	option (msgid) = 4203;
+	required int32 talkId = 1;
+}
+
+message SCQuestResult
+{
+	option (msgid) = 4204;
+	required int32 resultId = 1;
+}
+
+// ---------------------------------------------------------------------------------------
+
+message SXQuestGoal
+{
+	required int32 current_count	= 1; // 当前计数值
+	required int32 max_count		= 2; // 计数值上限
+}
+
+message SXQuestGuild
+{
+	required int32 quality			= 1; // 任务品质
+	required int32 human_level		= 2; // 任务刷出来时玩家等级
+	required int32 guild_level		= 3; // 任务刷出来时联盟等级
+	required float reward_multi		= 4; // 任务奖励倍数
+}
+
+message SXQuest
+{
+	required int32 id 				= 1; // 任务ID
+	required int32 type				= 2; // 任务类型（0=传统,1=联盟,2=家园）（修改后2=环任务3=家园4=7日）
+	required int32 state			= 3; // 任务状态
+	repeated SXQuestGoal goals		= 4; // 任务目标
+	optional SXQuestGuild guild		= 5; // 联盟任务相关信息
+}
+
+message CSXQuestAccept
+{
+	option (msgid) = 4500;
+	required int32 id		= 1; // 任务ID
+	required int32 type		= 2; // 任务类型（0=传统,1=联盟,2=家园）
+}
+
+message SCXQuestAcceptResult
+{
+	option (msgid) = 4501;
+	required int32 code		= 1;
+	optional SXQuest quest	= 2;
+}
+
+message CSXQuestGiveup
+{
+	option (msgid) = 4502;
+	required int32 id		= 1; // 任务ID
+	required int32 type		= 2; // 任务类型（0=传统,1=联盟,2=家园）
+}
+
+message SCXQuestGiveupResult
+{
+	option (msgid) = 4503;
+	required int32 code		= 1;
+	optional SXQuest quest	= 2;
+}
+
+message CSXQuestFinish
+{
+	option (msgid) = 4504;
+	required int32 id		= 1; // 任务ID
+	required int32 type		= 2; // 任务类型（0=传统,1=联盟,2=环任务）
+	optional int32 sub_type = 3; // 环任务（1=完成所有环）
+}
+
+message SCXQuestFinishResult
+{
+	option (msgid) = 4505;
+	required int32 code		= 1;
+	optional SXQuest quest	= 2;
+}
+
+message CSXQuestSubmit
+{
+	option (msgid) = 4506;
+	required int32 id		= 1; // 任务ID
+	required int32 type		= 2; // 任务类型（0=传统,1=联盟,2=家园）
+}
+
+message SCXQuestSubmitResult
+{
+	option (msgid) = 4507;
+	required int32 code		= 1;
+	optional SXQuest quest	= 2;
+}
+
+message SCXQuestUpdateGoal
+{
+	option (msgid) = 4508;
+	repeated SXQuest quests	= 1; // 任务目标改变的任务列表
+}
+
+// 客户端请求：一键完成任务
+message CSSweepQuest
+{
+	option (msgid) = 4509;
+	required int32 quest_id		= 1; // 任务ID
+}
+
+// 服务器反馈：一键完成
+message SCSweepQuestResult
+{
+	option (msgid) = 4510;
+	required int32 result		= 1;
+}
+
+// ---------------------------------------------------------------------------------------
+
+message CSGuildQuestQuery
+{
+	option (msgid) = 4550;
+}
+
+message SCGuildQuestQuery
+{
+	option (msgid) = 4551;
+	repeated SXQuest quests		= 1; // 任务列表
+	required int32 today_count 	= 2; // 今日完成次数
+	required int32 total_count 	= 3; // 今日总次数
+	required int32 wait_time	= 4; // 下次刷新时间
+	required int32 vip_today_count = 5; // 今日vip完成次数
+	required int32 vip_total_count = 6; // 今日vip已买总次数
+	required int32 daily_quest_cnt = 7; // 每日帮会任务次数
+}
+
+message CSGuildQuestRefresh
+{
+	option (msgid) = 4552;
+	required int32 refresh_type = 1; // 0=自动刷新,1=手动刷新,2=高级刷新
+}
+
+message SCGuildQuestRefreshResult
+{
+	option (msgid) = 4553;
+	required int32 wait_time 	= 1; // 下次刷新时间
+}
+
+message SCGuildQuestUpdate
+{
+	option (msgid) = 4554;
+	required int32 today_count = 1;
+	required int32 total_count = 2;
+	required int32 vip_today_count = 3; // 今日vip完成次数
+	required int32 vip_total_count = 4; // 今日vip已买总次数
+	required int32 daily_quest_cnt = 5; // 每日帮会任务次数
+}
+
+message CSGuildQuestBuyVipCount
+{
+	option (msgid) = 4555;
+}
+
+message CSRandomQuestQuery
+{
+	option (msgid) = 4556;
+}
+
+message SCRandomQuestQuery
+{
+	option (msgid) = 4557;
+	required int64 cd_time = 1;
+	repeated SXQuest quests		= 2; // 任务列表
+	optional int32 onekey_count = 3; // 一键完成任务次数
+}
+
+message CSGuildQuestDailyReward
+{
+	option (msgid) = 4558;
+}
+
+message SCDreamStart
+{
+	option (msgid) = 4559;
+	required int64 hid = 1;
+}
+
+message CSDreamEnd
+{
+	option (msgid) = 4560;
+}
+
+message SCDreamEndResult
+{
+	option (msgid) = 4561;
+	required int64 hid = 1;
+}
+
+message CS7DayQuestQuery
+{
+	option (msgid) = 4590;
+}
+
+message SC7DayQuestQuery
+{
+	option (msgid) = 4591;
+	repeated SXQuest quests		= 1; // 任务列表
+	required int64 close_time	= 2; // 7日任务关闭时间
+	required bool closed		= 3; // 7日任务是否已关闭
+}
+

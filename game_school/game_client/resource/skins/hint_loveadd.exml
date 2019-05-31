@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.hint_loveadd" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="fly">
+			<tween:TweenItem target="{Group_love}">
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object x="{0}" y="{400}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="750"/>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object x="{1000}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group verticalCenter="0" top="0" left="0" horizontalCenter="0" right="0" bottom="0">
+		<e:Group id="Group_love" height="135" width="750" x="-1000" y="600">
+			<e:Image width="729" height="213" source="image_66_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="label_content" text="哈哈哈哈" anchorOffsetX="0" width="529" textAlign="center" fontFamily="Microsoft YaHei" verticalCenter="0" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

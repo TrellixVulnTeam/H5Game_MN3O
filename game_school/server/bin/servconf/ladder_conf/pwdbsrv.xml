@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>dbsrv</name>
+	<communicator>
+		<listen_addr>tcp://127.0.0.1:9709</listen_addr>
+	</communicator>
+	<pwdbsrv>
+		<database>
+			<host>10.68.43.14</host>
+			<port>8016</port>
+			<name>characters_ladder_cbh</name>
+			<user>test</user>
+			<pswd>test</pswd>
+		</database>		
+	</pwdbsrv>
+</pwdist>
+
+

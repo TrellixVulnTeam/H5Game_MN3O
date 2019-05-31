@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<server_group>
+	<id>0</id>
+    <zone_id>4301</zone_id>
+    <secret>oP2LFmGbcbKv4rGQXSz2</secret>
+    <ladder-server>true</ladder-server>
+    <ladder-server-login-stage>1201</ladder-server-login-stage>
+    <fatigue>2</fatigue>    
+	<name>0</name>
+    <kaifudate>20130601</kaifudate>
+    <log_qlvh>./qlogs/</log_qlvh>
+    <log_self>./logs/</log_self>
+    <log_wm>./wlogs/</log_wm>
+    <tmp_log_qlvh>./tmp_qlogs/</tmp_log_qlvh>
+    <default_login_stage>1251</default_login_stage>
+	<default_tiyan_stage>1251</default_tiyan_stage>
+    <token_appid>10003</token_appid>
+    <token_secret>DCHUISEnrgXFsGohFpwqOaKr6hAlNqqNbsL</token_secret>
+	<dawn_hour>5</dawn_hour>
+	<enable_cheat_detect>1</enable_cheat_detect>
+	
+	<lianyun_push>0</lianyun_push>
+	<default_agent>173</default_agent>
+	<operators_name>173</operators_name>
+	<autofix_server_info>1</autofix_server_info>
+</server_group>
+

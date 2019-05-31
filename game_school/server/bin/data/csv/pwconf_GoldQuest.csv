@@ -1,0 +1,7 @@
+"任务ID(对应QuestConfig表)"	"最低触发等级"	"最高触发等级"	"任务出现概率权值"	"取消任务获得的铜币数"	"界面内显示的任务文本(对应StrConfig表)"	
+"quest_id"	"min_activate_level"	"max_activate_level"	"quest_weight"	"denied_gold"	"quest_text"	
+"int"	"int"	"int"	"int"	"int"	"int"	
+"cs"	"s"	"s"	"s"	"cs"	"c"	
+"50001"	"1"	"300"	"10"	"10000"	"5650"	
+"50002"	"50"	"150"	"20"	"15000"	"5651"	
+"50003"	"200"	"300"	"30"	"200000"	"5652"	

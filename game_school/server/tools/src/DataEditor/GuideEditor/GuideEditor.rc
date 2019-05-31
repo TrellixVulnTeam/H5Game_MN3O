@@ -1,0 +1,450 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\GuideEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GuideEditor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About GuideEditor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "GuideEditor, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_GUIDEEDITOR_DIALOG DIALOGEX 0, 0, 619, 366
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "GuideEditor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_MAIN_TREE,"SysTreeView32",NOT WS_VISIBLE | WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,46,141,313
+    EDITTEXT        IDC_EDIT_FIND,8,9,95,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "搜索",IDC_BUTTON_FIND,105,9,45,15
+    EDITTEXT        IDC_EDIT_TOTAL,40,27,47,15,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "",IDC_MAIN_TAB,"SysTabControl32",0x0,155,7,457,281
+    LISTBOX         IDC_MAIN_LOG,156,300,454,58,LBS_NOINTEGRALHEIGHT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "日志",IDC_STATIC,154,291,458,68
+    LTEXT           "总项数:",IDC_STATIC,7,30,28,8
+END
+
+IDD_DIALOG_GUIDE DIALOGEX 0, 0, 463, 321
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "指引ID:",IDC_STATIC,7,9,56,8
+    EDITTEXT        IDC_GUIDE_ID,69,7,93,14,ES_AUTOHSCROLL | WS_DISABLED
+    CTEXT           "指引名称:",IDC_STATIC,167,9,58,8
+    EDITTEXT        IDC_GUIDE_name,227,7,93,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_GUIDE_openCondition,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,18,127,141,57
+    GROUPBOX        "开启条件(全部满足则打开指引)",IDC_STATIC,7,117,161,89
+    PUSHBUTTON      "添加",IDC_BUTTON1,70,187,37,14
+    PUSHBUTTON      "删除",IDC_BUTTON2,113,187,37,14
+    CTEXT           "触发条件1:",IDC_STATIC,7,64,59,8
+    COMBOBOX        IDC_GUIDE_triggerType1,69,62,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "触发条件2:",IDC_STATIC,7,79,59,8
+    COMBOBOX        IDC_GUIDE_triggerType2,69,77,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "触发条件3:",IDC_STATIC,7,95,59,8
+    COMBOBOX        IDC_GUIDE_triggerType3,69,93,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "触发条件(任意一条满足则触发事件)",IDC_STATIC,7,50,318,60
+    CTEXT           "条件1参数:",IDC_STATIC,166,64,59,8
+    CTEXT           "条件2参数:",IDC_STATIC,166,79,59,8
+    CTEXT           "条件3参数:",IDC_STATIC,166,95,59,8
+    EDITTEXT        IDC_GUIDE_triggerKey1,227,61,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GUIDE_triggerKey2,227,77,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GUIDE_triggerKey3,227,93,93,14,ES_AUTOHSCROLL
+    CTEXT           "前置指引:",IDC_STATIC,174,131,58,8
+    EDITTEXT        IDC_GUIDE_prefixid,234,128,93,14,ES_AUTOHSCROLL
+    CTEXT           "后置指引:",IDC_STATIC,174,147,58,8
+    EDITTEXT        IDC_GUIDE_suffixid,234,144,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GUIDE_prefixdes,330,128,93,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_GUIDE_suffixdes,330,144,93,14,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "对其他指引的影响",IDC_STATIC,174,117,252,153
+    CONTROL         "打开自动完成（一般只用来关闭别人）",IDC_GUIDE_closeTag,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,163,152,10
+    CTEXT           "groupname:",IDC_STATIC,7,26,58,8
+    EDITTEXT        IDC_GUIDE_groupname,70,24,251,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_GUIDE_activeclose,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,197,187,141,57
+    GROUPBOX        "激活时关闭其他指引",IDC_STATIC,187,178,161,89
+    PUSHBUTTON      "添加",IDC_BUTTON3,249,248,37,14
+    PUSHBUTTON      "删除",IDC_BUTTON4,293,248,37,14
+END
+
+IDD_DIALOG_GUIDECONDITION DIALOGEX 0, 0, 458, 326
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "开启条件ID:",IDC_STATIC,7,9,56,8
+    EDITTEXT        IDC_GUIDECONDITION_ID,69,7,93,14,ES_AUTOHSCROLL | WS_DISABLED
+    CTEXT           "开启条件名:",IDC_STATIC,167,9,58,8
+    EDITTEXT        IDC_GUIDECONDITION_name,227,7,93,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_GUIDECONDITION_action,69,38,160,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "开启条件类型:",IDC_STATIC,7,40,56,8
+    CONTROL         "",IDC_GUIDECONDITION_sub,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,11,54,262,67
+    GROUPBOX        "开启条件配置",IDC_STATIC,7,27,273,98
+END
+
+IDD_DIALOG_SUBATTRIBUTE DIALOGEX 0, 0, 187, 65
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_GUIDECONDITION_param1,67,7,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "属性类型:",IDC_STATIC,7,9,58,8
+    CONTROL         "",IDC_GUIDECONDITION_sub,"Static",SS_BLACKFRAME,7,22,166,35
+END
+
+IDD_DIALOG_SUBATTRIBUTE_SUB1 DIALOGEX 0, 0, 168, 27
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_GUIDECONDITION_param2,67,7,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "职业:",IDC_STATIC,7,9,58,8
+END
+
+IDD_DIALOG_SUBATTRIBUTE_SUB2 DIALOGEX 0, 0, 168, 44
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_GUIDECONDITION_op,67,7,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "比较类型:",IDC_STATIC,7,9,58,8
+    CTEXT           "比较值:",IDC_STATIC,7,25,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param2,67,22,93,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_SUBTASK DIALOGEX 0, 0, 264, 29
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "任务:",IDC_STATIC,7,10,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param1,67,7,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GUIDECONDITION_param1des,163,7,93,14,ES_AUTOHSCROLL | WS_DISABLED
+END
+
+IDD_DIALOG_SUBTASKCOUNT DIALOGEX 0, 0, 264, 77
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "任务:",IDC_STATIC,7,10,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param1,67,7,93,14,ES_AUTOHSCROLL
+    CTEXT           "计数器索引:",IDC_STATIC,7,26,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param2,67,23,93,14,ES_AUTOHSCROLL
+    CTEXT           "比较值(计数值):",IDC_STATIC,7,57,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param3,67,54,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GUIDECONDITION_param1des,163,7,93,14,ES_AUTOHSCROLL | WS_DISABLED
+    COMBOBOX        IDC_GUIDECONDITION_op,67,39,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "比较类型:",IDC_STATIC,7,41,58,8
+END
+
+IDD_DIALOG_SUBCONTROL DIALOGEX 0, 0, 168, 29
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "NPCID:",IDC_STATIC,7,10,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param1,67,7,93,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_SUBSTAGE DIALOGEX 0, 0, 168, 28
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "场景ID:",IDC_STATIC,7,10,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param1,67,7,93,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_SUBENCHANT DIALOGEX 0, 0, 168, 44
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_GUIDECONDITION_op,67,7,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "比较类型:",IDC_STATIC,7,9,58,8
+    CTEXT           "比较值:",IDC_STATIC,7,25,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param1,67,22,93,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_SUBBLOOD DIALOGEX 0, 0, 168, 44
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_GUIDECONDITION_op,67,7,93,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "比较类型:",IDC_STATIC,7,9,58,8
+    CTEXT           "比较值:",IDC_STATIC,7,25,58,8
+    EDITTEXT        IDC_GUIDECONDITION_param1,67,22,93,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_GUIDEEDITOR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 612
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 359
+    END
+
+    IDD_DIALOG_GUIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 456
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 314
+    END
+
+    IDD_DIALOG_GUIDECONDITION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 451
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 319
+    END
+
+    IDD_DIALOG_SUBATTRIBUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_DIALOG_SUBATTRIBUTE_SUB1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 20
+    END
+
+    IDD_DIALOG_SUBATTRIBUTE_SUB2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_DIALOG_SUBTASK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_DIALOG_SUBTASKCOUNT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_DIALOG_SUBCONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_DIALOG_SUBSTAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+
+    IDD_DIALOG_SUBENCHANT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_DIALOG_SUBBLOOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "GuideEditor.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "GuideEditor.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About GuideEditor..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\GuideEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

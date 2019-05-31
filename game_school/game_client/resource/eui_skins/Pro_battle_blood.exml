@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Pro_battle_blood" minWidth="30" minHeight="18" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="80" height="16">
+	<e:Image scale9Grid="9,9,5,5" width="80"
+			 height="16" y="0" fillMode="scale" source="image_30_png" right="0"/>
+	<e:Image id="thumb" height="16" width="78" source="image_29_png" y="0" right="0"/>
+	<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle"
+			 size="13" fontFamily="Tahoma" verticalCenter="-1.5" text="" x="0" width="130" height="18" textColor="0x000000" visible="false"/>
+
+	<w:Config id="163915784f6" ></w:Config>
+</e:Skin>

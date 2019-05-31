@@ -1,0 +1,4 @@
+"配置ID"	"说话概率"	"语言库(索引到strConfig表)"	
+"id"	"talk_probability"	"talk_ids"	
+"int"	"int"	"int[]"	
+"cs"	"s"	"s"	

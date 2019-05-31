@@ -1,0 +1,13 @@
+__slavetable_of_human=[
+'humannull'
+,'humanitems'
+,'humanloaditems'
+,'humanloaditemwash'
+,'herocard'
+,'heronew'
+,'holyweapon'
+,'magicweapon'
+,'newweapon'
+,'hero'
+,'humanherospirit'
+]

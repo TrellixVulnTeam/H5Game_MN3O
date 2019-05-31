@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Battle_result" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group verticalCenter="0" horizontalCenter="0" left="0" right="0" top="0" bottom="0">
+		<e:Image source="image_06_png" fillMode="scale" left="0" top="0" verticalCenter="0" bottom="0" horizontalCenter="0" right="0"/>
+		<e:Group id="battlefail" width="750" height="1334" horizontalCenter="0" verticalCenter="0" visible="false">
+			<e:Image width="700" height="1010" source="bg03_png" verticalCenter="0" horizontalCenter="0"/>
+			<e:Image width="690" height="164" source="image_09_png" horizontalCenter="0" y="160"/>
+			<e:Image width="690" height="130" horizontalCenter="0" y="330" source="image_07_png"/>
+			<e:Image width="376" height="90" horizontalCenter="134" y="349" source="zi_05_png"/>
+			<e:Image width="350" height="660" horizontalCenter="-193" y="236" source="image_08_png"/>
+			<e:Image id="way1" width="270" height="100" y="464" source="zi_06_png" x="386"/>
+			<e:Image id="way2" width="270" height="100" y="575" source="zi_07_png" x="386"/>
+			<e:Image id="way3" width="270" height="100" y="687" source="zi_08_png" x="386"/>
+			<e:Image id="way4" width="270" height="100" y="798" source="zi_09_png" x="386"/>
+			<e:Button id="btn_back" label="" x="50" y="981">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn04_1_png" source.down="btn04_2_png" source.disabled="btn04_3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_again" label="" y="981" x="430">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn05_1_png" source.down="btn05_2_png" source.disabled="btn05_3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="win" width="750" height="1334" horizontalCenter="0" verticalCenter="0" x="10" y="10">
+			<e:Image width="700" height="1010" source="bg03_png" verticalCenter="0" horizontalCenter="0"/>
+			<e:Image width="700" height="322" horizontalCenter="0" y="842" source="image_19_png" anchorOffsetX="0"/>
+			<e:Image width="690" height="190" y="133" source="image_18_png" anchorOffsetX="0" x="30"/>
+			<e:Image width="680" height="60" y="472" anchorOffsetY="0" source="title02_png" anchorOffsetX="0" horizontalCenter="0"/>
+			<e:Image width="146" height="40" y="482" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0" source="zi_12_png"/>
+			<e:Image width="680" height="60" y="846" anchorOffsetY="0" source="title02_png" anchorOffsetX="0" horizontalCenter="0"/>
+			<e:Image width="146" height="40" y="856" anchorOffsetY="0" anchorOffsetX="0" source="zi_11_png" horizontalCenter="0"/>
+			<e:Button id="btn_ok" label="" y="1054" horizontalCenter="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn07_1_png" source.down="btn07_2_png" source.disabled="btn07_3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:DataGroup id="reward_item" width="680" height="127" y="909" anchorOffsetX="0" anchorOffsetY="0" itemRendererSkinName="skins.ItemRendererSkin" horizontalCenter="0"/>
+			<e:Scroller id="player_reward_item" width="680" height="300" y="536" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="off" horizontalCenter="0" visible="false">
+				<e:Group width="700" height="300">
+					<e:layout>
+						<e:HorizontalLayout/>
+					</e:layout>
+				</e:Group>
+			</e:Scroller>
+			<e:Group width="656" height="146" y="321" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+				<e:Image id="image_star1" width="34" height="34" x="7" y="6" scaleX="1" scaleY="1" source="image_star1_png"/>
+				<e:Image id="image_yes1" width="34" height="34" x="433" y="8" scaleX="1" scaleY="1" source="image_yes_png"/>
+				<e:Image id="image_yes2" width="34" height="34" x="435" y="49" scaleX="1" scaleY="1" source="image_yes_png"/>
+				<e:Label id="label_star1" text="规定回合内通关战斗" x="50" y="7" scaleX="1" scaleY="1" textColor="0xaf2323" anchorOffsetX="0" width="366" fontFamily="Microsoft YaHei"/>
+				<e:Image id="image_star2" width="34" height="34" x="7" y="52" scaleX="1" scaleY="1" source="image_star1_png"/>
+				<e:Image id="image_star0" width="34" height="34" x="7" y="97" scaleX="1" scaleY="1" source="image_star2_png"/>
+				<e:Label id="label_star2" text="全员无伤亡通关战斗" x="50" y="52" scaleX="1" scaleY="1" textColor="0xAF2323" anchorOffsetX="0" width="533" fontFamily="Microsoft YaHei"/>
+				<e:Label id="label_star3" text="全员无伤亡通关战斗" x="50" y="99" scaleX="1" scaleY="1" textColor="0xAF2323" anchorOffsetX="0" width="533" fontFamily="Microsoft YaHei"/>
+			</e:Group>
+			<e:Image width="62" height="62" y="932" source="item_icon1_png" horizontalCenter="0"/>
+			<e:Image width="62" height="62" y="932" source="item_icon2_png" x="444"/>
+			<e:Image width="62" height="62" y="932" source="item_icon2_png" x="244"/>
+			<e:Group width="300" height="100" x="61" y="536" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image width="300" height="100" x="0" y="0" source="image_22_png"/>
+				<e:Image width="80" height="80" source="player_icon1_png" x="11" y="10"/>
+				<e:Image width="80" height="80" x="11" y="10" source="quality_orange_png"/>
+				<e:Label text="lv.3" x="102" y="14" anchorOffsetX="0" width="96" textColor="0xcc7c76" fontFamily="KaiTi"/>
+				<e:Label text="EXP+320" x="103" y="55" anchorOffsetX="0" width="181" textColor="0xcc7c76" fontFamily="KaiTi"/>
+			</e:Group>
+			<e:Group width="300" height="100" y="536" anchorOffsetX="0" anchorOffsetY="0" x="394">
+				<e:Image width="300" height="100" x="0" y="0" source="image_22_png"/>
+				<e:Image width="80" height="80" x="11" y="10" source="player_icon2_png"/>
+				<e:Image width="80" height="80" source="quality_orange_png" x="11" y="10"/>
+				<e:Label text="lv.5" x="102" y="14" anchorOffsetX="0" width="96" textColor="0xCC7C76" fontFamily="KaiTi"/>
+				<e:Label text="EXP+300" x="103" y="55" anchorOffsetX="0" width="181" textColor="0xCC7C76" fontFamily="KaiTi"/>
+			</e:Group>
+			<e:Group width="300" height="100" y="640" anchorOffsetX="0" anchorOffsetY="0" x="395">
+				<e:Image width="300" height="100" x="0" y="0" source="image_22_png"/>
+				<e:Image width="80" height="80" x="11" y="10" source="player_icon3_png"/>
+				<e:Image width="80" height="80" source="quality_orange_png" x="11" y="10"/>
+				<e:Label text="lv.6" x="102" y="14" anchorOffsetX="0" width="96" textColor="0xCC7C76" fontFamily="KaiTi"/>
+				<e:Label text="EXP+280" x="103" y="55" anchorOffsetX="0" width="181" textColor="0xCC7C76" fontFamily="KaiTi"/>
+			</e:Group>
+			<e:Group width="300" height="100" y="640" anchorOffsetX="0" anchorOffsetY="0" x="61">
+				<e:Image width="300" height="100" x="0" y="0" source="image_22_png"/>
+				<e:Image width="80" height="80" x="11" y="10" source="player_icon4_png"/>
+				<e:Image width="80" height="80" source="quality_orange_png" x="11" y="10"/>
+				<e:Label text="lv.5" x="102" y="14" anchorOffsetX="0" width="96" textColor="0xCC7C76" fontFamily="KaiTi"/>
+				<e:Label text="EXP+300" x="103" y="55" anchorOffsetX="0" width="181" textColor="0xCC7C76" fontFamily="KaiTi"/>
+			</e:Group>
+			<e:Group width="300" height="100" y="743" anchorOffsetX="0" anchorOffsetY="0" x="61">
+				<e:Image width="300" height="100" x="0" y="0" source="image_22_png"/>
+				<e:Image width="80" height="80" x="11" y="10" source="player_icon5_png"/>
+				<e:Image width="80" height="80" source="quality_orange_png" x="11" y="10"/>
+				<e:Label text="lv.6" x="102" y="14" anchorOffsetX="0" width="96" textColor="0xCC7C76" fontFamily="KaiTi"/>
+				<e:Label text="EXP+280" x="103" y="55" anchorOffsetX="0" width="181" textColor="0xCC7C76" fontFamily="KaiTi"/>
+			</e:Group>
+			<e:Group width="300" height="100" y="743" anchorOffsetX="0" anchorOffsetY="0" x="395">
+				<e:Image width="300" height="100" x="0" y="0" source="image_22_png"/>
+				<e:Image width="80" height="80" x="11" y="10" source="player_icon6_png"/>
+				<e:Image width="80" height="80" source="quality_orange_png" x="11" y="10"/>
+				<e:Label text="lv.6" x="102" y="14" anchorOffsetX="0" width="96" textColor="0xCC7C76" fontFamily="KaiTi"/>
+				<e:Label text="EXP+280" x="103" y="55" anchorOffsetX="0" width="181" textColor="0xCC7C76" fontFamily="KaiTi"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

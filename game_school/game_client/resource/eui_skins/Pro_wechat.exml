@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Pro_wechat" minWidth="30" minHeight="18" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="454" height="60">
+	<e:Image scale9Grid="9,9,5,5" width="454"
+			 height="60" y="0" fillMode="scale" source="wechat_image5_png"/>
+	<e:Image id="thumb" height="60" width="454" source="wechat_image4_png"/>
+	<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle"
+			 size="28" fontFamily="Microsoft YaHei"
+			 horizontalCenter="0" verticalCenter="0" text="1" textColor="0xffffff" bold="true"/>
+
+	<w:Config id="164e9d5dc21" ></w:Config>
+</e:Skin>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Battle_edit" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group left="0" top="0" bottom="0" right="0">
+		<e:Image left="0" top="0" verticalCenter="0" bottom="0" horizontalCenter="0" right="0" source="login_bg_png"/>
+		<e:Group height="75" horizontalCenter="0" top="0" left="0" right="0">
+			<e:Image height="65" source="title01_png" left="0" horizontalCenter="0" right="0" top="0"/>
+			<e:Button id="btn_back" label="" top="0" right="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group anchorOffsetY="0" left="0" right="0" top="100" bottom="34" verticalCenter="33">
+			<e:Scroller anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" left="0" right="0" top="0" verticalCenter="0" bottom="0">
+				<e:Group id="scrollerCon" height="1200" width="750">
+					<e:layout>
+						<e:VerticalLayout horizontalAlign="center" verticalAlign="middle"/>
+					</e:layout>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+	</e:Group>
+</e:Skin>

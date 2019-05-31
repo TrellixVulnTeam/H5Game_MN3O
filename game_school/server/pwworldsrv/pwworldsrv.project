@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="pwworldsrv" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
+    <File Name="pw_worldsrv_node.h"/>
+    <File Name="pw_worldsrv_node.cpp"/>
+    <File Name="pw_worldsrv.h"/>
+    <File Name="pw_worldsrv.cpp"/>
+    <File Name="main_test.cpp"/>
+    <File Name="main_test.h"/>
+    <File Name="pw_scripts.cpp"/>
+    <File Name="pw_scripts.h"/>
+    <File Name="pw_tools.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="pwmsg">
+    <File Name="../../shared/pwmsg/options.pb.cc"/>
+    <File Name="../../shared/pwmsg/options.pb.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="msghandler">
+    <File Name="msg/msg.handler.cpp"/>
+    <File Name="msg/msg.handler.h"/>
+    <File Name="msg/worldsrv.pb.cc"/>
+    <File Name="msg/worldsrv.pb.h"/>
+    <File Name="msg/msg.handler.CSQueryCharacters.cpp"/>
+    <File Name="msg/msg.handler.CSCharacterCreate.cpp"/>
+    <File Name="msg/msg.handler.CSCharacterDelete.cpp"/>
+    <File Name="msg/msg.handler.CSCharacterLogin.cpp"/>
+    <File Name="msg/msg.handler.CSChat.cpp"/>
+    <File Name="msg/msg.handler.CSCleanForward.cpp"/>
+    <File Name="msg/msg.handler.CSStartForward.cpp"/>
+    <File Name="msg/msg.handler.CSUpdateMoving.cpp"/>
+    <File Name="msg/msg.handler.CSAskHumanStatistic.cpp"/>
+    <File Name="msg/msg.handler.CSCreateTeam.cpp"/>
+    <File Name="msg/msg.handler.CSEquip.cpp"/>
+    <File Name="msg/msg.handler.CSUnEquip.cpp"/>
+    <File Name="msg/msg.handler.CSAddRelationMember.cpp"/>
+    <File Name="msg/msg.handler.CSDelRelationMember.cpp"/>
+    <File Name="msg/msg.handler.CSChangeOrientation.cpp"/>
+    <File Name="msg/msg.handler.CSCastMagic.cpp"/>
+    <File Name="msg/msg.handler.CSCharacterEnterWorld.cpp"/>
+    <File Name="msg/msg.handler.CSPing.cpp"/>
+    <File Name="msg/msg.handler.CSCreateGuild.cpp"/>
+    <File Name="msg/msg.handler.CSLeaveGuild.cpp"/>
+    <File Name="msg/msg.handler.CSLeaveTeam.cpp"/>
+    <File Name="msg/msg.handler.CSMagicTypeOper.cpp"/>
+    <File Name="msg/msg.handler.CSEnterTeam.cpp"/>
+    <File Name="msg/msg.handler.CSDeleteTeam.cpp"/>
+    <File Name="msg/msg.handler.CSInviteTeam.cpp"/>
+    <File Name="msg/msg.handler.CSApplyGuild.cpp"/>
+    <File Name="msg/msg.handler.CSApplyTeam.cpp"/>
+    <File Name="msg/msg.handler.CSTeamInfo.cpp"/>
+    <File Name="msg/msg.handler.CSItemQuery.cpp"/>
+    <File Name="msg/msg.handler.CSPickupItem.cpp"/>
+    <File Name="msg/msg.handler.CSQuestDrop.cpp"/>
+    <File Name="msg/msg.handler.CSQuestQuery.cpp"/>
+    <File Name="msg/msg.handler.CSItemPack.cpp"/>
+    <File Name="msg/msg.handler.CSItemSell.cpp"/>
+    <File Name="msg/msg.handler.CSItemSwap.cpp"/>
+    <File Name="msg/msg.handler.CSItemUse.cpp"/>
+    <File Name="msg/msg.handler.CSQuestAccept.cpp"/>
+    <File Name="msg/msg.handler.CSQuestDone.cpp"/>
+    <File Name="msg/msg.handler.CSCastFire.cpp"/>
+    <File Name="msg/msg.handler.CSRoleAction.cpp"/>
+    <File Name="msg/msg.handler.CSBagExpand.cpp"/>
+    <File Name="msg/msg.handler.CSDialogNpc.cpp"/>
+    <File Name="msg/msg.handler.CSDialogTalk.cpp"/>
+    <File Name="msg/msg.handler.CSEquipUpgrade.cpp"/>
+    <File Name="msg/msg.handler.CSEquipUpgradeStart.cpp"/>
+    <File Name="msg/msg.handler.CSItemSynthesis.cpp"/>
+    <File Name="msg/msg.handler.CSEquipEnchant.cpp"/>
+    <File Name="msg/msg.handler.CSEquipEnchantStart.cpp"/>
+    <File Name="msg/msg.handler.CS_DMA_SpeakSkip.cpp"/>
+    <File Name="msg/msg.handler.CSUnitAttrQuery.cpp"/>
+    <File Name="msg/msg.handler.CSAstrology.cpp"/>
+    <File Name="msg/msg.handler.CSRuneDevour.cpp"/>
+    <File Name="msg/msg.handler.CSRuneInlay.cpp"/>
+    <File Name="msg/msg.handler.CSRuneLock.cpp"/>
+    <File Name="msg/msg.handler.CSRuneOnekeyDevour.cpp"/>
+    <File Name="msg/msg.handler.CSRuneOnekeyPickup.cpp"/>
+    <File Name="msg/msg.handler.CSRunePickup.cpp"/>
+    <File Name="msg/msg.handler.CSRuneRemove.cpp"/>
+    <File Name="msg/msg.handler.CSRuneUnLock.cpp"/>
+    <File Name="msg/msg.handler.CSItemBless.cpp"/>
+    <File Name="msg/msg.handler.CSItemBlessActive.cpp"/>
+    <File Name="msg/msg.handler.CSItemBlessStart.cpp"/>
+    <File Name="msg/msg.handler.CSAuraInstruction.cpp"/>
+    <File Name="msg/msg.handler.CSAstrologyQuery.cpp"/>
+    <File Name="msg/msg.handler.CSLoginGate.cpp"/>
+    <File Name="msg/msg.handler.CSActivityJoin.cpp"/>
+    <File Name="msg/msg.handler.CSActivityReward.cpp"/>
+    <File Name="msg/msg.handler.CSActivityRewardQuery.cpp"/>
+    <File Name="msg/msg.handler.CSEquipRefine.cpp"/>
+    <File Name="msg/msg.handler.CSEquipEnchantCDQuery.cpp"/>
+    <File Name="msg/msg.handler.CSEquipEnchantCDClear.cpp"/>
+    <File Name="msg/msg.handler.CSActivityAuction.cpp"/>
+    <File Name="msg/msg.handler.CS_DMA_SpeakAllSkip.cpp"/>
+    <File Name="msg/msg.handler.CSActivityGetBuff.cpp"/>
+    <File Name="msg/msg.handler.CSEquipDiscard.cpp"/>
+    <File Name="msg/msg.handler.CSItemDiscard.cpp"/>
+    <File Name="msg/msg.handler.CSActivityBoss.cpp"/>
+    <File Name="msg/msg.handler.CSEnterDungeon.cpp"/>
+    <File Name="msg/msg.handler.CSLeaveDungeon.cpp"/>
+    <File Name="msg/msg.handler.CSQueryRelation.cpp"/>
+    <File Name="msg/msg.handler.CSShopBuy.cpp"/>
+    <File Name="msg/msg.handler.CSShopBuyRecycleBin.cpp"/>
+    <File Name="msg/msg.handler.CSShopSell.cpp"/>
+    <File Name="msg/msg.handler.CSMailRecved.cpp"/>
+    <File Name="msg/msg.handler.CSQueryMailList.cpp"/>
+    <File Name="msg/msg.handler.CSActivityStartCtrl.cpp"/>
+    <File Name="msg/msg.handler.CSActivityStopCtrl.cpp"/>
+    <File Name="msg/msg.handler.CSGuideDeactive.cpp"/>
+    <File Name="msg/msg.handler.CSGuideLogin.cpp"/>
+    <File Name="msg/msg.handler.CSChatMsgRecved.cpp"/>
+    <File Name="msg/msg.handler.CSChatMsgSend.cpp"/>
+    <File Name="msg/msg.handler.CSQueryChatMsgList.cpp"/>
+    <File Name="msg/msg.handler.CSPoltCompleted.cpp"/>
+    <File Name="msg/msg.handler.CSQueryChatContactList.cpp"/>
+    <File Name="msg/msg.handler.CSGameObjectTrigger.cpp"/>
+    <File Name="msg/msg.handler.CSShopOpen.cpp"/>
+    <File Name="msg/msg.def.h"/>
+    <File Name="msg/msg.handler.CSDragonQuery.cpp"/>
+    <File Name="msg/msg.handler.CSQuestQueryNpcState.cpp"/>
+    <File Name="msg/msg.handler.CSDragonDiscard.cpp"/>
+    <File Name="msg/msg.handler.CSDragonEquip.cpp"/>
+    <File Name="msg/msg.handler.CSDragonRename.cpp"/>
+    <File Name="msg/msg.handler.CSDragonSummon.cpp"/>
+    <File Name="msg/msg.handler.CSDragonUnEquip.cpp"/>
+    <File Name="msg/msg.handler.CSDragonSwap.cpp"/>
+    <File Name="msg/msg.handler.CSBloodlineLevelup.cpp"/>
+    <File Name="msg/msg.handler.CSDragonLearnMagic.cpp"/>
+    <File Name="msg/msg.handler.CSPlayerInfoQuery.cpp"/>
+    <File Name="msg/msg.handler.CSApplyGuildResult.cpp"/>
+    <File Name="msg/msg.handler.CSDragonUpgradeMagic.cpp"/>
+    <File Name="msg/msg.handler.CSDTSDungeonSignUpInfo.cpp"/>
+    <File Name="msg/msg.handler.CSDTSEnterArea.cpp"/>
+    <File Name="msg/msg.handler.CSInviteGuild.cpp"/>
+    <File Name="msg/msg.handler.CSInviteGuildResult.cpp"/>
+    <File Name="msg/msg.handler.CSKickGuild.cpp"/>
+    <File Name="msg/msg.handler.CSQueryGuild.cpp"/>
+    <File Name="msg/msg.handler.CSQueryGuildList.cpp"/>
+    <File Name="msg/msg.handler.CSRealive.cpp"/>
+    <File Name="msg/msg.handler.CSGemCombine.cpp"/>
+    <File Name="msg/msg.handler.CSGemInlay.cpp"/>
+    <File Name="msg/msg.handler.CSGemRemove.cpp"/>
+    <File Name="msg/msg.handler.CSGemRemoveAll.cpp"/>
+    <File Name="msg/msg.handler.CSEliteDungeonResetting.cpp"/>
+    <File Name="msg/msg.handler.CSChangeGuildTitle.cpp"/>
+    <File Name="msg/msg.handler.CSRecvMailReward.cpp"/>
+    <File Name="msg/msg.handler.CSSLGBuildingHarvest.cpp"/>
+    <File Name="msg/msg.handler.CSSLGBuildingLevelup.cpp"/>
+    <File Name="msg/msg.handler.CSSLGBuildingQueryInfo.cpp"/>
+    <File Name="msg/msg.handler.CSSLGEnableCastle.cpp"/>
+    <File Name="msg/msg.handler.CSSLGEnterCastle.cpp"/>
+    <File Name="msg/msg.handler.CSSLGLeaveCastle.cpp"/>
+    <File Name="msg/msg.handler.CSSLGQueryCastleInfo.cpp"/>
+    <File Name="msg/msg.handler.CSChangeGuildNotice.cpp"/>
+    <File Name="msg/msg.handler.CSSLGAbuseCommonStart.cpp"/>
+    <File Name="msg/msg.handler.CSSLGAbuseCommonSuccess.cpp"/>
+    <File Name="msg/msg.handler.CSSLGAbuseGold.cpp"/>
+    <File Name="msg/msg.handler.CSSLGCageQuery.cpp"/>
+    <File Name="msg/msg.handler.CSSLGCatchListQuery.cpp"/>
+    <File Name="msg/msg.handler.CSSLGCatchSlave.cpp"/>
+    <File Name="msg/msg.handler.CSSLGEnableCoop.cpp"/>
+    <File Name="msg/msg.handler.CSSLGFlushSuspect.cpp"/>
+    <File Name="msg/msg.handler.CSSLGFlushSuspectGold.cpp"/>
+    <File Name="msg/msg.handler.CSSLGResetCage.cpp"/>
+    <File Name="msg/msg.handler.CSCreateAdventure.cpp"/>
+    <File Name="msg/msg.handler.CSCancelAdventure.cpp"/>
+    <File Name="msg/msg.handler.CSInterruptCast.cpp"/>
+    <File Name="msg/msg.handler.CSDragonFeed.cpp"/>
+    <File Name="msg/msg.handler.CSQueryGiftGroup.cpp"/>
+    <File Name="msg/msg.handler.CSRecvGift.cpp"/>
+    <File Name="msg/msg.handler.CSDivineAddCount.cpp"/>
+    <File Name="msg/msg.handler.CSDivineDraw.cpp"/>
+    <File Name="msg/msg.handler.CSDivineQuery.cpp"/>
+    <File Name="msg/msg.handler.CSDivineShuffle.cpp"/>
+    <File Name="msg/msg.handler.CSSLGAbuseLogQuery.cpp"/>
+    <File Name="msg/msg.handler.CSSLGCatchLogQuery.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="pwcommon">
+    <File Name="../pwcommon/pw_ngs_common.h"/>
+    <File Name="../pwcommon/pw_ngs_def.h"/>
+    <File Name="../pwcommon/pw_ngs_utils.cpp"/>
+    <File Name="../pwcommon/pw_ngs_utils.h"/>
+    <File Name="../pwcommon/pw_rpc_names.h"/>
+    <File Name="../pwcommon/pw_connsrv_utils.cpp"/>
+    <File Name="../pwcommon/pw_connsrv_utils.h"/>
+    <File Name="../pwcommon/pw_tables.h"/>
+    <File Name="../pwcommon/pw_human_status.h"/>
+    <File Name="../pwcommon/pw_rpc_proxy.h"/>
+    <File Name="../pwcommon/pw_rpc_proxy.cpp"/>
+    <File Name="../pwcommon/pw_msg_cluster.cpp"/>
+    <File Name="../pwcommon/pw_msg_cluster.h"/>
+    <File Name="../pwcommon/pw_msg_export_pwworldsrv.cpp"/>
+    <File Name="../pwcommon/pw_msg_export_pwworldsrv.h"/>
+    <File Name="../pwcommon/pw_misc_consts.h"/>
+    <File Name="../pwcommon/pw_guild_const.h"/>
+    <File Name="../pwcommon/pw_message_builder.h"/>
+    <File Name="../pwcommon/pw_message_builder_notify.h"/>
+    <File Name="../pwcommon/pw_mail_def.h"/>
+    <File Name="../pwcommon/pw_item_package.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="quest">
+    <File Name="quest/pw_quest_def.h"/>
+    <File Name="quest/pw_quest_mgr.cpp"/>
+    <File Name="quest/pw_quest_mgr.h"/>
+    <File Name="quest/pw_quest_upgrade.cpp"/>
+    <File Name="quest/pw_quest_npc_mgr.cpp"/>
+    <File Name="quest/pw_quest_npc_mgr.h"/>
+    <File Name="quest/pw_npc_dialog_mgr.cpp"/>
+    <File Name="quest/pw_npc_dialog_mgr.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="common">
+    <File Name="common/pw_bitset.cpp"/>
+    <File Name="common/pw_bitset.h"/>
+    <File Name="common/pw_class_query.h"/>
+    <File Name="common/pw_clsid.h"/>
+    <File Name="common/pw_event.cpp"/>
+    <File Name="common/pw_event.h"/>
+    <File Name="common/pw_phase_object.cpp"/>
+    <File Name="common/pw_phase_object.h"/>
+    <File Name="common/pw_keep_bitset_event.cpp"/>
+    <File Name="common/pw_keep_bitset_event.h"/>
+    <File Name="common/pw_keep_statmod_event.cpp"/>
+    <File Name="common/pw_keep_statmod_event.h"/>
+    <File Name="common/pw_temp_buffer.cpp"/>
+    <File Name="common/pw_temp_buffer.h"/>
+    <File Name="common/pw_upgrader.cpp"/>
+    <File Name="common/pw_upgrader.h"/>
+    <File Name="common/pw_born_action_event.cpp"/>
+    <File Name="common/pw_born_action_event.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="ai">
+    <File Name="ai/pw_ai_factory.cpp"/>
+    <File Name="ai/pw_ai_factory.h"/>
+    <File Name="ai/pw_unit_ai.cpp"/>
+    <File Name="ai/pw_unit_ai.h"/>
+    <File Name="ai/pw_scripted_def.h"/>
+    <File Name="ai/pw_scripted_operations.h"/>
+    <File Name="ai/pw_scripted_operations.cpp"/>
+    <File Name="ai/pw_scripted_ai.cpp"/>
+    <File Name="ai/pw_scripted_ai.h"/>
+    <File Name="ai/pw_scripted_ai_export.cpp"/>
+    <File Name="ai/pw_scripted_ai_export.h"/>
+    <File Name="ai/pw_scripted_common_ai.cpp"/>
+    <File Name="ai/pw_scripted_common_ai.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="characters">
+    <File Name="characters/pw_character.cpp"/>
+    <File Name="characters/pw_character.h"/>
+    <File Name="characters/pw_charm.cpp"/>
+    <File Name="characters/pw_charm.h"/>
+    <File Name="characters/pw_creature.cpp"/>
+    <File Name="characters/pw_creature.h"/>
+    <File Name="characters/pw_creature_def.h"/>
+    <File Name="characters/pw_creature_type_mgr.cpp"/>
+    <File Name="characters/pw_creature_type_mgr.h"/>
+    <File Name="characters/pw_game_object.h"/>
+    <File Name="characters/pw_guard.h"/>
+    <File Name="characters/pw_monster.cpp"/>
+    <File Name="characters/pw_monster.h"/>
+    <File Name="characters/pw_npc.cpp"/>
+    <File Name="characters/pw_npc.h"/>
+    <File Name="characters/pw_npc_def.h"/>
+    <File Name="characters/pw_puppet.cpp"/>
+    <File Name="characters/pw_puppet.h"/>
+    <File Name="characters/pw_smart_unit.cpp"/>
+    <File Name="characters/pw_smart_unit.h"/>
+    <File Name="characters/pw_temp_summon.cpp"/>
+    <File Name="characters/pw_temp_summon.h"/>
+    <File Name="characters/pw_unit.cpp"/>
+    <File Name="characters/pw_unit.h"/>
+    <File Name="characters/pw_unit_def.h"/>
+    <File Name="characters/pw_world_object.cpp"/>
+    <File Name="characters/pw_world_object.h"/>
+    <File Name="characters/pw_statistic_def.h"/>
+    <File Name="characters/pw_unit_oper.h"/>
+    <File Name="characters/pw_unit_oper.cpp"/>
+    <File Name="characters/pw_interim_character.h"/>
+    <File Name="characters/pw_interim_character.cpp"/>
+    <File Name="characters/pw_collision_object.h"/>
+    <File Name="characters/pw_collision_object.cpp"/>
+    <File Name="characters/pw_region_triggers.cpp"/>
+    <File Name="characters/pw_region_triggers.h"/>
+    <File Name="characters/pw_region_trigger.h"/>
+    <File Name="characters/pw_region_trigger.cpp"/>
+    <File Name="characters/pw_item_character.cpp"/>
+    <File Name="characters/pw_item_character.h"/>
+    <File Name="characters/pw_unit_bits.h"/>
+    <File Name="characters/pw_pro_def.h"/>
+    <File Name="characters/pw_unit_attr.h"/>
+    <File Name="characters/pw_chat_def.h"/>
+    <File Name="characters/pw_breakable_object.cpp"/>
+    <File Name="characters/pw_breakable_object.h"/>
+    <File Name="characters/pw_missile_object.cpp"/>
+    <File Name="characters/pw_missile_object.h"/>
+    <File Name="characters/pw_static_object.cpp"/>
+    <File Name="characters/pw_static_object.h"/>
+    <File Name="characters/pw_faction_dataset.cpp"/>
+    <File Name="characters/pw_faction_dataset.h"/>
+    <File Name="characters/pw_human_structs.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="human">
+    <File Name="human/pw_human.cpp"/>
+    <File Name="human/pw_human.h"/>
+    <File Name="human/pw_human_oper.cpp"/>
+    <File Name="human/pw_human_oper.h"/>
+    <File Name="human/pw_human_rpcs.cpp"/>
+    <File Name="human/pw_human_tester.cpp"/>
+    <File Name="human/pw_human_tester.h"/>
+    <File Name="human/pw_human_dataset.cpp"/>
+    <File Name="human/pw_human_dataset.h"/>
+    <File Name="human/pw_human_oper_attrs.cpp"/>
+    <File Name="human/pw_human_vars.h"/>
+    <File Name="human/pw_human_oper_activity.cpp"/>
+    <File Name="human/pw_human_oper_item.cpp"/>
+    <File Name="human/pw_human_oper_guild.cpp"/>
+    <File Name="human/pw_human_oper_relation.cpp"/>
+    <File Name="human/pw_human_oper_team.cpp"/>
+    <File Name="human/pw_human_oper_shop.cpp"/>
+    <File Name="human/pw_human_oper_mail.cpp"/>
+    <File Name="human/pw_human_oper_quest.cpp"/>
+    <File Name="human/pw_human_oper_chat.cpp"/>
+    <File Name="human/pw_human_oper_slg.cpp"/>
+    <File Name="human/pw_human_oper_dragon.cpp"/>
+    <File Name="human/pw_guide_dataset.cpp"/>
+    <File Name="human/pw_guide_dataset.h"/>
+    <File Name="human/pw_human_oper_gift.cpp"/>
+    <File Name="human/pw_human_oper_divine.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="item">
+    <File Name="item/pw_item.cpp"/>
+    <File Name="item/pw_item.h"/>
+    <File Name="item/pw_item_def.cpp"/>
+    <File Name="item/pw_item_def.h"/>
+    <File Name="item/pw_item_gen.cpp"/>
+    <File Name="item/pw_item_gen.h"/>
+    <File Name="item/pw_item_sandbox.cpp"/>
+    <File Name="item/pw_item_sandbox.h"/>
+    <File Name="item/pw_item_upgrade.cpp"/>
+    <File Name="item/pw_item_container.cpp"/>
+    <File Name="item/pw_item_container.h"/>
+    <File Name="item/pw_item_dataset.cpp"/>
+    <File Name="item/pw_item_dataset.h"/>
+    <File Name="item/pw_item_rune.cpp"/>
+    <File Name="item/pw_item_rune.h"/>
+    <File Name="item/pw_item_inventory.cpp"/>
+    <File Name="item/pw_item_inventory.h"/>
+    <File Name="item/pw_item_storage.cpp"/>
+    <File Name="item/pw_item_storage.h"/>
+    <File Name="item/pw_item_astrology.cpp"/>
+    <File Name="item/pw_item_astrology.h"/>
+    <File Name="item/pw_item_multi_sandbox.cpp"/>
+    <File Name="item/pw_item_multi_sandbox.h"/>
+    <File Name="item/pw_item_soul_stone.cpp"/>
+    <File Name="item/pw_item_soul_stone.h"/>
+    <File Name="item/pw_item_dataset_astrology.cpp"/>
+    <File Name="item/pw_item_dataset_bless.cpp"/>
+    <File Name="item/pw_item_dataset_combine.cpp"/>
+    <File Name="item/pw_item_dataset_enchant.cpp"/>
+    <File Name="item/pw_item_const.h"/>
+    <File Name="item/pw_item_dataset_egg.cpp"/>
+    <File Name="item/pw_item_dataset_equip.cpp"/>
+    <File Name="item/pw_item_dataset_magicbook.cpp"/>
+    <File Name="item/pw_item_dataset_gem.cpp"/>
+    <File Name="item/pw_item_dataset_dragonexp.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="magic">
+    <File Name="magic/pw_aura.cpp"/>
+    <File Name="magic/pw_aura.h"/>
+    <File Name="magic/pw_aura_application.h"/>
+    <File Name="magic/pw_aura_def.h"/>
+    <File Name="magic/pw_aura_effect.cpp"/>
+    <File Name="magic/pw_aura_effect.h"/>
+    <File Name="magic/pw_aura_effects.cpp"/>
+    <File Name="magic/pw_aura_effects.h"/>
+    <File Name="magic/pw_aura_event.cpp"/>
+    <File Name="magic/pw_aura_event.h"/>
+    <File Name="magic/pw_magic.cpp"/>
+    <File Name="magic/pw_magic.h"/>
+    <File Name="magic/pw_magic_cd.cpp"/>
+    <File Name="magic/pw_magic_cd.h"/>
+    <File Name="magic/pw_magic_chase_object.cpp"/>
+    <File Name="magic/pw_magic_chase_object.h"/>
+    <File Name="magic/pw_magic_const.cpp"/>
+    <File Name="magic/pw_magic_const.h"/>
+    <File Name="magic/pw_magic_def.h"/>
+    <File Name="magic/pw_magic_effects.cpp"/>
+    <File Name="magic/pw_magic_effects.h"/>
+    <File Name="magic/pw_magic_event.cpp"/>
+    <File Name="magic/pw_magic_event.h"/>
+    <File Name="magic/pw_magic_targets.cpp"/>
+    <File Name="magic/pw_magic_targets.h"/>
+    <File Name="magic/pw_aura_application.cpp"/>
+    <File Name="magic/pw_magic_dataset.cpp"/>
+    <File Name="magic/pw_magic_dataset.h"/>
+    <File Name="magic/pw_magic_delayed.cpp"/>
+    <File Name="magic/pw_magic_delayed.h"/>
+    <File Name="magic/pw_aura_dataset.cpp"/>
+    <File Name="magic/pw_aura_dataset.h"/>
+    <File Name="magic/pw_module_aura_upgrade.cpp"/>
+    <File Name="magic/pw_magic_flexible.cpp"/>
+    <File Name="magic/pw_magic_flexible.h"/>
+    <File Name="magic/pw_magic_flexible_events.cpp"/>
+    <File Name="magic/pw_magic_flexible_events.h"/>
+    <File Name="magic/pw_magic_def.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="module">
+    <File Name="module/pw_module.h"/>
+    <File Name="module/pw_module_aura.cpp"/>
+    <File Name="module/pw_module_aura.h"/>
+    <File Name="module/pw_module_combat.cpp"/>
+    <File Name="module/pw_module_equipment.cpp"/>
+    <File Name="module/pw_module_equipment.h"/>
+    <File Name="module/pw_module_gossip.cpp"/>
+    <File Name="module/pw_module_gossip.h"/>
+    <File Name="module/pw_module_magic.cpp"/>
+    <File Name="module/pw_module_magic.h"/>
+    <File Name="module/pw_module_motion_master.cpp"/>
+    <File Name="module/pw_module_motion_master.h"/>
+    <File Name="module/pw_module_quest.cpp"/>
+    <File Name="module/pw_module_quest.h"/>
+    <File Name="module/pw_module_statistic.cpp"/>
+    <File Name="module/pw_module_statistic.h"/>
+    <File Name="module/pw_module_threat.cpp"/>
+    <File Name="module/pw_module_threat.h"/>
+    <File Name="module/pw_module_trade.cpp"/>
+    <File Name="module/pw_module_trade.h"/>
+    <File Name="module/pw_module_reaction.h"/>
+    <File Name="module/pw_module_reaction.cpp"/>
+    <File Name="module/pw_module_enemy.cpp"/>
+    <File Name="module/pw_module_enemy.h"/>
+    <File Name="module/pw_module_combat.h"/>
+    <File Name="module/pw_action_group_mgr.cpp"/>
+    <File Name="module/pw_action_group_mgr.h"/>
+    <File Name="module/pw_command_def.h"/>
+    <File Name="module/pw_module_command.cpp"/>
+    <File Name="module/pw_module_command.h"/>
+    <File Name="module/pw_module_drop.cpp"/>
+    <File Name="module/pw_module_drop.h"/>
+    <File Name="module/pw_module_item.cpp"/>
+    <File Name="module/pw_module_item.h"/>
+    <File Name="module/pw_module_action_group.cpp"/>
+    <File Name="module/pw_module_action_group.h"/>
+    <File Name="module/pw_module_magic_upgrade.cpp"/>
+    <File Name="module/pw_module_item_enchant.cpp"/>
+    <File Name="module/pw_module_castle.cpp"/>
+    <File Name="module/pw_module_castle.h"/>
+    <File Name="module/pw_module_cash.cpp"/>
+    <File Name="module/pw_module_cash.h"/>
+    <File Name="module/pw_module_cash_def.h"/>
+    <File Name="module/pw_module_astrology.cpp"/>
+    <File Name="module/pw_module_astrology.h"/>
+    <File Name="module/pw_module_astrology_def.h"/>
+    <File Name="module/pw_module_item_combine.cpp"/>
+    <File Name="module/pw_module_item_levelup.cpp"/>
+    <File Name="module/pw_levelup_dataset.cpp"/>
+    <File Name="module/pw_levelup_dataset.h"/>
+    <File Name="module/pw_module_cooldown.cpp"/>
+    <File Name="module/pw_module_cooldown.h"/>
+    <File Name="module/pw_module_cooldown_def.h"/>
+    <File Name="module/pw_module_cooldown_upgrade.cpp"/>
+    <File Name="module/pw_module_exp.cpp"/>
+    <File Name="module/pw_module_exp.h"/>
+    <File Name="module/pw_module_astrology_devour.cpp"/>
+    <File Name="module/pw_module_astrology_inlay.cpp"/>
+    <File Name="module/pw_module_blessing.cpp"/>
+    <File Name="module/pw_module_blessing.h"/>
+    <File Name="module/pw_module_blessing_def.h"/>
+    <File Name="module/pw_module_equipment_def.h"/>
+    <File Name="module/pw_module_item_def.h"/>
+    <File Name="module/pw_module_item_bless.cpp"/>
+    <File Name="module/pw_module_controlled.cpp"/>
+    <File Name="module/pw_module_controlled.h"/>
+    <File Name="module/pw_module_controller.cpp"/>
+    <File Name="module/pw_module_controller.h"/>
+    <File Name="module/pw_module_mounted_objects.cpp"/>
+    <File Name="module/pw_module_mounted_objects.h"/>
+    <File Name="module/pw_module_item_refine.cpp"/>
+    <File Name="module/pw_module_add.cpp"/>
+    <File Name="module/pw_module_add.h"/>
+    <File Name="module/pw_module_shop.cpp"/>
+    <File Name="module/pw_module_shop.h"/>
+    <File Name="module/pw_module_mail_def.h"/>
+    <File Name="module/pw_module_dragon.cpp"/>
+    <File Name="module/pw_module_dragon.h"/>
+    <File Name="module/pw_module_comerguide.cpp"/>
+    <File Name="module/pw_module_comerguide.h"/>
+    <File Name="module/pw_module_dragon_statistic.cpp"/>
+    <File Name="module/pw_module_dragon_statistic.h"/>
+    <File Name="module/pw_module_dungeon.cpp"/>
+    <File Name="module/pw_module_dungeon.h"/>
+    <File Name="module/pw_module_bloodline.cpp"/>
+    <File Name="module/pw_module_bloodline.h"/>
+    <File Name="module/pw_module_comerguide_upgrade.cpp"/>
+    <File Name="module/pw_module_item_inlay.cpp"/>
+    <File Name="module/pw_module_elite_dungeon.cpp"/>
+    <File Name="module/pw_module_elite_dungeon.h"/>
+    <File Name="module/pw_module_elite_dungeon_def.h"/>
+    <File Name="module/pw_module_elite_dungeon_upgrader.cpp"/>
+    <File Name="module/pw_dungeon_upgrade.cpp"/>
+    <File Name="module/pw_function_deblocking_dataset.cpp"/>
+    <File Name="module/pw_function_deblocking_dataset.h"/>
+    <File Name="module/pw_module_function_deblocking.cpp"/>
+    <File Name="module/pw_module_function_deblocking.h"/>
+    <File Name="module/pw_module_summoned.cpp"/>
+    <File Name="module/pw_module_summoned.h"/>
+    <File Name="module/pw_module_summoner.cpp"/>
+    <File Name="module/pw_module_summoner.h"/>
+    <File Name="module/pw_function_def.h"/>
+    <File Name="module/pw_module_batter.cpp"/>
+    <File Name="module/pw_module_batter.h"/>
+    <File Name="module/pw_module_group_motion.cpp"/>
+    <File Name="module/pw_module_group_motion.h"/>
+    <File Name="module/pw_module_gift.cpp"/>
+    <File Name="module/pw_module_gift.h"/>
+    <File Name="module/pw_module_divine.cpp"/>
+    <File Name="module/pw_module_divine.h"/>
+    <File Name="module/pw_module_divine_def.h"/>
+    <File Name="module/pw_module_divine_upgrade.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="movement">
+    <File Name="movement/pw_chase_movement_generator.cpp"/>
+    <File Name="movement/pw_chase_movement_generator.h"/>
+    <File Name="movement/pw_motion_def.h"/>
+    <File Name="movement/pw_motion_event_helper.cpp"/>
+    <File Name="movement/pw_motion_event_helper.h"/>
+    <File Name="movement/pw_motion_path.h"/>
+    <File Name="movement/pw_movement_generator.cpp"/>
+    <File Name="movement/pw_movement_generator.h"/>
+    <File Name="movement/pw_pathchase_movement_generator.cpp"/>
+    <File Name="movement/pw_pathchase_movement_generator.h"/>
+    <File Name="movement/pw_position_movement_generator.cpp"/>
+    <File Name="movement/pw_position_movement_generator.h"/>
+    <File Name="movement/pw_targetchase_movement_generator.cpp"/>
+    <File Name="movement/pw_targetchase_movement_generator.h"/>
+    <File Name="movement/pw_waypoint_movement_generator.cpp"/>
+    <File Name="movement/pw_waypoint_movement_generator.h"/>
+    <File Name="movement/pw_random_movement_generator.cpp"/>
+    <File Name="movement/pw_random_movement_generator.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_login">
+    <File Name="srv_login/pw_service_login.cpp"/>
+    <File Name="srv_login/pw_service_login.h"/>
+    <File Name="srv_login/pw_service_login_object.cpp"/>
+    <File Name="srv_login/pw_service_login_object.h"/>
+    <File Name="srv_login/pw_login_const.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_pull">
+    <File Name="srv_pull/pw_service_pull_w.cpp"/>
+    <File Name="srv_pull/pw_service_pull_w.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_stage">
+    <File Name="srv_stage/pw_stage_cells.cpp"/>
+    <File Name="srv_stage/pw_stage_cells.h"/>
+    <File Name="srv_stage/pw_stage_scheme.cpp"/>
+    <File Name="srv_stage/pw_stage_scheme.h"/>
+    <File Name="srv_stage/pw_creature_spawn_scheme.h"/>
+    <File Name="srv_stage/pw_creature_spawn_scheme.cpp"/>
+    <File Name="srv_stage/pw_stage.h"/>
+    <File Name="srv_stage/pw_stage.cpp"/>
+    <File Name="srv_stage/pw_service_thread.h"/>
+    <File Name="srv_stage/pw_service_thread.cpp"/>
+    <File Name="srv_stage/pw_drop_scheme_dataset.cpp"/>
+    <File Name="srv_stage/pw_drop_scheme_dataset.h"/>
+    <File Name="srv_stage/pw_trigger_dataset.cpp"/>
+    <File Name="srv_stage/pw_trigger_dataset.h"/>
+    <File Name="srv_stage/pw_stage_rpcs.cpp"/>
+    <File Name="srv_stage/pw_stage_ilua.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="detour">
+    <VirtualDirectory Name="inc">
+      <File Name="detour/inc/DetourAlloc.h"/>
+      <File Name="detour/inc/DetourAssert.h"/>
+      <File Name="detour/inc/DetourCommon.h"/>
+      <File Name="detour/inc/DetourNavMesh.h"/>
+      <File Name="detour/inc/DetourNavMeshBuilder.h"/>
+      <File Name="detour/inc/DetourNavMeshQuery.h"/>
+      <File Name="detour/inc/DetourNode.h"/>
+      <File Name="detour/inc/DetourStatus.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="src">
+      <File Name="detour/src/DetourAlloc.cpp"/>
+      <File Name="detour/src/DetourCommon.cpp"/>
+      <File Name="detour/src/DetourNavMesh.cpp"/>
+      <File Name="detour/src/DetourNavMeshBuilder.cpp"/>
+      <File Name="detour/src/DetourNavMeshQuery.cpp"/>
+      <File Name="detour/src/DetourNode.cpp"/>
+    </VirtualDirectory>
+    <File Name="detour/pw_detour.cpp"/>
+    <File Name="detour/pw_detour.h"/>
+    <File Name="detour/pw_height_field.cpp"/>
+    <File Name="detour/pw_height_field.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="condition">
+    <File Name="condition/pw_quest_condition_mgr.h"/>
+    <File Name="condition/pw_quest_condition_mgr.cpp"/>
+    <File Name="condition/pw_quest_condition_def.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="utils">
+    <File Name="pw_logic_utils.h"/>
+    <File Name="pw_logic_utils.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="combat">
+    <File Name="combat/pw_combat_context.cpp"/>
+    <File Name="combat/pw_combat_context.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="conf">
+    <File Name="conf/pwconf_EffectCollision.cpp"/>
+    <File Name="conf/pwconf_EffectCollision.h"/>
+    <File Name="conf/pwconf_EffectCommon.cpp"/>
+    <File Name="conf/pwconf_EffectCommon.h"/>
+    <File Name="conf/pwconf_EffectMotion.cpp"/>
+    <File Name="conf/pwconf_EffectMotion.h"/>
+    <File Name="conf/pwconf_MagicType.cpp"/>
+    <File Name="conf/pwconf_MagicType.h"/>
+    <File Name="conf/pwconf_NpcSpawnMethod.cpp"/>
+    <File Name="conf/pwconf_NpcSpawnMethod.h"/>
+    <File Name="conf/pwconf_HumanStatistic.h"/>
+    <File Name="conf/pwconf_HumanStatistic.cpp"/>
+    <File Name="conf/pwconf_Action.h"/>
+    <File Name="conf/pwconf_Action.cpp"/>
+    <File Name="conf/pwconf_CreatureSpawn.cpp"/>
+    <File Name="conf/pwconf_CreatureStatistic.cpp"/>
+    <File Name="conf/pwconf_CreatureStatistic.h"/>
+    <File Name="conf/pwconf_CreatureType.cpp"/>
+    <File Name="conf/pwconf_CreatureType.h"/>
+    <File Name="conf/pwconf_RegionTrigger.cpp"/>
+    <File Name="conf/pwconf_RegionTrigger.h"/>
+    <File Name="conf/pwconf_Scene.cpp"/>
+    <File Name="conf/pwconf_Scene.h"/>
+    <File Name="conf/pwconf_ItemCommon.cpp"/>
+    <File Name="conf/pwconf_ItemCommon.h"/>
+    <File Name="conf/pwconf_ItemEquip.cpp"/>
+    <File Name="conf/pwconf_ItemEquip.h"/>
+    <File Name="conf/pwconf_DropCommon.cpp"/>
+    <File Name="conf/pwconf_DropCommon.h"/>
+    <File Name="conf/pwconf_DropSpecial.cpp"/>
+    <File Name="conf/pwconf_DropSpecial.h"/>
+    <File Name="conf/pwconf_Quest.cpp"/>
+    <File Name="conf/pwconf_Quest.h"/>
+    <File Name="conf/pwconf_Aura.cpp"/>
+    <File Name="conf/pwconf_Aura.h"/>
+    <File Name="conf/pwconf_AuraEffect.cpp"/>
+    <File Name="conf/pwconf_AuraEffect.h"/>
+    <File Name="conf/pwconf_CreatureSpawn.h"/>
+    <File Name="conf/pwconf_CrossingUI.cpp"/>
+    <File Name="conf/pwconf_CrossingUI.h"/>
+    <File Name="conf/pwconf_DramaContent.cpp"/>
+    <File Name="conf/pwconf_DramaContent.h"/>
+    <File Name="conf/pwconf_NpcAbility.cpp"/>
+    <File Name="conf/pwconf_NpcAbility.h"/>
+    <File Name="conf/pwconf_NpcConditionSkill.cpp"/>
+    <File Name="conf/pwconf_NpcConditionSkill.h"/>
+    <File Name="conf/pwconf_NpcTemper.cpp"/>
+    <File Name="conf/pwconf_NpcTemper.h"/>
+    <File Name="conf/pwconf_QTEType.cpp"/>
+    <File Name="conf/pwconf_QTEType.h"/>
+    <File Name="conf/pwconf_Formula.cpp"/>
+    <File Name="conf/pwconf_Formula.h"/>
+    <File Name="conf/pwconf_EnchantCost.cpp"/>
+    <File Name="conf/pwconf_EnchantCost.h"/>
+    <File Name="conf/pwconf_AuraConflict.cpp"/>
+    <File Name="conf/pwconf_AuraConflict.h"/>
+    <File Name="conf/pwconf_AstrologyType.cpp"/>
+    <File Name="conf/pwconf_AstrologyType.h"/>
+    <File Name="conf/pwconf_ItemRune.cpp"/>
+    <File Name="conf/pwconf_ItemRune.h"/>
+    <File Name="conf/pwconf_UpgradeExperience.cpp"/>
+    <File Name="conf/pwconf_UpgradeExperience.h"/>
+    <File Name="conf/pwconf_EffectFlexible.cpp"/>
+    <File Name="conf/pwconf_EffectFlexible.h"/>
+    <File Name="conf/pwconf_SoulStoneAttr.cpp"/>
+    <File Name="conf/pwconf_SoulStoneAttr.h"/>
+    <File Name="conf/pwconf_NPCDialog.cpp"/>
+    <File Name="conf/pwconf_NPCDialog.h"/>
+    <File Name="conf/pwconf_ActivityBlackBase.cpp"/>
+    <File Name="conf/pwconf_ActivityBlackBase.h"/>
+    <File Name="conf/pwconf_ActivityBlackBoss.cpp"/>
+    <File Name="conf/pwconf_ActivityBlackBoss.h"/>
+    <File Name="conf/pwconf_ActivityBlackChallenger.cpp"/>
+    <File Name="conf/pwconf_ActivityBlackChallenger.h"/>
+    <File Name="conf/pwconf_AuraGroup.cpp"/>
+    <File Name="conf/pwconf_AuraGroup.h"/>
+    <File Name="conf/pwconf_Shop.cpp"/>
+    <File Name="conf/pwconf_Shop.h"/>
+    <File Name="conf/pwconf_ItemEgg.cpp"/>
+    <File Name="conf/pwconf_ItemEgg.h"/>
+    <File Name="conf/pwconf_DragonName.cpp"/>
+    <File Name="conf/pwconf_DragonName.h"/>
+    <File Name="conf/pwconf_Guide.cpp"/>
+    <File Name="conf/pwconf_Guide.h"/>
+    <File Name="conf/pwconf_GuideCondition.cpp"/>
+    <File Name="conf/pwconf_GuideCondition.h"/>
+    <File Name="conf/pwconf_Bezier.cpp"/>
+    <File Name="conf/pwconf_Bezier.h"/>
+    <File Name="conf/pwconf_NPCFunction.cpp"/>
+    <File Name="conf/pwconf_NPCFunction.h"/>
+    <File Name="conf/pwconf_CastleUnit.cpp"/>
+    <File Name="conf/pwconf_CastleUnit.h"/>
+    <File Name="conf/pwconf_ItemSoulStone.cpp"/>
+    <File Name="conf/pwconf_ItemSoulStone.h"/>
+    <File Name="conf/pwconf_ActionGroup.cpp"/>
+    <File Name="conf/pwconf_ActionGroup.h"/>
+    <File Name="conf/pwconf_Bloodline.cpp"/>
+    <File Name="conf/pwconf_Bloodline.h"/>
+    <File Name="conf/pwconf_DragonMagicType.cpp"/>
+    <File Name="conf/pwconf_DragonMagicType.h"/>
+    <File Name="conf/pwconf_ItemMagicBook.cpp"/>
+    <File Name="conf/pwconf_ItemMagicBook.h"/>
+    <File Name="conf/pwconf_DragonUpgradeMagicCost.cpp"/>
+    <File Name="conf/pwconf_DragonUpgradeMagicCost.h"/>
+    <File Name="conf/pwconf_Guild.cpp"/>
+    <File Name="conf/pwconf_Guild.h"/>
+    <File Name="conf/pwconf_Faction.cpp"/>
+    <File Name="conf/pwconf_Faction.h"/>
+    <File Name="conf/pwconf_ItemGem.cpp"/>
+    <File Name="conf/pwconf_ItemGem.h"/>
+    <File Name="conf/pwconf_GemColorful.cpp"/>
+    <File Name="conf/pwconf_GemColorful.h"/>
+    <File Name="conf/pwconf_Activity.cpp"/>
+    <File Name="conf/pwconf_Activity.h"/>
+    <File Name="conf/pwconf_ActivityGainIndex.cpp"/>
+    <File Name="conf/pwconf_ActivityGainIndex.h"/>
+    <File Name="conf/pwconf_ActivityGainList.cpp"/>
+    <File Name="conf/pwconf_ActivityGainList.h"/>
+    <File Name="conf/pwconf_CastleOutput.cpp"/>
+    <File Name="conf/pwconf_CastleOutput.h"/>
+    <File Name="conf/pwconf_Function.cpp"/>
+    <File Name="conf/pwconf_Function.h"/>
+    <File Name="conf/pwconf_Adventure.cpp"/>
+    <File Name="conf/pwconf_Adventure.h"/>
+    <File Name="conf/pwconf_AdventureEvent.cpp"/>
+    <File Name="conf/pwconf_AdventureEvent.h"/>
+    <File Name="conf/pwconf_AdventureGenerate.cpp"/>
+    <File Name="conf/pwconf_AdventureGenerate.h"/>
+    <File Name="conf/pwconf_CastleAbuse.cpp"/>
+    <File Name="conf/pwconf_CastleAbuse.h"/>
+    <File Name="conf/pwconf_Gift.cpp"/>
+    <File Name="conf/pwconf_Gift.h"/>
+    <File Name="conf/pwconf_GiftGroup.cpp"/>
+    <File Name="conf/pwconf_GiftGroup.h"/>
+    <File Name="conf/pwconf_CreatureGroup.cpp"/>
+    <File Name="conf/pwconf_CreatureGroup.h"/>
+    <File Name="conf/pwconf_ItemDragonExp.cpp"/>
+    <File Name="conf/pwconf_ItemDragonExp.h"/>
+    <File Name="conf/pwconf_DivineOutput.cpp"/>
+    <File Name="conf/pwconf_DivineOutput.h"/>
+    <File Name="conf/pwconf_TarotType.cpp"/>
+    <File Name="conf/pwconf_TarotType.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="command">
+    <File Name="command/pw_command_stiff.cpp"/>
+    <File Name="command/pw_command_stiff.h"/>
+    <File Name="command/pw_command_smooth_orientation.cpp"/>
+    <File Name="command/pw_command_smooth_orientation.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="script">
+    <File Name="script/pw_script_envriment.cpp"/>
+    <File Name="script/pw_script_envriment.h"/>
+    <File Name="script/pw_script_exports.cpp"/>
+    <File Name="script/pw_script_exports.h"/>
+    <File Name="script/pw_async_script_once.cpp"/>
+    <File Name="script/pw_async_script_once.h"/>
+    <File Name="script/pw_lua_ext.h"/>
+    <File Name="script/pw_script_exports_func.cpp"/>
+    <File Name="script/pw_script_exports_ilua.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="astar">
+    <File Name="astar/pw_astar.cpp"/>
+    <File Name="astar/pw_astar.h"/>
+    <File Name="astar/pw_astar_grid.cpp"/>
+    <File Name="astar/pw_astar_grid.h"/>
+    <File Name="astar/pw_astar_grid_data.cpp"/>
+    <File Name="astar/pw_astar_grid_data.h"/>
+    <File Name="astar/pw_astar_motion_helper.cpp"/>
+    <File Name="astar/pw_astar_motion_helper.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="reaction">
+    <File Name="reaction/pw_reaction_def.cpp"/>
+    <File Name="reaction/pw_reaction_def.h"/>
+    <File Name="reaction/pw_reaction_param_def.h"/>
+    <File Name="reaction/pw_reaction_recovery_energy.cpp"/>
+    <File Name="reaction/pw_reaction_recovery_energy.h"/>
+    <File Name="reaction/pw_reaction_sunder_armor.cpp"/>
+    <File Name="reaction/pw_reaction_sunder_armor.h"/>
+    <File Name="reaction/pw_reaction_change_attr.cpp"/>
+    <File Name="reaction/pw_reaction_change_attr.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="stage_module">
+    <File Name="stage_module/pw_smodule_aoi.cpp"/>
+    <File Name="stage_module/pw_smodule_aoi.h"/>
+    <File Name="stage_module/pw_smodule_counter.cpp"/>
+    <File Name="stage_module/pw_smodule_counter.h"/>
+    <File Name="stage_module/pw_smodule_detour.cpp"/>
+    <File Name="stage_module/pw_smodule_detour.h"/>
+    <File Name="stage_module/pw_smodule_item_placer.cpp"/>
+    <File Name="stage_module/pw_smodule_item_placer.h"/>
+    <File Name="stage_module/pw_smodule_objs.cpp"/>
+    <File Name="stage_module/pw_smodule_objs.h"/>
+    <File Name="stage_module/pw_smodule_respawner.cpp"/>
+    <File Name="stage_module/pw_smodule_respawner.h"/>
+    <File Name="stage_module/pw_smodule_suid.cpp"/>
+    <File Name="stage_module/pw_smodule_suid.h"/>
+    <File Name="stage_module/pw_activities_script_operations.cpp"/>
+    <File Name="stage_module/pw_activities_script_operations.h"/>
+    <File Name="stage_module/pw_smodule_score_reward.cpp"/>
+    <File Name="stage_module/pw_smodule_score_reward.h"/>
+    <File Name="stage_module/pw_smodule_dungeonplay.cpp"/>
+    <File Name="stage_module/pw_smodule_dungeonplay.h"/>
+    <File Name="stage_module/pw_smodule_dungeonplay_scripts.cpp"/>
+    <File Name="stage_module/pw_smodule_dungeonscript.cpp"/>
+    <File Name="stage_module/pw_smodule_dungeonscript.h"/>
+    <File Name="stage_module/pw_smodule_dungeonscript_ext.cpp"/>
+    <File Name="stage_module/pw_smodule_dungeonscript_ext.h"/>
+    <File Name="stage_module/pw_smodule_events.cpp"/>
+    <File Name="stage_module/pw_smodule_events.h"/>
+    <File Name="stage_module/pw_smodule_events_def.h"/>
+    <File Name="stage_module/pw_smodule_common.cpp"/>
+    <File Name="stage_module/pw_smodule_common.h"/>
+    <File Name="stage_module/pw_smodule_creature_group.cpp"/>
+    <File Name="stage_module/pw_smodule_creature_group.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="dist_impl">
+    <File Name="dist_impl/pw_rpcs_impl_human.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simpllogin.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplpull.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplstage.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_stage.cpp"/>
+    <File Name="dist_impl/pw_rpcs_impl_simplslg.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="activities">
+    <File Name="activities/pw_activity_black_dataset.cpp"/>
+    <File Name="activities/pw_activity_black_dataset.h"/>
+    <File Name="activities/pw_activity_dataset.cpp"/>
+    <File Name="activities/pw_activity_dataset.h"/>
+    <File Name="activities/pw_smodule_activity.cpp"/>
+    <File Name="activities/pw_smodule_activity.h"/>
+    <File Name="activities/pw_activity_reward_dataset.cpp"/>
+    <File Name="activities/pw_activity_reward_dataset.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="collision">
+    <File Name="collision/pw_collision_def.h"/>
+    <File Name="collision/pw_detection_object.cpp"/>
+    <File Name="collision/pw_detection_object.h"/>
+    <File Name="collision/pw_smodule_collision.cpp"/>
+    <File Name="collision/pw_smodule_collision.h"/>
+    <File Name="collision/pw_spheresphere_collision_algorithm.cpp"/>
+    <File Name="collision/pw_spheresphere_collision_algorithm.h"/>
+    <File Name="collision/pw_spherebox_collision_algorithm.cpp"/>
+    <File Name="collision/pw_spherebox_collision_algorithm.h"/>
+    <File Name="collision/pw_collision_def.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_support">
+    <File Name="srv_support/pw_service_support.cpp"/>
+    <File Name="srv_support/pw_service_support.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="srv_slg">
+    <File Name="srv_slg/pw_service_slg.cpp"/>
+    <File Name="srv_slg/pw_service_slg.h"/>
+    <File Name="srv_slg/pw_slg_castle.cpp"/>
+    <File Name="srv_slg/pw_slg_castle.h"/>
+    <File Name="srv_slg/pw_slg_def.h"/>
+    <File Name="srv_slg/pw_slg_dragon.cpp"/>
+    <File Name="srv_slg/pw_slg_dragon.h"/>
+    <File Name="srv_slg/pw_slg_harbour.cpp"/>
+    <File Name="srv_slg/pw_slg_harbour.h"/>
+    <File Name="srv_slg/pw_slg_human.cpp"/>
+    <File Name="srv_slg/pw_slg_human.h"/>
+    <File Name="srv_slg/pw_slg_module_building.h"/>
+    <File Name="srv_slg/pw_slg_module_building_upgrade.cpp"/>
+    <File Name="srv_slg/pw_slg_building.cpp"/>
+    <File Name="srv_slg/pw_slg_human_oper.cpp"/>
+    <File Name="srv_slg/pw_slg_const.h"/>
+    <File Name="srv_slg/pw_slg_dataset.h"/>
+    <File Name="srv_slg/pw_slg_dragon_field.cpp"/>
+    <File Name="srv_slg/pw_slg_building.h"/>
+    <File Name="srv_slg/pw_slg_human_oper.h"/>
+    <File Name="srv_slg/pw_slg_module_building.cpp"/>
+    <File Name="srv_slg/pw_slg_dragon_field.h"/>
+    <File Name="srv_slg/pw_slg_dataset.cpp"/>
+    <File Name="srv_slg/pw_slg_dragon_field_rpcs.cpp"/>
+    <File Name="srv_slg/pw_slg_harbour_rpcs.cpp"/>
+    <File Name="srv_slg/pw_slg_altar.cpp"/>
+    <File Name="srv_slg/pw_slg_altar.h"/>
+    <File Name="srv_slg/pw_slg_altar_rpcs.cpp"/>
+    <File Name="srv_slg/pw_slg_cage.cpp"/>
+    <File Name="srv_slg/pw_slg_cage.h"/>
+    <File Name="srv_slg/pw_slg_cage_abuse.cpp"/>
+    <File Name="srv_slg/pw_slg_cage_rpcs.cpp"/>
+    <File Name="srv_slg/pw_slg_cage_upgrade.cpp"/>
+    <File Name="srv_slg/pw_slg_slave.cpp"/>
+    <File Name="srv_slg/pw_slg_slave.h"/>
+    <File Name="srv_slg/pw_slg_slave_upgrade.cpp"/>
+    <File Name="srv_slg/pw_slg_cage_log.h"/>
+    <File Name="srv_slg/pw_slg_cage_log_upgrade.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="shop">
+    <File Name="shop/pw_shop_dataset.cpp"/>
+    <File Name="shop/pw_shop_dataset.h"/>
+    <File Name="shop/pw_shop_def.h"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <VirtualDirectory Name="dragon">
+    <File Name="dragon/pw_dragon.cpp"/>
+    <File Name="dragon/pw_dragon.h"/>
+    <File Name="dragon/pw_dragon_dataset.cpp"/>
+    <File Name="dragon/pw_dragon_dataset.h"/>
+    <File Name="dragon/pw_dragon_def.h"/>
+    <File Name="dragon/pw_dragon_container.cpp"/>
+    <File Name="dragon/pw_dragon_container.h"/>
+    <File Name="dragon/pw_dragon_magic.cpp"/>
+    <File Name="dragon/pw_dragon_space.cpp"/>
+    <File Name="dragon/pw_dragon_space.h"/>
+    <File Name="dragon/pw_dragon_const.h"/>
+    <File Name="dragon/pw_dragon_equip.cpp"/>
+    <File Name="dragon/pw_dragon_equip.h"/>
+    <File Name="dragon/pw_dragon_exp.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="bloodline">
+    <File Name="bloodline/pw_bloodline_dataset.cpp"/>
+    <File Name="bloodline/pw_bloodline_dataset.h"/>
+    <File Name="bloodline/pw_bloodline_def.h"/>
+    <File Name="bloodline/pw_bloodline_effects.cpp"/>
+    <File Name="bloodline/pw_bloodline_effects.h"/>
+    <File Name="bloodline/pw_bloodline_upgrade.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="dataset">
+    <File Name="dataset/pw_adventure_dataset.cpp"/>
+    <File Name="dataset/pw_adventure_dataset.h"/>
+    <File Name="dataset/pw_creature_group_dataset.cpp"/>
+    <File Name="dataset/pw_creature_group_dataset.h"/>
+    <File Name="dataset/pw_divine_dataset.cpp"/>
+    <File Name="dataset/pw_divine_dataset.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="gift">
+    <File Name="gift/pw_gift_const.h"/>
+    <File Name="gift/pw_gift_dataset.cpp"/>
+    <File Name="gift/pw_gift_dataset.h"/>
+    <File Name="gift/pw_gift_def.h"/>
+    <File Name="gift/pw_gift_group.cpp"/>
+    <File Name="gift/pw_gift_group.h"/>
+    <File Name="gift/pw_gift_logday_group.cpp"/>
+    <File Name="gift/pw_gift_logday_group.h"/>
+    <File Name="gift/pw_gift_online_group.cpp"/>
+    <File Name="gift/pw_gift_online_group.h"/>
+    <File Name="gift/pw_gift_upgrade.cpp"/>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Wall;--std=c++0x" C_Options="-g" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="../common"/>
+        <IncludePath Value="../proto"/>
+        <IncludePath Value="./msg"/>
+        <IncludePath Value="../../shared/pwmsg"/>
+        <IncludePath Value="../pwcommon"/>
+        <IncludePath Value="../g3dlite/include"/>
+        <IncludePath Value="../libcore/inc"/>
+        <IncludePath Value="../lua/inc"/>
+        <IncludePath Value="./detour/inc"/>
+        <IncludePath Value="./detour"/>
+        <IncludePath Value="./common"/>
+        <IncludePath Value="./characters"/>
+        <IncludePath Value="./ai"/>
+        <IncludePath Value="./human"/>
+        <IncludePath Value="./item"/>
+        <IncludePath Value="./magic"/>
+        <IncludePath Value="./module"/>
+        <IncludePath Value="./movement"/>
+        <IncludePath Value="./quest"/>
+        <IncludePath Value="./srv_login"/>
+        <IncludePath Value="./srv_pull"/>
+        <IncludePath Value="./srv_stage"/>
+        <IncludePath Value="./condition"/>
+        <IncludePath Value="./combat"/>
+        <IncludePath Value="./conf"/>
+        <IncludePath Value="./command"/>
+        <IncludePath Value="./script"/>
+        <IncludePath Value="./astar"/>
+        <IncludePath Value="./reaction"/>
+        <IncludePath Value="./castle"/>
+        <IncludePath Value="./stage_module"/>
+        <IncludePath Value="./activities"/>
+        <IncludePath Value="./collision"/>
+        <IncludePath Value="./srv_support"/>
+        <IncludePath Value="./srv_slg"/>
+        <IncludePath Value="./shop"/>
+        <IncludePath Value="./dragon"/>
+        <IncludePath Value="./bloodline"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+        <Preprocessor Value="_DEBUG"/>
+        <Preprocessor Value="_PW_MEMORY_TRACE_"/>
+      </Compiler>
+      <Linker Options="-rdynamic" Required="yes">
+        <LibraryPath Value="../g3dlite/Debug"/>
+        <LibraryPath Value="../libcore/Debug"/>
+        <LibraryPath Value="../common/Debug"/>
+        <Library Value="libexpat"/>
+        <Library Value="libzmq"/>
+        <Library Value="libACE"/>
+        <Library Value="libtbb"/>
+        <Library Value="liblog4cpp"/>
+        <Library Value="libpthread"/>
+        <Library Value="libmysqlclient"/>
+        <Library Value="libprotobuf"/>
+        <Library Value="libg3dlite"/>
+        <Library Value="libcore"/>
+        <Library Value="libcommon"/>
+        <Library Value="liblua5.1"/>
+        <Library Value="libunittest++"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../bin/$(ProjectName)" IntermediateDirectory="../bin/Debug/$(ProjectName)/" Command="../bin/$(ProjectName)" CommandArguments="./server_0.xml" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../bin/" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Wall;--std=c++0x;-msse2;-mmmx;-mfpmath=sse" C_Options="-msse2;-mmmx;-mfpmath=sse" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="../common"/>
+        <IncludePath Value="../proto"/>
+        <IncludePath Value="./msg"/>
+        <IncludePath Value="../../shared/pwmsg"/>
+        <IncludePath Value="../pwcommon"/>
+        <IncludePath Value="../g3dlite/include"/>
+        <IncludePath Value="../libcore/inc"/>
+        <IncludePath Value="../lua/inc"/>
+        <IncludePath Value="./detour/inc"/>
+        <IncludePath Value="./detour"/>
+        <IncludePath Value="./common"/>
+        <IncludePath Value="./characters"/>
+        <IncludePath Value="./ai"/>
+        <IncludePath Value="./human"/>
+        <IncludePath Value="./item"/>
+        <IncludePath Value="./magic"/>
+        <IncludePath Value="./module"/>
+        <IncludePath Value="./movement"/>
+        <IncludePath Value="./quest"/>
+        <IncludePath Value="./srv_login"/>
+        <IncludePath Value="./srv_pull"/>
+        <IncludePath Value="./srv_stage"/>
+        <IncludePath Value="./condition"/>
+        <IncludePath Value="./combat"/>
+        <IncludePath Value="./conf"/>
+        <IncludePath Value="./command"/>
+        <IncludePath Value="./script"/>
+        <IncludePath Value="./astar"/>
+        <IncludePath Value="./reaction"/>
+        <IncludePath Value="./stage_module"/>
+        <IncludePath Value="./activities"/>
+        <IncludePath Value="./collision"/>
+        <IncludePath Value="./srv_support"/>
+        <IncludePath Value="./srv_slg"/>
+        <IncludePath Value="./shop"/>
+        <IncludePath Value="./dragon"/>
+        <IncludePath Value="./bloodline"/>
+        <IncludePath Value="./dataset"/>
+        <IncludePath Value="./gift"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+        <Preprocessor Value="BT_NO_PROFILE"/>
+      </Compiler>
+      <Linker Options="-O2;-rdynamic" Required="yes">
+        <LibraryPath Value="../g3dlite/Release"/>
+        <LibraryPath Value="../libcore/Release"/>
+        <LibraryPath Value="../common/Release"/>
+        <Library Value="libexpat"/>
+        <Library Value="libzmq"/>
+        <Library Value="libACE"/>
+        <Library Value="libtbb"/>
+        <Library Value="liblog4cpp"/>
+        <Library Value="libpthread"/>
+        <Library Value="libmysqlclient"/>
+        <Library Value="libprotobuf"/>
+        <Library Value="libg3dlite"/>
+        <Library Value="libcore"/>
+        <Library Value="libcommon"/>
+        <Library Value="liblua5.1"/>
+        <Library Value="libunittest++"/>
+        <Library Value="libBulletSoftBody_gmake_x64_release"/>
+        <Library Value="libBulletDynamics_gmake_x64_release"/>
+        <Library Value="libBulletCollision_gmake_x64_release"/>
+        <Library Value="libLinearMath_gmake_x64_release"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../bin/$(ProjectName)" IntermediateDirectory="../bin/Release/$(ProjectName)" Command="../bin/$(ProjectName)" CommandArguments="./server_0.xml" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../bin/" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

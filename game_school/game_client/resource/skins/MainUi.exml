@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.MainUi" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group horizontalCenter="0" left="0" right="0" top="0" verticalCenter="0" bottom="0">
+		<e:Image source="main1_png" top="0" verticalCenter="0" bottom="0" left="0" horizontalCenter="0" right="0"/>
+		<e:Group width="750" height="1334" verticalCenter="0" x="0">
+			<e:Button id="btn_player" label="" x="-229" y="104" scaleX="1" scaleY="1" visible="false">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="player11_png" source.down="player11_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Image id="image_face" width="266" height="192" x="74" y="224" source="player11_face1_png" visible="false"/>
+			<e:Group id="Dragon" width="750" height="1334" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0">
+			</e:Group>
+		</e:Group>
+		<e:Group height="71" anchorOffsetY="0" top="0" right="0" left="0">
+			<e:Image height="62" y="0" source="image_46_png" left="0" right="0"/>
+			<e:Image height="34" y="12" source="image_moneydi_png" width="148" right="38"/>
+			<e:Image height="34" y="12" source="image_moneydi_png" width="148" right="210"/>
+			<e:Image height="34" y="12" source="image_moneydi_png" width="148" right="392"/>
+			<e:Image id="money_coin" height="40" y="8" width="40" right="334" source="image_money1_png"/>
+			<e:Image id="money_tili" height="36" y="11" width="40" right="159" source="image_money3_png"/>
+			<e:Image id="money_dia" height="40" y="8" width="40" right="514" source="image_money2_png"/>
+			<e:Button id="btn_adddia" label="" y="6" width="120" right="404">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png" source.disabled="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_addcoin" label="" y="5" width="120" x="407">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png" source.disabled="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_addtili" label="" y="6" width="120" x="579">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png" source.disabled="image_hui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Label id="label_tili" text="9999" y="15" fontFamily="Microsoft YaHei" bold="true" right="45" textAlign="right" size="28"/>
+			<e:Label id="label_coin" text="9999" y="15" right="217" fontFamily="Microsoft YaHei" bold="true" textAlign="right" size="28"/>
+			<e:Label id="label_dia" text="9999" y="15" right="402" fontFamily="Microsoft YaHei" bold="true" textAlign="right" size="28"/>
+		</e:Group>
+		<e:Group width="103" height="539" anchorOffsetX="0" anchorOffsetY="0" right="0" top="71">
+			<e:Button id="btn_shop" label="" x="5" y="2">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main6_png" source.down="btn_main6_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_gift" label="" x="5" y="25">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main7_png" source.down="btn_main7_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_active" label="" x="5" y="35">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main3_png" source.down="btn_main3_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_mail" label="" x="25" y="55">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main10_png" source.down="btn_main10_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_setup" label="" x="15" y="45">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main9_png" source.down="btn_main9_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="621" height="128" anchorOffsetY="0" anchorOffsetX="0" bottom="0" right="0">
+			<e:Button id="btn_story" label="" x="648" y="5">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main1_png" source.down="btn_main1_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_challenge" label="" x="658" y="5">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main2_png" source.down="btn_main2_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_message" label="" x="678" y="5">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main4_png" source.down="btn_main4_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_atlas" label="" x="688" y="15">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main5_png" source.down="btn_main5_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_draw" label="" x="698" y="25">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_main5_png" source.down="btn_main5_1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:layout>
+			<e:HorizontalLayout horizontalAlign="right"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="108" height="84" anchorOffsetY="0" anchorOffsetX="0" right="0" bottom="150" visible="false">
+			<e:Button id="btn_backbattle" label="" x="648" y="5" height="84">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_fanhuizhandou01_png" source.down="btn_fanhuizhandou02_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:layout>
+			<e:HorizontalLayout horizontalAlign="right"/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="454" height="126" anchorOffsetX="0" anchorOffsetY="0" left="0" top="84">
+			<e:Button id="btn_huodong" label="" left="0" top="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="image_active1_png" source.down="image_active1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+	</e:Group>
+</e:Skin>

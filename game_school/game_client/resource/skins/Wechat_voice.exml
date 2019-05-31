@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Wechat_voice" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group id="chapterChooseGroup" width="750" height="1334" horizontalCenter="0" verticalCenter="0">
+		<e:Image width="750" height="1334" x="0" y="0" source="login_bg_png"/>
+		<e:Image width="750" height="86" x="0" source="title01_png" top="0"/>
+		<e:Button id="btn_back" label="" scaleX="1" scaleY="1" top="7" left="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_back1_png" source.down="btn_back2_png" source.disabled="btn_back3_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Scroller id="sclistchapter" height="1246" scaleX="1" scaleY="1" anchorOffsetY="0" enabled="true" bounces="false" top="86" left="0" right="0" horizontalCenter="0">
+			<e:Group id="chapterChooseItemGroup" width="750" height="1246" anchorOffsetY="0">
+			</e:Group>
+		</e:Scroller>
+		<e:Image width="532.03" height="205.08" source="image_72_png" bottom="0" left="0" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Group width="750" height="1000" horizontalCenter="0" verticalCenter="0" visible="false">
+			<e:Image alpha="1" height="1000" width="750" horizontalCenter="0" verticalCenter="0" source="login_bg_png"/>
+			<e:Scroller id="sclistchapter0" height="900" scaleX="1" scaleY="1" anchorOffsetY="0" enabled="true" bounces="false" width="750" horizontalCenter="0" verticalCenter="0">
+				<e:Group id="chapterChooseItemGroup0" width="750" height="1246" anchorOffsetY="0">
+				<e:Button id="voice_1" label="" left="54" top="-16" anchorOffsetX="0" width="652" anchorOffsetY="0" height="107">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn_dia1_png" source.down="1_1_png" source.disabled="1_2_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+	</e:Group>
+</e:Skin>

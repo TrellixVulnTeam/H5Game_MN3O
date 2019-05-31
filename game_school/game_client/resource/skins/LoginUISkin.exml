@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.LoginUISkin" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="taiyang">
+			<tween:TweenItem target="{image}">
+				<tween:Set>
+					<tween:props>
+						<e:Object scaleX="{0.7}" scaleY="{0.7}" rotation="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="1000">
+					<tween:props>
+						<e:Object scaleX="{1}" scaleY="{1}" rotation="{180}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="1000">
+					<tween:props>
+						<e:Object scaleY="{0.7}" scaleX="{0.7}" rotation="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group verticalCenter="0" horizontalCenter="0" left="0" right="0" top="0" bottom="0">
+		<e:Image scaleX="1" scaleY="1" left="0" verticalCenter="0" horizontalCenter="0" right="0" top="0" bottom="0" width="1080" height="1920" source="login_bg_png"/>
+		<e:Group id="Group_Dragon" width="750" height="1334" horizontalCenter="0" bottom="0"/>
+		<e:Group width="750" height="622" anchorOffsetY="0" horizontalCenter="0" verticalCenter="223">
+			<e:Image anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" height="260" width="514" source="login_namedi_png" horizontalCenter="0" bottom="0"/>
+			<e:Image width="200" height="60" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="login_di_png" x="376" y="412"/>
+			<e:Image width="200" height="59" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="login_di_png" x="151" y="412"/>
+			<e:EditableText id="username" width="180.61" height="35" text="用户名" anchorOffsetY="0" anchorOffsetX="0" textAlign="center" x="162" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xffffff" y="421"/>
+			<e:EditableText id="password" width="157.88" height="35" text="密码" anchorOffsetY="0" textAlign="center" x="398.96" scaleX="1" scaleY="1" fontFamily="Microsoft YaHei" textColor="0xffffff" anchorOffsetX="0" y="421"/>
+			<e:Button id="loginbtn" label="" width="270" height="70" alpha="1" scaleX="1" scaleY="1" horizontalCenter="0" bottom="62">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_login1_png" source.down="btn_login2_png" source.disabled="btn_login3_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Image id="image" width="246" height="246" horizontalCenter="-211" verticalCenter="-157" source="taiyang_png"/>
+			<e:Image width="643" height="372" horizontalCenter="0.5" verticalCenter="-91" source="logo1_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

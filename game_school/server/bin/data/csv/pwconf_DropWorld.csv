@@ -1,0 +1,4 @@
+"掉落ID"	"策划注释"	"等级限制，填入怪物等级上下闭区间"	"怪物类型限制(0x01=普通怪,0x02=精英怪,0x04=稀有怪,0x08=首领怪,0x16=超级首领)"	"掉落时间限制,填入起始时间"	"掉落ID，索引到普通掉落表"	
+"id"	""	"levelLimit"	"monsterTypeLimit"	"timeLimit"	"dropID"	
+"int"	""	"int[]"	"int"	"string[]"	"int"	
+"cs"	""	"s"	"s"	"s"	"s"	

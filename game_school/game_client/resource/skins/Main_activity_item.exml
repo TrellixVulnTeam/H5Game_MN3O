@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Main_activity_item" width="732" height="224" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group anchorOffsetY="0" height="224" width="732" x="0" y="0">
+		<e:Image id="image_back" scaleX="1" scaleY="1" source="image_hui_png" horizontalCenter="0" verticalCenter="0" left="0" right="0" top="0" bottom="0"/>
+		<e:Image id="image_news" width="60" height="70" source="image_talk8_png" top="0" right="0"/>
+		<e:Image id="image_type" width="60" height="70" source="image_talk8_png" top="0" left="0"/>
+		<e:Label id="label_time" text="Label" textAlign="right" anchorOffsetX="0" right="0" bottom="0" width="367"/>
+		<e:Button id="btn_go" label="" horizontalCenter="0" verticalCenter="0" top="0" left="0" right="0" bottom="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>

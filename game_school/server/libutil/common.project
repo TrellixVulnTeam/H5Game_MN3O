@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="common" InternalType="Library">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="common">
+    <File Name="pw_memory.h"/>
+    <File Name="pw_backtrace.cpp"/>
+    <File Name="pw_mem_stream.h"/>
+    <File Name="pw_command.cpp"/>
+    <File Name="pw_backtrace.h"/>
+    <File Name="pw_def.h"/>
+    <File Name="pw_csv.h"/>
+    <File Name="pw_byte_order.h"/>
+    <File Name="pw_runnable.cpp"/>
+    <File Name="pw_tick_timer.cpp"/>
+    <File Name="pw_utils.h"/>
+    <File Name="tokenizer.h"/>
+    <File Name="pw_logger.cpp"/>
+    <File Name="pw_memhook.cpp"/>
+    <File Name="pw_csv.cpp"/>
+    <File Name="pw_runnable.h"/>
+    <File Name="pw_time.cpp"/>
+    <File Name="pw_command.h"/>
+    <File Name="pw_xml.cpp"/>
+    <File Name="pw_time.h"/>
+    <File Name="pw_logger.h"/>
+    <File Name="tokenizer.cpp"/>
+    <File Name="pw_msg.h"/>
+    <File Name="pw_circle_buffer.cpp"/>
+    <File Name="pw_timer_queue.h"/>
+    <File Name="pw_error_handler.cpp"/>
+    <File Name="pw_error_handler.h"/>
+    <File Name="pw_byte_order.cpp"/>
+    <File Name="pw_xml.h"/>
+    <File Name="pw_circle_buffer.h"/>
+    <File Name="pw_fixed_msg.h"/>
+    <File Name="pw_class.h"/>
+    <File Name="pw_tick_timer.h"/>
+    <File Name="pw_utils.cpp"/>
+    <File Name="pw_linked_ptr.h"/>
+    <File Name="pw_memory.inl"/>
+    <File Name="pw_ordered_vector.h"/>
+    <File Name="pw_stack_walker_win32.cpp"/>
+    <File Name="pw_stack_walker_win32.h"/>
+    <File Name="pw_lua.h"/>
+    <File Name="pw_random.cpp"/>
+    <File Name="pw_random.h"/>
+    <File Name="pw_iconv.cpp"/>
+    <File Name="pw_iconv.h"/>
+    <File Name="mongoose.c"/>
+    <File Name="mongoose.h"/>
+    <File Name="pw_destroyer.h"/>
+    <File Name="sqlite3.c"/>
+    <File Name="sqlite3.h"/>
+    <File Name="sqlite3ext.h"/>
+    <File Name="pw_lua.cpp"/>
+    <File Name="pw_luaseri.cpp"/>
+    <File Name="pw_luaseri.h"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <Settings Type="Static Library">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Wall;--std=c++0x" C_Options="-g" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="../libcore/inc"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+        <Preprocessor Value="_DEBUG"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="./Debug/lib$(ProjectName).a" IntermediateDirectory="../bin/Debug/$(ProjectName)" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../bin/Debug/$(ProjectName)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Wall;--std=c++0x" C_Options="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="../libcore/inc"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="./Release/lib$(ProjectName).a" IntermediateDirectory="../bin/Release/$(ProjectName)" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../bin/Release$(ProjectName)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

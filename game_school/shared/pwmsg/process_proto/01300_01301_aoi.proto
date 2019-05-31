@@ -1,0 +1,238 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/01300_01301_aoi.proto
+// -------------------------------------------------------
+
+// -----------------------------------------
+
+message SInterpolationObjectBezier
+{
+    required float elapsed_second = 1;
+    repeated SVector3 bezier_points = 2;
+}
+
+message SInterpolationObjectTracker
+{
+    required int64 target_id = 1;
+    required float elapsed_second = 2;
+    required float speed = 3;
+}
+
+message SInterpolationObject
+{
+    required int32 type = 1;
+    optional SInterpolationObjectBezier bezier = 2;
+    optional SInterpolationObjectTracker tracker = 3;
+}
+
+// -----------------------------------------
+
+message SCollisionObject
+{
+	required int32 collision_id = 1;
+	required int64 owner = 2;
+	required float radius = 3;
+	required SVector3 position = 4;
+	required SVector3 orientation = 5;
+    required SInterpolationObject interpolation = 6;
+    required float survive_second = 7;
+
+}
+
+// -----------------------------------------
+
+message SFormationObject
+{
+	required int32 id = 1;
+	required int32 lv = 2;
+}
+
+message SWarlordObject
+{
+	required int32 warlord_rank = 1; // 武神镜像排名
+}
+
+message SLegionWarStatueObject
+{
+	required int32 legion_war_term = 1;	// 联盟雕像 1本届 2上届
+	required int64 guild_id = 2; 
+}
+
+message SHumanObject
+{
+	required int32 pro = 1;
+	required int32 sex = 2;
+	repeated SEquipObject equipObject = 3;
+    required int64 guildid = 4; // 0表示没有公会
+	repeated int32 magics = 5;	// 装备的技能
+	optional int32 title = 6;	// 玩家当前头顶称号
+	optional bool meditating = 7; // 是否挂机状态中
+	optional SWarlordObject warlord = 8; // 武神镜像信息
+	optional SLegionWarStatueObject legion_war_statue = 9; // 联盟雕像信息
+	optional bool dressed = 10;	// 是否穿时装
+	optional bytes server_name = 11; // 服务器组名
+    optional STencentUserInfo tencent_user_info = 12; // 腾讯用户信息
+	optional int32 viplv = 13;	// 玩家VIP等级
+	optional int32 equip_relic_id = 14;	// 血脉圣物id
+	optional int32 equip_relic_lv = 15;	// 血脉圣物等级
+	repeated SFormationObject equip_formations = 16; // 法阵特效
+	required int64 teamid = 17; // 0表示没有队伍
+	optional int32 magic_weapon_id =  18;//法宝Id
+	optional int32 flag_id =  19;//背旗Id
+	optional int32 magic_circle_id =  20;//法阵Id
+}
+
+message SCharmObject
+{
+	required int64 owner = 1;
+	required int32 magic_type = 2;
+}
+
+message SBreakableObject
+{
+	required int32 type = 1;
+	optional int64 owner = 2;
+}
+
+message SHeroObject
+{
+    required int32 type = 1;
+	required int64 ownerId = 2;
+    required bytes ownerName = 3;
+	required int32 heroLv = 4;
+	required bytes heroName = 5;
+	required int32 heroDID = 6;
+}
+
+message SQuestObject
+{
+  required int32 type = 1;
+	required int64 ownerId = 2;
+  required bytes ownerName = 3;
+	required int32 objId = 4;
+}
+
+message SCreatureObject
+{
+	required bool incombat = 1;
+	repeated int32 special_ability = 2;
+}
+
+message STrapObject
+{
+    required int64 owner = 1;
+    required int32 performance = 2;
+}
+
+message SGatherObject
+{
+	required float min_gather_dist = 1;
+}
+
+message SServantObject
+{
+    required int32 type = 1;
+	required int64 ownerId = 2;
+    required bytes ownerName = 3;
+	required int32 servantLv = 4;
+	required bytes servantName = 5;
+	required int32 servantDID = 6;
+}
+
+message SMultiRideObject
+{
+	required int32 type = 1;
+	required int64 ownerId = 2;
+    required int32 rideId = 3;
+}
+
+message SLansquenetObject
+{
+	required int32 type = 1;
+	required int64 ownerId = 2;
+    required bytes ownerName = 3;
+	required int32 lansquenetLv = 4;
+	required int64 lansquenetDID = 5;
+}
+
+message SUnitObject
+{
+	required int32 type = 1;
+	required float life = 2;
+	required float mana = 3;
+	required float max_life = 4;
+	required float speed = 5;
+	required int32 level = 6;
+	required int32 faction = 7;
+	repeated SAura auras = 8;
+	optional int32 ctrl_type = 9;
+	optional int64 ctrl_id = 10;
+	optional int64 ctrl_owner_id = 11;
+	optional SActionObject actionObject = 12;
+	optional SHumanObject humanObject = 13;
+	optional SBreakableObject breakableObject = 14;
+	optional SCharmObject charmObject = 15;
+	optional SStaticObject staticObject = 16;
+	optional SHeroObject heroObject = 17;
+	optional SCreatureObject creatureObject = 18;
+    optional STrapObject trapObject = 19;
+	optional SGatherObject gatherObject = 20;
+    optional int32 pkmode = 21;
+    optional int64 pkmodeData = 22;
+    optional bool dead = 23;
+	optional SQuestObject questObject = 24;
+	optional SServantObject servantObject = 25;
+	optional SLansquenetObject lansquenetObject = 26;
+	optional SMultiRideObject   multiRideObject = 27;
+}
+
+// ----------------------------------------
+
+message SItemObject
+{
+	required int32 type = 1;
+	required int32 count = 2;
+	required int64 dropper_id = 3;
+	required bool dropping = 4;
+	required int64 owner = 5;
+	optional SItem itemInfo = 6;	// 物品详细信息
+	optional int32 index = 7;
+}
+
+// -----------------------------------------
+
+
+// -----------------------------------------
+
+message SGameEntity
+{
+	required int64 id = 1;
+	required int32 type = 2;
+	required bytes name = 3;
+	optional SUnitObject unit = 4;
+	optional SCollisionObject collision = 5;
+	optional SItemObject sitem = 6;
+};
+
+// -----------------------------------------
+
+message SCGameObjectEnter
+{
+	option (msgid) = 1300;
+	required SGameEntity obj = 1;
+	required SVector3 position = 2;
+	required SVector3 orientation = 3;
+	optional SMotion motion = 4;
+	optional int64 view_tag = 5;
+}
+
+message SCGameObjectLeave
+{
+	option (msgid) = 1301;
+	required int64 id = 1;
+    required int64 flags = 2;
+}

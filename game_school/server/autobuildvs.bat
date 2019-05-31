@@ -1,0 +1,1 @@
+BuildConsole.exe build2013/pwngs.sln /prj="*" /rebuild /All  /Log=test.log /OpenMonitor /cfg="Debug|Win32"

@@ -1,0 +1,9 @@
+{
+	"host": "10.64.72.77",
+	"port": 8800,
+	"user": "test",
+	"pswd": "test",
+	"databases": [ "4300","4301","4302" ],
+	"default_zoneids" : [ 4300,4301,4302],
+	"default_localids": [ 0,1,2 ]
+}

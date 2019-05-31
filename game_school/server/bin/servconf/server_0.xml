@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>worldsrv0</name>
+    
+	<communicator>
+		<listen_addr>tcp://GAME1_ADDR:WORLDSRV0_PORT</listen_addr>
+	</communicator>
+	
+    <pwworldsrv>
+		<id>0</id>
+		<mode>0</mode>
+		<csv_path>./data/csv/</csv_path>        
+        
+        <thread_world>
+            <enable>true</enable>
+            <thread_num>WORLDSRV0_THREAD_NUM</thread_num>
+        </thread_world>
+        
+        <thread_login>
+            <enable>true</enable>
+        </thread_login>
+        
+        <thread_support>
+            <enable>false</enable>
+            <port>port_support</port>
+        </thread_support>
+
+	</pwworldsrv>
+	<nodes>
+		<count>5</count>
+		<node1>
+			<name>dbsrv</name>
+			<addr>tcp://GAME1_ADDR:DBSRV_PORT</addr>
+		</node1>
+		<node2>
+			<name>connsrv1</name>
+			<addr>tcp://GAME1_ADDR:CONNSRV1_PORT</addr>
+		</node2>
+		<node3>
+			<name>connsrv2</name>
+			<addr>tcp://LINK1_ADDR:CONNSRV2_PORT</addr>
+		</node3>
+		<node4>
+			<name>ctrlsrv</name>
+			<addr>tcp://GAME1_ADDR:CTRLSRV_PORT</addr>
+		</node4>
+		<node5>
+			<name>accsrv</name>
+			<addr>tcp://GAME1_ADDR:ACCSRV_PORT</addr>
+		</node5>
+	</nodes>
+</pwdist>
+
+

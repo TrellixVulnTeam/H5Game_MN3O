@@ -1,0 +1,117 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/02800_02999_relation.proto
+// -------------------------------------------------------
+// -----------------------------------------
+
+// 客户端请求: 增加关系成员
+message CSAddRelationMember
+{
+	option (msgid) = 2800;
+	repeated int64 rid = 1;
+	repeated bytes name = 2;
+	required int32 type = 3;
+}
+
+// 服务端通知: 增加成员反馈
+message SCAddRelationMemberResult
+{
+	option (msgid) = 2801;
+	required int32 type = 1;
+	required int32 result = 2;
+	optional SRelationMember member = 3;
+}
+
+// 客户端请求: 删除关系成员
+message CSDelRelationMember
+{
+	option (msgid) = 2802;
+	required int64 rid = 1;
+	required int32 type = 2;
+}
+
+// 服务端通知: 删除成员反馈
+message SCDelRelationMemberResult
+{
+	option (msgid) = 2803;
+	required int32 type = 1;
+	required int64 rid = 2;
+	required int32 result = 3;
+}
+
+// 客户端请求: 获取关系列表
+message CSQueryRelation
+{
+	option (msgid) = 2804;
+	required int32 type = 1;
+}
+
+// 服务端通知: 下发关系列表
+message SCQueryRelationResult
+{
+	option (msgid) = 2805;
+	required int32 type = 1;
+	repeated SRelationMember members = 2;
+}
+
+// 服务端通知: 更新单一关系成员状态
+message SCUpdateRelationMember
+{
+	option (msgid) = 2808;
+	required int32 type = 1;
+	required SRelationMemberStatus status = 2;
+}
+
+// 客户端请求: 请求被添加关系
+message CSRequestRelationMember
+{
+	option (msgid) = 2810;
+	required int64 rid = 1;
+	required int32 type = 2;
+}
+
+// 服务端通知: 通知添加关系请求
+message SCNotifyRelationRequest
+{
+	option (msgid) = 2811;
+	required int64 rid = 1;
+	required bytes name = 2;
+	required int32 type = 3;
+}
+
+// 客户端请求: 获取好友亲密度列表
+message CSQueryFriendClose
+{
+	option (msgid) = 2820;
+}
+
+// 服务端通知: 下发好友亲密度列表
+message SCQueryFriendCloseResult
+{
+	option (msgid) = 2821;
+	repeated SFriendClose members = 1;
+}
+
+// 服务端通知: 更新好友亲密度
+message SCUpdateFriendClose
+{
+	option (msgid) = 2822;
+	required SFriendClose member = 1;
+}
+
+// 客户端请求：获取推荐好友列表
+message CSRequestRecommendLists
+{
+	option (msgid) = 2823;
+}
+
+// 服务器返回：更新推荐好友列表
+message SCUpdateRecommendLists
+{
+	option (msgid) = 2824;
+	repeated SRecommendFriend members = 1;
+}

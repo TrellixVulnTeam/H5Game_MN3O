@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Array_item" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="250" height="500">
+	<e:Group id="rootgroup" width="250" height="500" horizontalCenter="0" top="0">
+		<e:Image id="base_back" anchorOffsetX="0" anchorOffsetY="0" source="image_array2_png" width="400" height="669" y="0" x="0" visible="false"/>
+
+		<e:Image id="image_lock" scale9Grid="23,29,29,24" anchorOffsetX="0" width="240" anchorOffsetY="0" height="120" horizontalCenter="0" bottom="0" source="image_36_png" visible="false"/>
+
+		<e:Image id="point_back" scale9Grid="23,29,29,24" anchorOffsetX="0" width="58" anchorOffsetY="0" height="46.63" source="image_37_png" bottom="0" left="0" visible="false"/>
+		<e:Label id="label_position" text="1" fontFamily="Microsoft YaHei" bold="true" size="40" textColor="0x700b0b" stroke="2" strokeColor="0xffffff" left="19" bottom="0" visible="false"/>
+		<e:Label id="label_lock" text="55级开启" fontFamily="Microsoft YaHei" bold="true" size="40" textColor="0x700B0B" stroke="2" strokeColor="0xFFFFFF" horizontalCenter="0.5" verticalCenter="-26" visible="false"/>
+		<e:Button id="image_plus" label="" width="140" height="140" horizontalCenter="-13" verticalCenter="0.5">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_plus_png" source.down="image_plus_png" source.disabled="image_plus_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_add" label="" left="43" right="60" top="0" bottom="0">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+
+
+		<e:Image id="player_image" scale9Grid="23,29,29,24" anchorOffsetX="0" anchorOffsetY="0" source="player2_png" width="256" height="455" y="43.96" x="-56"/>
+		<e:Image id="combat_image" scale9Grid="23,29,29,24" anchorOffsetX="0" width="120" anchorOffsetY="0" height="120" source="image_zhanlidi_png" x="0" y="410" visible="false"/>
+
+		<e:Group id="group_player" x="140" y="140" visible="false"/>
+	</e:Group>
+</e:Skin>

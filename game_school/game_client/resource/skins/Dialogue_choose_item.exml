@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Dialogue_choose_item" width="700" height="81" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group anchorOffsetY="0" top="0" left="0" verticalCenter="0" bottom="0" horizontalCenter="0" right="0" width="550">
+		<e:Image width="700" height="81" y="0" horizontalCenter="0" source="image_dia01_png"/>
+		<e:Label id="label_dia" text="Label" anchorOffsetX="0" width="500" fontFamily="Microsoft YaHei" height="40" verticalAlign="middle" size="28" textAlign="center" anchorOffsetY="0" horizontalCenter="0" verticalCenter="-1" textColor="0xffffff"/>
+		<e:Button id="button_dia" label="" x="0" y="0" width="700" height="81">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_hui_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>

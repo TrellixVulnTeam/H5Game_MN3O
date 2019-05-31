@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root text="root"><!--type 1为事件，2为动作，3为条件-->
+	<dungeon name="pw_dungeonscript1" text="pw_dungeonscript1" id="0" typeid="0" childs="1">
+		<node name="SetEventHandler" text="创建事件动作" id="1" type="2" typeid="1" childs="2" param1="StageEvents.DungeonCreated" param2="EventCreateProcess">
+			<node name="EventCreateProcess" text="创建副本事件" id="2" type="1" typeid="2" childs="3">
+				<node name="self.SModDungeonScript:CreateTimer" text="创建time动作" id="3" type="2" typeid="3" childs="4" param1="10" param2="Timer1">
+					<node name="Timer1" text="创建time1事件" id="4" type="1" typeid="4"/>
+				</node>
+			</node>
+		</node>			
+	</dungeon>
+</root>
+

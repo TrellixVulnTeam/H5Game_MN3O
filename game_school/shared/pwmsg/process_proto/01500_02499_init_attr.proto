@@ -1,0 +1,300 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/01500_02499_init_attr.proto
+// -------------------------------------------------------
+
+
+message CSUnitAttrQuery
+{
+	option (msgid) = 1500;
+	required int64 id = 1;
+	required int64 context = 2;
+	repeated int32 attrs = 3;
+}
+
+message SCUnitAttrQuery
+{
+	option (msgid) = 1501;
+	required int64 id = 1;
+	required int64 context = 2;
+	repeated SUnitAttrValue attrs = 3;
+}
+
+message SCUnitAttrUpdate
+{
+	option (msgid) = 1503;
+	required int64 id = 1;
+	repeated SUnitAttrValue attrs = 2;
+}
+
+
+// --------------------------------------------------------------------------
+
+message SCMotionFlags
+{
+    option (msgid) = 1510;
+    required int64 id = 1;
+    required int32 motion_flags = 2;
+}
+// --------------------------------------------------------------------------
+
+
+message CSMagicTypeOper
+{
+	option (msgid) = 1550;
+	required EMagicTypeOper oper = 1;
+	optional int32 data = 2;
+};
+
+message SCMagicTypeOper
+{
+	option (msgid) = 1551;
+	required int64 id = 1;
+	required EMagicTypeOper oper = 2;
+	repeated SMagicType magics = 3;
+	optional int32 data = 4;
+}
+
+message CSMagicUpgrade
+{
+    option (msgid) = 1555;
+    required int32 magic_type = 1;
+    optional int32 way = 2; // 升级方式(暂不用)
+}
+
+message CSMagicReplace
+{
+	option (msgid) = 1556;
+    required int32 magic_type = 1;
+    required int32 magic_loc = 2;
+}
+
+message SCMagicUpgrade
+{
+	option (msgid) = 1557;
+    required int32 old_id = 1;
+	required int32 new_id = 2;
+}
+
+// 玩家当前装备的技能列表发生变化(键位信息)
+message SCMagicEquipChanged
+{
+	option (msgid) = 1558;
+	required int64 id = 1;
+	repeated int32 magics = 2;
+}
+
+message SCMagicBarOper
+{
+	option (msgid) = 1561;
+	required int64 id = 1;
+	required int32 type = 2;
+	repeated SMagicType magics = 3;
+}
+
+// -----------------------------------------
+
+// 客户端显示属性变化开关
+message SCDisplayStatistic
+{
+	option (msgid) = 1600;
+	required int64 id = 1;
+	required bool apply = 2;
+}
+
+message CSAskHumanStatistic
+{
+	option (msgid) = 1601;
+}
+
+message SCRefreshStatistic
+{
+	option (msgid) 	= 1602;
+	required int64 id = 1;
+	required float HP = 2;
+	required float EP = 3;	// 精力 
+	required float IFP = 4; // 内力
+	repeated SStatisticObject obj = 5;
+	required int32 refresh_type = 6;
+}
+
+message SCUpdateStatistic
+{
+	option (msgid) = 1603;
+	required int64 id = 1;
+	required float HP = 2;
+	required float EP = 3;	// 精力 
+	required float IFP = 4; // 内力
+	repeated SStatisticObject obj = 5;
+}
+
+message SCUpdateMP
+{
+	option (msgid) = 1604;
+	required int64 id = 1;
+	required int32 type = 2;
+	required int32 flag = 3; //0表示加  1表示减
+	required float value = 4;
+    optional int64 trigger = 5; // 触发者id
+}
+
+message SCUpdateHP
+{
+	option (msgid) = 1605;
+	required int64 id = 1;
+	required int32 type = 2;
+	required int32 flag = 3; //0表示加  1表示减
+	required float value = 4;
+    optional int64 trigger = 5; // 触发者id
+	
+}
+
+message SCUpdateDurability
+{
+	option (msgid) = 1606;
+	required int64 id = 1;
+	required int32 value = 2;
+}
+
+message SCUpdateFaction
+{
+	option (msgid) = 1607;
+	required int64 id = 1;
+	required int32 faction = 2;
+}
+
+message SCUpdatePkmode
+{
+    option (msgid) = 1608;
+	required int64 id = 1;
+    required int32 pkmode = 2;
+    required int64 pkmode_data = 3;
+}
+
+message SCUpdateStatisticMod
+{
+	option (msgid) = 1620;
+	required int64 id = 1;
+	repeated SStatisticMod mods = 2;
+}
+
+// 下发给客户端的更新bitsetEx数据的消息
+message SCBitsetEx
+{
+	option (msgid) = 1700;
+	required int64 target = 1;
+	repeated int32 set_bits = 2;
+	repeated int32 rst_bits = 3; 
+	repeated int32 set_bitexs = 4;
+	repeated int32 rst_bitexs = 5;
+}
+
+// 战斗状态
+message SCCombatStatus
+{
+	option (msgid) = 1705;
+	required int64 owner = 1;
+	required bool incombat = 2;
+}
+
+
+message SCClientSettingInitial
+{
+    option (msgid) = 1710;
+    required bytes value = 1;
+}
+
+message CSClientSettingUpdate
+{
+    option (msgid) = 1711;
+    required bytes value = 1;
+}
+
+
+// 跨服时，向客户端通知
+message SCUpdateServerName
+{
+	option (msgid) = 1750;
+	required int64 id = 1;
+    required bytes server_name = 2;
+}
+
+// 技能一键升级
+message CSMagicUpgradeOneKey
+{
+    option (msgid) = 1751;
+	required int64 target_level = 1;
+}
+
+
+// 技能一键升级返回
+message SCMagicUpgradeOneKeyResult
+{
+    option (msgid) = 1752;
+    required int64 result = 1;
+    repeated int32 upgrade_magicid = 2;
+}
+
+// 指定属性值更新
+message SCUpdateModValue
+{
+	option (msgid) = 1753;
+	required int64 id = 1;
+	required int32 attr = 2;
+	required int32 type = 3;
+	required int32 flag = 4; //0表示加  1表示减
+	required float value = 5;
+}
+
+// 技能连续升级 
+message CSMagicUpgradeRepeated
+{
+    option (msgid) = 1754;
+    required int32 magic_type = 1;
+	required int32 target_level = 2;
+}
+
+// 技能连续升级返回
+message SCMagicUpgradeRepeatedResult
+{
+	option (msgid) = 1755;
+    required int32 old_magic_type = 1;
+	required int32 new_magic_type = 2;
+	required int32 target_level = 3;
+}
+
+//技能进阶
+message CSMagicAdvance
+{
+    option (msgid) = 1756;
+    required int32 magic_type = 1;
+    optional int32 way = 2; // 升级方式(暂不用)
+}
+
+message SCMagicAdvance
+{
+	option (msgid) = 1757;
+    required int32 old_id = 1;
+	required int32 new_id = 2;
+}
+
+//技能阶级连续升级
+message CSMagicAdvanceRepeated
+{
+    option (msgid) = 1758;
+	required int32 magic_type = 1;
+	required int32 target_level = 2;
+}
+
+//技能阶级连续升级返回
+message SCMagicAdvanceRepeatedResult
+{
+    option (msgid) = 1759;
+    required int32 old_magic_type = 1;
+	required int32 new_magic_type = 2;
+	required int32 target_level = 3;
+}

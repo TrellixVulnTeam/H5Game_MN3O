@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>test</name>
+	<communicator>
+		<listen_addr>tcp://*:8700</listen_addr>
+	</communicator>
+</pwdist>
+
+

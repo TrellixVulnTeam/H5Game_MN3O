@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.ActivityReward" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" left="0" right="0" top="0" bottom="0">
+		<e:Image id="back" scaleX="1" scaleY="1" left="0" top="0" verticalCenter="0" bottom="0" horizontalCenter="0" right="0" source="login_bg_png"/>
+		<e:Group id="Group_set" width="700" height="1105" horizontalCenter="0" verticalCenter="-59" anchorOffsetY="0">
+			<e:Group id="gro_btn" anchorOffsetY="0" anchorOffsetX="0" x="0" y="0" width="750" height="53" visible="false">
+				<e:Group id="btn_gro_bulb0" horizontalCenter="0" anchorOffsetY="0" left="25" right="25" bottom="56" width="176" height="45" x="10" y="10">
+				<e:RadioButton id="btn_0" label="" scaleX="1" scaleY="1" right="0" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" width="176" height="45">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn04_1_png" source.down="btn04_2_png" source.disabled="btn04_3_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" xmlns:tween="egret.tween.*"/>
+						</e:Skin>
+					</e:skinName>
+				</e:RadioButton>
+				<e:Image id="image_bulb0" width="26" height="26" source="image_69_png" anchorOffsetX="0" anchorOffsetY="0" scaleY="1.08" scaleX="1" left="0" top="0"/>
+				<e:layout>
+					<e:BasicLayout/>
+				</e:layout>
+				</e:Group>
+				<e:Group id="btn_gro_bulb1" horizontalCenter="0" anchorOffsetY="0" left="25" right="25" bottom="56" width="176" height="45" x="20" y="20">
+					<e:RadioButton id="btn_1" label="" scaleX="1" scaleY="1" right="0" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" width="176" height="45">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn04_1_png" source.down="btn04_2_png" source.disabled="btn04_3_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" xmlns:tween="egret.tween.*"/>
+						</e:Skin>
+					</e:skinName>
+					</e:RadioButton>
+					<e:Image id="image_bulb1" width="26" height="26" source="image_69_png" anchorOffsetX="0" anchorOffsetY="0" scaleY="1.08" scaleX="1" left="0" top="0"/>
+					<e:layout>
+					<e:BasicLayout/>
+					</e:layout>
+				</e:Group>
+				<e:Group id="btn_gro_bulb2" horizontalCenter="0" anchorOffsetY="0" left="25" right="25" bottom="56" width="176" height="45" x="30" y="30">
+					<e:RadioButton id="btn_2" label="" scaleX="1" scaleY="1" right="0" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" width="176" height="45">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn04_1_png" source.down="btn04_2_png" source.disabled="btn04_3_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" xmlns:tween="egret.tween.*"/>
+						</e:Skin>
+					</e:skinName>
+					</e:RadioButton>
+					<e:Image id="image_bulb2" width="26" height="26" source="image_69_png" anchorOffsetX="0" anchorOffsetY="0" scaleY="1.08" scaleX="1" left="0" top="0"/>
+					<e:layout>
+					<e:BasicLayout/>
+					</e:layout>
+				</e:Group>
+				<e:Group id="btn_gro_bulb3" horizontalCenter="0" anchorOffsetY="0" left="25" right="25" bottom="56" width="176" height="45" x="40" y="40">
+					<e:RadioButton id="btn_3" label="" scaleX="1" scaleY="1" right="0" horizontalCenter="0" left="0" top="0" verticalCenter="0" bottom="0" width="176" height="45">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn04_1_png" source.down="btn04_2_png" source.disabled="btn04_3_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" xmlns:tween="egret.tween.*"/>
+						</e:Skin>
+					</e:skinName>
+					</e:RadioButton>
+					<e:Image id="image_bulb3" width="26" height="26" source="image_69_png" anchorOffsetX="0" anchorOffsetY="0" scaleY="1.08" scaleX="1" left="0" top="0"/>
+					<e:layout>
+					<e:BasicLayout/>
+					</e:layout>
+				</e:Group>
+				<e:layout>
+				<e:HorizontalLayout gap="15"/>
+				</e:layout>
+			</e:Group>
+			<e:Group id="gro_sign" anchorOffsetY="0" height="1105" top="0" horizontalCenter="0" left="-25" right="-25">
+				<e:Image id="background" width="700" height="1105" fillMode="scale" scaleX="1" scaleY="1" anchorOffsetY="0" source="sign_bg_png" y="0" horizontalCenter="0"/>
+				<e:Image width="650" height="420" fillMode="scale" scaleX="1" scaleY="1" anchorOffsetY="0" y="109" horizontalCenter="-7" source="image_sign10_png"/>
+				<e:Group id="gro_sign_daily" width="340" height="188" anchorOffsetY="0" scaleX="1" scaleY="1" name="gro_sign_daily" anchorOffsetX="0" y="117.4" right="87">
+					<e:Image width="278" height="86" anchorOffsetY="0" source="image_sign9_png" horizontalCenter="0" top="0"/>
+					<e:Label id="label_daily_des" text="当前奖励" anchorOffsetX="0" width="168" fontFamily="Microsoft YaHei" name="label_daily_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" strokeColor="0xffffff" size="30" horizontalCenter="0" bold="true" top="12" textColor="0xffffff"/>
+					<e:Group id="gro_sign_daily_point" height="120" width="120" name="gro_sign_daily_point" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" x="110" top="36">
+						<e:layout>
+							<e:TileLayout horizontalGap="6" paddingLeft="13" paddingTop="30"/>
+						</e:layout>
+					</e:Group>
+				</e:Group>
+				<e:Group id="gro_sign_acc" width="340" height="204" y="314.34" anchorOffsetY="0" scaleX="1" scaleY="1" name="gro_sign_acc" anchorOffsetX="0" horizontalCenter="118">
+					<e:Image width="278" height="86" anchorOffsetY="0" source="image_sign9_png" top="0" horizontalCenter="0"/>
+					<e:Label id="label_acc_des" text="累签N天" anchorOffsetX="0" width="168" fontFamily="Microsoft YaHei" name="label_acc_des" anchorOffsetY="0" height="30" textAlign="center" size="30" horizontalCenter="0" top="12" bold="true" strokeColor="0xffffff" textColor="0xffffff"/>
+					<e:Group id="gro_sign_acc_point" width="120" height="120" anchorOffsetX="0" anchorOffsetY="0" name="gro_sign_acc_point" horizontalCenter="0" top="36">
+						<e:layout>
+							<e:TileLayout paddingLeft="13" paddingTop="30"/>
+						</e:layout>
+					</e:Group>
+				</e:Group>
+				<e:Group id="gro_cur_date" width="260" height="300" anchorOffsetY="0" scaleX="1" scaleY="1" name="gro_cur_date" anchorOffsetX="0" horizontalCenter="-176" top="169">
+					<e:Image width="260" height="300" horizontalCenter="0" bottom="0" anchorOffsetY="0" source="image_sign11_png"/>
+					<e:Label id="label_cur_week" text="星期N" anchorOffsetX="0" width="200" fontFamily="Microsoft YaHei" name="label_cur_week" anchorOffsetY="0" height="50" scaleX="1" scaleY="1" textAlign="center" bold="true" horizontalCenter="0" textColor="0x000000" size="40" top="16"/>
+					<e:Label id="label_cur_date" text="10" anchorOffsetX="0" width="200" fontFamily="Microsoft YaHei" name="label_cur_date" anchorOffsetY="0" height="140" scaleX="1" scaleY="1" size="110" bold="true" strokeColor="0xffffff" stroke="0" textAlign="center" textColor="0x000000" horizontalCenter="0" verticalCenter="32"/>
+				</e:Group>
+				<e:Group id="gro_date" width="650" height="470" anchorOffsetY="0" scaleX="1" scaleY="1" bottom="43" name="gro_date" anchorOffsetX="0" horizontalCenter="-6">
+					<e:Label id="label_sign_des" text="本月签到：10次，还差10次可领取累签奖励" y="-42.92" anchorOffsetX="0" width="626" fontFamily="Microsoft YaHei" name="label_sign_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" horizontalCenter="0" bold="true" textColor="0xffffff"/>
+					<e:Group id="gro_total_week" height="30" name="gro_total_week" width="650" y="13.08" horizontalCenter="0">
+						<e:Label id="label_week1" text="一" y="43" anchorOffsetX="0" fontFamily="Microsoft YaHei" name="label_sign_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" width="30" horizontalCenter="0" x="0" bold="true" textColor="0x932a26"/>
+						<e:Label id="label_week2" text="二" y="53" anchorOffsetX="0" fontFamily="Microsoft YaHei" name="label_sign_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" width="30" horizontalCenter="0" x="10" bold="true" textColor="0x932a26"/>
+						<e:Label id="label_week3" text="三" y="63" anchorOffsetX="0" fontFamily="Microsoft YaHei" name="label_sign_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" width="30" horizontalCenter="0" x="20" bold="true" textColor="0x932a26"/>
+						<e:Label id="label_week4" text="四" y="73" anchorOffsetX="0" fontFamily="Microsoft YaHei" name="label_sign_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" width="30" horizontalCenter="0" x="30" bold="true" textColor="0x932a26"/>
+						<e:Label id="label_week5" text="五" y="83" anchorOffsetX="0" fontFamily="Microsoft YaHei" name="label_sign_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" width="30" horizontalCenter="0" x="40" bold="true" textColor="0x932a26"/>
+						<e:Label id="label_week6" text="六" y="93" anchorOffsetX="0" fontFamily="Microsoft YaHei" name="label_sign_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" width="30" horizontalCenter="0" x="50" bold="true" textColor="0x932a26"/>
+						<e:Label id="label_week7" text="日" y="103" anchorOffsetX="0" fontFamily="Microsoft YaHei" name="label_sign_des" anchorOffsetY="0" height="30" scaleX="1" scaleY="1" textAlign="center" width="30" horizontalCenter="0" x="60" bold="true" textColor="0x932a26"/>
+						<e:layout>
+							<e:HorizontalLayout paddingLeft="25" gap="65"/>
+						</e:layout>
+					</e:Group>
+					<e:Scroller id="scro_date" height="400" anchorOffsetY="0" name="scro_date" width="650" y="62" horizontalCenter="0">
+						<e:Group id="gro_date_point" anchorOffsetX="0" width="650" anchorOffsetY="0" height="400" name="gro_date_point">
+							<e:layout>
+								<e:TileLayout horizontalGap="30" paddingLeft="8" verticalGap="16"/>
+							</e:layout>
+						</e:Group>
+					</e:Scroller>
+				</e:Group>
+				<e:Button id="btn_sign" label="" name="btn_sign" x="426" y="1128" width="324" height="114">
+					<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn_sign2_png" source.down="btn_sign1_png" source.disabled="btn_sign3_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</e:skinName>
+				</e:Button>
+				<e:Button id="btn_buqian" label="" name="btn_buqian" x="426" y="1128" width="324" height="114">
+					<e:skinName>
+						<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="btn_buqian2_png" source.down="btn_buqian1_png" source.disabled="btn_buqian3_png"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+						</e:Skin>
+					</e:skinName>
+				</e:Button>
+			</e:Group>
+			<e:Group id="gro_cost" anchorOffsetY="0" left="0" right="0" top="55" bottom="0" visible="false">
+			</e:Group>
+			<e:Group id="gro_vip" anchorOffsetY="0" left="0" right="0" top="55" bottom="0" visible="false">
+			</e:Group>
+			<e:Group id="gro_other" anchorOffsetY="0" left="0" right="0" top="55" bottom="0" visible="false"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

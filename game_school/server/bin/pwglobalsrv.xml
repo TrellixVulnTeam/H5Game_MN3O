@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>globalsrv</name>
+	<communicator>
+		<listen_addr>tcp://127.0.0.1:8500</listen_addr>
+	</communicator>
+	<pwglobalsrv>
+		<database>
+			<host>127.0.0.1</host>
+			<port>8600</port>
+			<name>global</name>
+			<user>test</user>
+			<pswd>test</pswd>
+		</database>		
+	</pwglobalsrv>
+</pwdist>

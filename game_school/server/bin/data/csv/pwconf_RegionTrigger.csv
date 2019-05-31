@@ -1,0 +1,6 @@
+"触发器ID"	"类型(0=圆,1=矩形)"	"地图id"	"中心点X"	"中心点Z"	"圆为半径,矩形为X方向"	"扩展Z"	"调用脚本"	"中文注释"	
+"trigger_id"	"region_type"	"stage"	"center_x"	"center_z"	"exten_x"	"exten_z"	"fun"	"note"	
+"int"	"int"	"int"	"float"	"float"	"float"	"float"	"string"	"string"	
+"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"s"	"c"	
+"38"	"0"	"1251"	"149.000000"	"81.800000"	"1.500000"	"1.500000"	"OnTrigger35"	"野外1->北境"	
+"39"	"0"	"1251"	"88.500000"	"183.000000"	"1.500000"	"1.500000"	"OnTrigger36"	"野外1->圣光城"	

@@ -1,0 +1,113 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/30000_30999_dungeonscript.proto
+// -------------------------------------------------------
+
+message SCLaunchPolt
+{
+	option (msgid) = 30000;
+	required int32 id = 1;
+	required int64 context = 2;
+	optional int32 quest_type = 3;
+}
+
+message CSPoltCompleted
+{
+	option (msgid) = 30001;
+	required int32 id = 1;
+	required int64 context = 2;
+}
+
+message CSPoltEvent
+{
+    option (msgid) = 30002;
+	required int32 id = 1;
+    required bytes event_name = 2;
+    required int64 event_data = 3;
+    optional bytes event_data_str = 4;
+}
+
+message SCEnableBlockEffects
+{
+    option (msgid) = 30010;
+    required int32 id = 1;
+    required bool enable = 2;
+}
+
+message SCPreloadResources
+{
+    option (msgid) = 30020;
+    repeated int32 ids = 1;
+}
+
+message SCPreloadPolts
+{
+	option (msgid) = 30021;
+	repeated int32 ids = 1;
+}
+
+message STargetInfo
+{
+	required int32 type = 1;
+	required int32 strid = 2;
+	optional int32 count = 3;
+	optional int32 maxcount = 4;
+	optional bool ok = 5;
+	optional int32 pathid = 6;
+}
+
+// 副本目标
+message SCDungeonTargetList
+{
+	option (msgid) = 30025;
+	repeated STargetInfo targetlist = 1;
+	required int32 timesec = 2;
+}
+
+message SDungeonHumanInfo
+{
+	required int64 uid = 1; // 玩家ID
+	required bytes uname = 2; // 玩家名字
+	required int32 pro = 3; // 玩家职业
+	required int32 sex = 4; // 玩家性别
+	required int32 level = 5; // 玩家等级
+	required float hp = 6; // 玩家当前血量
+	required float hp_max = 7; // 玩家最大血量
+	optional float mp = 8; // 玩家当前蓝量
+	optional float mp_max = 9; // 玩家最大蓝量
+	optional int32 fight_point = 10; // 玩家战斗力
+	optional int64 damage_maked = 11; // 玩家伤害输出
+}
+
+// 副本中玩家信息
+message SCDungeonHumanList
+{
+	option (msgid) = 30026;
+	repeated SDungeonHumanInfo humanlist = 1;
+}
+
+// 副本失败
+message SCDungeonFailed
+{
+	option (msgid) = 30027;
+	required int32 timesec = 1;
+}
+
+message SMonsterInfo
+{
+	required int32 type = 1;
+	required int64 id = 2;
+	optional int32 strid = 3;
+}
+
+// 副本怪物状态显示
+message SCDungeonMonsters
+{
+	option (msgid) = 30028;
+	repeated SMonsterInfo monsters = 1;
+}
+

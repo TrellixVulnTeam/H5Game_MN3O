@@ -1,0 +1,446 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/20000_29999_misc.proto
+// -------------------------------------------------------
+
+// -----------------------------------------
+
+message SCCharacterKick
+{
+	option (msgid) = 20000;
+	required int32 reason = 1;
+    optional bytes error = 2;
+}
+
+// -----------------------------------------
+
+message SCLevelup
+{
+	option (msgid) = 20001;
+	required int64 id = 1;
+	required int32 level = 2;
+}
+
+// 检查时间
+message CSTimeCheck
+{
+	option (msgid) = 20009;
+	optional int64 data = 1; 
+}
+
+// PING消息
+message CSPing
+{
+	option (msgid) = 20010;
+	required float time = 1;
+}
+
+// PING的响应消息
+message SCPong
+{
+	option (msgid) = 20011;
+	required float time = 2;
+	required int64 server_time = 3;
+}
+
+// 弹出复活按钮
+message SCRequestRealive
+{
+	option (msgid) = 20020;
+	required int32 realive_delay = 1; // 单位(ms)
+	optional bytes killer_name = 2;
+}
+
+// 请求复活消息
+message CSRealive
+{
+	option (msgid) = 20021;
+	required bool isPay = 1;	//0=普通复活，1=花钱复活
+}
+
+// 复活效果
+message SCRealiveEffect
+{
+	option (msgid) = 20022;
+}
+
+// 服务器返回：复活玩家
+message SCRealiveResult
+{
+	option (msgid) = 20023;
+	required int32 code = 1;
+}
+
+// -----------------------------------------
+
+// 传送
+message SCTransport
+{
+	option (msgid) = 20100;
+	required int32 idScene = 1;
+	required int64 idDungeon = 2;
+	required SVector3 pos = 3;
+	required SVector3 ori = 4;
+}
+
+message SCTransportPrepareBegan
+{
+    option (msgid) = 20101;
+	required int32 idScene = 1;
+	required int64 idDungeon = 2;
+}
+
+message SCTransportPrepareEnded
+{
+    option (msgid) = 20102;
+}
+
+// -----------------------------------------
+
+message SCDungeonFinished 
+{
+	option (msgid) = 22000;
+	required int32 mapID = 1;
+}
+
+// -----------------------------------------
+
+message SCActionGroup
+{
+	option (msgid) = 22100;
+	required int64 actionID = 1;
+	required int32 section = 2;
+	required int32 status	= 3;
+	required int64 guid	= 4;
+}
+
+message SCEnvironmentalAnimation
+{
+	option (msgid) = 22200;
+}
+
+message SCRoleAction
+{
+	option (msgid) = 22300;
+	required int32 roleID = 1;
+	required SActionObject actionObject = 2;
+}
+
+message CSRoleAction
+{
+	option (msgid) = 22301;
+	required bytes actionName = 1;
+}
+
+message SCPlayAction
+{
+	option (msgid) = 22400;
+	required int64 id = 1;
+	required int64 actionID = 2;
+	required int64 random_seed = 3;
+}
+
+// -----------------------------------------
+
+// 开始控制
+message SCControllBegan
+{
+	option (msgid) = 22500;
+	required int64 id = 1;
+	required int64 target = 2;
+    required int32 type = 3;
+}
+
+// 结束控制
+message SCControllEnded
+{
+	option (msgid) = 22501;
+	required int64 id = 1;
+	required int64 target = 2;
+	required SVector3 position = 3;
+    required int32 type = 4;
+}
+
+
+// -----------------------------------------
+
+message CSEnterDungeon
+{
+    option (msgid) = 23000;
+    required int64 basemap = 1;
+    required int64 gamemap = 2; // ==0表示创新副本
+}
+
+message SCEnterDungeon
+{
+    option (msgid) = 23001;
+    required int64 basemap = 1;
+    required int32 error_code = 2;
+}
+
+message CSLeaveDungeon
+{
+	option (msgid) = 23002;
+	required int64 self = 1;
+}
+
+// ----------------------------
+
+message CSGameObjectTrigger
+{
+	option (msgid) = 24000;
+	required int64 id = 1;	
+}
+
+message SCGameObjectTriggerResult
+{
+	option (msgid) = 24001;
+	required int32 code = 1;
+}
+
+// ----------------------------
+
+message CSPlayerInfoQuery
+{
+	option (msgid) = 24100;
+	required int64 id = 1;
+	required int32 query_type = 2;
+	optional int64 item_id = 3;
+	optional int64 timestamp = 4;
+	optional bytes name = 5;
+	optional bool lookat = 6;
+}
+
+message SCPlayerInfoQueryResult
+{
+	option (msgid) = 24101;
+	required int32 result = 1;
+	required int64 id = 2;
+	required int32 query_type = 3;
+	optional SQueryPlayerEquipment infos = 4;
+	optional SQueryPlayerItem sitem = 5;
+	optional SQueryPlayerAchievement achievement = 6;
+	optional SQueryPlayerHero hero = 7;
+	optional SQueryPlayerBlood blood = 8;
+	optional SQueryPlayerRide ride = 9;
+	optional int32 equiped_bid = 10;
+	optional int32 equiped_blv = 11;
+	optional int32 viplv = 12;
+	optional SQueryPlayerHolyWeapon holy_weapon = 13;
+	optional SQueryPlayerHeroCard hero_card = 14;
+	optional SQueryPlayerLans lans_id = 15;
+	optional SQueryPlayerMagicWeaponRank magic_weapon_id = 16;
+	optional SQueryPlayerPet pet_id = 17;
+}	
+
+message CSLegionWarStatueInfoQuery
+{
+	option (msgid) = 24105;
+	required int64 statue_id = 1;
+}
+
+message SHeroCardSkill
+{
+	required int32 skill_id = 1;
+	required int32 level = 2;
+}
+
+// 英雄秘籍装备技能
+message SCPlayerHeroCardInfo
+{
+	option (msgid) = 24106;
+	required int64 hid = 1;
+	repeated SHeroCardSkill skills = 2;
+}
+
+// ----------------------------
+
+message SCStaticObjectUpdate
+{
+    option (msgid) = 24200;
+    required int64 id = 1;
+    required SStaticObject obj = 2;
+}
+
+// ----------------------------
+
+message SCHeadBubble
+{
+	option (msgid) = 24300;
+	required int64 id = 1;
+	required int32 strid = 2;
+}
+
+message CSAwardGiftcard
+{
+    option (msgid) = 24310;
+    required bytes cardno = 1;
+}
+
+// ----------------------------
+// 传送阵相关
+
+message CSTeleporterQuery
+{
+	option (msgid) = 24320;
+}
+
+message SCTeleporterQueryResult
+{
+	option (msgid) = 24321;
+	repeated int32 teleporter_list = 1;	// 已开启的传送阵列表
+}
+
+message SCTeleporterEnable
+{
+	option (msgid) = 24322;
+	required int32 teleporter_id = 1;	// 开启的传送阵id
+}
+
+message SCTeleporterOpenUI
+{
+	option (msgid) = 24323;
+	required int32 teleporter_id = 1;	// 点击的传送阵id
+}
+
+message CSTeleporterTeleport
+{
+	option (msgid) = 24324;
+	required int32 teleporter_id = 1;	// 目标点
+}
+
+message SCTeleporterTeleportResult
+{
+	option (msgid) = 24325;
+	required int32 result = 1;
+}
+
+// ----------------------------
+// 消息球相关
+
+// 一条消息球
+message SNotifyBall
+{
+	required int64 uuid = 1;		// 消息uuid
+	required int32 id = 2;			// 消息配置表中id
+	optional int64 timestamp = 3;	// 消息时间戳
+	repeated bytes args = 4;		// 消息参数
+}
+
+message CSNotifyBallQuery
+{
+	option (msgid) = 24340;
+}
+
+message SCNotifyBallUpdate
+{
+	option (msgid) = 24341;
+	repeated SNotifyBall messages = 1;
+}
+
+message CSNotifyBallDelete
+{
+	option (msgid) = 24342;
+	repeated int64 uuid = 1;		// 消息uuid
+	optional int32 id = 2;			// 消息配置表中id
+}
+
+message SCNotifyBallQueryResult
+{
+	option (msgid) = 24343;
+	repeated SNotifyBall messages = 1;
+}
+
+// ----------------------------
+// 同步服务器时间
+message SCServerTimeUpdate
+{
+	option (msgid) = 24350;
+	required int64 time = 1;
+}
+
+
+// ----------------------------
+// 提升指引
+message SCAdvanceOper
+{
+	option (msgid) = 24360;
+	required int32 oper = 1;	// 0更新 1删除
+	required int32 type = 2;	// 1技能 2血脉 3龙 4装备
+	required int32 subtype = 3;	// 1技能升级 2血脉孔数 3血脉之力 4龙基础属性 5龙专精属性 6龙悟性 7装备
+	optional int32 strid = 4;
+	optional int32 nparam1 = 5;	// subtype为1代表技能ID subtype为5代表专精条数
+	optional int32 nparam2 = 6;	// subtype为5代表专精颜色
+}
+
+// ----------------------------
+// 打开UI
+message SCOpenFunctionUI
+{
+	option (msgid) = 24370;
+	required int32 function = 1; // 功能类型
+}
+
+// 野外bossID请求
+message CSWildBossID
+{
+	option (msgid) = 24380;
+}
+
+// 野外bossID反馈
+message SCWildBossID
+{
+	option (msgid) = 24381;
+	repeated int32 bossid = 1; // bossid(对应CreatureTypeConfig表索引ID)
+}
+
+// 请求小飞鞋功能
+message CSUseEasyGo
+{
+	option (msgid) = 24385;
+	required int32 index = 1;
+}
+
+// 服务器返回小飞鞋功能
+message SCUseEasyGoResult
+{
+	option (msgid) = 24386;
+	required int32 index = 1;
+}
+
+// 客户端请求设置当前节点
+message CSRequestSetCurFun
+{
+	option (msgid) = 24387;
+	required int32 index = 1;
+	required int32 time = 2; // 单位为秒
+	required bool finish = 3;
+}
+
+// 服务器返回当前节点数据
+message SCResponseCurFun
+{
+	option (msgid) = 24388;
+	required int32 index = 1;
+	required int32 left_time = 2; // 单位为秒
+	required bool finish = 3;
+}
+
+// 兑换货币
+message CSExchangeCurrency
+{
+	option (msgid) = 24389;
+	required int32 count = 1; 
+}
+
+// 服务器返回兑换货币
+message SCExchangeCurrency
+{
+	option (msgid) = 24390;
+	required int32 result = 1;
+	required int32 count = 2;
+}

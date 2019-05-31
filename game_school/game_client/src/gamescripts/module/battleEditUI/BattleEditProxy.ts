@@ -1,0 +1,4 @@
+class BattleEditProxy {
+	public constructor() {
+	}
+}

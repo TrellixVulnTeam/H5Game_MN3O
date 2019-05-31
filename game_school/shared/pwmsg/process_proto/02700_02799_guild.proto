@@ -1,0 +1,463 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/02700_02799_guild.proto
+// -------------------------------------------------------
+// -----------------------------------------
+
+// 客户端请求: 创建新的联盟
+message CSCreateGuild
+{
+	option (msgid) = 2700;
+	required bytes gname = 1;  // 联盟名字
+	required int32 spend_type = 2;
+}
+
+// 服务端通知: 创建联盟反馈
+message SCCreateGuildResult
+{
+	option (msgid) = 2701;
+	required int32 result = 1; // 创建结果
+	optional int64 gid = 2;    // 如创建成功，会返回公会ID
+}
+
+// 客户端请求: 申请加入联盟
+message CSApplyGuild
+{
+	option (msgid) = 2720;
+	required int64 gid = 1;    // 申请联盟ID
+}
+
+// 服务端通知: 申请加入反馈
+message SCApplyGuildResult
+{
+	option (msgid) = 2721;
+	required int32 result = 1; // 申请结果
+	required int64 gid = 2;
+}
+
+// 客户端请求: 是否批准申请
+message CSApplyGuildResult
+{
+	option (msgid) = 2723;
+	required int32 result = 1; // 0:不同意 1:同意
+	required int64 uid = 2;    // 申请者ID
+	required bytes uname = 3;  // 申请者姓名
+}
+
+// 服务端通知: 批准申请反馈
+message SCApplyGuildResultResult
+{
+	option (msgid) = 2724;
+	required int32 result = 1; // 批准结果
+}
+
+// 客户端请求: 邀请加入联盟
+message CSInviteGuild
+{
+	option (msgid) = 2725;
+	required bytes uname = 1;  // 被邀人名字
+}
+
+// 服务端通知: 邀请加入反馈
+message SCInviteGuildResult
+{
+	option (msgid) = 2726;
+	required int32 result = 1; // 邀请结果
+	required bytes uname = 2;  // 被邀人名字
+}
+
+// 客户端请求: 是否批准邀请
+message CSInviteGuildResult
+{
+	option (msgid) = 2727;
+	required int32 result = 1; // 0:不同意 1:同意
+	required int64 gid = 2;    // 邀请公会ID
+	required int64 uid = 3;    // 邀请人ID
+}
+
+// 服务端通知: 批准邀请反馈
+message SCInviteGuildResultResult
+{
+	option (msgid) = 2728;
+	required int32 result = 1; // 批准结果
+}
+
+// 客户端请求: 申请退出联盟
+message CSLeaveGuild
+{
+	option (msgid) = 2730;
+}
+
+// 服务端通知: 退出联盟反馈
+message SCLeaveGuildResult
+{
+	option (msgid) = 2731;
+	required int32 result = 1;
+}
+
+// 客户端请求：撤销申请
+message CSCancelApply
+{
+	option (msgid) = 2732;
+	required int64 gid = 1;
+}
+
+// 服务器反馈：撤销申请结果
+message SCCancelApplyResult
+{
+	option (msgid) = 2733;
+	required int64 gid = 1;
+	required int32 result = 2;
+}
+
+// 客户端请求: 开除联盟成员
+message CSKickGuild
+{
+	option (msgid) = 2735;
+	required int64 uid = 1;
+}
+
+// 服务端通知: 开除成员反馈
+message SCKickGuildResult
+{
+	option (msgid) = 2736;
+	required int32 result = 1;
+	required int64 uid = 2;
+}
+
+// 服务端通知: 通知被开除成员
+message SCKickGuildNotify
+{
+	option (msgid) = 2737;
+}
+
+// 客户端请求: 查询本联盟信息
+message CSQueryGuild
+{
+	option (msgid) = 2740;
+	required int64 gid = 1;
+}
+
+// 服务端通知: 下发本联盟信息
+message SCQueryGuildResult
+{
+	option (msgid) = 2741;
+	required int64 gid = 1;
+	required SGuild guild = 2;
+	repeated SGuildMember members = 3;
+	repeated SApplyGuildMember applymembers = 4;
+	required bytes notice = 5;
+	repeated SGuildLog logs = 6; 
+	optional int64 recruit_cd = 7;
+	optional int64 notice_cd = 8;
+}
+
+// 客户端请求: 查询其他联盟信息
+message CSQueryOtherGuild
+{
+	option (msgid) = 2742;
+	required int64 gid = 1;
+}
+
+// 服务端通知: 下发其他联盟信息
+message SCQueryOtherGuildResult
+{
+	option (msgid) = 2743;
+	required int64 gid = 1;
+	required SGuild guild = 2;
+	repeated SGuildMember members = 3;
+}
+
+// 客户端请求: 查询联盟列表
+message CSQueryGuildList
+{
+	option (msgid) = 2750;
+}
+
+// 服务端通知: 下发联盟列表
+message SCQueryGuildListResult
+{
+	option (msgid) = 2751;
+	repeated SGuild guilds = 1;
+	repeated int64 applygids = 2;
+}
+
+// 服务端通知: 更新联盟状态
+message SCUpdateGuild
+{
+	option (msgid) = 2760;
+	required int64 gid = 1;
+	required int32 reason = 2; // 0:未知原因 1:正常更新 2:新建联盟 3:解散联盟
+	optional SGuild guild = 3;
+	optional SGuildStatus status = 4;
+}
+
+// 服务端通知: 更新联盟成员状态
+message SCUpdateGuildMember
+{
+	option (msgid) = 2761;
+	required int64 uid = 1;
+	required int32 reason = 2; // 0:未知原因 1:正常更新 2:新进成员 3:成员退出 4:成员被踢
+	optional SGuildMember member = 3;
+	optional SGuildMemberStatus status = 4;
+}
+
+// 服务端通知: 更新申请成员状态
+message SCUpdateApplyGuildMember
+{
+	option (msgid) = 2762;
+	required int64 uid = 1;
+	required int32 reason = 2; // 0:未知原因 1:正常更新 2:新增申请 3:删除申请
+	optional SApplyGuildMember member = 3;
+	optional SApplyGuildMemberStatus status = 4;
+}
+
+// 服务端通知: 更新联盟公告内容
+message SCUpdateGuildNotice
+{
+	option (msgid) = 2763;
+	required bytes content = 1;
+	optional int64 cd = 2;
+}
+
+// 服务端通知: 更新联盟日志内容
+message SCUpdateGuildLog
+{
+	option (msgid) = 2764;
+	required SGuildLog log = 1;
+}
+
+// 客户端请求: 招募会员加入
+message CSRecruitGuildMember
+{
+	option (msgid) = 2765;
+}
+
+message SCUpdateRecruitInfo
+{
+	option (msgid) = 2766;
+	optional int64 cd = 1;
+}
+
+// 客户端请求: 任命转让联盟职位
+message CSChangeGuildTitle
+{
+	option (msgid) = 2770;
+	required int64 oper_uid = 1;
+	required int32 oper_title = 2;
+	repeated int64 new_uids = 3;
+}
+
+// 服务端通知: 改变联盟职位反馈
+message SCChangeGuildTitleResult
+{
+	option (msgid) = 2771;
+	required int32 result = 1;
+	optional int32 oper_title = 2;
+}
+
+// 客户端请求: 统帅发布联盟公告
+message CSChangeGuildNotice
+{
+	option (msgid) = 2772;
+	required bytes content = 1;
+}
+
+// 公会改变
+message SCGuildChanged
+{
+    option (msgid) = 2773;
+    required int64 id = 1;
+    required int64 guild = 2; // 0表示没有公会
+}
+
+//------------------------------------------
+// 公会大厅升级
+
+// 客户端请求: 公会建筑升级
+message CSLevelupGuildBuilding
+{
+    option (msgid) = 2774;
+    required int32 type = 1;
+}
+
+// 服务端通知: 建筑升级反馈
+message SCLevelupGuildBuildingResult
+{
+	option (msgid) = 2775;
+	required int32 result = 1;
+	optional int32 type = 2;
+}
+
+//------------------------------------------
+// 公会雕像玩法
+
+message CSQueryDonateStatus
+{
+	option (msgid) = 2776;
+}
+
+message SCRefreshDonateStatus
+{
+	option (msgid) = 2777;
+	optional int32 remain_count = 1;
+	optional int32 activated_buff = 2;
+}
+
+message CSDonateToGuild
+{
+	option (msgid) = 2778;
+	required int32 type = 1;
+}
+
+message SCDonateToGuildResult
+{
+	option (msgid) = 2779;
+	required int32 result = 1;
+	optional int32 type = 2;
+}
+
+//------------------------------------------
+// 公会果树玩法
+
+message CSQueryGuildFruiter
+{
+	option (msgid) = 2780;
+}
+
+message SCQueryGuildFruiterResult
+{
+	option (msgid) = 2781;
+	repeated SGuildFruit fruits = 1;
+	optional int32 remain_pickup_count = 2;
+	optional int32 max_pickup_count = 3;
+	optional int32 remain_pickup_cd = 4;
+}
+
+message CSPickupGuildFruit
+{
+	option (msgid) = 2782;
+	required int32 index = 1;
+	required int32 id = 2;
+}
+
+message SCPickupGuildFruitResult
+{
+	option (msgid) = 2783;
+	required int32 result = 1;
+	required int32 index = 2;
+	required int32 id = 3;
+	optional int32 remain_pickup_count = 4;
+	optional int32 remain_pickup_cd = 5;
+}
+
+message SCUpdateGuildFruit
+{
+	option (msgid) = 2784;
+	required SGuildFruit fruit = 1;
+}
+
+//------------------------------------------
+// 公会雕像玩法（接上面的定义）
+message CSActivateDonateBuff
+{
+	option (msgid) = 2786;
+	required int32 buff = 1;
+}
+
+message SCActivateDonateBuffResult
+{
+	option (msgid) = 2787;
+	required int32 result = 1;
+	optional int32 buff = 2;
+}
+
+//-------------------------------------------
+// 客户端请求: 更改加入联盟方式
+message CSChangeApplyWay
+{
+	option (msgid) = 2788;
+	required bool bIsAutoApply = 1;
+}
+
+//------------------------------------------
+// 公会猎龙玩法
+
+message SHuntedDragon
+{
+	required int32 type = 1;			// 龙在CreatureType表中的id
+	required int32 quality = 2;			// 龙的品质,0=普通龙,1=紫色龙,2=金色龙
+	required bytes owner_name = 3;		// 谁猎取到的龙
+}
+
+message CSDragonHuntQuery
+{
+	option (msgid) = 2790;
+}
+
+message SCDragonHuntUpdate
+{
+	option (msgid) = 2791;
+	required int32 reason = 1;				// 0=更新个人信息,1=更新公会信息
+
+	// 个人信息
+	optional int32 remain_free_times = 2;	// 剩余免费猎龙次数
+	optional int32 remain_gold_times = 3;	// 剩余免费猎龙次数
+
+	// 公会信息
+	optional int32 remain_open_times = 4;	// 剩余开启副本次数（仅首领可用）
+	optional bool is_doubled = 5;			// 是否开启了双倍
+	optional bool is_started = 6;			// 副本是否已开启
+	repeated SHuntedDragon dragons = 7;		// 当前已经猎取到的龙
+}
+
+message CSDragonHuntDouble
+{
+	option (msgid) = 2792;
+}
+
+message SCDragonHuntDoubleResult
+{
+	option (msgid) = 2793;
+	required int32 ret = 1;
+}
+
+message CSDragonHunt
+{
+	option (msgid) = 2794;
+	required int32 type = 1;				// 0=免费猎龙,1=金币猎龙
+}
+
+message SCDragonHuntResult
+{
+	option (msgid) = 2795;
+	required int32 ret = 1;
+	optional SHuntedDragon dragon = 2;		// 猎取到的龙
+	optional int32 devotion = 3;			// 联盟贡献值
+}
+
+message CSDragonHuntStart
+{
+	option (msgid) = 2796;
+}
+
+message SCDragonHuntStartResult
+{
+	option (msgid) = 2797;
+	required int32 ret = 1;
+}
+
+message CSDragonHuntJoin
+{
+	option (msgid) = 2798;
+}
+
+message SCDragonHuntJoinResult
+{
+	option (msgid) = 2799;
+	required int32 ret = 1;
+}

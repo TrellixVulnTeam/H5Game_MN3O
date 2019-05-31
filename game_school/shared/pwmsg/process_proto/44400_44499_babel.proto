@@ -1,0 +1,170 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/44400_44499_babel.proto
+// -------------------------------------------------------
+// 通天塔进入
+message CSBabelEnter
+{
+	option (msgid) = 44400;
+}
+
+// 通天塔进入反馈
+message SCBabelEnter
+{
+	option (msgid) = 44401;
+	required int32 result = 1;
+}
+
+// 通天塔次数重置
+message CSBabelReset
+{
+	option (msgid) = 44402;
+	required int32 type = 1;
+}
+
+// 通天塔次数重置反馈
+message SCBabelReset
+{
+	option (msgid) = 44403;
+	required int32 result = 1;
+	required int32 type = 2;
+	optional int32 free_reset_count = 3;
+	optional int32 currLv = 4;
+	optional bool pass = 5;
+}
+
+// 控制客户端过关UI
+// section = 1 到达传送门后发送，client播关闭UI
+// section = 2 延迟1s后发送，client播打开UI
+message SCBabelSwitchAnim
+{
+	option (msgid) = 44404;
+	required int32 section = 1;
+    required bool clear_objs = 2;
+}
+
+// 通知client当期层信息
+message SCBabelUpdate
+{
+	option (msgid) = 44405;
+	required int32 currLv = 1;
+	required bool pass = 2;	
+}
+
+// 通天塔信息查询
+message CSBabelQuery
+{
+	option (msgid) = 44410;
+}
+
+// 通天塔信息查询反馈
+message SCBabelQuery
+{
+	option (msgid) = 44411;
+	required int32 result = 1;
+	required int32 query_type = 2;
+	optional int32 rank = 3;
+	optional int32 currLv = 4;
+	optional int32 maxLv = 5;
+	optional int32 free_reset_count = 6;
+	optional bool pass = 7;	
+	optional int32 offline_days = 8;	// 离线天数
+}
+
+// 通天塔退出特殊处理，server发送
+message SCBabelLeave
+{
+	option (msgid) = 44412;
+	required int32 type = 1;	// 0未通关退出 1任务完成退出
+}
+
+message CSBabelLeave
+{
+	option (msgid) = 44413;
+}
+
+// 通天塔升阶
+message CSBabelUpgradeRank
+{
+	option (msgid) = 44414;
+}
+
+message SCBabelUpgradeRank
+{
+	option (msgid) = 44415;
+	required int32 result = 1;
+}
+
+//通天塔通知客户端每层的任务目标
+message SCBabelLevelAim
+{
+	option (msgid) = 44416;
+	required int32 aim = 1;
+}
+
+//通天塔通知客户端每层杀怪时间
+message SCBabelLevelTime
+{
+	option (msgid) = 44417;
+	required int32 time = 1;
+}
+
+//通知客户端发奖励
+message SCBabelPrize
+{
+	option (msgid) = 44418;
+	required int32 dropid = 1;
+}
+
+//通天塔通知客户端每层初始化时间段
+message SCBabelLevelPeriod
+{
+	option (msgid) = 44419;
+	required bytes period = 1;
+}
+
+//通天塔通知客户端本层挑战失败:1表示成功，0表示失败
+message SCBabelResult
+{
+	option (msgid) = 44420;
+	required int32 result = 1;
+}
+
+//通知客户端奖励箱子Tips
+message SCBabelPrizeTips
+{
+	option (msgid) = 44421;
+	repeated int32 ids = 1;
+}
+
+// 通天塔扫荡
+message CSBabelSweep
+{
+	option (msgid) = 44430;
+}
+
+// 通天塔扫荡返回
+message SCBabelSweep
+{
+	option (msgid) = 44431;
+	required int32 result = 1;
+}
+
+// 通天塔补领
+message CSBabelRewardAgain
+{
+	option (msgid) = 44432;
+	required int32 type = 1;
+}
+
+// 通天塔补领返回
+message SCBabelRewardAgain
+{
+	option (msgid) = 44433;
+	required int32 result = 1;
+	required int32 type = 2;
+}

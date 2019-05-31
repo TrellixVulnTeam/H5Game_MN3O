@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>node1</name>
+	<communicator>
+		<listen_addr>tcp://127.0.0.1:8800</listen_addr>
+	</communicator>
+</pwdist>
+
+

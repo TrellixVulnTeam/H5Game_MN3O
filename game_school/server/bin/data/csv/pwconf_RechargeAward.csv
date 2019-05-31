@@ -1,0 +1,8 @@
+"金币"	"金币图像连接"	"奖励礼包"	"奖励礼包图标"	"金币物品"	"蓝钻折扣"	
+"id"	"gold_image_url"	"award_item"	"award_icon"	"icon"	"blue_discount"	
+"int"	"string"	"int"	"string[]"	"int"	"float"	
+"cs"	"cs"	"cs"	"c"	"cs"	"cs"	
+"10"	"http://wyphs.sincetimes.com/binghuoqq/gold10.png"	"0"	"qqlanzuan_png,box1"	"600123"	"0.800000"	
+"100"	"http://wyphs.sincetimes.com/binghuoqq/gold100.png"	"0"	"qqlanzuan_png,box2"	"600125"	"0.800000"	
+"1000"	"http://wyphs.sincetimes.com/binghuoqq/gold1000.png"	"0"	"qqlanzuan_png,box3"	"600127"	"0.800000"	
+"10000"	"http://wyphs.sincetimes.com/binghuoqq/gold10000.png"	"0"	"qqlanzuan_png,box4"	"600129"	"0.800000"	

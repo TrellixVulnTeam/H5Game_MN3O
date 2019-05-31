@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Workspace Name="libcore" Database="./libcore.tags">
+  <Project Name="libcore" Path="libcore.project" Active="Yes"/>
+  <Project Name="pwdist" Path="../pwdist/pwdist.project" Active="No"/>
+  <Project Name="pwconnsrv" Path="../pwconnsrv/pwconnsrv.project" Active="No"/>
+  <Project Name="mysql" Path="../mysql/mysql.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="libcore" ConfigName="Debug"/>
+      <Project Name="pwdist" ConfigName="Debug"/>
+      <Project Name="pwconnsrv" ConfigName="Debug"/>
+      <Project Name="mysql" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="no">
+      <Project Name="libcore" ConfigName="Release"/>
+      <Project Name="pwdist" ConfigName="Release"/>
+      <Project Name="pwconnsrv" ConfigName="Release"/>
+      <Project Name="mysql" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

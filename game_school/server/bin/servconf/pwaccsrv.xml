@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<pwdist>
+	<name>accsrv</name>
+	<communicator>
+		<listen_addr>tcp://GAME1_ADDR:ACCSRV_PORT</listen_addr>
+	</communicator>
+	<pwaccsrv>
+       <database>
+			<host>ACCDB_ADDR</host>
+			<port>ACCDB_PORT</port>
+			<name>ACCDB_NAME</name>
+			<user>ACCDB_USER</user>
+			<pswd>ACCDB_PSWD</pswd>
+		</database>
+	</pwaccsrv>
+	<nodes>
+		<count>2</count>
+		<node1>
+			<name>connsrv1</name>
+			<addr>tcp://GAME1_ADDR:CONNSRV1_PORT</addr>
+		</node1>
+		<node2>
+			<name>connsrv2</name>
+			<addr>tcp://LINK1_ADDR:CONNSRV2_PORT</addr>
+		</node2>
+	</nodes>
+    <whitelist>
+        <open>false</open>
+		<count>2</count>
+		<ip1>127.0.0.1</ip1>
+		<ip2>127.0.0.1</ip2>
+    </whitelist>
+</pwdist>
+
+

@@ -1,0 +1,178 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/31000_31999_chat_mail.proto
+// -------------------------------------------------------
+
+// 广播相关
+message CSChat
+{
+	option (msgid) = 31000;
+	required int32 mode = 1;
+	required bytes text = 2;
+	required int32 text_type = 3;
+	optional int64 to = 4;
+	optional bytes to_name = 5;
+	repeated int64 item_ids = 6;
+	optional int32 horn_tid = 7;
+	optional int64 timestamp = 8;
+	optional int32 to_zone = 9;
+}
+
+message SCChat
+{
+	option (msgid) = 31001;
+	required int32 mode = 1;
+	required int64 from = 2;
+	required bytes from_name = 3;
+	required bytes text = 4;
+	required int32 text_type = 5;
+    optional int32 vip_level = 6;
+    optional int32 temporary_vip_level = 7;
+	optional int32 horn_tid = 8;
+	optional int32 gm_level = 9; 	//0代表非gm指令，1代表重要程度是1的gm指令
+    optional STencentUserInfo tencent_user_info = 10; // 发送者的腾讯用户信息
+	optional int32 from_zone = 11;
+}
+
+message SCNotify
+{
+	option (msgid) = 31004;
+	required int32 mode = 1;
+	required int32 text_id = 2;
+	repeated bytes text_args = 3;
+	required int32 text_type = 4;
+	required bool is_href = 5;
+}
+
+// 邮件相关
+
+// 客户端请求: 查询未读邮件列表
+message CSQueryMailList
+{
+	option (msgid) = 31010;
+	required int64 id = 1;
+}
+
+// 服务端通知: 下发未读邮件列表
+message SCQueryMailListResult
+{
+	option (msgid) = 31011;
+	repeated SMail mails = 1;
+}
+
+// 服务端通知: 有新的邮件达到
+message SCMailNotify
+{
+	option (msgid) = 31012;
+	required SMail mail = 1;
+}
+
+// 客户端反馈: 该邮件已被阅览
+message CSMailRecved
+{
+	option (msgid) = 31013;
+	required int64 id = 1;
+	required int64 mail_id = 2;
+}
+
+// 客户端请求: 领取附件
+message CSRecvMailReward
+{
+	option (msgid) = 31014;
+	required int64 mail_id = 1;
+}
+
+// 服务端通知: 领取附件反馈
+message SCRecvMailRewardResult
+{
+	option (msgid) = 31015;
+	required int32 result = 1;
+	required int64 mail_id = 2;
+}
+
+// 客户端请求: 删除邮件
+message CSDeleteMail
+{
+	option (msgid) = 31016;
+	repeated int64 mail_ids = 1;
+}
+
+// 服务端通知: 更新邮件状态
+message SCUpdateMailStatus
+{
+	option (msgid) = 31018;
+	required int64 mail_id = 1;
+	required int32 mail_flags = 2;
+}
+
+// 客户端反馈: 收取全部邮件
+message CSRecvAllMails
+{
+	option (msgid) = 31019;
+	repeated int64 mail_ids = 1;
+}
+
+// 聊天相关
+
+// 客户端请求: 查询未读消息列表
+message CSQueryChatMsgList
+{
+	option (msgid) = 31020;
+}
+
+// 服务端通知: 下发未读消息列表
+message SCQueryChatMsgListResult
+{
+	option (msgid) = 31021;
+	repeated SChatMsg msgs = 1;
+}
+
+// 客户端请求: 向某人发送消息
+message CSChatMsgSend
+{
+	option (msgid) = 31022;
+	required int64 to = 1;
+	required bytes to_name = 2;
+	required bytes content = 3;
+}
+
+// 服务端通知: 接收到新的消息
+message SCChatMsgNotify
+{
+	option (msgid) = 31023;
+	required SChatMsg msg = 1;
+	optional int64 to = 2;
+	optional bytes to_name = 3;
+}
+
+// 客户端反馈: 该消息已被阅览
+message CSChatMsgRecved
+{
+	option (msgid) = 31024;
+	required int64 from = 1;
+	required int64 timestamp = 2;
+}
+
+// 客户端请求: 查询最近联系人列表
+message CSQueryChatContactList
+{
+	option (msgid) = 31030;
+}
+
+// 服务端通知: 下发最近联系人列表
+message SCQueryChatContactListResult
+{
+	option (msgid) = 31031;
+	repeated SChatContact contacts = 1;
+}
+
+// 服务端通知: 更新最近联系人状态
+message SCUpdateChatContact
+{
+	option (msgid) = 31032;
+	required SChatContactStatus status = 1;
+}

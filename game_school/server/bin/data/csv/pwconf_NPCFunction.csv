@@ -1,0 +1,7 @@
+"功能编号"	"功能图像(头顶显示)"	"选项名称"	"选项脚本号(对应pw_npc_function.lua)"	"选项脚本参数"	"扩展选项脚本(对应pw_npc_function_ext.lua)"	"是否默认显示对话选项（默认显示：会再NPC对话框中常态显示默认不显示：判断玩家身上是否有脚本参数行的任务）"	
+"id"	"functionIcon"	"optNumList"	"optScript"	"optScriptParam"	"optScriptEx"	"isDefaultDis"	
+"int"	"string"	"int[]"	"string[]"	"int[]"	"string"	"bool"	
+"cs"	"cs"	"cs"	"cs"	"cs"	"s"	"c"	
+"11"	""	"14412"	"NpcFunc_OpenFunctionUI"	"200259"	""	"1"	
+"12"	""	"70001,70037"	"NpcFunc_DiologQuest1,NpcFunc_DiologQuest2"	"21060,22076"	""	"0"	
+"1001"	""	"14601"	"NpcFunc_OpenGouHuoUI"	"200269"	""	"1"	

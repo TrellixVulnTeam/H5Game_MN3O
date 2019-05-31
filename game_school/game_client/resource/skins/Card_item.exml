@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Card_item" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="140">
+	<e:Group width="730" height="140">
+		<e:Image width="730" height="140" x="0" y="0" source="image_11_png" anchorOffsetY="0"/>
+		<e:Image id="player" width="90" height="90" x="16" y="25" anchorOffsetY="0" source="image_05_png"/>
+		<e:Image width="90" height="90" x="16" y="25" anchorOffsetY="0" source="quality_green_png"/>
+		<e:Image width="420" height="2" x="122" y="47" source="image_line_png"/>
+		<e:Label id="label_name" text="卡牌名字" x="123" y="13" anchorOffsetX="0" width="277" fontFamily="KaiTi" stroke="1" strokeColor="0xffffff" textColor="0xfc7bb5"/>
+		<e:Label id="label_battle" text="战力：999" x="347" y="12" anchorOffsetX="0" width="203" fontFamily="KaiTi" stroke="1" strokeColor="0xFFFFFF" textColor="0xFC7BB5" textAlign="left"/>
+		<e:Label id="label_type" text="这里是卡牌的标签，活泼、天真" x="123" y="55" anchorOffsetX="0" width="495" fontFamily="KaiTi" stroke="1" strokeColor="0xFFFFFF" textAlign="left" anchorOffsetY="0" height="61" textColor="0x16beff"/>
+		<e:Image id="image_wcz" width="162" height="42" x="563" y="4" source="image_17_png"/>
+		<e:Image id="image_ycz" width="162" height="42" x="563" y="4" source="image_16_png"/>
+		<e:Image id="image_type" width="47" height="41" x="9" y="7" source="image_37_png" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Button id="btn_item" label="" left="0" right="0" top="0" bottom="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="image_hui_png" source.down="image_11_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+
+
+
+
+
+
+
+
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,5 @@
+"ID"	"描述"	"击杀者掉落"	"个人伤害排名掉落1(格式为:名次下限，名次上限，掉落id)"	"个人伤害排名掉落2(格式为:名次下限，名次上限，掉落id)"	"个人伤害排名掉落3(格式为:名次下限，名次上限，掉落id)"	"个人伤害排名掉落4(格式为:名次下限，名次上限，掉落id)"	"个人伤害排名掉落5(格式为:名次下限，名次上限，掉落id)"	"联盟伤害排名掉落1(格式为:名次下限，名次上限，成员掉落id，联盟仓库掉落id)"	"联盟伤害排名掉落2(格式为:名次下限，名次上限，成员掉落id，联盟仓库掉落id)"	"联盟伤害排名掉落3(格式为:名次下限，名次上限，成员掉落id，联盟仓库掉落id)"	"联盟伤害排名掉落4(格式为:名次下限，名次上限，成员掉落id，联盟仓库掉落id)"	"联盟伤害排名掉落5(格式为:名次下限，名次上限，成员掉落id，联盟仓库掉落id)"	
+"id"	"des"	"killerDrop"	"humanDamageDrop1"	"humanDamageDrop2"	"humanDamageDrop3"	"humanDamageDrop4"	"humanDamageDrop5"	"guildDamageDrop1"	"guildDamageDrop2"	"guildDamageDrop3"	"guildDamageDrop4"	"guildDamageDrop5"	
+"int"	"string"	"int"	"int[3]"	"int[3]"	"int[3]"	"int[3]"	"int[3]"	"int[4]"	"int[4]"	"int[4]"	"int[4]"	"int[4]"	
+"cs"	""	"s"	"s"	"s"	"s"	"s"	"s"	"s"	"s"	"s"	"s"	"s"	
+"1"	"金兵太子"	""	"1,10000,7000102"	""	""	""	""	""	""	""	""	""	

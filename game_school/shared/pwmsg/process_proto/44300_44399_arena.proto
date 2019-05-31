@@ -1,0 +1,148 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/44300_44399_arena.proto
+// -------------------------------------------------------
+
+// 服务器通知: 寻找组队开始
+message SCArenaTeamInviteBegan
+{
+    option (msgid) = 44330;
+    required int64 tid = 1;
+    required int32 time = 2;
+}
+
+// 服务器通知: 寻找组队结束
+message SCArenaTeamInviteEnded
+{
+    option (msgid) = 44331;
+    required int32 result = 1;
+    required int64 tid = 2;
+}
+
+// 服务器通知: 匹配对手开始
+message SCArenaTeamMatchBegan
+{
+    option (msgid) = 44300;
+    required int64 tid = 1;
+    required int32 time = 2;
+}
+
+// 服务器通知: 匹配对手结束
+message SCArenaTeamMatchEnded
+{
+    option (msgid) = 44301;
+    required int32 result = 1;
+    required int64 tid = 2;
+    optional int64 matched_tid = 3;
+	optional STeam matched_team = 4;
+}
+
+// 服务器通知: 参赛倒计时开始
+message SCArenaTeamAckBegan
+{
+    option (msgid) = 44310;
+    required int64 tid = 1;
+    required int64 matched_tid = 2;
+    required int32 time = 3;
+}
+
+// 服务器通知: 参数倒计时结束
+message SCArenaTeamAckEnded
+{
+    option (msgid) = 44312;
+    required int32 result = 1;
+    required int64 tid = 2;
+}
+
+// 客户端请求: 将基本信息传入天梯服匹配
+message CSArenaTeamMatch
+{
+    option (msgid) = 44302;
+    required int32 result = 1;  // 0:开始
+}
+
+// 客户端请求: 匹配好对角色进行参赛确认
+message CSArenaTeamAck
+{
+    option (msgid) = 44311;
+	optional int32 result = 1;  // 0:参加比赛，1:拒绝比赛
+}
+
+// 客户端请求: 离开竞技场 （！！！这个目前暂时无用）
+message CSArenaLeave
+{
+    option (msgid) = 44320;
+    required int32 result = 1;  // 0:比赛结束，离开
+}
+
+// 客户端请求: 比赛下注 （！！！这个玩法废弃了，暂时无用）
+message CSArenaBet
+{
+    option (msgid) = 44321;
+    required int32 result = 1;  // 0:取消，1:2倍下注 2:5倍下注
+}
+
+message SCArenaBetResult
+{
+    option (msgid) = 44322;
+    required int32 result = 1; // 0:取消，1:2倍下注 2:5倍下注
+    optional int32 count = 2;  // 剩余压住次数
+}
+
+// 客户端请求: 查询竞技信息
+message CSQueryArenaInfo
+{
+    option (msgid) = 44340;
+}
+
+// 服务器反馈: 返回竞技信息
+message SCQueryArenaInfoResult
+{
+    option (msgid) = 44341;
+	repeated SArenaRecord records = 1;
+}
+
+// 服务器反馈: 更新比赛中的竞技信息
+message SCUpdateArenaInfo
+{
+    option (msgid) = 44342;
+	required int64 tid = 1;
+	optional int64 time = 2; // 本场比赛总时间，秒为单位
+	optional int32 life = 3; // 这个代表tid队伍的击杀数
+}
+
+// 服务器反馈: 更新参赛确认消息
+message SCUpdateArenaAcked
+{
+    option (msgid) = 44343;
+	required int32 navi_ackednum = 1; 	// 本方确认数量
+	required int32 anti_ackednum = 2; 	// 对方确认数量
+	repeated int32 navi_profs = 3; 		
+	repeated int32 anti_profs = 4; 		
+}
+
+// 服务器反馈: 竞技场开启
+message SCUpdateArenaOpenStatus
+{
+	option (msgid) = 44344;
+	required int32 state = 1;			// 1：开 0：关
+}
+
+// 客户端请求：领取每日排行奖励
+message CSRequestDailyRankReward
+{
+	option (msgid) = 44345;
+	required int32 type = 1;
+}
+
+// 服务器反馈：每日排行奖励领取是否成功
+message SCDailyRankRewardResult
+{
+	option (msgid) = 44346;
+	required int32 result = 1;
+	required int32 type = 2;
+}

@@ -1,0 +1,29 @@
+PROJECT(gdbclient)
+
+AUX_SOURCE_DIRECTORY(./ SRC)
+AUX_SOURCE_DIRECTORY(./bson SRC_BSON)
+AUX_SOURCE_DIRECTORY(./gdb SRC_GDB)
+AUX_SOURCE_DIRECTORY(./mongo SRC_MONGO)
+
+ADD_DEFINITIONS("-g --std=c++0x -O3 -msse2 -mmmx -mfpmath=sse -D_NODEJS_CLIENT")
+#ADD_DEFINITIONS("-g --std=c++0x -O0 -msse2 -mmmx -mfpmath=sse")
+ADD_DEFINITIONS("-DTBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE -fPIC")
+
+INCLUDE_DIRECTORIES("./")
+INCLUDE_DIRECTORIES("/usr/local/include/node")
+
+LINK_DIRECTORIES("${PROJECT_SOURCE_DIR}/deps")
+
+ADD_LIBRARY(gdbclient SHARED 
+	${SRC} 
+	${SRC_BSON}
+	${SRC_GDB}
+	${SRC_MONGO}
+	)
+
+TARGET_LINK_LIBRARIES(gdbclient pthread)
+TARGET_LINK_LIBRARIES(gdbclient tcmalloc_minimal)
+
+
+
+

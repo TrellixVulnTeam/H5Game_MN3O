@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<server_group>
+	<id>LOCAL_ID</id>
+    <zone_id>ZONEID</zone_id>
+	<game_id>GAMEID</game_id>
+    <secret>173_SECRET</secret>
+    <ladder-server>LADDER_SERVER</ladder-server>
+    <ladder-server-login-stage>1201</ladder-server-login-stage>
+    <fatigue>2</fatigue>    
+	<name>0</name>
+    <kaifudate>KAIFU_DATE</kaifudate>
+    <log_qlvh>QLOG_PATH</log_qlvh>
+    <log_self>MLOG_PATH</log_self>
+    <log_wm>WLOG_PATH</log_wm>
+    <tmp_log_qlvh>TMPLOG_PATH</tmp_log_qlvh>
+    <default_login_stage>1251</default_login_stage>
+	<default_tiyan_stage>1251</default_tiyan_stage>
+    <token_appid>10003</token_appid>
+    <token_secret>DCHUISEnrgXFsGohFpwqOaKr6hAlNqqNbsL</token_secret>
+	<dawn_hour>5</dawn_hour>
+	<currency_ratio>10</currency_ratio>
+	<enable_uuid_recycle>0</enable_uuid_recycle>
+	<enable_cheat_detect>1</enable_cheat_detect>
+	<wmlog_enable>WMLOG_ENABLE</wmlog_enable>
+	<lianyun_push>OPEN_LIANYUN_PUSH</lianyun_push>
+	<default_agent>DEFAULT_AGENT</default_agent>
+    
+    <default_encoding>GBK</default_encoding>
+    
+    <tencent-platform>0</tencent-platform>
+    <tencent-appid>1103300610</tencent-appid>
+    <tencent-appkey>PH9g1xLXsikXslmY</tencent-appkey>
+    <tencent-url>openapi.tencentyun.com</tencent-url>
+    <tencent-pfkey-url>openapi.tencentyun.com</tencent-pfkey-url>
+    <tencent-stat-url>apistat.tencentyun.com</tencent-stat-url>
+    <tencent-gold-url>http://wyphs.sincetimes.com/binghuoqq/jinbi.png</tencent-gold-url>
+    <tencent-datacompass-url>http://tencentlog.com/stat/</tencent-datacompass-url>
+</server_group>
+

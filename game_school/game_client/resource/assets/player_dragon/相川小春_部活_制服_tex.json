@@ -1,0 +1,113 @@
+{
+    "width": 1024,
+    "imagePath": "相川小春_部活_制服_tex.png",
+    "height": 1024,
+    "name": "相川小春_部活_制服",
+    "SubTexture": [
+        {
+            "width": 296,
+            "y": 456,
+            "height": 307,
+            "name": "yishi",
+            "x": 1
+        },
+        {
+            "width": 85,
+            "y": 456,
+            "height": 460,
+            "name": "youtui",
+            "x": 801
+        },
+        {
+            "width": 125,
+            "y": 456,
+            "height": 462,
+            "name": "001相川小春测试-拆分 - 副本/图层_5",
+            "x": 674
+        },
+        {
+            "width": 126,
+            "y": 456,
+            "height": 463,
+            "name": "zuotui",
+            "x": 546
+        },
+        {
+            "width": 210,
+            "y": 756,
+            "height": 181,
+            "name": "001相川小春测试-拆分 - 副本/图层_23",
+            "x": 299
+        },
+        {
+            "width": 61,
+            "y": 971,
+            "height": 48,
+            "name": "faqia",
+            "x": 1
+        },
+        {
+            "width": 245,
+            "y": 456,
+            "height": 298,
+            "name": "cefa",
+            "x": 299
+        },
+        {
+            "width": 104,
+            "y": 765,
+            "height": 152,
+            "name": "youdabi",
+            "x": 155
+        },
+        {
+            "width": 44,
+            "y": 1,
+            "height": 135,
+            "name": "youxiaobi",
+            "x": 952
+        },
+        {
+            "width": 306,
+            "y": 1,
+            "height": 453,
+            "name": "shenti",
+            "x": 1
+        },
+        {
+            "width": 17,
+            "y": 971,
+            "height": 35,
+            "name": "001相川小春测试-拆分 - 副本/图层_25",
+            "x": 64
+        },
+        {
+            "width": 152,
+            "y": 765,
+            "height": 204,
+            "name": "tou",
+            "x": 1
+        },
+        {
+            "width": 61,
+            "y": 919,
+            "height": 56,
+            "name": "001相川小春测试-拆分 - 副本/图层_31",
+            "x": 155
+        },
+        {
+            "width": 82,
+            "y": 353,
+            "height": 181,
+            "name": "001相川小春测试-拆分 - 副本/图层_12",
+            "x": 888
+        },
+        {
+            "width": 62,
+            "y": 1,
+            "height": 350,
+            "name": "zuobi",
+            "x": 888
+        }
+    ]
+}

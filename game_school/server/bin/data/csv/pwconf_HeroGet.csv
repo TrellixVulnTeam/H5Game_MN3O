@@ -1,0 +1,7 @@
+"抽取方式ID"	"备注"	"消耗资源类型100001.铜币100003.元宝100004.绑定元宝"	"消耗资源数量"	"十连抽价格-1表示不提供"	"免费抽取CD单位为秒填-1表示禁止免费抽取"	"建号免费CD单位为秒填-1表示禁止免费抽取"	"每天免费次数上限预留"	"能量积累比例万分比"	"普通随机池RandomPoolID"	"满能量需求"	"满能量随机池RandomPoolID"	"优先能量需求"	"优先英雄配置RandomPoolID"	"高概率英雄ID高级抽取显示用"	
+"id"	"comment"	"costType"	"normalCost"	"tenTimesCost"	"freeCd"	"freeStartCd"	"dailyMaxFree"	"energyGet"	"normalPool"	"normalEnergyNeed"	"energyPool"	"firstEnergyNeed"	"firstHero"	"onSellHero"	
+"int"	"string"	"int"	"int"	"int"	"int"	"int"	"int"	"int"	"int"	"int"	"int"	"int"	"int"	"int[]"	
+"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"s"	"cs"	"s"	"cs"	"s"	"cs"	"s"	"cs"	"c"	
+"0"	"初级抽取"	"100001"	"1000000"	"9000000"	"14400"	"0"	"100"	"10000"	"10000101"	"5000000"	"10000102"	"5000000"	"-1"	"-1"	
+"1"	"中级抽取"	"100004"	"200"	"1800"	"86400"	"0"	"100"	"10000"	"10000201"	"2000"	"10000202"	"2000"	"-1"	"-1"	
+"2"	"高级抽取"	"100003"	"500"	"-1"	"-1"	"-1"	"0"	"10000"	"10000301"	"5000"	"10000302"	"10000"	"10000303"	"2,3"	

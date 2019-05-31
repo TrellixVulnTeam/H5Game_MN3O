@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Battle_skill" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="star">
+			<tween:TweenItem target="{image_bg}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{264}" x="{-2400}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object x="{-1000}" y="{170}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object x="{-500}" y="{140}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object y="{83.03}" alpha="{0}" x="{200}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{Palyer_Group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-900}" y="{-60}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object x="{-900}" y="{-60}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="200">
+					<tween:props>
+						<e:Object x="{70}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="550">
+					<tween:props>
+						<e:Object x="{100}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object x="{1000}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image_bg3}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{800}" y="{841}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object x="{-300}" y="{788}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="400">
+					<tween:props>
+						<e:Object x="{-800}" y="{750}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object y="{743}" alpha="{0}" x="{-1800}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{Palyer_Group_left}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{370}" x="{900}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object y="{370}" x="{900}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="200">
+					<tween:props>
+						<e:Object y="{370}" x="{-160}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="550">
+					<tween:props>
+						<e:Object x="{-190}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object x="{-1000}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image_skill}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{-1600}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="250"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}" scaleX="{2.5}" scaleY="{2.5}" x="{149.66}" y="{-209.09}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object y="{333.33}" x="{292.09}" scaleX="{0.9}" scaleY="{0.9}" alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="50">
+					<tween:props>
+						<e:Object y="{300}" x="{283}" scaleX="{1}" scaleY="{1}" alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:Wait duration="350"/>
+				<tween:Set/>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{1600}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="300"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{1600}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object y="{280}"/>
+					</tween:props>
+				</tween:To>
+				<tween:Wait duration="400"/>
+				<tween:Set/>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image}">
+				<tween:Set>
+				<tween:props>
+					<e:Object y="{1600}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:Wait duration="300"/>
+				<tween:Set>
+				<tween:props>
+					<e:Object y="{1600}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="100">
+				<tween:props>
+					<e:Object y="{160}"/>
+				</tween:props>
+				</tween:To>
+				<tween:Wait duration="400"/>
+				<tween:Set/>
+				<tween:To duration="100">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="pojia">
+			<tween:TweenItem target="{image0}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-1000}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object x="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object x="{40}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="350">
+					<tween:props>
+						<e:Object x="{0}" scaleX="{1}" scaleY="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="300">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{bu1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="500"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{400}" y="{500}" alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+					<tween:props>
+						<e:Object x="{440}" y="{500}" alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{0}" x="{804}" y="{396}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{bu2}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="500"/>
+				<tween:Set>
+				<tween:props>
+					<e:Object alpha="{0}" x="{584}" y="{392}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+				<tween:props>
+					<e:Object alpha="{1}" x="{584}" y="{392}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{0}" x="{770}" y="{310}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{bu3}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="500"/>
+				<tween:Set>
+				<tween:props>
+					<e:Object alpha="{0}" x="{142}" y="{288}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+				<tween:props>
+					<e:Object alpha="{1}" x="{142}" y="{288}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{0}" x="{-70}" y="{168}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{bu4}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="500"/>
+				<tween:Set>
+				<tween:props>
+					<e:Object alpha="{0}" x="{46}" y="{382}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+				<tween:props>
+					<e:Object alpha="{1}" x="{46}" y="{382}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{0}" x="{-186}" y="{464}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{bu5}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="500"/>
+				<tween:Set>
+				<tween:props>
+					<e:Object alpha="{0}" x="{130}" y="{864}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+				<tween:props>
+					<e:Object alpha="{1}" x="{130}" y="{864}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{0}" x="{-216}" y="{1042}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{bu6}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:Wait duration="500"/>
+				<tween:Set>
+				<tween:props>
+					<e:Object alpha="{0}" x="{232}" y="{622}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+				<tween:props>
+					<e:Object alpha="{1}" x="{232}" y="{622}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="150">
+					<tween:props>
+						<e:Object alpha="{0}" x="{-132}" y="{686}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+				<tween:props>
+					<e:Object x="{900}"/>
+				</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+				<tween:props>
+					<e:Object x="{0}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="600">
+				<tween:props>
+					<e:Object x="{40}"/>
+				</tween:props>
+				</tween:To>
+				<tween:To duration="300">
+				<tween:props>
+					<e:Object alpha="{0}"/>
+				</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group left="0" right="0" top="0" width="750" bottom="-334" verticalCenter="167" horizontalCenter="0" height="1334">
+		<e:Image source="image_06_png" left="0" top="0" verticalCenter="-167" bottom="334" horizontalCenter="0" right="0"/>
+		<e:Group id="HPGroup" height="1334" right="0" verticalCenter="-167" left="0" visible="false">
+			<e:Image id="image0" width="749" height="1220" x="0" y="0" scaleX="1" scaleY="1" source="image_64_png"/>
+			<e:Group id="group" width="750" height="1334" x="0" y="0">
+				<e:Image id="image_player_blood" width="750" height="1300" scaleX="1" scaleY="1" y="0" x="0" source="po_player11_png"/>
+				<e:Image id="image_face0" width="500" height="260" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" scaleX="1" scaleY="1" source=""/>
+			</e:Group>
+			<e:Image id="bu1" width="262" height="188" anchorOffsetX="0" anchorOffsetY="0" source="image_po01_png" x="804" y="396"/>
+			<e:Image id="bu2" width="74" height="105" anchorOffsetX="0" anchorOffsetY="0" source="image_po02_png" y="310" x="770"/>
+			<e:Image id="bu3" width="50" height="86" anchorOffsetX="0" anchorOffsetY="0" source="image_po03_png" y="168" x="-70"/>
+			<e:Image id="bu4" width="154" height="150" anchorOffsetX="0" anchorOffsetY="0" source="image_po04_png" y="464" x="-186"/>
+			<e:Image id="bu5" width="177" height="153" anchorOffsetX="0" anchorOffsetY="0" source="image_po05_png" y="1042" x="-216"/>
+			<e:Image id="bu6" width="90" height="72" anchorOffsetX="0" anchorOffsetY="0" source="image_po06_png" y="686" x="-132"/>
+		</e:Group>
+		<e:Group id="SkillGroup" height="1334" right="0" verticalCenter="-167" left="0">
+			<e:Image id="image_bg" height="456" scaleX="1" scaleY="1" source="image_34_png" x="-270.12" y="176.97"/>
+			<e:Group id="Bg_Group" height="1334" scaleX="1" scaleY="1" right="0" verticalCenter="0" left="0">
+			</e:Group>
+			<e:Group id="Palyer_Group" width="750" height="1334" scaleX="1" scaleY="1" y="-60" x="96">
+				<e:Image id="image_player" width="750" height="1300" source="player1_png" top="0" x="0" y="0" scaleX="1" scaleY="1"/>
+				<e:Image id="image_face" width="500" height="260" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0"/>
+			</e:Group>
+			<e:Image id="image_bg3" height="456" source="image_33_png" scaleX="1" scaleY="1" y="788" x="-358"/>
+			<e:Group id="Palyer_Group_left" width="750" height="1334" scaleX="1" scaleY="1" y="370" x="-184">
+				<e:Image id="image_player0" width="750" height="1300" top="0" x="0" y="0" scaleX="1" scaleY="1" source="player26_png"/>
+				<e:Image id="image_face1" width="500" height="260" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0"/>
+			</e:Group>
+			<e:Group id="Skill_Group" height="1334" scaleX="1" scaleY="1" right="0" bottom="0" left="0">
+				<e:Image id="image" height="957" anchorOffsetY="0" width="166" y="211" source="image_35_png" horizontalCenter="-80"/>
+				<e:Image id="image1" height="380" anchorOffsetY="0" width="154" x="396" y="438" source="image_36_png"/>
+				<e:Image id="image_skill" width="185" height="673" scaleX="1" scaleY="1" y="399.09" source="skill6_png" x="283"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

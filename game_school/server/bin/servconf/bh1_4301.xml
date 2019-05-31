@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configure>
+	
+	<package command=""/>
+	<network>
+		<host hostname="manager"/>
+		<host hostname="database"/>
+		<host hostname="backup"/>
+		<host hostname="game1"/>
+		<host hostname="link1"/>
+	</network>
+	<groups>
+		<group name="update" apps="bhgame,bhdb,bhserver_0,bhserver_group,bhst,start"/>
+		<group name="stop" apps="stop"/>
+	</groups>
+	<application name="bhgame">
+		<part>
+			<mkdir dir="/export/game1/root/bhgame/bh1_4301/"/>
+		</part>
+		<part>
+			<systemrun command="tar zxf /home/super/update/bhpackage/srcfiles/gameserver.tar.gz -C /export/game1/root/bhgame/bh1_4301/"/>
+		</part>
+		<part>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" src="LOCAL_ID" dest="0"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" src="ZONEID" dest="4300"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" src="173_SECRET" dest="123456"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" src="KAIFU_DATE" dest="20140224"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" src="MLOG_PATH" dest="/export/mlogs/"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" src="QLOG_PATH" dest="/export/qlogs/"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" src="WLOG_PATH" dest="/export/wlogs/"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" src="TMPLOG_PATH" dest="./tmplogs/"/>
+		</part>
+
+		<!--accsrv-->
+		<part>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="GAME1_ADDR" dest="172.22.111.11"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="LINK1_ADDR" dest="172.22.111.101"/>
+
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="ACCDB_ADDR" dest="172.22.111.31"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="ACCDB_PORT" dest="8018"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="ACCDB_USER" dest="test"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="ACCDB_PSWD" dest="test"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="ACCDB_NAME" dest="account"/>
+			
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="ACCSRV_PORT" dest="7101"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="CONNSRV1_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" src="CONNSRV2_PORT" dest="7105"/>
+
+		       <mkdir dir="/export/bhgame/bh1_4301/server/" host="game1"/>
+	              <mkdir dir="/export/bhgame/bh1_4301/server/" host="link1"/>
+		</part>
+
+		<!--dbsrv-->
+		<part>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv.xml" src="GAME1_ADDR" dest="172.22.111.11"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv.xml" src="DBSRV_PORT" dest="7102"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv.xml" src="CHARACTERDB_ADDR" dest="172.22.111.31"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv.xml" src="CHARACTERDB_PORT" dest="8018"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv.xml" src="CHARACTERDB_USER" dest="test"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv.xml" src="CHARACTERDB_PSWD" dest="test"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv.xml" src="CHARACTERDB_NAME" dest="characters"/>
+		</part>
+		<!--ctrlsrv-->
+		<part>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="GAME1_ADDR" dest="172.22.111.11"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="LINK1_ADDR" dest="172.22.111.101"/>
+
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="ACCSRV_PORT" dest="7101"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="DBSRV_PORT" dest="7102"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="CTRLSRV_PORT" dest="7103"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="CONNSRV1_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="CONNSRV2_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="CTRLSRV_173_PORT" dest="4203"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="CTRLSRV_CSI_PORT" dest="4202"/>
+
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="LADDER_SERV_LOCAL_ADDR" dest="172.22.111.11"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="LADDER_SERV_LOCAL_PORT" dest="4301"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="LADDER_SERV_ADDR" dest="58.215.54.203"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="LADDER_SERV_PORT" dest="4300"/>
+			
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="NAMESRV_ENABLE" dest="true"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="NAMEDB_ADDR" dest="172.22.111.31"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="NAMEDB_PORT" dest="8018"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="NAMEDB_USER" dest="test"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="NAMEDB_PSWD" dest="test"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" src="NAMEDB_NAME" dest="namedb"/>
+		</part>		
+		<!--worldsrv 0-->
+		<part>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="GAME1_ADDR" dest="172.22.111.11"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="LINK1_ADDR" dest="172.22.111.101"/>
+
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="ACCSRV_PORT" dest="7101"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="DBSRV_PORT" dest="7102"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="CTRLSRV_PORT" dest="7103"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="CONNSRV1_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="CONNSRV2_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="WORLDSRV0_PORT" dest="7110"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" src="WORLDSRV0_THREAD_NUM" dest="5"/>
+		</part>
+		<!--worldsrv 1-->
+		<part>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="GAME1_ADDR" dest="172.22.111.11"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="LINK1_ADDR" dest="172.22.111.101"/>
+
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="ACCSRV_PORT" dest="7101"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="DBSRV_PORT" dest="7102"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="CTRLSRV_PORT" dest="7103"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="CONNSRV1_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="CONNSRV2_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="WORLDSRV1_PORT" dest="7111"/>
+
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" src="WORLDSRV1_THREAD_NUM" dest="12"/>
+		</part>
+		<!-- connsrv1 -->
+		<part>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv_1.xml" src="GAME1_ADDR" dest="172.22.111.11"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv_1.xml" src="CONNSRV1_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv_1.xml" src="CONNSRV1_SERV_PORT" dest="4200"/>
+		</part>
+		<!-- connsrv2 -->
+		<part>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv_2.xml" src="LINK1_ADDR" dest="172.22.111.101"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv_2.xml" src="CONNSRV2_PORT" dest="7105"/>
+			<replace file="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv_2.xml" src="CONNSRV2_SERV_PORT" dest="4200"/>
+		</part>
+		<part>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwworldsrv" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwaccmgr" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwdbprinter" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwnrobot" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwproxy" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwrobot" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/data" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/Lua" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv.xml" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv.xml" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv.xml" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv_1.xml" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+		</part>
+		<part>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwctrlsrv" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwworldsrv" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwdbsrv" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwaccsrv" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwaccmgr" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwdbprinter" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwnrobot" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwproxy" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwrobot" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/data" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/Lua" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/sql" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/pwconnsrv_2.xml" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+		</part>
+	</application>
+
+	<application name="bhdb">
+		<part>
+		</part>
+	</application>
+
+	<application name="bhserver_0">
+		<part>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/server_0.xml" dest="/export/bhgame/bh1_4301/server/" host="game1"/>	
+		</part>
+		<part>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/server_1.xml" dest="/export/bhgame/bh1_4301/server/" host="link1"/>	
+		</part>
+	</application>
+
+	<application name="bhserver_group">
+		<part>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+		</part>
+		<part>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/server_group.xml" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+		</part>
+	</application>	
+                                                               
+	<application name="bhst">
+		<part>		
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/start.sh" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/stop.sh" dest="/export/bhgame/bh1_4301/server/" host="game1"/>
+		</part>
+		<part>		
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/start_second.sh" dest="/export/bhgame/bh1_4301/server/start.sh" host="link1"/>
+			<copy src="/export/game1/root/bhgame/bh1_4301/server/stop.sh" dest="/export/bhgame/bh1_4301/server/" host="link1"/>
+		</part>
+        </application>
+        <application name="start">
+        	<part>
+        		<systemrun command="cd /export/bhgame/bh1_4301/server/;./start.sh" host="game1"/>
+        		<systemrun command="cd /export/bhgame/bh1_4301/server/;./start.sh" host="link1"/>
+        	</part>
+        </application>
+        <application name="stop">
+ 	      	<part>
+	       		<systemrun command="cd /export/bhgame/bh1_4301/server/;./stop.sh" host="game1"/>
+	       		<systemrun command="cd /export/bhgame/bh1_4301/server/;./stop.sh" host="link1"/>
+	       	</part>
+        </application>
+                                                               
+</configure>                                   

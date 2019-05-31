@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="libcore" InternalType="Library">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="inc">
+    <File Name="inc/CppMysql.h"/>
+    <File Name="inc/CppMysql_FieldDefs.h"/>
+    <File Name="inc/CppMysql_PrimaryKeys.h"/>
+    <File Name="inc/CppMysql_Recordset.h"/>
+    <File Name="inc/CppMysql_RecordsetEx.h"/>
+    <File Name="inc/pwdist_callable_object.h"/>
+    <File Name="inc/pwdist_common.h"/>
+    <File Name="inc/pwdist_def.h"/>
+    <File Name="inc/pwdist_dispatcher.h"/>
+    <File Name="inc/pwdist_mempool.h"/>
+    <File Name="inc/pwdist_method_gen.h"/>
+    <File Name="inc/pwdist_method_helper.h"/>
+    <File Name="inc/pwdist_node.h"/>
+    <File Name="inc/pwdist_node_runner.h"/>
+    <File Name="inc/pwdist_ordered_array.h"/>
+    <File Name="inc/pwdist_parameter.h"/>
+    <File Name="inc/pwdist_port.h"/>
+    <File Name="inc/pwdist_port_generic.h"/>
+    <File Name="inc/pwdist_port_scripted.h"/>
+    <File Name="inc/pwdist_remote_node.h"/>
+    <File Name="inc/pwdist_utils.h"/>
+    <File Name="inc/pwdist_zmq.h"/>
+    <File Name="inc/pw_refcounted.h"/>
+    <File Name="inc/CppMysql_RecordFetcher.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="src">
+    <File Name="src/CppMysql.cpp"/>
+    <File Name="src/CppMysql_PrimaryKeys.cpp"/>
+    <File Name="src/CppMysql_Recordset.cpp"/>
+    <File Name="src/CppMysql_RecordsetEx.cpp"/>
+    <File Name="src/pwdist_common.cpp"/>
+    <File Name="src/pwdist_dispatcher.cpp"/>
+    <File Name="src/pwdist_node.cpp"/>
+    <File Name="src/pwdist_node_runner.cpp"/>
+    <File Name="src/pwdist_port.cpp"/>
+    <File Name="src/pwdist_port_generic.cpp"/>
+    <File Name="src/pwdist_port_scripted.cpp"/>
+    <File Name="src/pwdist_remote_node.cpp"/>
+    <File Name="src/pwdist_zmq.cpp"/>
+    <File Name="src/CppMysql_RecordFetcher.cpp"/>
+  </VirtualDirectory>
+  <Settings Type="Static Library">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;--std=c++0x" C_Options="-g" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="./inc"/>
+        <IncludePath Value="../common"/>
+        <IncludePath Value="../pwcommon"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+        <Preprocessor Value="_DEBUG"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName).a" IntermediateDirectory="./Debug" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;--std=c++0x" C_Options="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+        <IncludePath Value="./inc"/>
+        <IncludePath Value="../common"/>
+        <IncludePath Value="../pwcommon"/>
+        <Preprocessor Value="TBB_PREVIEW_CONCURRENT_PRIORITY_QUEUE"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName).a" IntermediateDirectory="./Release" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+</CodeLite_Project>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.Battle_pojia" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group left="0" right="0" top="0" width="750" bottom="-334" verticalCenter="167" horizontalCenter="0" height="1334">
+		<e:Image width="750" height="1334" x="0" y="0" source="image_06_png"/>
+		<e:Group id="HPGroup" width="750" height="1334" x="0" y="0">
+			<e:Image id="image_player_blood" width="750" height="1334" source="player1_png" top="0" x="0" y="0" scaleX="1" scaleY="1"/>
+			<e:Image id="image_face0" width="293" height="208" x="351" y="111" anchorOffsetX="0" anchorOffsetY="0"/>
+		</e:Group>
+		<e:Group id="SkillGroup" width="750" height="1334" x="0" y="0">
+			<e:Group id="Bg_Group" width="750" height="1334" x="0" y="0" scaleX="1" scaleY="1">
+				<e:Image width="750" height="816" source="image_33_png" horizontalCenter="0" top="0" x="-266" y="-231" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group id="Palyer_Group" width="750" height="1334" x="0" y="0" scaleX="1" scaleY="1">
+				<e:Image id="image_player" width="684" height="1252" source="player1_png" top="0" horizontalCenter="0" x="33" y="0" scaleX="1" scaleY="1"/>
+				<e:Image id="image_face" width="293" height="208" x="341" y="101" anchorOffsetX="0" anchorOffsetY="0"/>
+			</e:Group>
+			<e:Group id="Skill_Group" width="750" height="1334" x="0" y="0" scaleX="1" scaleY="1">
+				<e:Image width="750" height="1033" source="image_34_png" y="300" horizontalCenter="0" anchorOffsetY="0"/>
+				<e:Image id="image_skill" width="448" height="289" source="skill1_png" y="396" horizontalCenter="0" x="151" scaleX="1" scaleY="1"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,313 @@
+import "pwngs/options.proto";
+import "pwngs/protocol/worldsrv/00000_00000_def.proto";
+package pwngs.protocol.worldsrv;
+
+// -------------------------------------------------------
+// auto generate by ProbufAssembly
+// ./proto/02500_02699_team.proto
+// -------------------------------------------------------
+// -----------------------------------------
+
+// 客户端请求: 创建新的队伍
+message CSCreateTeam
+{
+	option (msgid) = 2500;
+	required int32 type = 1;
+	required int32 mode = 2;
+	optional int32 reserved = 3;
+	required bytes tname = 4;
+	optional int32 fight_point_limit = 5; // 加入队伍战斗力限制
+	optional bool auto_join = 6; // 是否允许自动加入队伍
+}
+
+// 服务端通知: 创建队伍反馈
+message SCCreateTeamResult
+{
+	option (msgid) = 2501;
+	required int32 result = 1;
+	required int32 type = 2;
+	required int32 mode = 3;
+	optional int32 reserved = 4;
+	optional int64 tid = 5;    // 创建成功，返回队伍ID
+	optional int32 fight_point_limit = 6; // 加入队伍战斗力限制
+}
+
+// 客户端请求: 请求解散队伍
+message CSDismissTeam
+{
+	option (msgid) = 2510;
+}
+
+// 服务端通知: 解散队伍反馈
+message SCDismissTeamResult
+{
+	option (msgid) = 2511;
+	required int32 result = 1;
+	optional int64 tid = 2;
+}
+
+// 客户端请求: 请求加入队伍
+message CSJoinTeam
+{
+	option (msgid) = 2520;
+	required int64 tid = 1;	  // 0:自动寻找队伍加入
+	optional bytes tname = 2; // 队伍名字
+}
+
+// 服务端通知: 加入队伍反馈
+message SCJoinTeamResult
+{
+	option (msgid) = 2521;
+	required int32 result = 1;
+	optional int64 tid = 2;   // 加入成功，返回队伍ID
+}
+
+// 客户端请求: 邀请某人加入
+message CSInviteTeam
+{
+	option (msgid) = 2522;
+	repeated int64 uid = 1;	  // 被邀请人ID
+}
+
+// 服务端通知: 邀请某人反馈
+message SCInviteTeamResult
+{
+	option (msgid) = 2523;
+	required int32 result = 1;
+	required int64 uid = 2;	  // 被邀请人ID
+}
+
+// 服务端通知: 邀请加入队伍
+message SCInviteTeamNotify
+{
+	option (msgid) = 2524;
+	required int64 tid = 1;	  // 邀请队伍ID
+	required int64 uid = 2;	  // 邀请人ID
+	required bytes uname = 3; // 邀请人名字
+	optional int32 type = 4;  // 队伍类型
+	optional int32 mode = 5;
+	optional int32 reserved = 6;
+}
+
+// 客户端请求: 邀请入队反馈
+message CSInviteTeamReturn
+{
+	option (msgid) = 2525;
+	required int32 result = 1; // 0:拒绝 1:同意
+	optional int64 tid = 2;
+}
+
+// 客户端请求: 请求离开队伍
+message CSLeaveTeam
+{
+	option (msgid) = 2530;
+}
+
+// 服务端通知: 离开队伍反馈
+message SCLeaveTeamResult
+{
+	option (msgid) = 2531;
+	required int32 result = 1;
+}
+
+// 客户端请求: 将人踢离队伍
+message CSKickTeam
+{
+	option (msgid) = 2540;
+	required int64 uid = 1;
+}
+
+// 服务端通知: 踢人离队反馈
+message SCKickTeamResult
+{
+	option (msgid) = 2541;
+	required int32 result = 1;
+}
+
+// 客户端请求: 招募队员加入
+message CSRecruitTeam
+{
+	option (msgid) = 2545;
+}
+
+// 客户端请求: 查询队伍列表
+message CSQueryTeamList
+{
+	option (msgid) = 2550;
+	required int32 type = 1;
+	required int32 mode = 2;
+	optional int32 reserved = 3;
+}
+
+// 服务端通知: 下发队伍列表
+message SCQueryTeamListResult
+{
+	option (msgid) = 2551;
+	required int32 type = 1;
+	required int32 mode = 2;
+	optional int32 reserved = 3;
+	repeated STeam teams = 4;
+}
+
+// 服务端通知: 更新队伍状态
+message SCUpdateTeam
+{
+	option (msgid) = 2560;
+	required int32 type = 1;
+	required int32 mode = 2;
+	optional int32 reserved = 3;
+	required int64 tid = 4;
+	required int32 reason = 5; // 0:未知原因 1:正常更新 2:新建队伍 3:解散队伍 4:更新邀请列表
+	optional STeam team = 6;
+}
+
+// 服务端通知: 更新队员状态
+message SCUpdateTeamMember
+{
+	option (msgid) = 2561;
+	required int32 type = 1;
+	required int32 mode = 2;
+	required int64 tid = 3;
+	optional STeamMember member = 4;
+}
+
+// 客户端请求: 队长变更队员权限
+message CSChangeTeamMemberAuth
+{
+	option (msgid) = 2570;
+	required int64 target = 1;
+	required int32 auth = 2; // 0x00:无权限 0x01:邀请权
+}
+
+// 服务端通知: 队员变更权限反馈
+message SCChangeTeamMemberAuthResult
+{
+	option (msgid) = 2571;
+	required int32 result = 1;
+}
+
+// 客户端请求: 队伍变更队长
+message CSChangeTeamLeader
+{
+	option (msgid) = 2580;
+	required int64 target = 1;
+}
+
+// 服务端通知: 队长变更反馈
+message SCChangeTeamLeaderResult
+{
+	option (msgid) = 2581;
+	required int32 result = 1;
+}
+
+// 服务端通知: 同步队员血魔
+message SCSyncTeamMemberInfo
+{
+	option (msgid) = 2585;
+	required int64 tid = 1;
+	required int64 uid = 2;
+	optional STeamMemberSyncInfo info = 3;
+}
+// 客户端请求: 更新队员标记
+message CSChangeTeamMemberFlag
+{
+	option (msgid) = 2590;
+	required int64 flag = 1;
+	required bool apply = 2;
+}
+
+
+// 客户端请求: 招募队员加入从好友列表
+message CSRecruitTeamFromFriend
+{
+	option (msgid) = 2595;
+}
+
+// 客户端请求: 招募队员加入从公会成员
+message CSRecruitTeamFromGuild
+{
+	option (msgid) = 2596;
+}
+
+// 客户端请求：申请加入队伍
+message CSApplyJoinTeam
+{
+	option (msgid) = 2597;
+	required int64 tid = 1;
+}
+
+// 服务端通知: 申请加入队伍反馈
+message SCApplyJoinTeamResult
+{
+	option (msgid) = 2598;
+	required int32 result = 1;
+	optional int64 tid = 2;   // 加入成功，返回队伍ID
+}
+
+// 客户端请求：同意加入队伍
+message CSAgreeJoinTeam
+{
+	option (msgid) = 2599;
+	required int64 tid = 1;
+	required int64 uid = 2; // 申请者ID
+}
+
+// 服务端通知：同意加入队伍结果
+message SCAgreeJoinTeamResult
+{
+	option (msgid) = 2600;
+	required int64 tid = 1;
+	required int64 uid = 2; // 申请者ID
+	required int32 result = 3;
+}
+
+// 客户端请求：对队伍操作
+message CSOperTeam
+{
+	option (msgid) = 2601;
+	required int64 tid = 1;
+	required int32 type = 2;
+	required int32 param = 3;
+}
+
+// 客户端请求：附近信息
+message CSQueryNearInfo
+{
+	option (msgid) = 2602;
+	required int32 type = 1; // 0:队伍，1：玩家
+}
+
+// 服务器返回：附近信息
+message SCQueryNearInfoResult
+{
+	option (msgid) = 2603;
+	required int32 type = 1; // 0:队伍，1：玩家
+	repeated SNearTeamInfo teaminfo = 2;
+	repeated SNearPlayerInfo playerinfo = 3;
+}
+
+// 服务器通知：确认改变队伍
+message SCConfirmChangeTeam
+{
+	option (msgid) = 2604;
+	required int64 mgrid = 1;
+	required int32 fp_limit = 2;
+	required bool auto_join = 3;
+}
+
+// 客户端请求：切换队伍
+message CSRequestChangeTeam
+{
+	option (msgid) = 2605;
+	required int64 mgrid = 1;
+	required int32 fp_limit = 2;
+	required bool auto_join = 3;
+}
+
+// 服务器返回：队伍操作结果
+message SCOperTeamResult
+{
+	option (msgid) = 2606;
+	required int32 type = 1;
+	required int32 result = 2;
+}

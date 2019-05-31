@@ -1,0 +1,4 @@
+"装备ID"	"装备名称"	"装备图标"	"部件类别1=鞍2=圈3=蹄4=护"	"坐骑类别1=初级2=中级3=高级"	"升级后装备ID"	"属性1加成"	"属性2加成"	"属性3加成"	"属性4加成"	"属性5加成"	
+"ride_eid"	"name"	"icon"	"ride_part"	"ride_type"	"ride_levelup_eid"	"attr1_plus"	"attr2_plus"	"attr3_plus"	"attr4_plus"	"attr5_plus"	
+"int"	"string"	"string[]"	"int"	"int"	"int"	"float[3]"	"float[3]"	"float[3]"	"float[3]"	"float[3]"	
+"cs"	"c"	"c"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	"cs"	

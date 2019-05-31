@@ -1,0 +1,34 @@
+#!/bin/bash
+
+source ./make_version.sh
+
+cd build
+cmake ..
+make -j 8
+
+code=$?
+if [ $code -ne 0 ]; then
+	return $code
+fi
+
+cp ./pwconnsrv/Release/pwconnsrv ../bin/pwconnsrv 
+cp ./pwaccsrv/Release/pwaccsrv ../bin/pwaccsrv 
+cp ./pwctrlsrv/Release/pwctrlsrv ../bin/pwctrlsrv 
+cp ./pwdbsrv/Release/pwdbsrv ../bin/pwdbsrv 
+cp ./pwworldsrv/Release/pwworldsrv ../bin/pwworldsrv 
+cp ./pwglobalsrv/Release/pwglobalsrv ../bin/pwglobalsrv 
+
+cp ./pwnrobot/Release/pwnrobot ../bin/pwnrobot
+cp ./pwaccmgr/Release/pwaccmgr ../bin/pwaccmgr
+cp ./pwclientlog/Release/pwclientlog ../bin/pwclientlog
+cp ./pwgdbserver/Release/pwgdbserver ../bin/pwgdbserver
+cp ./pwgdbclient/Release/pwgdbclient ../bin/pwgdbclient
+
+###create hmodule directory && copy all module to it
+rm -rf ../bin/hmodules
+
+mkdir -p ../bin/hmodules/w
+mkdir -p ../bin/hmodules/c
+
+cp ./pwworldsrv/Release/*.so ../bin/hmodules/w/
+cp ./pwctrlsrv/Release/*.so ../bin/hmodules/c/
