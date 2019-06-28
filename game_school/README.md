@@ -50,7 +50,7 @@
 * wechat
     * 821153923
 
-**<font color=#FF0000 size=4 face="黑体">仅供学习交流,切勿用于商业用途,否则后果自负</font>**
+**<font color=red size=4 face="微软雅黑">仅供学习交流,切勿用于商业用途,否则后果自负</font>**
 
 
-**<font color=#FF0000 size=4 face="黑体">Only for learning exchange, do not use for commercial purposes, otherwise the consequences.</font>**
+**<font color=red size=4 face="微软雅黑">Only for learning exchange, do not use for commercial purposes, otherwise the consequences.</font>**
