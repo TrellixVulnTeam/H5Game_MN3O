@@ -50,8 +50,7 @@
 * wechat
     * 821153923
 
-**本服务只提供予客户作私人及非牟利用途，而不得用于任何商业用途**
+**<font color=#FF0000 size=4 face="黑体">仅供学习交流,切勿用于商业用途,否则后果自负</font>**
 
-**仅供学习交流,切勿用于商业用途,否则后果自负**
 
-**The Service is provided to the Subscriber for private use and non-profit making purpose and shall not to be used for commercial purpose.**
+**<font color=#FF0000 size=4 face="黑体">Only for learning exchange, do not use for commercial purposes, otherwise the consequences.</font>**
