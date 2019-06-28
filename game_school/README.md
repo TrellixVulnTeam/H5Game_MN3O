@@ -43,3 +43,12 @@
 * 内存优化
 * 战斗框架优化
 * 网络模块优化封装
+
+# **本人联系方式**
+* 邮箱
+    * 821153923@qq.com
+* wechat
+    * 821153923
+
+**本服务只提供予客户作私人及非牟利用途，而不得用于任何商业用途**
+**The Service is provided to the Subscriber for private use and non-profit making purpose and shall not to be used for commercial purpose.**
